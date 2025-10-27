@@ -1,6 +1,6 @@
 ﻿namespace EpiControl
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -49,10 +49,10 @@
 			panel7 = new Panel();
 			button6 = new Button();
 			panel8 = new Panel();
-			button7 = new Button();
-			pictureBox2 = new PictureBox();
+			btn_normasRegulamentadoras = new Button();
 			panel10 = new Panel();
-			button9 = new Button();
+			btn_sair = new Button();
+			pictureBox2 = new PictureBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -64,8 +64,8 @@
 			panel6.SuspendLayout();
 			panel7.SuspendLayout();
 			panel8.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			panel10.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -104,7 +104,7 @@
 			// pictureBox1
 			// 
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(3, 0);
+			pictureBox1.Location = new Point(1, -1);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(53, 51);
 			pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -124,7 +124,6 @@
 			button2.TabIndex = 2;
 			button2.Text = "EPI";
 			button2.UseVisualStyleBackColor = false;
-			button2.Click += button2_Click;
 			// 
 			// flowLayoutPanel1
 			// 
@@ -308,7 +307,7 @@
 			// panel8
 			// 
 			panel8.BackColor = Color.Black;
-			panel8.Controls.Add(button7);
+			panel8.Controls.Add(btn_normasRegulamentadoras);
 			panel8.Location = new Point(0, 434);
 			panel8.Margin = new Padding(0);
 			panel8.Name = "panel8";
@@ -316,19 +315,46 @@
 			panel8.Size = new Size(200, 62);
 			panel8.TabIndex = 9;
 			// 
-			// button7
+			// btn_normasRegulamentadoras
 			// 
-			button7.BackColor = Color.FromArgb(64, 64, 64);
-			button7.FlatAppearance.BorderSize = 0;
-			button7.FlatStyle = FlatStyle.Flat;
-			button7.Image = (Image)resources.GetObject("button7.Image");
-			button7.ImageAlign = ContentAlignment.MiddleLeft;
-			button7.Location = new Point(0, 0);
-			button7.Name = "button7";
-			button7.Size = new Size(220, 54);
-			button7.TabIndex = 2;
-			button7.Text = "Normas Regulamentadoras";
-			button7.UseVisualStyleBackColor = false;
+			btn_normasRegulamentadoras.BackColor = Color.FromArgb(64, 64, 64);
+			btn_normasRegulamentadoras.FlatAppearance.BorderSize = 0;
+			btn_normasRegulamentadoras.FlatStyle = FlatStyle.Flat;
+			btn_normasRegulamentadoras.Image = (Image)resources.GetObject("btn_normasRegulamentadoras.Image");
+			btn_normasRegulamentadoras.ImageAlign = ContentAlignment.MiddleLeft;
+			btn_normasRegulamentadoras.Location = new Point(0, 0);
+			btn_normasRegulamentadoras.Name = "btn_normasRegulamentadoras";
+			btn_normasRegulamentadoras.Size = new Size(220, 54);
+			btn_normasRegulamentadoras.TabIndex = 2;
+			btn_normasRegulamentadoras.Text = "Normas Regulamentadoras";
+			btn_normasRegulamentadoras.UseVisualStyleBackColor = false;
+			btn_normasRegulamentadoras.Click += btn_normasRegulamentadoras_Click;
+			// 
+			// panel10
+			// 
+			panel10.BackColor = Color.Black;
+			panel10.Controls.Add(btn_sair);
+			panel10.Location = new Point(0, 496);
+			panel10.Margin = new Padding(0);
+			panel10.Name = "panel10";
+			panel10.RightToLeft = RightToLeft.No;
+			panel10.Size = new Size(200, 62);
+			panel10.TabIndex = 10;
+			// 
+			// btn_sair
+			// 
+			btn_sair.BackColor = Color.FromArgb(64, 64, 64);
+			btn_sair.FlatAppearance.BorderSize = 0;
+			btn_sair.FlatStyle = FlatStyle.Flat;
+			btn_sair.Image = (Image)resources.GetObject("btn_sair.Image");
+			btn_sair.ImageAlign = ContentAlignment.MiddleLeft;
+			btn_sair.Location = new Point(0, 0);
+			btn_sair.Name = "btn_sair";
+			btn_sair.Size = new Size(220, 54);
+			btn_sair.TabIndex = 2;
+			btn_sair.Text = "Sair";
+			btn_sair.UseVisualStyleBackColor = false;
+			btn_sair.Click += btn_sair_Click;
 			// 
 			// pictureBox2
 			// 
@@ -338,48 +364,21 @@
 			pictureBox2.Size = new Size(603, 580);
 			pictureBox2.TabIndex = 4;
 			pictureBox2.TabStop = false;
-			pictureBox2.Click += pictureBox2_Click;
 			// 
-			// panel10
-			// 
-			panel10.BackColor = Color.Black;
-			panel10.Controls.Add(button9);
-			panel10.Location = new Point(0, 496);
-			panel10.Margin = new Padding(0);
-			panel10.Name = "panel10";
-			panel10.RightToLeft = RightToLeft.No;
-			panel10.Size = new Size(200, 62);
-			panel10.TabIndex = 10;
-			// 
-			// button9
-			// 
-			button9.BackColor = Color.FromArgb(64, 64, 64);
-			button9.FlatAppearance.BorderSize = 0;
-			button9.FlatStyle = FlatStyle.Flat;
-			button9.Image = (Image)resources.GetObject("button9.Image");
-			button9.ImageAlign = ContentAlignment.MiddleLeft;
-			button9.Location = new Point(0, 0);
-			button9.Name = "button9";
-			button9.Size = new Size(220, 54);
-			button9.TabIndex = 2;
-			button9.Text = "Sair";
-			button9.UseVisualStyleBackColor = false;
-			// 
-			// Form1
+			// Home
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.White;
+			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
 			Controls.Add(panel1);
 			Font = new Font("Segoe UI", 9F);
 			ForeColor = Color.White;
-			Name = "Form1";
+			Name = "Home";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "EPI CONTROL";
-			Load += Form1_Load;
+			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -392,8 +391,8 @@
 			panel6.ResumeLayout(false);
 			panel7.ResumeLayout(false);
 			panel8.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			panel10.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -417,11 +416,11 @@
 		private Panel panel7;
 		private Button button6;
 		private Panel panel8;
-		private Button button7;
+		private Button btn_normasRegulamentadoras;
 		private PictureBox pictureBox2;
 		private Panel panel9;
 		private Button button8;
 		private Panel panel10;
-		private Button button9;
+		private Button btn_sair;
 	}
 }

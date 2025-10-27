@@ -3,7 +3,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.deps.json
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.runtimeconfig.json
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.pdb
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Form1.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.GenerateResource.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.GeneratedMSBuildEditorConfig.editorconfig
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.AssemblyInfoInputs.cache
@@ -17,3 +16,5 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.genruntimeconfig.ca
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\ref\EpiControl.dll
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.backup.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Home.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.NormasRegulamentadoras.resources
