@@ -35,6 +35,8 @@
 			pictureBox1 = new PictureBox();
 			button2 = new Button();
 			flowLayoutPanel1 = new FlowLayoutPanel();
+			panel9 = new Panel();
+			button8 = new Button();
 			panel2 = new Panel();
 			panel3 = new Panel();
 			button1 = new Button();
@@ -48,9 +50,13 @@
 			button6 = new Button();
 			panel8 = new Panel();
 			button7 = new Button();
+			pictureBox2 = new PictureBox();
+			panel10 = new Panel();
+			button9 = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
+			panel9.SuspendLayout();
 			panel2.SuspendLayout();
 			panel3.SuspendLayout();
 			panel4.SuspendLayout();
@@ -58,6 +64,8 @@
 			panel6.SuspendLayout();
 			panel7.SuspendLayout();
 			panel8.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+			panel10.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panel1
@@ -121,6 +129,7 @@
 			// flowLayoutPanel1
 			// 
 			flowLayoutPanel1.BackColor = Color.Black;
+			flowLayoutPanel1.Controls.Add(panel9);
 			flowLayoutPanel1.Controls.Add(panel2);
 			flowLayoutPanel1.Controls.Add(panel3);
 			flowLayoutPanel1.Controls.Add(panel4);
@@ -128,17 +137,43 @@
 			flowLayoutPanel1.Controls.Add(panel6);
 			flowLayoutPanel1.Controls.Add(panel7);
 			flowLayoutPanel1.Controls.Add(panel8);
+			flowLayoutPanel1.Controls.Add(panel10);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
 			flowLayoutPanel1.Size = new Size(200, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
+			// panel9
+			// 
+			panel9.BackColor = Color.Black;
+			panel9.Controls.Add(button8);
+			panel9.Location = new Point(0, 0);
+			panel9.Margin = new Padding(0);
+			panel9.Name = "panel9";
+			panel9.RightToLeft = RightToLeft.No;
+			panel9.Size = new Size(200, 62);
+			panel9.TabIndex = 10;
+			// 
+			// button8
+			// 
+			button8.BackColor = Color.FromArgb(64, 64, 64);
+			button8.FlatAppearance.BorderSize = 0;
+			button8.FlatStyle = FlatStyle.Flat;
+			button8.Image = (Image)resources.GetObject("button8.Image");
+			button8.ImageAlign = ContentAlignment.MiddleLeft;
+			button8.Location = new Point(0, 0);
+			button8.Name = "button8";
+			button8.Size = new Size(220, 54);
+			button8.TabIndex = 2;
+			button8.Text = "Home";
+			button8.UseVisualStyleBackColor = false;
+			// 
 			// panel2
 			// 
 			panel2.BackColor = Color.Black;
 			panel2.Controls.Add(button2);
-			panel2.Location = new Point(0, 0);
+			panel2.Location = new Point(0, 62);
 			panel2.Margin = new Padding(0);
 			panel2.Name = "panel2";
 			panel2.RightToLeft = RightToLeft.No;
@@ -149,7 +184,7 @@
 			// 
 			panel3.BackColor = Color.Black;
 			panel3.Controls.Add(button1);
-			panel3.Location = new Point(0, 62);
+			panel3.Location = new Point(0, 124);
 			panel3.Margin = new Padding(0);
 			panel3.Name = "panel3";
 			panel3.RightToLeft = RightToLeft.No;
@@ -174,7 +209,7 @@
 			// 
 			panel4.BackColor = Color.Black;
 			panel4.Controls.Add(button3);
-			panel4.Location = new Point(0, 124);
+			panel4.Location = new Point(0, 186);
 			panel4.Margin = new Padding(0);
 			panel4.Name = "panel4";
 			panel4.RightToLeft = RightToLeft.No;
@@ -199,7 +234,7 @@
 			// 
 			panel5.BackColor = Color.Black;
 			panel5.Controls.Add(button4);
-			panel5.Location = new Point(0, 186);
+			panel5.Location = new Point(0, 248);
 			panel5.Margin = new Padding(0);
 			panel5.Name = "panel5";
 			panel5.RightToLeft = RightToLeft.No;
@@ -224,7 +259,7 @@
 			// 
 			panel6.BackColor = Color.Black;
 			panel6.Controls.Add(button5);
-			panel6.Location = new Point(0, 248);
+			panel6.Location = new Point(0, 310);
 			panel6.Margin = new Padding(0);
 			panel6.Name = "panel6";
 			panel6.RightToLeft = RightToLeft.No;
@@ -249,7 +284,7 @@
 			// 
 			panel7.BackColor = Color.Black;
 			panel7.Controls.Add(button6);
-			panel7.Location = new Point(0, 310);
+			panel7.Location = new Point(0, 372);
 			panel7.Margin = new Padding(0);
 			panel7.Name = "panel7";
 			panel7.RightToLeft = RightToLeft.No;
@@ -274,7 +309,7 @@
 			// 
 			panel8.BackColor = Color.Black;
 			panel8.Controls.Add(button7);
-			panel8.Location = new Point(0, 372);
+			panel8.Location = new Point(0, 434);
 			panel8.Margin = new Padding(0);
 			panel8.Name = "panel8";
 			panel8.RightToLeft = RightToLeft.No;
@@ -292,14 +327,51 @@
 			button7.Name = "button7";
 			button7.Size = new Size(220, 54);
 			button7.TabIndex = 2;
-			button7.Text = "Norma";
+			button7.Text = "Normas Regulamentadoras";
 			button7.UseVisualStyleBackColor = false;
+			// 
+			// pictureBox2
+			// 
+			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+			pictureBox2.Location = new Point(465, 52);
+			pictureBox2.Name = "pictureBox2";
+			pictureBox2.Size = new Size(603, 580);
+			pictureBox2.TabIndex = 4;
+			pictureBox2.TabStop = false;
+			pictureBox2.Click += pictureBox2_Click;
+			// 
+			// panel10
+			// 
+			panel10.BackColor = Color.Black;
+			panel10.Controls.Add(button9);
+			panel10.Location = new Point(0, 496);
+			panel10.Margin = new Padding(0);
+			panel10.Name = "panel10";
+			panel10.RightToLeft = RightToLeft.No;
+			panel10.Size = new Size(200, 62);
+			panel10.TabIndex = 10;
+			// 
+			// button9
+			// 
+			button9.BackColor = Color.FromArgb(64, 64, 64);
+			button9.FlatAppearance.BorderSize = 0;
+			button9.FlatStyle = FlatStyle.Flat;
+			button9.Image = (Image)resources.GetObject("button9.Image");
+			button9.ImageAlign = ContentAlignment.MiddleLeft;
+			button9.Location = new Point(0, 0);
+			button9.Name = "button9";
+			button9.Size = new Size(220, 54);
+			button9.TabIndex = 2;
+			button9.Text = "Sair";
+			button9.UseVisualStyleBackColor = false;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = Color.White;
 			ClientSize = new Size(1283, 644);
+			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
 			Controls.Add(panel1);
 			Font = new Font("Segoe UI", 9F);
@@ -312,6 +384,7 @@
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			flowLayoutPanel1.ResumeLayout(false);
+			panel9.ResumeLayout(false);
 			panel2.ResumeLayout(false);
 			panel3.ResumeLayout(false);
 			panel4.ResumeLayout(false);
@@ -319,6 +392,8 @@
 			panel6.ResumeLayout(false);
 			panel7.ResumeLayout(false);
 			panel8.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+			panel10.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -343,5 +418,10 @@
 		private Button button6;
 		private Panel panel8;
 		private Button button7;
+		private PictureBox pictureBox2;
+		private Panel panel9;
+		private Button button8;
+		private Panel panel10;
+		private Button button9;
 	}
 }

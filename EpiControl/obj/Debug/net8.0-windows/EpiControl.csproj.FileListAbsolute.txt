@@ -16,3 +16,4 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.genruntimeconfig.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\ref\EpiControl.dll
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.backup.resources
