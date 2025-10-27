@@ -1,6 +1,6 @@
 ﻿namespace EpiControl
 {
-	partial class NormasRegulamentadoras
+	partial class CadastrarNr
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NormasRegulamentadoras));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarNr));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -198,7 +198,7 @@
 			btn_voltar.UseVisualStyleBackColor = false;
 			btn_voltar.Click += btn_voltar_Click;
 			// 
-			// NormasRegulamentadoras
+			// Cadastrar
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
@@ -216,7 +216,7 @@
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(label3);
-			Name = "NormasRegulamentadoras";
+			Name = "Cadastrar";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();

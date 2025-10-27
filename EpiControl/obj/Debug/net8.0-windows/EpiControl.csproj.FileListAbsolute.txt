@@ -17,4 +17,6 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\ref\EpiControl.dll
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.backup.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Home.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.NormasRegulamentadoras.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources

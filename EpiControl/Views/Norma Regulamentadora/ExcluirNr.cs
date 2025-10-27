@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl
+namespace EpiControl.Views.Norma_Regulamentadora
 {
-	public partial class NormasRegulamentadoras : Form
+	public partial class ExcluirNr : Form
 	{
-		public NormasRegulamentadoras()
+		public ExcluirNr()
 		{
 			InitializeComponent();
 		}

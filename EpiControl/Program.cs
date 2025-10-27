@@ -1,3 +1,5 @@
+using EpiControl.Views.Norma_Regulamentadora;
+
 namespace EpiControl
 {
     internal static class Program

@@ -11,7 +11,7 @@ namespace EpiControl
 
 		private void btn_normasRegulamentadoras_Click(object sender, EventArgs e)
 		{
-			NormasRegulamentadoras normasRegulamentadoras = new NormasRegulamentadoras();
+			CadastrarNr normasRegulamentadoras = new CadastrarNr();
 
 			normasRegulamentadoras.FormClosed += (s, args) => this.Show();
 			this.Hide();
