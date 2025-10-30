@@ -45,6 +45,7 @@
 			textBox2 = new TextBox();
 			label4 = new Label();
 			label3 = new Label();
+			button2 = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
@@ -198,11 +199,24 @@
 			label3.TabIndex = 22;
 			label3.Text = "Numero da NR*";
 			// 
+			// button2
+			// 
+			button2.BackColor = Color.FromArgb(136, 186, 163);
+			button2.FlatAppearance.BorderSize = 0;
+			button2.FlatStyle = FlatStyle.Flat;
+			button2.Location = new Point(262, 100);
+			button2.Name = "button2";
+			button2.Size = new Size(75, 23);
+			button2.TabIndex = 46;
+			button2.Text = "Consultar";
+			button2.UseVisualStyleBackColor = false;
+			// 
 			// EditarNr
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(626, 498);
+			Controls.Add(button2);
 			Controls.Add(btn_voltar);
 			Controls.Add(button1);
 			Controls.Add(numericUpDown1);
@@ -244,5 +258,6 @@
 		private TextBox textBox2;
 		private Label label4;
 		private Label label3;
+		private Button button2;
 	}
 }

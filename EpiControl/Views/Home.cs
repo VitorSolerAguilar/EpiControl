@@ -1,4 +1,4 @@
-
+using EpiControl.Views.Fornecedores;
 
 namespace EpiControl
 {
@@ -21,6 +21,15 @@ namespace EpiControl
 		private void btn_sair_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void btn_cadastroFornecedor_Click(object sender, EventArgs e)
+		{
+			CadastrarFornecedor cadastrarFornecedor = new CadastrarFornecedor();
+
+			cadastrarFornecedor.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarFornecedor.Show();
 		}
 	}
 }

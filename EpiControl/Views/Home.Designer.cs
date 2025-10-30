@@ -39,7 +39,7 @@
 			button8 = new Button();
 			panel2 = new Panel();
 			panel3 = new Panel();
-			button1 = new Button();
+			btn_cadastroFornecedor = new Button();
 			panel4 = new Panel();
 			button3 = new Button();
 			panel5 = new Panel();
@@ -113,7 +113,7 @@
 			// 
 			// button2
 			// 
-			button2.BackColor = Color.FromArgb(64, 64, 64);
+			button2.BackColor = Color.FromArgb(74, 146, 247);
 			button2.FlatAppearance.BorderSize = 0;
 			button2.FlatStyle = FlatStyle.Flat;
 			button2.Image = (Image)resources.GetObject("button2.Image");
@@ -127,7 +127,7 @@
 			// 
 			// flowLayoutPanel1
 			// 
-			flowLayoutPanel1.BackColor = Color.Black;
+			flowLayoutPanel1.BackColor = Color.FromArgb(0, 45, 71);
 			flowLayoutPanel1.Controls.Add(panel9);
 			flowLayoutPanel1.Controls.Add(panel2);
 			flowLayoutPanel1.Controls.Add(panel3);
@@ -145,7 +145,7 @@
 			// 
 			// panel9
 			// 
-			panel9.BackColor = Color.Black;
+			panel9.BackColor = Color.FromArgb(0, 45, 71);
 			panel9.Controls.Add(button8);
 			panel9.Location = new Point(0, 0);
 			panel9.Margin = new Padding(0);
@@ -156,7 +156,7 @@
 			// 
 			// button8
 			// 
-			button8.BackColor = Color.FromArgb(64, 64, 64);
+			button8.BackColor = Color.FromArgb(74, 146, 247);
 			button8.FlatAppearance.BorderSize = 0;
 			button8.FlatStyle = FlatStyle.Flat;
 			button8.Image = (Image)resources.GetObject("button8.Image");
@@ -170,7 +170,7 @@
 			// 
 			// panel2
 			// 
-			panel2.BackColor = Color.Black;
+			panel2.BackColor = Color.FromArgb(0, 45, 71);
 			panel2.Controls.Add(button2);
 			panel2.Location = new Point(0, 62);
 			panel2.Margin = new Padding(0);
@@ -181,8 +181,8 @@
 			// 
 			// panel3
 			// 
-			panel3.BackColor = Color.Black;
-			panel3.Controls.Add(button1);
+			panel3.BackColor = Color.FromArgb(0, 45, 71);
+			panel3.Controls.Add(btn_cadastroFornecedor);
 			panel3.Location = new Point(0, 124);
 			panel3.Margin = new Padding(0);
 			panel3.Name = "panel3";
@@ -190,23 +190,24 @@
 			panel3.Size = new Size(200, 62);
 			panel3.TabIndex = 7;
 			// 
-			// button1
+			// btn_cadastroFornecedor
 			// 
-			button1.BackColor = Color.FromArgb(64, 64, 64);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.Image = (Image)resources.GetObject("button1.Image");
-			button1.ImageAlign = ContentAlignment.MiddleLeft;
-			button1.Location = new Point(0, 0);
-			button1.Name = "button1";
-			button1.Size = new Size(220, 54);
-			button1.TabIndex = 2;
-			button1.Text = "Cadastro Fonecedor";
-			button1.UseVisualStyleBackColor = false;
+			btn_cadastroFornecedor.BackColor = Color.FromArgb(74, 146, 247);
+			btn_cadastroFornecedor.FlatAppearance.BorderSize = 0;
+			btn_cadastroFornecedor.FlatStyle = FlatStyle.Flat;
+			btn_cadastroFornecedor.Image = (Image)resources.GetObject("btn_cadastroFornecedor.Image");
+			btn_cadastroFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
+			btn_cadastroFornecedor.Location = new Point(0, 0);
+			btn_cadastroFornecedor.Name = "btn_cadastroFornecedor";
+			btn_cadastroFornecedor.Size = new Size(220, 54);
+			btn_cadastroFornecedor.TabIndex = 2;
+			btn_cadastroFornecedor.Text = "Cadastro Fonecedor";
+			btn_cadastroFornecedor.UseVisualStyleBackColor = false;
+			btn_cadastroFornecedor.Click += btn_cadastroFornecedor_Click;
 			// 
 			// panel4
 			// 
-			panel4.BackColor = Color.Black;
+			panel4.BackColor = Color.FromArgb(0, 45, 71);
 			panel4.Controls.Add(button3);
 			panel4.Location = new Point(0, 186);
 			panel4.Margin = new Padding(0);
@@ -217,7 +218,7 @@
 			// 
 			// button3
 			// 
-			button3.BackColor = Color.FromArgb(64, 64, 64);
+			button3.BackColor = Color.FromArgb(74, 146, 247);
 			button3.FlatAppearance.BorderSize = 0;
 			button3.FlatStyle = FlatStyle.Flat;
 			button3.Image = (Image)resources.GetObject("button3.Image");
@@ -231,7 +232,7 @@
 			// 
 			// panel5
 			// 
-			panel5.BackColor = Color.Black;
+			panel5.BackColor = Color.FromArgb(0, 45, 71);
 			panel5.Controls.Add(button4);
 			panel5.Location = new Point(0, 248);
 			panel5.Margin = new Padding(0);
@@ -242,7 +243,7 @@
 			// 
 			// button4
 			// 
-			button4.BackColor = Color.FromArgb(64, 64, 64);
+			button4.BackColor = Color.FromArgb(74, 146, 247);
 			button4.FlatAppearance.BorderSize = 0;
 			button4.FlatStyle = FlatStyle.Flat;
 			button4.Image = (Image)resources.GetObject("button4.Image");
@@ -256,7 +257,7 @@
 			// 
 			// panel6
 			// 
-			panel6.BackColor = Color.Black;
+			panel6.BackColor = Color.FromArgb(0, 45, 71);
 			panel6.Controls.Add(button5);
 			panel6.Location = new Point(0, 310);
 			panel6.Margin = new Padding(0);
@@ -267,7 +268,7 @@
 			// 
 			// button5
 			// 
-			button5.BackColor = Color.FromArgb(64, 64, 64);
+			button5.BackColor = Color.FromArgb(74, 146, 247);
 			button5.FlatAppearance.BorderSize = 0;
 			button5.FlatStyle = FlatStyle.Flat;
 			button5.Image = (Image)resources.GetObject("button5.Image");
@@ -281,7 +282,7 @@
 			// 
 			// panel7
 			// 
-			panel7.BackColor = Color.Black;
+			panel7.BackColor = Color.FromArgb(0, 45, 71);
 			panel7.Controls.Add(button6);
 			panel7.Location = new Point(0, 372);
 			panel7.Margin = new Padding(0);
@@ -292,7 +293,7 @@
 			// 
 			// button6
 			// 
-			button6.BackColor = Color.FromArgb(64, 64, 64);
+			button6.BackColor = Color.FromArgb(74, 146, 247);
 			button6.FlatAppearance.BorderSize = 0;
 			button6.FlatStyle = FlatStyle.Flat;
 			button6.Image = (Image)resources.GetObject("button6.Image");
@@ -306,7 +307,7 @@
 			// 
 			// panel8
 			// 
-			panel8.BackColor = Color.Black;
+			panel8.BackColor = Color.FromArgb(0, 45, 71);
 			panel8.Controls.Add(btn_normasRegulamentadoras);
 			panel8.Location = new Point(0, 434);
 			panel8.Margin = new Padding(0);
@@ -317,7 +318,7 @@
 			// 
 			// btn_normasRegulamentadoras
 			// 
-			btn_normasRegulamentadoras.BackColor = Color.FromArgb(64, 64, 64);
+			btn_normasRegulamentadoras.BackColor = Color.FromArgb(74, 146, 247);
 			btn_normasRegulamentadoras.FlatAppearance.BorderSize = 0;
 			btn_normasRegulamentadoras.FlatStyle = FlatStyle.Flat;
 			btn_normasRegulamentadoras.Image = (Image)resources.GetObject("btn_normasRegulamentadoras.Image");
@@ -332,7 +333,7 @@
 			// 
 			// panel10
 			// 
-			panel10.BackColor = Color.Black;
+			panel10.BackColor = Color.FromArgb(0, 45, 71);
 			panel10.Controls.Add(btn_sair);
 			panel10.Location = new Point(0, 496);
 			panel10.Margin = new Padding(0);
@@ -343,7 +344,7 @@
 			// 
 			// btn_sair
 			// 
-			btn_sair.BackColor = Color.FromArgb(64, 64, 64);
+			btn_sair.BackColor = Color.FromArgb(74, 146, 247);
 			btn_sair.FlatAppearance.BorderSize = 0;
 			btn_sair.FlatStyle = FlatStyle.Flat;
 			btn_sair.Image = (Image)resources.GetObject("btn_sair.Image");
@@ -406,7 +407,7 @@
 		private FlowLayoutPanel flowLayoutPanel1;
 		private Panel panel2;
 		private Panel panel3;
-		private Button button1;
+		private Button btn_cadastroFornecedor;
 		private Panel panel4;
 		private Button button3;
 		private Panel panel5;

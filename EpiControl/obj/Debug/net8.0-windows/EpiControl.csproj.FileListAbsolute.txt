@@ -20,3 +20,5 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Home.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.CadastrarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ListarNrs.resources
