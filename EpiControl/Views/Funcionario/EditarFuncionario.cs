@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EpiControl.Views.Funcionario
 {
-    public partial class EditarFuncionario : Form
-    {
-        public EditarFuncionario()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class EditarFuncionario : Form
+	{
+		public EditarFuncionario()
+		{
+			InitializeComponent();
+		}
+	}
 }

@@ -411,6 +411,7 @@
 			Controls.Add(label1);
 			Controls.Add(btn_voltar);
 			Controls.Add(button1);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "CadastrarFornecedor";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);

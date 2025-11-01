@@ -230,6 +230,7 @@
 			Controls.Add(label4);
 			Controls.Add(label3);
 			Controls.Add(panel1);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "EditarNr";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);

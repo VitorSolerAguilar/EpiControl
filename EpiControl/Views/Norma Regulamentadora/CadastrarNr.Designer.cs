@@ -216,6 +216,7 @@
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(label3);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "CadastrarNr";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);

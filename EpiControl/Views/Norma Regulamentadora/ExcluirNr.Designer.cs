@@ -46,6 +46,7 @@
 			btn_voltar = new Button();
 			button1 = new Button();
 			button2 = new Button();
+			label8 = new Label();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
@@ -96,14 +97,14 @@
 			// 
 			// numericUpDown1
 			// 
-			numericUpDown1.Location = new Point(187, 86);
+			numericUpDown1.Location = new Point(187, 71);
 			numericUpDown1.Name = "numericUpDown1";
 			numericUpDown1.Size = new Size(49, 23);
 			numericUpDown1.TabIndex = 41;
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(187, 283);
+			textBox3.Location = new Point(187, 296);
 			textBox3.Name = "textBox3";
 			textBox3.ReadOnly = true;
 			textBox3.Size = new Size(349, 23);
@@ -112,7 +113,7 @@
 			// label7
 			// 
 			label7.AutoSize = true;
-			label7.Location = new Point(57, 283);
+			label7.Location = new Point(57, 296);
 			label7.Name = "label7";
 			label7.Size = new Size(100, 15);
 			label7.TabIndex = 39;
@@ -121,7 +122,7 @@
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(57, 341);
+			label6.Location = new Point(57, 354);
 			label6.Name = "label6";
 			label6.Size = new Size(98, 15);
 			label6.TabIndex = 38;
@@ -130,14 +131,14 @@
 			// dateTimePicker1
 			// 
 			dateTimePicker1.Enabled = false;
-			dateTimePicker1.Location = new Point(187, 335);
+			dateTimePicker1.Location = new Point(187, 348);
 			dateTimePicker1.Name = "dateTimePicker1";
 			dateTimePicker1.Size = new Size(200, 23);
 			dateTimePicker1.TabIndex = 37;
 			// 
 			// richTextBox1
 			// 
-			richTextBox1.Location = new Point(187, 193);
+			richTextBox1.Location = new Point(187, 206);
 			richTextBox1.Name = "richTextBox1";
 			richTextBox1.ReadOnly = true;
 			richTextBox1.Size = new Size(349, 74);
@@ -147,7 +148,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(57, 196);
+			label5.Location = new Point(57, 209);
 			label5.Name = "label5";
 			label5.Size = new Size(58, 15);
 			label5.TabIndex = 35;
@@ -155,7 +156,7 @@
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(187, 141);
+			textBox2.Location = new Point(187, 154);
 			textBox2.Name = "textBox2";
 			textBox2.ReadOnly = true;
 			textBox2.Size = new Size(349, 23);
@@ -164,7 +165,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(57, 141);
+			label4.Location = new Point(57, 154);
 			label4.Name = "label4";
 			label4.Size = new Size(37, 15);
 			label4.TabIndex = 33;
@@ -173,7 +174,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(57, 94);
+			label3.Location = new Point(57, 73);
 			label3.Name = "label3";
 			label3.Size = new Size(86, 15);
 			label3.TabIndex = 32;
@@ -207,19 +208,28 @@
 			// 
 			button2.BackColor = Color.FromArgb(136, 186, 163);
 			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatStyle = FlatStyle.Flat;
-			button2.Location = new Point(261, 86);
+			button2.Location = new Point(263, 71);
 			button2.Name = "button2";
 			button2.Size = new Size(75, 23);
 			button2.TabIndex = 45;
 			button2.Text = "Consultar";
 			button2.UseVisualStyleBackColor = false;
 			// 
+			// label8
+			// 
+			label8.AutoSize = true;
+			label8.Location = new Point(-33, 110);
+			label8.Name = "label8";
+			label8.Size = new Size(697, 15);
+			label8.TabIndex = 50;
+			label8.Text = "__________________________________________________________________________________________________________________________________________";
+			// 
 			// ExcluirNr
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(626, 498);
+			Controls.Add(label8);
 			Controls.Add(button2);
 			Controls.Add(btn_voltar);
 			Controls.Add(button1);
@@ -234,6 +244,7 @@
 			Controls.Add(label4);
 			Controls.Add(label3);
 			Controls.Add(panel1);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "ExcluirNr";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
@@ -263,5 +274,6 @@
 		private Button btn_voltar;
 		private Button button1;
 		private Button button2;
+		private Label label8;
 	}
 }

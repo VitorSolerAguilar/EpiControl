@@ -5,6 +5,9 @@
     <Compile Update="backup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Emprestimo\CadastrarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\EPI\CadastrarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
