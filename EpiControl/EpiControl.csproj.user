@@ -47,5 +47,11 @@
     <Compile Update="Views\Treinamentos\CadastrarTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Treinamentos\EditarTreinamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Treinamentos\ExcluirTreinamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

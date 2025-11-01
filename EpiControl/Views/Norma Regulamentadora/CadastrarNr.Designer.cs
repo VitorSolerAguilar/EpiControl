@@ -139,7 +139,7 @@
 			// 
 			dateTimePicker1.Location = new Point(187, 337);
 			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(200, 23);
+			dateTimePicker1.Size = new Size(234, 23);
 			dateTimePicker1.TabIndex = 15;
 			// 
 			// label6
@@ -198,7 +198,7 @@
 			btn_voltar.UseVisualStyleBackColor = false;
 			btn_voltar.Click += btn_voltar_Click;
 			// 
-			// Cadastrar
+			// CadastrarNr
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
@@ -216,7 +216,7 @@
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(label3);
-			Name = "Cadastrar";
+			Name = "CadastrarNr";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
