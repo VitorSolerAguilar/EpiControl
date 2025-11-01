@@ -21,4 +21,8 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resourc
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.CadastrarFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ListarNrs.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.EditarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.ExcluirFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.CadastrarEmprestimo.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.ListarFornecedoresFFF.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ListarNrsFFF.resources

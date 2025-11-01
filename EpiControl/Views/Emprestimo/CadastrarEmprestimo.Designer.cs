@@ -1,6 +1,6 @@
-﻿namespace EpiControl.Views.Norma_Regulamentadora
+﻿namespace EpiControl.Views.Emprestimo
 {
-	partial class ListarNrs
+	partial class CadastrarEmprestimo
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarNrs));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarEmprestimo));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -46,8 +46,8 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(1283, 46);
-			panel1.TabIndex = 7;
+			panel1.Size = new Size(626, 46);
+			panel1.TabIndex = 6;
 			// 
 			// label2
 			// 
@@ -56,9 +56,9 @@
 			label2.ForeColor = Color.Black;
 			label2.Location = new Point(57, 4);
 			label2.Name = "label2";
-			label2.Size = new Size(150, 37);
+			label2.Size = new Size(332, 37);
 			label2.TabIndex = 3;
-			label2.Text = "LISTAR NRs";
+			label2.Text = "CADASTRAR EMPRESTIMO";
 			// 
 			// label1
 			// 
@@ -80,14 +80,15 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
-			// ListasNrs
+			// CadastrarEmprestimo
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1283, 644);
+			ClientSize = new Size(626, 498);
 			Controls.Add(panel1);
-			Name = "ListasNrs";
-			Text = "ListasNrs";
+			Icon = (Icon)resources.GetObject("$this.Icon");
+			Name = "CadastrarEmprestimo";
+			Text = "CadastrarEmprestimo";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

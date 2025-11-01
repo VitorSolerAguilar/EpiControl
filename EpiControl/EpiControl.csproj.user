@@ -4,10 +4,19 @@
     <Compile Update="backup.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Emprestimo\CadastrarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Fornecedores\CadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Fornecedores\EditarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Fornecedores\ExcluirFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Fornecedores\ListarFornecedoresFFF.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Home.cs">
@@ -22,7 +31,7 @@
     <Compile Update="Views\Norma Regulamentadora\ExcluirNr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Norma Regulamentadora\ListarNrs.cs">
+    <Compile Update="Views\Norma Regulamentadora\ListarNrsFFF.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Norma_Regulamentadora
+namespace EpiControl.Views.Fornecedores
 {
-	public partial class ListarNrs : Form
+	public partial class ListarFornecedoresFFF : Form
 	{
-		public ListarNrs()
+		public ListarFornecedoresFFF()
 		{
 			InitializeComponent();
 		}

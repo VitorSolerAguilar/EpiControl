@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Estoque\" />
-    <Folder Include="Views\Emprestimo\" />
     <Folder Include="Views\Treinamentos\" />
   </ItemGroup>
 
