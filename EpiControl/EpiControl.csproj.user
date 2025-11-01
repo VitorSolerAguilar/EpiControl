@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
     <Compile Update="backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Emprestimo\CadastrarEmprestimo.cs">
+    <Compile Update="Views\EPI\CadastrarEpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EPI\EditarEpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EPI\ExcluirEpi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Fornecedores\CadastrarFornecedor.cs">
@@ -16,7 +23,13 @@
     <Compile Update="Views\Fornecedores\ExcluirFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Fornecedores\ListarFornecedoresFFF.cs">
+    <Compile Update="Views\Funcionario\CadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionario\EditarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Funcionario\ExcluirFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Home.cs">
@@ -31,7 +44,7 @@
     <Compile Update="Views\Norma Regulamentadora\ExcluirNr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Norma Regulamentadora\ListarNrsFFF.cs">
+    <Compile Update="Views\Treinamentos\CadastrarTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

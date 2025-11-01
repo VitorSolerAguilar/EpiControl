@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Fornecedores
+namespace EpiControl.Views.Funcionario
 {
-	public partial class ListarFornecedoresFFF : Form
-	{
-		public ListarFornecedoresFFF()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class CadastrarFuncionario : Form
+    {
+        public CadastrarFuncionario()
+        {
+            InitializeComponent();
+        }
+    }
 }

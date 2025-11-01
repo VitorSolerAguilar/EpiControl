@@ -64,6 +64,7 @@
 			label17 = new Label();
 			label18 = new Label();
 			pictureBox1 = new PictureBox();
+			button2 = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -280,6 +281,7 @@
 			// 
 			textBox2.Location = new Point(158, 132);
 			textBox2.Name = "textBox2";
+			textBox2.ReadOnly = true;
 			textBox2.Size = new Size(231, 23);
 			textBox2.TabIndex = 68;
 			// 
@@ -328,7 +330,7 @@
 			button1.Name = "button1";
 			button1.Size = new Size(75, 40);
 			button1.TabIndex = 63;
-			button1.Text = " Salvar";
+			button1.Text = "Salvar";
 			button1.UseVisualStyleBackColor = false;
 			// 
 			// panel1
@@ -374,11 +376,24 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
+			// button2
+			// 
+			button2.BackColor = Color.FromArgb(136, 186, 163);
+			button2.FlatAppearance.BorderSize = 0;
+			button2.FlatStyle = FlatStyle.Flat;
+			button2.Location = new Point(398, 102);
+			button2.Name = "button2";
+			button2.Size = new Size(75, 23);
+			button2.TabIndex = 95;
+			button2.Text = "Consultar";
+			button2.UseVisualStyleBackColor = false;
+			// 
 			// EditarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(534, 701);
+			Controls.Add(button2);
 			Controls.Add(panel1);
 			Controls.Add(comboBox1);
 			Controls.Add(label16);
@@ -457,5 +472,6 @@
 		private Label label17;
 		private Label label18;
 		private PictureBox pictureBox1;
+		private Button button2;
 	}
 }

@@ -1,6 +1,6 @@
-﻿namespace EpiControl.Views.Fornecedores
+﻿namespace EpiControl.Views.Treinamentos
 {
-	partial class ListarFornecedoresFFF
+	partial class CadastrarTreinamento
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -31,7 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Listar";
+			this.Text = "CadastrarTreinamento";
 		}
 
 		#endregion

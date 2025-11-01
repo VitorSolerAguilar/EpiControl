@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Norma_Regulamentadora
+namespace EpiControl.Views.Funcionario
 {
-	public partial class ListarNrsFFF : Form
-	{
-		public ListarNrsFFF()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class EditarFuncionario : Form
+    {
+        public EditarFuncionario()
+        {
+            InitializeComponent();
+        }
+    }
 }

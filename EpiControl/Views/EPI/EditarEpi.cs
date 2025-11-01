@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Emprestimo
+namespace EpiControl.Views.EPI
 {
-	public partial class CadastrarEmprestimo : Form
-	{
-		public CadastrarEmprestimo()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class EditarEpi : Form
+    {
+        public EditarEpi()
+        {
+            InitializeComponent();
+        }
+    }
 }
