@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EpiControl.Views.Funcionario
 {
-    public partial class CadastrarFuncionario : Form
-    {
-        public CadastrarFuncionario()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class CadastrarFuncionario : Form
+	{
+		public CadastrarFuncionario()
+		{
+			InitializeComponent();
+		}
+	}
 }
