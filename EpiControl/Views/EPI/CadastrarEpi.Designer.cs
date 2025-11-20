@@ -63,7 +63,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(800, 46);
+			panel1.Size = new Size(484, 46);
 			panel1.TabIndex = 53;
 			// 
 			// label2
@@ -100,7 +100,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(12, 71);
+			label3.Location = new Point(57, 76);
 			label3.Name = "label3";
 			label3.Size = new Size(43, 15);
 			label3.TabIndex = 54;
@@ -108,15 +108,15 @@
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new Point(61, 68);
+			textBox1.Location = new Point(153, 68);
 			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(325, 23);
+			textBox1.Size = new Size(278, 23);
 			textBox1.TabIndex = 55;
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(12, 119);
+			label4.Location = new Point(57, 113);
 			label4.Name = "label4";
 			label4.Size = new Size(90, 15);
 			label4.TabIndex = 56;
@@ -124,7 +124,7 @@
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(108, 116);
+			textBox2.Location = new Point(153, 105);
 			textBox2.Name = "textBox2";
 			textBox2.Size = new Size(132, 23);
 			textBox2.TabIndex = 57;
@@ -132,7 +132,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(263, 119);
+			label5.Location = new Point(58, 287);
 			label5.Name = "label5";
 			label5.Size = new Size(42, 15);
 			label5.TabIndex = 58;
@@ -141,7 +141,7 @@
 			// radioButton1
 			// 
 			radioButton1.AutoSize = true;
-			radioButton1.Location = new Point(311, 119);
+			radioButton1.Location = new Point(153, 285);
 			radioButton1.Name = "radioButton1";
 			radioButton1.Size = new Size(53, 19);
 			radioButton1.TabIndex = 59;
@@ -152,7 +152,7 @@
 			// radioButton2
 			// 
 			radioButton2.AutoSize = true;
-			radioButton2.Location = new Point(370, 120);
+			radioButton2.Location = new Point(212, 285);
 			radioButton2.Name = "radioButton2";
 			radioButton2.Size = new Size(61, 19);
 			radioButton2.TabIndex = 60;
@@ -163,7 +163,7 @@
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(12, 163);
+			label6.Location = new Point(57, 148);
 			label6.Name = "label6";
 			label6.Size = new Size(26, 15);
 			label6.TabIndex = 61;
@@ -171,7 +171,7 @@
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(44, 160);
+			textBox3.Location = new Point(153, 140);
 			textBox3.Name = "textBox3";
 			textBox3.Size = new Size(132, 23);
 			textBox3.TabIndex = 62;
@@ -179,7 +179,7 @@
 			// label7
 			// 
 			label7.AutoSize = true;
-			label7.Location = new Point(221, 163);
+			label7.Location = new Point(57, 222);
 			label7.Name = "label7";
 			label7.Size = new Size(90, 15);
 			label7.TabIndex = 63;
@@ -187,15 +187,16 @@
 			// 
 			// dateTimePicker1
 			// 
-			dateTimePicker1.Location = new Point(311, 160);
+			dateTimePicker1.Format = DateTimePickerFormat.Short;
+			dateTimePicker1.Location = new Point(153, 214);
 			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(200, 23);
+			dateTimePicker1.Size = new Size(132, 23);
 			dateTimePicker1.TabIndex = 64;
 			// 
 			// label8
 			// 
 			label8.AutoSize = true;
-			label8.Location = new Point(12, 205);
+			label8.Location = new Point(57, 184);
 			label8.Name = "label8";
 			label8.Size = new Size(59, 15);
 			label8.TabIndex = 65;
@@ -203,7 +204,7 @@
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(78, 202);
+			textBox4.Location = new Point(153, 176);
 			textBox4.Name = "textBox4";
 			textBox4.Size = new Size(132, 23);
 			textBox4.TabIndex = 66;
@@ -211,7 +212,7 @@
 			// label9
 			// 
 			label9.AutoSize = true;
-			label9.Location = new Point(235, 205);
+			label9.Location = new Point(57, 255);
 			label9.Name = "label9";
 			label9.Size = new Size(29, 15);
 			label9.TabIndex = 67;
@@ -219,7 +220,7 @@
 			// 
 			// textBox5
 			// 
-			textBox5.Location = new Point(270, 205);
+			textBox5.Location = new Point(153, 252);
 			textBox5.Name = "textBox5";
 			textBox5.Size = new Size(132, 23);
 			textBox5.TabIndex = 68;
@@ -227,7 +228,7 @@
 			// btn_voltar
 			// 
 			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(557, 367);
+			btn_voltar.Location = new Point(275, 337);
 			btn_voltar.Name = "btn_voltar";
 			btn_voltar.Size = new Size(75, 40);
 			btn_voltar.TabIndex = 69;
@@ -240,7 +241,7 @@
 			button1.FlatAppearance.BorderSize = 0;
 			button1.FlatStyle = FlatStyle.Flat;
 			button1.ForeColor = Color.White;
-			button1.Location = new Point(660, 367);
+			button1.Location = new Point(356, 337);
 			button1.Name = "button1";
 			button1.Size = new Size(75, 40);
 			button1.TabIndex = 70;
@@ -251,7 +252,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(484, 411);
 			Controls.Add(button1);
 			Controls.Add(btn_voltar);
 			Controls.Add(textBox5);

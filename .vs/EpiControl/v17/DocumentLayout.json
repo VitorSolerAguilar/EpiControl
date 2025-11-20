@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\EpiControl\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\views\\epi\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\views\\epi\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\views\\epi\\editarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\views\\epi\\editarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\views\\epi\\excluirepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|D:\\EpiControl\\epicontrol\\views\\epi\\excluirepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\views\\epi\\excluirepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -23,6 +27,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CadastrarEpi.cs [Projeto]",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\Views\\EPI\\CadastrarEpi.cs",
+              "RelativeDocumentMoniker": "EpiControl\\Views\\EPI\\CadastrarEpi.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\Views\\EPI\\CadastrarEpi.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\Views\\EPI\\CadastrarEpi.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T17:26:13.808Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EditarEpi.cs [Projeto]",
               "DocumentMoniker": "D:\\EpiControl\\EpiControl\\Views\\EPI\\EditarEpi.cs",
               "RelativeDocumentMoniker": "EpiControl\\Views\\EPI\\EditarEpi.cs",
@@ -34,15 +50,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ExcluirEpi.cs [Projeto]",
               "DocumentMoniker": "D:\\EpiControl\\EpiControl\\Views\\EPI\\ExcluirEpi.cs",
               "RelativeDocumentMoniker": "EpiControl\\Views\\EPI\\ExcluirEpi.cs",
               "ToolTip": "D:\\EpiControl\\EpiControl\\Views\\EPI\\ExcluirEpi.cs [Projeto]",
               "RelativeToolTip": "EpiControl\\Views\\EPI\\ExcluirEpi.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T17:02:49.359Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-11-20T17:02:49.359Z"
             }
           ]
         }

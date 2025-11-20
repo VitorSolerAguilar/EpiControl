@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EpiControl.Views.EPI
 {
-    public partial class CadastrarEpi : Form
-    {
-        public CadastrarEpi()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class CadastrarEpi : Form
+	{
+		public CadastrarEpi()
+		{
+			InitializeComponent();
+		}
+	}
 }
