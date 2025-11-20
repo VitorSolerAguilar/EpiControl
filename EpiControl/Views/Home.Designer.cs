@@ -380,7 +380,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "Home";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "EPICONTROL";
+			Text = "HOME";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
