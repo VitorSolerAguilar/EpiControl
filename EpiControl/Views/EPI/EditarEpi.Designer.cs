@@ -44,13 +44,14 @@
 			label5 = new Label();
 			textBox2 = new TextBox();
 			label4 = new Label();
-			textBox1 = new TextBox();
 			label3 = new Label();
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
 			button2 = new Button();
+			label19 = new Label();
+			comboBox1 = new ComboBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -61,7 +62,7 @@
 			button1.FlatAppearance.BorderSize = 0;
 			button1.FlatStyle = FlatStyle.Flat;
 			button1.ForeColor = Color.White;
-			button1.Location = new Point(660, 389);
+			button1.Location = new Point(390, 359);
 			button1.Name = "button1";
 			button1.Size = new Size(75, 40);
 			button1.TabIndex = 88;
@@ -71,7 +72,7 @@
 			// btn_voltar
 			// 
 			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(557, 389);
+			btn_voltar.Location = new Point(309, 359);
 			btn_voltar.Name = "btn_voltar";
 			btn_voltar.Size = new Size(75, 40);
 			btn_voltar.TabIndex = 87;
@@ -80,7 +81,7 @@
 			// 
 			// textBox5
 			// 
-			textBox5.Location = new Point(270, 227);
+			textBox5.Location = new Point(153, 256);
 			textBox5.Name = "textBox5";
 			textBox5.Size = new Size(132, 23);
 			textBox5.TabIndex = 86;
@@ -88,7 +89,7 @@
 			// label9
 			// 
 			label9.AutoSize = true;
-			label9.Location = new Point(235, 227);
+			label9.Location = new Point(57, 264);
 			label9.Name = "label9";
 			label9.Size = new Size(29, 15);
 			label9.TabIndex = 85;
@@ -96,7 +97,7 @@
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(78, 224);
+			textBox4.Location = new Point(153, 194);
 			textBox4.Name = "textBox4";
 			textBox4.Size = new Size(132, 23);
 			textBox4.TabIndex = 84;
@@ -104,7 +105,7 @@
 			// label8
 			// 
 			label8.AutoSize = true;
-			label8.Location = new Point(12, 227);
+			label8.Location = new Point(57, 202);
 			label8.Name = "label8";
 			label8.Size = new Size(59, 15);
 			label8.TabIndex = 83;
@@ -112,15 +113,16 @@
 			// 
 			// dateTimePicker1
 			// 
-			dateTimePicker1.Location = new Point(311, 182);
+			dateTimePicker1.Format = DateTimePickerFormat.Short;
+			dateTimePicker1.Location = new Point(153, 227);
 			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(200, 23);
+			dateTimePicker1.Size = new Size(132, 23);
 			dateTimePicker1.TabIndex = 82;
 			// 
 			// label7
 			// 
 			label7.AutoSize = true;
-			label7.Location = new Point(221, 185);
+			label7.Location = new Point(57, 233);
 			label7.Name = "label7";
 			label7.Size = new Size(90, 15);
 			label7.TabIndex = 81;
@@ -128,7 +130,7 @@
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(44, 182);
+			textBox3.Location = new Point(153, 163);
 			textBox3.Name = "textBox3";
 			textBox3.Size = new Size(132, 23);
 			textBox3.TabIndex = 80;
@@ -136,7 +138,7 @@
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(12, 185);
+			label6.Location = new Point(57, 171);
 			label6.Name = "label6";
 			label6.Size = new Size(26, 15);
 			label6.TabIndex = 79;
@@ -145,7 +147,7 @@
 			// radioButton2
 			// 
 			radioButton2.AutoSize = true;
-			radioButton2.Location = new Point(370, 142);
+			radioButton2.Location = new Point(212, 297);
 			radioButton2.Name = "radioButton2";
 			radioButton2.Size = new Size(61, 19);
 			radioButton2.TabIndex = 78;
@@ -156,7 +158,8 @@
 			// radioButton1
 			// 
 			radioButton1.AutoSize = true;
-			radioButton1.Location = new Point(311, 141);
+			radioButton1.Checked = true;
+			radioButton1.Location = new Point(153, 297);
 			radioButton1.Name = "radioButton1";
 			radioButton1.Size = new Size(53, 19);
 			radioButton1.TabIndex = 77;
@@ -167,7 +170,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(263, 141);
+			label5.Location = new Point(57, 299);
 			label5.Name = "label5";
 			label5.Size = new Size(42, 15);
 			label5.TabIndex = 76;
@@ -175,7 +178,7 @@
 			// 
 			// textBox2
 			// 
-			textBox2.Location = new Point(108, 138);
+			textBox2.Location = new Point(153, 103);
 			textBox2.Name = "textBox2";
 			textBox2.Size = new Size(132, 23);
 			textBox2.TabIndex = 75;
@@ -183,27 +186,20 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(12, 141);
+			label4.Location = new Point(57, 111);
 			label4.Name = "label4";
 			label4.Size = new Size(90, 15);
 			label4.TabIndex = 74;
 			label4.Text = "Código Interno:";
 			// 
-			// textBox1
-			// 
-			textBox1.Location = new Point(61, 90);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(325, 23);
-			textBox1.TabIndex = 73;
-			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(12, 93);
+			label3.Location = new Point(57, 73);
 			label3.Name = "label3";
-			label3.Size = new Size(43, 15);
+			label3.Size = new Size(54, 15);
 			label3.TabIndex = 72;
-			label3.Text = "Nome:";
+			label3.Text = "Nome: * ";
 			// 
 			// panel1
 			// 
@@ -214,7 +210,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(800, 46);
+			panel1.Size = new Size(484, 46);
 			panel1.TabIndex = 71;
 			// 
 			// label2
@@ -253,18 +249,37 @@
 			button2.BackColor = Color.FromArgb(136, 186, 163);
 			button2.FlatAppearance.BorderSize = 0;
 			button2.FlatStyle = FlatStyle.Flat;
-			button2.Location = new Point(410, 90);
+			button2.Location = new Point(390, 70);
 			button2.Name = "button2";
 			button2.Size = new Size(75, 23);
 			button2.TabIndex = 101;
 			button2.Text = "Consultar";
 			button2.UseVisualStyleBackColor = false;
 			// 
+			// label19
+			// 
+			label19.AutoSize = true;
+			label19.Location = new Point(-17, 129);
+			label19.Name = "label19";
+			label19.Size = new Size(927, 15);
+			label19.TabIndex = 130;
+			label19.Text = "________________________________________________________________________________________________________________________________________________________________________________________";
+			// 
+			// comboBox1
+			// 
+			comboBox1.FormattingEnabled = true;
+			comboBox1.Location = new Point(153, 70);
+			comboBox1.Name = "comboBox1";
+			comboBox1.Size = new Size(231, 23);
+			comboBox1.TabIndex = 131;
+			// 
 			// EditarEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(484, 411);
+			Controls.Add(comboBox1);
+			Controls.Add(label19);
 			Controls.Add(button2);
 			Controls.Add(button1);
 			Controls.Add(btn_voltar);
@@ -281,7 +296,6 @@
 			Controls.Add(label5);
 			Controls.Add(textBox2);
 			Controls.Add(label4);
-			Controls.Add(textBox1);
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
@@ -311,12 +325,13 @@
         private Label label5;
         private TextBox textBox2;
         private Label label4;
-        private TextBox textBox1;
         private Label label3;
         private Panel panel1;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
         private Button button2;
-    }
+		private Label label19;
+		private ComboBox comboBox1;
+	}
 }
