@@ -1,20 +1,23 @@
 using EpiControl.Views.Emprestimo;
 using EpiControl.Views.Fornecedores;
 using EpiControl.Views.Norma_Regulamentadora;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 
 namespace EpiControl
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
+		public static IConfiguration Configuration { get; private set; }
+
+		[STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+			Configuration = new ConfigurationBuilder().SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+			.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+			.Build();
+
+			ApplicationConfiguration.Initialize();
             Application.Run(new Home());
         }
     }

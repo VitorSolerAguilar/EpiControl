@@ -27,7 +27,6 @@
     <Folder Include="epicontrol.views\Estoque\" />
     <Folder Include="epicontrol.model\" />
     <Folder Include="epicontrol.dao\" />
-    <Folder Include="epicontrol.conexao\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +34,12 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="10.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.1" />
     <PackageReference Include="MySql.Data" Version="9.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
