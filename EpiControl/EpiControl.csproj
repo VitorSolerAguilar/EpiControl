@@ -24,7 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Estoque\" />
+    <Folder Include="epicontrol.views\Estoque\" />
+    <Folder Include="epicontrol.model\" />
+    <Folder Include="epicontrol.dao\" />
+    <Folder Include="epicontrol.conexao\" />
   </ItemGroup>
 
 </Project>

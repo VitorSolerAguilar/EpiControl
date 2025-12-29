@@ -5,55 +5,55 @@
     <Compile Update="backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Emprestimo\CadastrarEmprestimo.cs">
+    <Compile Update="epicontrol.views\Emprestimo\CadastrarEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\EPI\CadastrarEpi.cs">
+    <Compile Update="epicontrol.views\EPI\CadastrarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\EPI\EditarEpi.cs">
+    <Compile Update="epicontrol.views\EPI\EditarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\EPI\ExcluirEpi.cs">
+    <Compile Update="epicontrol.views\EPI\ExcluirEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Fornecedores\CadastrarFornecedor.cs">
+    <Compile Update="epicontrol.views\Fornecedores\CadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Fornecedores\EditarFornecedor.cs">
+    <Compile Update="epicontrol.views\Fornecedores\EditarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Fornecedores\ExcluirFornecedor.cs">
+    <Compile Update="epicontrol.views\Fornecedores\ExcluirFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Funcionario\CadastrarFuncionario.cs">
+    <Compile Update="epicontrol.views\Funcionario\CadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Funcionario\EditarFuncionario.cs">
+    <Compile Update="epicontrol.views\Funcionario\EditarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Funcionario\ExcluirFuncionario.cs">
+    <Compile Update="epicontrol.views\Funcionario\ExcluirFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Home.cs">
+    <Compile Update="epicontrol.views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Norma Regulamentadora\CadastrarNr.cs">
+    <Compile Update="epicontrol.views\Norma Regulamentadora\CadastrarNr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Norma Regulamentadora\EditarNr.cs">
+    <Compile Update="epicontrol.views\Norma Regulamentadora\EditarNr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Norma Regulamentadora\ExcluirNr.cs">
+    <Compile Update="epicontrol.views\Norma Regulamentadora\ExcluirNr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Treinamentos\CadastrarTreinamento.cs">
+    <Compile Update="epicontrol.views\Treinamentos\CadastrarTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Treinamentos\EditarTreinamento.cs">
+    <Compile Update="epicontrol.views\Treinamentos\EditarTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\Treinamentos\ExcluirTreinamento.cs">
+    <Compile Update="epicontrol.views\Treinamentos\ExcluirTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
