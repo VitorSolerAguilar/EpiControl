@@ -12,7 +12,6 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.ExcluirEp
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.CadastrarFornecedor.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.EditarFornecedor.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.ExcluirFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Funcionario.CadastrarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Funcionario.EditarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Funcionario.ExcluirFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Home.resources
@@ -60,3 +59,4 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\Sy
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.AssemblyReference.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.Up2Date
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\appsettings.json
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.CadastrarFuncionario.resources

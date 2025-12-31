@@ -26,13 +26,13 @@
     <Compile Update="epicontrol.views\Fornecedores\ExcluirFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Funcionario\CadastrarFuncionario.cs">
+    <Compile Update="epicontrol.views\CadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Funcionario\EditarFuncionario.cs">
+    <Compile Update="epicontrol.views\EditarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Funcionario\ExcluirFuncionario.cs">
+    <Compile Update="epicontrol.views\ExcluirFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\Home.cs">

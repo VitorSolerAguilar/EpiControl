@@ -23,7 +23,7 @@ namespace EpiControl.epicontrol.dao
 		{
 			try
 			{
-				string sql = "INSERT INTO tb_funcionario(nome, rg, cpf, pis, dataNascimento, numeroCTPS, serieCtps, estadoCivil, genero, nomeMae, nomePai, inscricaoETitulo, zona, secao, municipio, uf, dataEmissao)" +
+				string sql = "INSERT INTO tb_funcionario(nome, rg, cpf, pis, data_nascimento, numero_ctps, serie_ctps, estado_civil, genero, nome_mae, nome_pai, inscricao_titulo_eleitor, zona, secao, municipio, uf, data_emissao)" +
 					"VALUES(@nome, @rg, @cpf, @pis, @dataNascimento, @numeroCTPS, @serieCtps, @estadoCivil, @genero, @nomeMae, @nomePai, @inscricaoETitulo, @zona, @secao, @municipio, @uf, @dataEmissao)";
 
 				MySqlCommand mySqlCommand = new MySqlCommand(sql, conexao);

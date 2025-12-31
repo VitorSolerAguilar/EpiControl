@@ -1,3 +1,4 @@
+using EpiControl.epicontrol.views;
 using EpiControl.Views.Emprestimo;
 using EpiControl.Views.Fornecedores;
 using EpiControl.Views.Funcionario;
