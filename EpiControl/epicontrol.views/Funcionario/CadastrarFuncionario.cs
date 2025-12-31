@@ -17,19 +17,5 @@ namespace EpiControl.Views.Funcionario
 			InitializeComponent();
 		}
 
-		private void label21_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label39_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void tabPage3_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }
