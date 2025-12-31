@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="epicontrol.dao\" />
-    <Folder Include="epicontrol.model\" />
     <Folder Include="epicontrol.views\Estoque\" />
   </ItemGroup>
 
