@@ -8,6 +8,7 @@ namespace EpiControl.epicontrol.model
 {
 	public class Endereco
 	{
+		public int id { get; set; }
 		public string cep { get; set; }
 		public string cidade { get; set; }
 		public string uf { get; set; }
@@ -16,5 +17,8 @@ namespace EpiControl.epicontrol.model
 		public string logradouro { get; set; }
 		public string tipo { get; set; }
 		public string complemento { get; set; }
+
+		//FK
+		public int funcionarioId { get; set; }
 	}
 }

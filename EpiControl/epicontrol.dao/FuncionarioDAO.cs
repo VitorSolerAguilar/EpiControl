@@ -3,6 +3,7 @@ using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,80 +19,81 @@ namespace EpiControl.epicontrol.dao
 			this.conexao = new ConnectionFactory().getconnetion();
 		}
 
-		#region cadastrarDocumentos
-		public int cadastrarDocumentos(Funcionario funcionario)
+		#region cadastrarFuncionario
+		public void cadastrarFuncionario(Funcionario funcionario, Endereco endereco, Contato contato)
 		{
+			conexao.Open();
+			MySqlTransaction transaction = conexao.BeginTransaction();
+
 			try
 			{
-				string sql = "INSERT INTO tb_funcionario(nome, rg, cpf, pis, data_nascimento, numero_ctps, serie_ctps, estado_civil, genero, nome_mae, nome_pai, inscricao_titulo_eleitor, zona, secao, municipio, uf, data_emissao)" +
-					"VALUES(@nome, @rg, @cpf, @pis, @dataNascimento, @numeroCTPS, @serieCtps, @estadoCivil, @genero, @nomeMae, @nomePai, @inscricaoETitulo, @zona, @secao, @municipio, @uf, @dataEmissao); SELECT LAST_INSERT_ID();";
+				string sqlFuncionario = @"INSERT INTO tb_funcionario (nome, data_nascimento, estado_civil, nacionalidade, genero, nome_mae, nome_pai, numero_titulo_eleitor, pis, rg, cpf, matricula, cargo, status)
+					 VALUES (@nome, @data_nascimento, @estado_civil, @nacionalidade, @genero, @nome_mae, @nome_pai, @numero_titulo_eleitor, @pis, @rg, @cpf, @matricula, @cargo, @status)";
 
-				MySqlCommand mySqlCommand = new MySqlCommand(sql, conexao);
+				MySqlCommand cmdFuncionario = new MySqlCommand(sqlFuncionario, conexao, transaction);
 
-				mySqlCommand.Parameters.AddWithValue("@nome", funcionario.nome);
-				mySqlCommand.Parameters.AddWithValue("@rg", funcionario.rg);
-				mySqlCommand.Parameters.AddWithValue("@cpf", funcionario.cpf);
-				mySqlCommand.Parameters.AddWithValue("@pis", funcionario.pis);
-				mySqlCommand.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-				mySqlCommand.Parameters.AddWithValue("@numeroCTPS", funcionario.numeroCTPS);
-				mySqlCommand.Parameters.AddWithValue("@serieCtps", funcionario.serieCtps);
-				mySqlCommand.Parameters.AddWithValue("@estadoCivil", funcionario.estadoCivil);
-				mySqlCommand.Parameters.AddWithValue("@genero", funcionario.genero);
-				mySqlCommand.Parameters.AddWithValue("@nomeMae", funcionario.nomeMae);
-				mySqlCommand.Parameters.AddWithValue("@nomePai", funcionario.nomePai);
-				mySqlCommand.Parameters.AddWithValue("@inscricaoETitulo", funcionario.inscricaoETitulo);
-				mySqlCommand.Parameters.AddWithValue("@zona", funcionario.zona);
-				mySqlCommand.Parameters.AddWithValue("@secao", funcionario.secao);
-				mySqlCommand.Parameters.AddWithValue("@municipio", funcionario.municipio);
-				mySqlCommand.Parameters.AddWithValue("@uf", funcionario.uf);
-				mySqlCommand.Parameters.AddWithValue("@dataEmissao", funcionario.dataEmissao);
+				cmdFuncionario.Parameters.AddWithValue("@nome", funcionario.nome);
+				cmdFuncionario.Parameters.AddWithValue("@data_nascimento", funcionario.dataNascimento);
+				cmdFuncionario.Parameters.AddWithValue("@estado_civil", funcionario.estadoCivil);
+				cmdFuncionario.Parameters.AddWithValue("@nacionalidade", funcionario.nacionalidade);
+				cmdFuncionario.Parameters.AddWithValue("@genero", funcionario.genero);
+				cmdFuncionario.Parameters.AddWithValue("@nome_mae", funcionario.nomeMae);
+				cmdFuncionario.Parameters.AddWithValue("@nome_pai", funcionario.nomePai);
+				cmdFuncionario.Parameters.AddWithValue("@numero_titulo_eleitor", funcionario.tituloEleitor);
+				cmdFuncionario.Parameters.AddWithValue("@pis", funcionario.pisPasep);
+				cmdFuncionario.Parameters.AddWithValue("@rg", funcionario.rg);
+				cmdFuncionario.Parameters.AddWithValue("@cpf", funcionario.cpf);
+				cmdFuncionario.Parameters.AddWithValue("@matricula", funcionario.matricula);
+				cmdFuncionario.Parameters.AddWithValue("@cargo", funcionario.cargo);
+				cmdFuncionario.Parameters.AddWithValue("@status", funcionario.status);
 
-				conexao.Open();
-				int idFuncionario = Convert.ToInt32(mySqlCommand.ExecuteScalar());
-				MessageBox.Show("Funcionario cadastrado com sucesso");
-				return idFuncionario;
+				cmdFuncionario.ExecuteNonQuery();
 
+				int idFuncionario = (int)cmdFuncionario.LastInsertedId;
+
+				
+				string sqlEndereco = @"INSERT INTO tb_endereco (cep, cidade, uf, rua, numero, logradouro, tipo, complemento, fk_funcionario)
+					VALUES (@cep, @cidade, @uf, @rua, @numero, @logradouro, @tipo, @complemento, @fk_funcionario)";
+
+				MySqlCommand cmdEndereco = new MySqlCommand(sqlEndereco, conexao, transaction);
+
+				cmdEndereco.Parameters.AddWithValue("@cep", endereco.cep);
+				cmdEndereco.Parameters.AddWithValue("@cidade", endereco.cidade);
+				cmdEndereco.Parameters.AddWithValue("@uf", endereco.uf);
+				cmdEndereco.Parameters.AddWithValue("@rua", endereco.rua);
+				cmdEndereco.Parameters.AddWithValue("@numero", endereco.numero);
+				cmdEndereco.Parameters.AddWithValue("@logradouro", endereco.logradouro);
+				cmdEndereco.Parameters.AddWithValue("@tipo", endereco.tipo);
+				cmdEndereco.Parameters.AddWithValue("@complemento", endereco.complemento);
+				cmdEndereco.Parameters.AddWithValue("@fk_funcionario", idFuncionario);
+
+				cmdEndereco.ExecuteNonQuery();
+
+				string sqlContato = @"INSERT INTO tb_contato (telefone, celular, email, email_corporativo, fk_funcionario) VALUES (@telefone, @celular, @email, @email_corporativo, @fk_funcionario)";
+
+				MySqlCommand cmdContato = new MySqlCommand(sqlContato, conexao, transaction);
+
+				cmdContato.Parameters.AddWithValue("@telefone", contato.telefone);
+				cmdContato.Parameters.AddWithValue("@celular", contato.celular);
+				cmdContato.Parameters.AddWithValue("@email", contato.emailPessoal);
+				cmdContato.Parameters.AddWithValue("@email_corporativo", contato.emailCorporativo);
+				cmdContato.Parameters.AddWithValue("@fk_funcionario", idFuncionario);
+
+				cmdContato.ExecuteNonQuery();
+
+				transaction.Commit();
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Erro: " + ex);
-				return 0;
+				transaction.Rollback();
+				throw new Exception("Erro ao cadastrar funcionário completo: " + ex.Message);
+			}
+			finally
+			{
+				conexao.Close();
 			}
 		}
 		#endregion
-
-		#region cadastrarEndereco
-		public void cadastrarEndereco(Endereco endereco)
-		{
-			try
-			{
-				string sql = "INSERT INTO tb_endereco(cep, rua, numero, logradouro, cidade, uf, bairro, tipo, complemento, fk_funcionario) " +
-					"VALUES(@cep, @rua, @numero, @logradouro, @cidade, @uf, @bairro, @tipo, @complemento, @fk_funcionario) ";
-
-				MySqlCommand mySqlCommand = new MySqlCommand(sql, conexao);
-
-				mySqlCommand.Parameters.AddWithValue("@cep", endereco.cep);
-				mySqlCommand.Parameters.AddWithValue("@rua", endereco.rua);
-				mySqlCommand.Parameters.AddWithValue("@numero", endereco.numero);
-				mySqlCommand.Parameters.AddWithValue("@logradouro", endereco.logradouro);
-				mySqlCommand.Parameters.AddWithValue("@cidade", endereco.cidade);
-				mySqlCommand.Parameters.AddWithValue("@uf", endereco.uf);
-				mySqlCommand.Parameters.AddWithValue("@bairro", endereco.bairro);
-				mySqlCommand.Parameters.AddWithValue("@tipo", endereco.tipo);
-				mySqlCommand.Parameters.AddWithValue("@complemento", endereco.complemento);
-				mySqlCommand.Parameters.AddWithValue("@fk_funcionario", endereco.fkFuncionario);
-
-				conexao.Open();
-				MessageBox.Show("ID FUNCIONARIO: " + endereco.fkFuncionario);
-				mySqlCommand.ExecuteNonQuery();
-
-				MessageBox.Show("Endereço cadastrado com sucesso");
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("erro " + ex);
-			}
-		}
-		#endregion
+		
 	}
 }

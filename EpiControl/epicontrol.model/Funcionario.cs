@@ -24,5 +24,6 @@ namespace EpiControl.epicontrol.model
 		public string matricula { get; set; }
 		public string cargo { get; set; }
 		public string status { get; set; }
+
 	}
 }

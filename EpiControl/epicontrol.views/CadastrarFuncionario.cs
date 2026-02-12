@@ -21,73 +21,65 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private int _idFuncionarioAtual = 0;
-		private void btnSalvarFuncionario_Click_1(object sender, EventArgs e)
-		{
-			Funcionario funcionario = new Funcionario();
-
-			funcionario.nome = txtNome.Text;
-			funcionario.rg = mtbRg.Text;
-			funcionario.cpf = mtbCpf.Text;
-			funcionario.pis = txtPis.Text;
-			funcionario.dataNascimento = DateTime.Parse(mtmDataNascimento.Text);
-			funcionario.numeroCTPS = txtNumeroCtps.Text;
-			funcionario.serieCtps = txtSerieCtps.Text;
-			funcionario.estadoCivil = cbxEstadoCivil.Text;
-			funcionario.genero = cbxGenero.Text;
-			funcionario.nomeMae = txtNomeMae.Text;
-			funcionario.nomePai = txtNomePai.Text;
-			funcionario.inscricaoETitulo = txtInscricaoETitutulo.Text;
-			funcionario.zona = txtZona.Text;
-			funcionario.secao = txtSecao.Text;
-			funcionario.municipio = txtMunicipio.Text;
-			funcionario.uf = cbxUf.Text;
-			funcionario.dataEmissao = DateTime.Parse(mtbDataEmissao.Text);
-
-			FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-			_idFuncionarioAtual = funcionarioDAO.cadastrarDocumentos(funcionario);
-		}
-
-		private void tncConsultarCep_Click(object sender, EventArgs e)
+		private void btnSalvarFuncionario_Click(object sender, EventArgs e)
 		{
 			try
 			{
-				string cep = mtbCep.Text;
-				string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
+				Funcionario funcionario = new Funcionario();
 
-				DataSet dados = new DataSet();
-				dados.ReadXml(xml);
+				funcionario.nome = txtNome.Text;
+				funcionario.dataNascimento = dtpDataNascimento.Value;
+				funcionario.estadoCivil = txtEstadoCivil.Text;
+				funcionario.nacionalidade = txtNacionalidade.Text;
+				funcionario.nomeMae = txtNomeMae.Text;
+				funcionario.nomePai = txtNomePai.Text;
+				funcionario.tituloEleitor = txtTituloEleitor.Text;
+				funcionario.pisPasep = txtPisPasep.Text;
+				funcionario.rg = txtRg.Text;
+				funcionario.cpf = txtCpf.Text;
+				funcionario.matricula = txtMatricula.Text;
+				funcionario.cargo = txtCargo.Text;
 
-				txtComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
-				txtLogradouro.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
-				txtBairro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
-				txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
-				txtUf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+				if (rdbMasculino.Checked)
+					funcionario.genero = "Masculino";
+				else if (rdbFeminino.Checked)
+					funcionario.genero = "Feminino";
+
+				if (rdbAtivo.Checked)
+					funcionario.status = "Ativo";
+				else if (rdbInativo.Checked)
+					funcionario.status = "Inativo";
+
+
+				Endereco endereco = new Endereco();
+
+				endereco.cep = txtCep.Text;
+				endereco.cidade = txtCidade.Text;
+				endereco.uf = txtUf.Text;
+				endereco.rua = txtRua.Text;
+				endereco.numero = txtNumero.Text;
+				endereco.logradouro = txtLogradouro.Text;
+				endereco.tipo = cbxTipo.Text;
+				endereco.complemento = rtbComplemento.Text;
+
+
+				Contato contato = new Contato();
+
+				contato.telefone = txtTelefone.Text;
+				contato.celular = txtCelular.Text;
+				contato.emailPessoal = txtEmailPessoal.Text;
+				contato.emailCorporativo = txtEmailCorporativo.Text;
+
+				FuncionarioDAO dao = new FuncionarioDAO();
+				dao.cadastrarFuncionario(funcionario, endereco, contato);
+
+				MessageBox.Show("Funcionário cadastrado com sucesso!");
 			}
 			catch (Exception ex)
 			{
-
-				throw;
+				MessageBox.Show("Erro ao salvar: " + ex.Message);
 			}
 		}
-
-		private void btnSalvarEndereco_Click(object sender, EventArgs e)
-		{
-			Endereco endereco = new Endereco();
-
-			endereco.rua = txtLogradouro.Text;
-			endereco.cep = mtbCep.Text;
-			endereco.bairro = txtBairro.Text;
-			endereco.uf = txtUf.Text;
-			endereco.cidade = txtCidade.Text;
-			endereco.complemento = txtComplemento.Text;
-			endereco.numero = int.Parse(txtNumero.Text);
-			endereco.tipo = cbxTipo.Text;
-			endereco.fkFuncionario = _idFuncionarioAtual;
-
-			FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-			funcionarioDAO.cadastrarEndereco(endereco);
-		}
-		
 	}
 }
+

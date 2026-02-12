@@ -39,8 +39,7 @@
 			label26 = new Label();
 			label25 = new Label();
 			label24 = new Label();
-			button1 = new Button();
-			btn_voltar = new Button();
+			btnVoltar = new Button();
 			txtPisPasep = new TextBox();
 			label23 = new Label();
 			txtTituloEleitor = new TextBox();
@@ -90,10 +89,11 @@
 			label29 = new Label();
 			txtCpf = new TextBox();
 			label30 = new Label();
-			comboBox1 = new ComboBox();
+			cbxTipo = new ComboBox();
 			label31 = new Label();
 			label32 = new Label();
 			rtbComplemento = new RichTextBox();
+			btnSalvarFuncionario = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -197,28 +197,15 @@
 			label24.TabIndex = 160;
 			label24.Text = "Dados Principais";
 			// 
-			// button1
+			// btnVoltar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(503, 979);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 159;
-			button1.Text = " Salvar";
-			button1.UseVisualStyleBackColor = false;
-			// 
-			// btn_voltar
-			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(422, 979);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 158;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(422, 979);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.TabIndex = 158;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
 			// 
 			// txtPisPasep
 			// 
@@ -630,13 +617,13 @@
 			label30.TabIndex = 168;
 			label30.Text = "Cpf:";
 			// 
-			// comboBox1
+			// cbxTipo
 			// 
-			comboBox1.FormattingEnabled = true;
-			comboBox1.Location = new Point(429, 736);
-			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(121, 23);
-			comboBox1.TabIndex = 170;
+			cbxTipo.FormattingEnabled = true;
+			cbxTipo.Location = new Point(429, 736);
+			cbxTipo.Name = "cbxTipo";
+			cbxTipo.Size = new Size(121, 23);
+			cbxTipo.TabIndex = 170;
 			// 
 			// label31
 			// 
@@ -664,15 +651,30 @@
 			rtbComplemento.TabIndex = 173;
 			rtbComplemento.Text = "";
 			// 
+			// btnSalvarFuncionario
+			// 
+			btnSalvarFuncionario.BackColor = Color.FromArgb(17, 138, 254);
+			btnSalvarFuncionario.FlatAppearance.BorderSize = 0;
+			btnSalvarFuncionario.FlatStyle = FlatStyle.Flat;
+			btnSalvarFuncionario.ForeColor = Color.White;
+			btnSalvarFuncionario.Location = new Point(503, 979);
+			btnSalvarFuncionario.Name = "btnSalvarFuncionario";
+			btnSalvarFuncionario.Size = new Size(75, 40);
+			btnSalvarFuncionario.TabIndex = 221;
+			btnSalvarFuncionario.Text = " Salvar";
+			btnSalvarFuncionario.UseVisualStyleBackColor = false;
+			btnSalvarFuncionario.Click += btnSalvarFuncionario_Click;
+			// 
 			// CadastrarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 1020);
+			Controls.Add(btnSalvarFuncionario);
 			Controls.Add(rtbComplemento);
 			Controls.Add(label32);
 			Controls.Add(label31);
-			Controls.Add(comboBox1);
+			Controls.Add(cbxTipo);
 			Controls.Add(txtCpf);
 			Controls.Add(label30);
 			Controls.Add(txtRg);
@@ -683,8 +685,7 @@
 			Controls.Add(label26);
 			Controls.Add(label25);
 			Controls.Add(label24);
-			Controls.Add(button1);
-			Controls.Add(btn_voltar);
+			Controls.Add(btnVoltar);
 			Controls.Add(txtPisPasep);
 			Controls.Add(label23);
 			Controls.Add(txtTituloEleitor);
@@ -753,8 +754,8 @@
 		private Label label26;
 		private Label label25;
 		private Label label24;
-		private Button button1;
-		private Button btn_voltar;
+		private Button btnSalvar;
+		private Button btnVoltar;
 		private TextBox txtPisPasep;
 		private Label label23;
 		private TextBox txtTituloEleitor;
@@ -804,9 +805,10 @@
 		private Label label29;
 		private TextBox txtCpf;
 		private Label label30;
-		private ComboBox comboBox1;
+		private ComboBox cbxTipo;
 		private Label label31;
 		private Label label32;
 		private RichTextBox rtbComplemento;
+		private Button btnSalvarFuncionario;
 	}
 }

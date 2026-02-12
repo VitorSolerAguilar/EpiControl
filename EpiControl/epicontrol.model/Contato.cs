@@ -8,9 +8,13 @@ namespace EpiControl.epicontrol.model
 {
 	public class Contato
 	{
+		public int id { get; set; }
 		public string telefone { get; set; }
 		public string celular { get; set; }
 		public string emailPessoal { get; set; }
 		public string emailCorporativo { get; set; }
+
+		//FK
+		public int funcionarioId { get; set; }
 	}
 }
