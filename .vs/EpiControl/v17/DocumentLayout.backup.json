@@ -30,10 +30,10 @@
               "Title": "CadastrarFuncionario.cs [Projeto]",
               "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T05:41:54.488Z",
+              "WhenOpened": "2026-02-12T18:17:00.329Z",
               "EditorCaption": " [Projeto]"
             },
             {
@@ -42,9 +42,9 @@
               "Title": "CadastrarFuncionario.cs",
               "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwv2MAAAAEAAAAAAAAAA==",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs*",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwGAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T05:19:47.241Z",
               "EditorCaption": ""
@@ -57,10 +57,9 @@
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
               "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
               "RelativeToolTip": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T05:24:33.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-12T05:24:33.711Z"
             }
           ]
         }

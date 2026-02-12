@@ -80,6 +80,28 @@ namespace EpiControl.epicontrol.views
 				MessageBox.Show("Erro ao salvar: " + ex.Message);
 			}
 		}
+
+		private void btnConsultarCep_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string cep = txtCep.Text;
+				string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
+
+				DataSet dados = new DataSet();
+				dados.ReadXml(xml);
+
+				txtCidade.Text = dados.Tables[0].Rows[0]["localidade"].ToString();
+				txtUf.Text = dados.Tables[0].Rows[0]["uf"].ToString();
+				txtRua.Text = dados.Tables[0].Rows[0]["logradouro"].ToString();
+				rtbComplemento.Text = dados.Tables[0].Rows[0]["complemento"].ToString();
+				txtLogradouro.Text = dados.Tables[0].Rows[0]["bairro"].ToString();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao consultar cep: " + ex.Message);
+			}
+		}
 	}
 }
 

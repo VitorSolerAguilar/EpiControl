@@ -46,10 +46,8 @@
 			label22 = new Label();
 			txtUf = new TextBox();
 			label21 = new Label();
-			txtLogradouro = new TextBox();
 			label20 = new Label();
 			txtRua = new TextBox();
-			label19 = new Label();
 			txtNumero = new TextBox();
 			label18 = new Label();
 			txtCep = new TextBox();
@@ -94,6 +92,9 @@
 			label32 = new Label();
 			rtbComplemento = new RichTextBox();
 			btnSalvarFuncionario = new Button();
+			btnConsultarCep = new Button();
+			lblBairro = new Label();
+			txtLogradouro = new TextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -200,7 +201,7 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(422, 979);
+			btnVoltar.Location = new Point(421, 968);
 			btnVoltar.Name = "btnVoltar";
 			btnVoltar.Size = new Size(75, 40);
 			btnVoltar.TabIndex = 158;
@@ -255,13 +256,6 @@
 			label21.TabIndex = 152;
 			label21.Text = "UF:";
 			// 
-			// txtLogradouro
-			// 
-			txtLogradouro.Location = new Point(184, 736);
-			txtLogradouro.Name = "txtLogradouro";
-			txtLogradouro.Size = new Size(200, 23);
-			txtLogradouro.TabIndex = 151;
-			// 
 			// label20
 			// 
 			label20.AutoSize = true;
@@ -277,15 +271,6 @@
 			txtRua.Name = "txtRua";
 			txtRua.Size = new Size(283, 23);
 			txtRua.TabIndex = 149;
-			// 
-			// label19
-			// 
-			label19.AutoSize = true;
-			label19.Location = new Point(57, 744);
-			label19.Name = "label19";
-			label19.Size = new Size(72, 15);
-			label19.TabIndex = 148;
-			label19.Text = "Logradouro:";
 			// 
 			// txtNumero
 			// 
@@ -620,6 +605,7 @@
 			// cbxTipo
 			// 
 			cbxTipo.FormattingEnabled = true;
+			cbxTipo.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
 			cbxTipo.Location = new Point(429, 736);
 			cbxTipo.Name = "cbxTipo";
 			cbxTipo.Size = new Size(121, 23);
@@ -657,7 +643,7 @@
 			btnSalvarFuncionario.FlatAppearance.BorderSize = 0;
 			btnSalvarFuncionario.FlatStyle = FlatStyle.Flat;
 			btnSalvarFuncionario.ForeColor = Color.White;
-			btnSalvarFuncionario.Location = new Point(503, 979);
+			btnSalvarFuncionario.Location = new Point(502, 968);
 			btnSalvarFuncionario.Name = "btnSalvarFuncionario";
 			btnSalvarFuncionario.Size = new Size(75, 40);
 			btnSalvarFuncionario.TabIndex = 221;
@@ -665,11 +651,40 @@
 			btnSalvarFuncionario.UseVisualStyleBackColor = false;
 			btnSalvarFuncionario.Click += btnSalvarFuncionario_Click;
 			// 
+			// btnConsultarCep
+			// 
+			btnConsultarCep.Location = new Point(363, 648);
+			btnConsultarCep.Name = "btnConsultarCep";
+			btnConsultarCep.Size = new Size(75, 23);
+			btnConsultarCep.TabIndex = 222;
+			btnConsultarCep.Text = "Consultar";
+			btnConsultarCep.UseVisualStyleBackColor = true;
+			btnConsultarCep.Click += btnConsultarCep_Click;
+			// 
+			// lblBairro
+			// 
+			lblBairro.AutoSize = true;
+			lblBairro.Location = new Point(58, 744);
+			lblBairro.Name = "lblBairro";
+			lblBairro.Size = new Size(72, 15);
+			lblBairro.TabIndex = 224;
+			lblBairro.Text = "Logradouro:";
+			// 
+			// txtLogradouro
+			// 
+			txtLogradouro.Location = new Point(183, 736);
+			txtLogradouro.Name = "txtLogradouro";
+			txtLogradouro.Size = new Size(200, 23);
+			txtLogradouro.TabIndex = 223;
+			// 
 			// CadastrarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(619, 1020);
+			ClientSize = new Size(619, 1010);
+			Controls.Add(lblBairro);
+			Controls.Add(txtLogradouro);
+			Controls.Add(btnConsultarCep);
 			Controls.Add(btnSalvarFuncionario);
 			Controls.Add(rtbComplemento);
 			Controls.Add(label32);
@@ -692,10 +707,8 @@
 			Controls.Add(label22);
 			Controls.Add(txtUf);
 			Controls.Add(label21);
-			Controls.Add(txtLogradouro);
 			Controls.Add(label20);
 			Controls.Add(txtRua);
-			Controls.Add(label19);
 			Controls.Add(txtNumero);
 			Controls.Add(label18);
 			Controls.Add(txtCep);
@@ -734,6 +747,7 @@
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "CadastrarFuncionario";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
@@ -762,10 +776,8 @@
 		private Label label22;
 		private TextBox txtUf;
 		private Label label21;
-		private TextBox txtLogradouro;
 		private Label label20;
 		private TextBox txtRua;
-		private Label label19;
 		private TextBox txtNumero;
 		private Label label18;
 		private TextBox txtCep;
@@ -810,5 +822,8 @@
 		private Label label32;
 		private RichTextBox rtbComplemento;
 		private Button btnSalvarFuncionario;
+		private Button btnConsultarCep;
+		private Label lblBairro;
+		private TextBox txtLogradouro;
 	}
 }
