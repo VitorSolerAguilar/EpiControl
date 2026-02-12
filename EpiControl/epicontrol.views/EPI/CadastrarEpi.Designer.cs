@@ -34,22 +34,26 @@
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
 			label3 = new Label();
-			textBox1 = new TextBox();
+			txtNome = new TextBox();
 			label4 = new Label();
-			textBox2 = new TextBox();
+			txtCodigoInterno = new TextBox();
 			label5 = new Label();
-			radioButton1 = new RadioButton();
-			radioButton2 = new RadioButton();
+			rdbAtivo = new RadioButton();
+			rdbInativo = new RadioButton();
 			label6 = new Label();
-			textBox3 = new TextBox();
+			txtCa = new TextBox();
 			label7 = new Label();
-			dateTimePicker1 = new DateTimePicker();
+			dtpValidadeCa = new DateTimePicker();
 			label8 = new Label();
-			textBox4 = new TextBox();
+			txtTamanho = new TextBox();
 			label9 = new Label();
-			textBox5 = new TextBox();
-			btn_voltar = new Button();
-			button1 = new Button();
+			txtCor = new TextBox();
+			btnVoltar = new Button();
+			btnSalvar = new Button();
+			txtMarca = new TextBox();
+			label10 = new Label();
+			label11 = new Label();
+			rtbDescricao = new RichTextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -106,12 +110,12 @@
 			label3.TabIndex = 54;
 			label3.Text = "Nome:";
 			// 
-			// textBox1
+			// txtNome
 			// 
-			textBox1.Location = new Point(153, 68);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(278, 23);
-			textBox1.TabIndex = 55;
+			txtNome.Location = new Point(153, 68);
+			txtNome.Name = "txtNome";
+			txtNome.Size = new Size(278, 23);
+			txtNome.TabIndex = 55;
 			// 
 			// label4
 			// 
@@ -122,43 +126,43 @@
 			label4.TabIndex = 56;
 			label4.Text = "Código Interno:";
 			// 
-			// textBox2
+			// txtCodigoInterno
 			// 
-			textBox2.Location = new Point(153, 105);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(132, 23);
-			textBox2.TabIndex = 57;
+			txtCodigoInterno.Location = new Point(153, 105);
+			txtCodigoInterno.Name = "txtCodigoInterno";
+			txtCodigoInterno.Size = new Size(132, 23);
+			txtCodigoInterno.TabIndex = 57;
 			// 
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(58, 287);
+			label5.Location = new Point(58, 329);
 			label5.Name = "label5";
 			label5.Size = new Size(42, 15);
 			label5.TabIndex = 58;
 			label5.Text = "Status:";
 			// 
-			// radioButton1
+			// rdbAtivo
 			// 
-			radioButton1.AutoSize = true;
-			radioButton1.Location = new Point(153, 285);
-			radioButton1.Name = "radioButton1";
-			radioButton1.Size = new Size(53, 19);
-			radioButton1.TabIndex = 59;
-			radioButton1.TabStop = true;
-			radioButton1.Text = "Ativo";
-			radioButton1.UseVisualStyleBackColor = true;
+			rdbAtivo.AutoSize = true;
+			rdbAtivo.Location = new Point(153, 327);
+			rdbAtivo.Name = "rdbAtivo";
+			rdbAtivo.Size = new Size(53, 19);
+			rdbAtivo.TabIndex = 59;
+			rdbAtivo.TabStop = true;
+			rdbAtivo.Text = "Ativo";
+			rdbAtivo.UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// rdbInativo
 			// 
-			radioButton2.AutoSize = true;
-			radioButton2.Location = new Point(212, 285);
-			radioButton2.Name = "radioButton2";
-			radioButton2.Size = new Size(61, 19);
-			radioButton2.TabIndex = 60;
-			radioButton2.TabStop = true;
-			radioButton2.Text = "Inativo";
-			radioButton2.UseVisualStyleBackColor = true;
+			rdbInativo.AutoSize = true;
+			rdbInativo.Location = new Point(212, 327);
+			rdbInativo.Name = "rdbInativo";
+			rdbInativo.Size = new Size(61, 19);
+			rdbInativo.TabIndex = 60;
+			rdbInativo.TabStop = true;
+			rdbInativo.Text = "Inativo";
+			rdbInativo.UseVisualStyleBackColor = true;
 			// 
 			// label6
 			// 
@@ -169,12 +173,12 @@
 			label6.TabIndex = 61;
 			label6.Text = "CA:";
 			// 
-			// textBox3
+			// txtCa
 			// 
-			textBox3.Location = new Point(153, 140);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(132, 23);
-			textBox3.TabIndex = 62;
+			txtCa.Location = new Point(153, 140);
+			txtCa.Name = "txtCa";
+			txtCa.Size = new Size(132, 23);
+			txtCa.TabIndex = 62;
 			// 
 			// label7
 			// 
@@ -185,13 +189,13 @@
 			label7.TabIndex = 63;
 			label7.Text = "Validade do CA:";
 			// 
-			// dateTimePicker1
+			// dtpValidadeCa
 			// 
-			dateTimePicker1.Format = DateTimePickerFormat.Short;
-			dateTimePicker1.Location = new Point(153, 214);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(132, 23);
-			dateTimePicker1.TabIndex = 64;
+			dtpValidadeCa.Format = DateTimePickerFormat.Short;
+			dtpValidadeCa.Location = new Point(153, 214);
+			dtpValidadeCa.Name = "dtpValidadeCa";
+			dtpValidadeCa.Size = new Size(132, 23);
+			dtpValidadeCa.TabIndex = 64;
 			// 
 			// label8
 			// 
@@ -202,77 +206,116 @@
 			label8.TabIndex = 65;
 			label8.Text = "Tamanho:";
 			// 
-			// textBox4
+			// txtTamanho
 			// 
-			textBox4.Location = new Point(153, 176);
-			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(132, 23);
-			textBox4.TabIndex = 66;
+			txtTamanho.Location = new Point(153, 176);
+			txtTamanho.Name = "txtTamanho";
+			txtTamanho.Size = new Size(132, 23);
+			txtTamanho.TabIndex = 66;
 			// 
 			// label9
 			// 
 			label9.AutoSize = true;
-			label9.Location = new Point(57, 255);
+			label9.Location = new Point(57, 297);
 			label9.Name = "label9";
 			label9.Size = new Size(29, 15);
 			label9.TabIndex = 67;
 			label9.Text = "Cor:";
 			// 
-			// textBox5
+			// txtCor
 			// 
-			textBox5.Location = new Point(153, 252);
-			textBox5.Name = "textBox5";
-			textBox5.Size = new Size(132, 23);
-			textBox5.TabIndex = 68;
+			txtCor.Location = new Point(153, 294);
+			txtCor.Name = "txtCor";
+			txtCor.Size = new Size(132, 23);
+			txtCor.TabIndex = 68;
 			// 
-			// btn_voltar
+			// btnVoltar
 			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(275, 337);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 69;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(275, 479);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.TabIndex = 69;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// btnSalvar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(356, 337);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 70;
-			button1.Text = " Salvar";
-			button1.UseVisualStyleBackColor = false;
+			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
+			btnSalvar.FlatAppearance.BorderSize = 0;
+			btnSalvar.FlatStyle = FlatStyle.Flat;
+			btnSalvar.ForeColor = Color.White;
+			btnSalvar.Location = new Point(356, 479);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(75, 40);
+			btnSalvar.TabIndex = 70;
+			btnSalvar.Text = " Salvar";
+			btnSalvar.UseVisualStyleBackColor = false;
+			btnSalvar.Click += btnSalvar_Click;
+			// 
+			// txtMarca
+			// 
+			txtMarca.Location = new Point(153, 254);
+			txtMarca.Name = "txtMarca";
+			txtMarca.Size = new Size(132, 23);
+			txtMarca.TabIndex = 72;
+			// 
+			// label10
+			// 
+			label10.AutoSize = true;
+			label10.Location = new Point(57, 257);
+			label10.Name = "label10";
+			label10.Size = new Size(43, 15);
+			label10.TabIndex = 71;
+			label10.Text = "Marca:";
+			// 
+			// label11
+			// 
+			label11.AutoSize = true;
+			label11.Location = new Point(58, 370);
+			label11.Name = "label11";
+			label11.Size = new Size(61, 15);
+			label11.TabIndex = 73;
+			label11.Text = "Descrição:";
+			// 
+			// rtbDescricao
+			// 
+			rtbDescricao.Location = new Point(153, 370);
+			rtbDescricao.Name = "rtbDescricao";
+			rtbDescricao.Size = new Size(278, 82);
+			rtbDescricao.TabIndex = 74;
+			rtbDescricao.Text = "";
 			// 
 			// CadastrarEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(484, 411);
-			Controls.Add(button1);
-			Controls.Add(btn_voltar);
-			Controls.Add(textBox5);
+			ClientSize = new Size(484, 531);
+			Controls.Add(rtbDescricao);
+			Controls.Add(label11);
+			Controls.Add(txtMarca);
+			Controls.Add(label10);
+			Controls.Add(btnSalvar);
+			Controls.Add(btnVoltar);
+			Controls.Add(txtCor);
 			Controls.Add(label9);
-			Controls.Add(textBox4);
+			Controls.Add(txtTamanho);
 			Controls.Add(label8);
-			Controls.Add(dateTimePicker1);
+			Controls.Add(dtpValidadeCa);
 			Controls.Add(label7);
-			Controls.Add(textBox3);
+			Controls.Add(txtCa);
 			Controls.Add(label6);
-			Controls.Add(radioButton2);
-			Controls.Add(radioButton1);
+			Controls.Add(rdbInativo);
+			Controls.Add(rdbAtivo);
 			Controls.Add(label5);
-			Controls.Add(textBox2);
+			Controls.Add(txtCodigoInterno);
 			Controls.Add(label4);
-			Controls.Add(textBox1);
+			Controls.Add(txtNome);
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "CadastrarEpi";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
@@ -288,21 +331,25 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtNome;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtCodigoInterno;
         private Label label5;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton rdbAtivo;
+        private RadioButton rdbInativo;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox txtCa;
         private Label label7;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpValidadeCa;
         private Label label8;
-        private TextBox textBox4;
+        private TextBox txtTamanho;
         private Label label9;
-        private TextBox textBox5;
-        private Button btn_voltar;
-        private Button button1;
-    }
+        private TextBox txtCor;
+        private Button btnVoltar;
+        private Button btnSalvar;
+		private TextBox txtMarca;
+		private Label label10;
+		private Label label11;
+		private RichTextBox rtbDescricao;
+	}
 }

@@ -20,5 +20,6 @@ namespace EpiControl.epicontrol.model
 
 		//FK
 		public int funcionarioId { get; set; }
+		public int fornecedorId { get; set; }
 	}
 }
