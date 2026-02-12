@@ -17,6 +17,7 @@
 | TabControl   | `tbc`   | `tbcCliente`   |
 | MaskedTextBox| `mtb`   | `mtbRg`        |
 | RichTextBox  | `rtb`   | `rtbComplemento`|
+| DateTimePicker| `dtp`  |`dtpDataNascimento`|
 
 ## 🏗️ Padrão para Classes
 Use a convenção "PascalCase" e nomes que representem claramente o papel da classe.
