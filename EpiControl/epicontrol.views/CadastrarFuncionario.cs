@@ -13,10 +13,10 @@ using static System.Net.WebRequestMethods;
 
 namespace EpiControl.epicontrol.views
 {
-	public partial class CadastrarFuncionario : Form
+	public partial class frmCadastrarFuncionario : Form
 	{
 
-		public CadastrarFuncionario()
+		public frmCadastrarFuncionario()
 		{
 			InitializeComponent();
 		}
@@ -33,7 +33,6 @@ namespace EpiControl.epicontrol.views
 				funcionario.nacionalidade = txtNacionalidade.Text;
 				funcionario.nomeMae = txtNomeMae.Text;
 				funcionario.nomePai = txtNomePai.Text;
-				funcionario.tituloEleitor = txtTituloEleitor.Text;
 				funcionario.pisPasep = txtPisPasep.Text;
 				funcionario.rg = txtRg.Text;
 				funcionario.cpf = txtCpf.Text;
@@ -102,6 +101,7 @@ namespace EpiControl.epicontrol.views
 				MessageBox.Show("Erro ao consultar cep: " + ex.Message);
 			}
 		}
+
 	}
 }
 

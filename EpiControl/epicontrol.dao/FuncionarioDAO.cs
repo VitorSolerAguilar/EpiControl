@@ -1,6 +1,7 @@
 ﻿using EpiControl.epicontrol.conexao;
 using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.Mozilla;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,6 @@ namespace EpiControl.epicontrol.dao
 			this.conexao = new ConnectionFactory().getconnetion();
 		}
 
-		#region cadastrarFuncionario
 		public void cadastrarFuncionario(Funcionario funcionario, Endereco endereco, Contato contato)
 		{
 			conexao.Open();
@@ -27,8 +27,8 @@ namespace EpiControl.epicontrol.dao
 
 			try
 			{
-				string sqlFuncionario = @"INSERT INTO tb_funcionario (nome, data_nascimento, estado_civil, nacionalidade, genero, nome_mae, nome_pai, numero_titulo_eleitor, pis, rg, cpf, matricula, cargo, status)
-					 VALUES (@nome, @data_nascimento, @estado_civil, @nacionalidade, @genero, @nome_mae, @nome_pai, @numero_titulo_eleitor, @pis, @rg, @cpf, @matricula, @cargo, @status)";
+				string sqlFuncionario = @"INSERT INTO tb_funcionario (nome, data_nascimento, estado_civil, nacionalidade, genero, nome_mae, nome_pai, pis, rg, cpf, matricula, cargo, status)
+					 VALUES (@nome, @data_nascimento, @estado_civil, @nacionalidade, @genero, @nome_mae, @nome_pai, @pis, @rg, @cpf, @matricula, @cargo, @status)";
 
 				MySqlCommand cmdFuncionario = new MySqlCommand(sqlFuncionario, conexao, transaction);
 
@@ -39,7 +39,6 @@ namespace EpiControl.epicontrol.dao
 				cmdFuncionario.Parameters.AddWithValue("@genero", funcionario.genero);
 				cmdFuncionario.Parameters.AddWithValue("@nome_mae", funcionario.nomeMae);
 				cmdFuncionario.Parameters.AddWithValue("@nome_pai", funcionario.nomePai);
-				cmdFuncionario.Parameters.AddWithValue("@numero_titulo_eleitor", funcionario.tituloEleitor);
 				cmdFuncionario.Parameters.AddWithValue("@pis", funcionario.pisPasep);
 				cmdFuncionario.Parameters.AddWithValue("@rg", funcionario.rg);
 				cmdFuncionario.Parameters.AddWithValue("@cpf", funcionario.cpf);
@@ -93,7 +92,104 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
-		#endregion
-		
+
+		public DataTable listarFuncionarios()
+		{
+			try
+			{
+				DataTable tabelaFuncionario = new DataTable();
+
+				string sql = "SELECT " +
+					"f.id_funcionario, " +
+					"f.nome, " +
+					"f.cpf, " +
+					"f.cargo, " +
+					"f.status, " +
+					"" +
+					"c.telefone, " +
+					"c.celular, " +
+					"c.email, " +
+					"c.email_corporativo, " +
+					"" +
+					"e.cep, " +
+					"e.rua, " +
+					"e.numero, " +
+					"e.complemento, " +
+					"e.bairro, " +
+					"e.cidade, " +
+					"e.uf " +
+					"" +
+					"FROM tb_funcionario f " +
+					"LEFT JOIN tb_contato c " +
+					"ON c.fk_funcionario = f.id_funcionario " +
+					"LEFT JOIN tb_endereco e " +
+					"ON e.fk_funcionario = f.id_funcionario " +
+					"ORDER BY f.nome;";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				conexao.Open();
+
+				executacmd.ExecuteNonQuery();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaFuncionario);
+
+				return tabelaFuncionario;
+
+			}
+			catch (Exception e)
+			{
+				return null;
+			}
+		}
+
+		public DataTable buscarFuncionarioId(int idFuncionario)
+		{
+			try
+			{
+				DataTable tabelaFuncionario = new DataTable();
+
+				string sql = "SELECT " +
+					"f.id_funcionario, " +
+					"f.nome, " +
+					"f.cpf, " +
+					"f.cargo, " +
+					"f.status, " +
+					"c.telefone, " +
+					"c.celular, " +
+					"c.email, " +
+					"c.email_corporativo, " +
+					"e.cep, " +
+					"e.rua, " +
+					"e.numero, " +
+					"e.complemento, " +
+					"e.bairro, " +
+					"e.cidade, " +
+					"e.uf " +
+					"FROM tb_funcionario f " +
+					"LEFT JOIN tb_contato c ON c.fk_funcionario = f.id_funcionario " +
+					"LEFT JOIN tb_endereco e ON e.fk_funcionario = f.id_funcionario " +
+					"WHERE f.id_funcionario = @id;";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@id", idFuncionario);
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaFuncionario);
+
+				return tabelaFuncionario;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
 	}
 }

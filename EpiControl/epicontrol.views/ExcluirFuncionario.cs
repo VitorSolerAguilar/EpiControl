@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Funcionario
+namespace EpiControl.Views
 {
-    public partial class ExcluirFuncionario : Form
-    {
-        public ExcluirFuncionario()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class ExcluirFuncionario : Form
+	{
+		public ExcluirFuncionario()
+		{
+			InitializeComponent();
+		}
+
+		private void ExcluirFuncionario_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

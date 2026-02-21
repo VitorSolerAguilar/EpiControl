@@ -1,6 +1,6 @@
 ﻿namespace EpiControl.epicontrol.views
 {
-    partial class CadastrarFuncionario
+    partial class frmCadastrarFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFuncionario));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarFuncionario));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -42,8 +42,6 @@
 			btnVoltar = new Button();
 			txtPisPasep = new TextBox();
 			label23 = new Label();
-			txtTituloEleitor = new TextBox();
-			label22 = new Label();
 			txtUf = new TextBox();
 			label21 = new Label();
 			label20 = new Label();
@@ -146,7 +144,7 @@
 			// 
 			label28.AutoSize = true;
 			label28.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label28.Location = new Point(319, 860);
+			label28.Location = new Point(318, 815);
 			label28.Name = "label28";
 			label28.Size = new Size(54, 21);
 			label28.TabIndex = 165;
@@ -154,7 +152,7 @@
 			// 
 			// txtCidade
 			// 
-			txtCidade.Location = new Point(184, 678);
+			txtCidade.Location = new Point(184, 645);
 			txtCidade.Name = "txtCidade";
 			txtCidade.Size = new Size(144, 23);
 			txtCidade.TabIndex = 164;
@@ -162,7 +160,7 @@
 			// label27
 			// 
 			label27.AutoSize = true;
-			label27.Location = new Point(57, 686);
+			label27.Location = new Point(57, 653);
 			label27.Name = "label27";
 			label27.Size = new Size(47, 15);
 			label27.TabIndex = 163;
@@ -172,7 +170,7 @@
 			// 
 			label26.AutoSize = true;
 			label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label26.Location = new Point(318, 614);
+			label26.Location = new Point(318, 581);
 			label26.Name = "label26";
 			label26.Size = new Size(74, 21);
 			label26.TabIndex = 162;
@@ -182,7 +180,7 @@
 			// 
 			label25.AutoSize = true;
 			label25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label25.Location = new Point(318, 443);
+			label25.Location = new Point(318, 410);
 			label25.Name = "label25";
 			label25.Size = new Size(65, 21);
 			label25.TabIndex = 161;
@@ -201,7 +199,7 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(421, 968);
+			btnVoltar.Location = new Point(421, 935);
 			btnVoltar.Name = "btnVoltar";
 			btnVoltar.Size = new Size(75, 40);
 			btnVoltar.TabIndex = 158;
@@ -210,7 +208,7 @@
 			// 
 			// txtPisPasep
 			// 
-			txtPisPasep.Location = new Point(182, 337);
+			txtPisPasep.Location = new Point(181, 312);
 			txtPisPasep.Name = "txtPisPasep";
 			txtPisPasep.Size = new Size(147, 23);
 			txtPisPasep.TabIndex = 157;
@@ -218,31 +216,15 @@
 			// label23
 			// 
 			label23.AutoSize = true;
-			label23.Location = new Point(55, 345);
+			label23.Location = new Point(54, 320);
 			label23.Name = "label23";
 			label23.Size = new Size(64, 15);
 			label23.TabIndex = 156;
 			label23.Text = "PIS/PASEP:";
 			// 
-			// txtTituloEleitor
-			// 
-			txtTituloEleitor.Location = new Point(182, 308);
-			txtTituloEleitor.Name = "txtTituloEleitor";
-			txtTituloEleitor.Size = new Size(146, 23);
-			txtTituloEleitor.TabIndex = 155;
-			// 
-			// label22
-			// 
-			label22.AutoSize = true;
-			label22.Location = new Point(54, 316);
-			label22.Name = "label22";
-			label22.Size = new Size(92, 15);
-			label22.TabIndex = 154;
-			label22.Text = "Título de eleitor:";
-			// 
 			// txtUf
 			// 
-			txtUf.Location = new Point(364, 678);
+			txtUf.Location = new Point(364, 645);
 			txtUf.Name = "txtUf";
 			txtUf.Size = new Size(74, 23);
 			txtUf.TabIndex = 153;
@@ -250,7 +232,7 @@
 			// label21
 			// 
 			label21.AutoSize = true;
-			label21.Location = new Point(334, 681);
+			label21.Location = new Point(334, 648);
 			label21.Name = "label21";
 			label21.Size = new Size(24, 15);
 			label21.TabIndex = 152;
@@ -259,7 +241,7 @@
 			// label20
 			// 
 			label20.AutoSize = true;
-			label20.Location = new Point(57, 714);
+			label20.Location = new Point(57, 681);
 			label20.Name = "label20";
 			label20.Size = new Size(30, 15);
 			label20.TabIndex = 150;
@@ -267,14 +249,14 @@
 			// 
 			// txtRua
 			// 
-			txtRua.Location = new Point(184, 707);
+			txtRua.Location = new Point(184, 674);
 			txtRua.Name = "txtRua";
 			txtRua.Size = new Size(283, 23);
 			txtRua.TabIndex = 149;
 			// 
 			// txtNumero
 			// 
-			txtNumero.Location = new Point(503, 707);
+			txtNumero.Location = new Point(503, 674);
 			txtNumero.Name = "txtNumero";
 			txtNumero.Size = new Size(74, 23);
 			txtNumero.TabIndex = 147;
@@ -282,7 +264,7 @@
 			// label18
 			// 
 			label18.AutoSize = true;
-			label18.Location = new Point(473, 710);
+			label18.Location = new Point(473, 677);
 			label18.Name = "label18";
 			label18.Size = new Size(24, 15);
 			label18.TabIndex = 146;
@@ -290,7 +272,7 @@
 			// 
 			// txtCep
 			// 
-			txtCep.Location = new Point(184, 649);
+			txtCep.Location = new Point(184, 616);
 			txtCep.Name = "txtCep";
 			txtCep.Size = new Size(144, 23);
 			txtCep.TabIndex = 145;
@@ -298,7 +280,7 @@
 			// label17
 			// 
 			label17.AutoSize = true;
-			label17.Location = new Point(57, 657);
+			label17.Location = new Point(57, 624);
 			label17.Name = "label17";
 			label17.Size = new Size(31, 15);
 			label17.TabIndex = 144;
@@ -306,7 +288,7 @@
 			// 
 			// txtEmailCorporativo
 			// 
-			txtEmailCorporativo.Location = new Point(184, 574);
+			txtEmailCorporativo.Location = new Point(184, 541);
 			txtEmailCorporativo.Name = "txtEmailCorporativo";
 			txtEmailCorporativo.Size = new Size(223, 23);
 			txtEmailCorporativo.TabIndex = 143;
@@ -314,7 +296,7 @@
 			// label16
 			// 
 			label16.AutoSize = true;
-			label16.Location = new Point(57, 574);
+			label16.Location = new Point(57, 541);
 			label16.Name = "label16";
 			label16.Size = new Size(103, 15);
 			label16.TabIndex = 142;
@@ -322,7 +304,7 @@
 			// 
 			// txtEmailPessoal
 			// 
-			txtEmailPessoal.Location = new Point(184, 538);
+			txtEmailPessoal.Location = new Point(184, 505);
 			txtEmailPessoal.Name = "txtEmailPessoal";
 			txtEmailPessoal.Size = new Size(223, 23);
 			txtEmailPessoal.TabIndex = 141;
@@ -330,7 +312,7 @@
 			// label15
 			// 
 			label15.AutoSize = true;
-			label15.Location = new Point(57, 546);
+			label15.Location = new Point(57, 513);
 			label15.Name = "label15";
 			label15.Size = new Size(81, 15);
 			label15.TabIndex = 140;
@@ -338,7 +320,7 @@
 			// 
 			// txtCelular
 			// 
-			txtCelular.Location = new Point(184, 509);
+			txtCelular.Location = new Point(184, 476);
 			txtCelular.Name = "txtCelular";
 			txtCelular.Size = new Size(167, 23);
 			txtCelular.TabIndex = 139;
@@ -346,7 +328,7 @@
 			// label14
 			// 
 			label14.AutoSize = true;
-			label14.Location = new Point(57, 517);
+			label14.Location = new Point(57, 484);
 			label14.Name = "label14";
 			label14.Size = new Size(47, 15);
 			label14.TabIndex = 138;
@@ -354,7 +336,7 @@
 			// 
 			// txtTelefone
 			// 
-			txtTelefone.Location = new Point(184, 480);
+			txtTelefone.Location = new Point(184, 447);
 			txtTelefone.Name = "txtTelefone";
 			txtTelefone.Size = new Size(167, 23);
 			txtTelefone.TabIndex = 137;
@@ -362,7 +344,7 @@
 			// label13
 			// 
 			label13.AutoSize = true;
-			label13.Location = new Point(57, 488);
+			label13.Location = new Point(57, 455);
 			label13.Name = "label13";
 			label13.Size = new Size(54, 15);
 			label13.TabIndex = 136;
@@ -494,7 +476,7 @@
 			// rdbInativo
 			// 
 			rdbInativo.AutoSize = true;
-			rdbInativo.Location = new Point(244, 948);
+			rdbInativo.Location = new Point(243, 903);
 			rdbInativo.Name = "rdbInativo";
 			rdbInativo.Size = new Size(61, 19);
 			rdbInativo.TabIndex = 121;
@@ -505,7 +487,7 @@
 			// rdbAtivo
 			// 
 			rdbAtivo.AutoSize = true;
-			rdbAtivo.Location = new Point(185, 948);
+			rdbAtivo.Location = new Point(184, 903);
 			rdbAtivo.Name = "rdbAtivo";
 			rdbAtivo.Size = new Size(53, 19);
 			rdbAtivo.TabIndex = 120;
@@ -516,7 +498,7 @@
 			// label6
 			// 
 			label6.AutoSize = true;
-			label6.Location = new Point(58, 950);
+			label6.Location = new Point(57, 905);
 			label6.Name = "label6";
 			label6.Size = new Size(42, 15);
 			label6.TabIndex = 119;
@@ -524,7 +506,7 @@
 			// 
 			// txtCargo
 			// 
-			txtCargo.Location = new Point(185, 917);
+			txtCargo.Location = new Point(184, 872);
 			txtCargo.Name = "txtCargo";
 			txtCargo.Size = new Size(174, 23);
 			txtCargo.TabIndex = 118;
@@ -532,7 +514,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(57, 925);
+			label5.Location = new Point(56, 880);
 			label5.Name = "label5";
 			label5.Size = new Size(42, 15);
 			label5.TabIndex = 117;
@@ -540,7 +522,7 @@
 			// 
 			// txtMatricula
 			// 
-			txtMatricula.Location = new Point(186, 888);
+			txtMatricula.Location = new Point(185, 843);
 			txtMatricula.Name = "txtMatricula";
 			txtMatricula.Size = new Size(173, 23);
 			txtMatricula.TabIndex = 116;
@@ -548,7 +530,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(58, 896);
+			label4.Location = new Point(57, 851);
 			label4.Name = "label4";
 			label4.Size = new Size(60, 15);
 			label4.TabIndex = 115;
@@ -572,7 +554,7 @@
 			// 
 			// txtRg
 			// 
-			txtRg.Location = new Point(183, 366);
+			txtRg.Location = new Point(182, 341);
 			txtRg.Name = "txtRg";
 			txtRg.Size = new Size(147, 23);
 			txtRg.TabIndex = 167;
@@ -580,7 +562,7 @@
 			// label29
 			// 
 			label29.AutoSize = true;
-			label29.Location = new Point(56, 374);
+			label29.Location = new Point(55, 349);
 			label29.Name = "label29";
 			label29.Size = new Size(25, 15);
 			label29.TabIndex = 166;
@@ -588,7 +570,7 @@
 			// 
 			// txtCpf
 			// 
-			txtCpf.Location = new Point(182, 395);
+			txtCpf.Location = new Point(181, 370);
 			txtCpf.Name = "txtCpf";
 			txtCpf.Size = new Size(147, 23);
 			txtCpf.TabIndex = 169;
@@ -596,17 +578,17 @@
 			// label30
 			// 
 			label30.AutoSize = true;
-			label30.Location = new Point(55, 403);
+			label30.Location = new Point(54, 378);
 			label30.Name = "label30";
-			label30.Size = new Size(29, 15);
+			label30.Size = new Size(31, 15);
 			label30.TabIndex = 168;
-			label30.Text = "Cpf:";
+			label30.Text = "CPF:";
 			// 
 			// cbxTipo
 			// 
 			cbxTipo.FormattingEnabled = true;
 			cbxTipo.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
-			cbxTipo.Location = new Point(429, 736);
+			cbxTipo.Location = new Point(429, 703);
 			cbxTipo.Name = "cbxTipo";
 			cbxTipo.Size = new Size(121, 23);
 			cbxTipo.TabIndex = 170;
@@ -614,7 +596,7 @@
 			// label31
 			// 
 			label31.AutoSize = true;
-			label31.Location = new Point(390, 739);
+			label31.Location = new Point(390, 706);
 			label31.Name = "label31";
 			label31.Size = new Size(33, 15);
 			label31.TabIndex = 171;
@@ -623,7 +605,7 @@
 			// label32
 			// 
 			label32.AutoSize = true;
-			label32.Location = new Point(58, 777);
+			label32.Location = new Point(58, 744);
 			label32.Name = "label32";
 			label32.Size = new Size(87, 15);
 			label32.TabIndex = 172;
@@ -631,7 +613,7 @@
 			// 
 			// rtbComplemento
 			// 
-			rtbComplemento.Location = new Point(184, 765);
+			rtbComplemento.Location = new Point(184, 732);
 			rtbComplemento.Name = "rtbComplemento";
 			rtbComplemento.Size = new Size(366, 80);
 			rtbComplemento.TabIndex = 173;
@@ -643,7 +625,7 @@
 			btnSalvarFuncionario.FlatAppearance.BorderSize = 0;
 			btnSalvarFuncionario.FlatStyle = FlatStyle.Flat;
 			btnSalvarFuncionario.ForeColor = Color.White;
-			btnSalvarFuncionario.Location = new Point(502, 968);
+			btnSalvarFuncionario.Location = new Point(502, 935);
 			btnSalvarFuncionario.Name = "btnSalvarFuncionario";
 			btnSalvarFuncionario.Size = new Size(75, 40);
 			btnSalvarFuncionario.TabIndex = 221;
@@ -653,7 +635,7 @@
 			// 
 			// btnConsultarCep
 			// 
-			btnConsultarCep.Location = new Point(363, 648);
+			btnConsultarCep.Location = new Point(363, 615);
 			btnConsultarCep.Name = "btnConsultarCep";
 			btnConsultarCep.Size = new Size(75, 23);
 			btnConsultarCep.TabIndex = 222;
@@ -664,7 +646,7 @@
 			// lblBairro
 			// 
 			lblBairro.AutoSize = true;
-			lblBairro.Location = new Point(58, 744);
+			lblBairro.Location = new Point(58, 711);
 			lblBairro.Name = "lblBairro";
 			lblBairro.Size = new Size(72, 15);
 			lblBairro.TabIndex = 224;
@@ -672,16 +654,16 @@
 			// 
 			// txtLogradouro
 			// 
-			txtLogradouro.Location = new Point(183, 736);
+			txtLogradouro.Location = new Point(183, 703);
 			txtLogradouro.Name = "txtLogradouro";
 			txtLogradouro.Size = new Size(200, 23);
 			txtLogradouro.TabIndex = 223;
 			// 
-			// CadastrarFuncionario
+			// frmCadastrarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(619, 1010);
+			ClientSize = new Size(619, 979);
 			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
 			Controls.Add(btnConsultarCep);
@@ -703,8 +685,6 @@
 			Controls.Add(btnVoltar);
 			Controls.Add(txtPisPasep);
 			Controls.Add(label23);
-			Controls.Add(txtTituloEleitor);
-			Controls.Add(label22);
 			Controls.Add(txtUf);
 			Controls.Add(label21);
 			Controls.Add(label20);
@@ -746,7 +726,7 @@
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "CadastrarFuncionario";
+			Name = "frmCadastrarFuncionario";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
@@ -772,8 +752,6 @@
 		private Button btnVoltar;
 		private TextBox txtPisPasep;
 		private Label label23;
-		private TextBox txtTituloEleitor;
-		private Label label22;
 		private TextBox txtUf;
 		private Label label21;
 		private Label label20;

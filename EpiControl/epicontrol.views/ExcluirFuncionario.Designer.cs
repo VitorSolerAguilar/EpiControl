@@ -1,4 +1,4 @@
-﻿namespace EpiControl.Views.Funcionario
+﻿namespace EpiControl.Views
 {
     partial class ExcluirFuncionario
     {
@@ -734,6 +734,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "ExcluirFuncionario";
 			Text = "EPICONTROL";
+			Load += ExcluirFuncionario_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

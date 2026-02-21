@@ -1,6 +1,6 @@
-﻿namespace EpiControl.Views.Funcionario
+﻿namespace EpiControl.Views
 {
-    partial class EditarFuncionario
+    partial class frmEditarFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarFuncionario));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarFuncionario));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -47,7 +47,7 @@
 			label26 = new Label();
 			label25 = new Label();
 			label24 = new Label();
-			button1 = new Button();
+			btnEditar = new Button();
 			btn_voltar = new Button();
 			txtPisPasep = new TextBox();
 			label23 = new Label();
@@ -94,6 +94,7 @@
 			label4 = new Label();
 			txtNome = new TextBox();
 			label3 = new Label();
+			btnBuscar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -263,18 +264,18 @@
 			label24.TabIndex = 221;
 			label24.Text = "Dados Principais";
 			// 
-			// button1
+			// btnEditar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(506, 976);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 220;
-			button1.Text = " Salvar";
-			button1.UseVisualStyleBackColor = false;
+			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
+			btnEditar.FlatAppearance.BorderSize = 0;
+			btnEditar.FlatStyle = FlatStyle.Flat;
+			btnEditar.ForeColor = Color.White;
+			btnEditar.Location = new Point(506, 976);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 220;
+			btnEditar.Text = "Editar";
+			btnEditar.UseVisualStyleBackColor = false;
 			// 
 			// btn_voltar
 			// 
@@ -664,11 +665,21 @@
 			label3.TabIndex = 174;
 			label3.Text = "Nome:";
 			// 
-			// EditarFuncionario
+			// btnBuscar
+			// 
+			btnBuscar.Location = new Point(517, 92);
+			btnBuscar.Name = "btnBuscar";
+			btnBuscar.Size = new Size(75, 23);
+			btnBuscar.TabIndex = 235;
+			btnBuscar.Text = "Buscar";
+			btnBuscar.UseVisualStyleBackColor = true;
+			// 
+			// frmEditarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 1020);
+			Controls.Add(btnBuscar);
 			Controls.Add(rtbComplemento);
 			Controls.Add(label32);
 			Controls.Add(label31);
@@ -683,7 +694,7 @@
 			Controls.Add(label26);
 			Controls.Add(label25);
 			Controls.Add(label24);
-			Controls.Add(button1);
+			Controls.Add(btnEditar);
 			Controls.Add(btn_voltar);
 			Controls.Add(txtPisPasep);
 			Controls.Add(label23);
@@ -732,7 +743,7 @@
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "EditarFuncionario";
+			Name = "frmEditarFuncionario";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
@@ -760,7 +771,7 @@
 		private Label label26;
 		private Label label25;
 		private Label label24;
-		private Button button1;
+		private Button btnEditar;
 		private Button btn_voltar;
 		private TextBox txtPisPasep;
 		private Label label23;
@@ -807,5 +818,6 @@
 		private Label label4;
 		private TextBox txtNome;
 		private Label label3;
+		private Button btnBuscar;
 	}
 }

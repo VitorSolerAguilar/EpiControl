@@ -2,7 +2,6 @@ using EpiControl.epicontrol.views;
 using EpiControl.Views.Emprestimo;
 using EpiControl.Views.EPI;
 using EpiControl.Views.Fornecedores;
-using EpiControl.Views.Funcionario;
 using EpiControl.Views.Norma_Regulamentadora;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
@@ -21,7 +20,7 @@ namespace EpiControl
 			.Build();
 
 			ApplicationConfiguration.Initialize();
-            Application.Run(new CadastrarFornecedor());
+            Application.Run(new frmConsultarFuncionario());
         }
     }
 }
