@@ -1,4 +1,6 @@
 ﻿using EpiControl.epicontrol.dao;
+using EpiControl.epicontrol.model;
+using EpiControl.Views.EPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,25 +28,93 @@ namespace EpiControl.Views.Fornecedores
 
 		public void carregarFornecedor()
 		{
-			FornecedorDAO dao = new FornecedorDAO();
-			DataTable dt = dao.buscarFornecedorId(_idFornecedor);
+			try
+			{
+				FornecedorDAO dao = new FornecedorDAO();
+				DataTable dt = dao.buscarFornecedorId(_idFornecedor);
 
-			DataRow row = dt.Rows[0];
+				DataRow row = dt.Rows[0];
 
-			txtNome.Text = row["nome"].ToString();
-			txtCnpj.Text = row["cnpj"].ToString();
-			rtbObservacoes.Text = row["observacoes"].ToString();
-			txtTelefone.Text = row["telefone"].ToString();
-			txtCelular.Text = row["celular"].ToString();
-			txtEmailPessoal.Text = row["email"].ToString();
-			txtEmailCorporativo.Text = row["email_corporativo"].ToString();
+				txtNome.Text = row["nome"].ToString();
+				mtbCnpj.Text = row["cnpj"].ToString();
+				rtbObservacoes.Text = row["observacoes"].ToString();
+				mtbTelefone.Text = row["telefone"].ToString();
+				mtbCelular.Text = row["celular"].ToString();
+				txtEmailPessoal.Text = row["email"].ToString();
+				txtEmailCorporativo.Text = row["email_corporativo"].ToString();
 
-			txtCep.Text = row["cep"].ToString();
-			txtRua.Text = row["rua"].ToString();
-			txtNumero.Text = row["numero"].ToString();
-			txtLogradouro.Text = row["logradouro"].ToString();
-			txtCidade.Text = row["cidade"].ToString();
-			cbxUf.Text = row["uf"].ToString();
+				mtbCep.Text = row["cep"].ToString();
+				txtRua.Text = row["rua"].ToString();
+				txtNumero.Text = row["numero"].ToString();
+				txtLogradouro.Text = row["logradouro"].ToString();
+				txtCidade.Text = row["cidade"].ToString();
+				txtUf.Text = row["uf"].ToString();
+				cbxTipo.Text = row["tipo"].ToString();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao carregar fornecedores: " + ex);
+			}
+		}
+
+		private void btn_voltar_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		private void btnExcluir_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				FornecedorDAO dao = new FornecedorDAO();
+				dao.excluirFornecedorId(_idFornecedor);
+
+				MessageBox.Show("Fornecedor excluido!");
+				Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao excluir: " + ex.Message);
+
+			}
+		}
+
+		private void btnEditar_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				Fornecedor fornecedor = new Fornecedor();
+				fornecedor.nome = txtNome.Text;
+				fornecedor.cnpj = mtbCnpj.Text;
+				fornecedor.observacoes = rtbObservacoes.Text;
+
+				Endereco endereco = new Endereco();
+				endereco.id = _idEndereco;
+				endereco.cep = mtbCep.Text;
+				endereco.cidade = txtCidade.Text.Trim();
+				endereco.uf = txtUf.Text;
+				endereco.rua = txtRua.Text.Trim();
+				endereco.numero = txtNumero.Text.Trim();
+				endereco.logradouro = txtLogradouro.Text.Trim();
+				endereco.tipo = cbxTipo.Text;
+				endereco.complemento = rtbComplemento.Text.Trim();
+
+				Contato contato = new Contato();
+				contato.id = _idContato;
+				contato.telefone = mtbTelefone.Text;
+				contato.celular = mtbCelular.Text;
+				contato.emailPessoal = txtEmailPessoal.Text.Trim();
+				contato.emailCorporativo = txtEmailCorporativo.Text.Trim();
+
+				FornecedorDAO dao = new FornecedorDAO();
+				dao.editarFornecedor(fornecedor, endereco, contato);
+
+				MessageBox.Show("Fornecedor atualizado!");
+				Close();
+			}catch(Exception ex)
+			{
+				MessageBox.Show("Erro ao alterar fornecedor: " + ex);
+			}
 		}
 	}
 }

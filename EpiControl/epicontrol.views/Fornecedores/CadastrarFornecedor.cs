@@ -49,7 +49,7 @@ namespace EpiControl.Views.Fornecedores
 
 				fornecedor.nome = txtNome.Text;
 				fornecedor.cnpj = mtbCnpj.Text;
-				fornecedor.observacao = rtbObservacao.Text;
+				fornecedor.observacoes = rtbObservacao.Text;
 
 				Endereco endereco = new Endereco();
 

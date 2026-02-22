@@ -29,152 +29,50 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarFornecedor));
-			cbxUf = new ComboBox();
-			label16 = new Label();
-			txtCidade = new TextBox();
-			label15 = new Label();
-			txtLogradouro = new TextBox();
-			label14 = new Label();
-			txtNumero = new TextBox();
-			label13 = new Label();
-			txtRua = new TextBox();
-			label12 = new Label();
-			txtCep = new TextBox();
-			label11 = new Label();
-			label10 = new Label();
 			txtEmailCorporativo = new TextBox();
 			label9 = new Label();
 			txtEmailPessoal = new TextBox();
 			label8 = new Label();
-			txtCelular = new TextBox();
 			label7 = new Label();
-			txtTelefone = new TextBox();
 			label6 = new Label();
 			label5 = new Label();
 			label4 = new Label();
 			rtbObservacoes = new RichTextBox();
 			label3 = new Label();
-			txtCnpj = new TextBox();
 			label2 = new Label();
 			txtNome = new TextBox();
 			label1 = new Label();
 			btn_voltar = new Button();
-			button1 = new Button();
+			btnEditar = new Button();
 			panel1 = new Panel();
 			label17 = new Label();
 			label18 = new Label();
 			pictureBox1 = new PictureBox();
-			button3 = new Button();
+			btnExcluir = new Button();
+			mtbCelular = new MaskedTextBox();
+			mtbTelefone = new MaskedTextBox();
+			mtbCnpj = new MaskedTextBox();
+			mtbCep = new MaskedTextBox();
+			lblBairro = new Label();
+			txtLogradouro = new TextBox();
+			btnConsultarCep = new Button();
+			rtbComplemento = new RichTextBox();
+			label32 = new Label();
+			label31 = new Label();
+			cbxTipo = new ComboBox();
+			txtCidade = new TextBox();
+			label27 = new Label();
+			label26 = new Label();
+			txtUf = new TextBox();
+			label21 = new Label();
+			label20 = new Label();
+			txtRua = new TextBox();
+			txtNumero = new TextBox();
+			label10 = new Label();
+			label11 = new Label();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
-			// 
-			// cbxUf
-			// 
-			cbxUf.FormattingEnabled = true;
-			cbxUf.Location = new Point(158, 585);
-			cbxUf.Name = "cbxUf";
-			cbxUf.Size = new Size(61, 23);
-			cbxUf.TabIndex = 93;
-			// 
-			// label16
-			// 
-			label16.AutoSize = true;
-			label16.Location = new Point(50, 588);
-			label16.Name = "label16";
-			label16.Size = new Size(26, 15);
-			label16.TabIndex = 92;
-			label16.Text = "UF*";
-			// 
-			// txtCidade
-			// 
-			txtCidade.Location = new Point(158, 556);
-			txtCidade.Name = "txtCidade";
-			txtCidade.Size = new Size(231, 23);
-			txtCidade.TabIndex = 91;
-			// 
-			// label15
-			// 
-			label15.AutoSize = true;
-			label15.Location = new Point(50, 559);
-			label15.Name = "label15";
-			label15.Size = new Size(49, 15);
-			label15.TabIndex = 90;
-			label15.Text = "Cidade*";
-			// 
-			// txtLogradouro
-			// 
-			txtLogradouro.Location = new Point(158, 527);
-			txtLogradouro.Name = "txtLogradouro";
-			txtLogradouro.Size = new Size(231, 23);
-			txtLogradouro.TabIndex = 89;
-			// 
-			// label14
-			// 
-			label14.AutoSize = true;
-			label14.Location = new Point(50, 530);
-			label14.Name = "label14";
-			label14.Size = new Size(69, 15);
-			label14.TabIndex = 88;
-			label14.Text = "Logradouro";
-			// 
-			// txtNumero
-			// 
-			txtNumero.Location = new Point(158, 498);
-			txtNumero.Name = "txtNumero";
-			txtNumero.Size = new Size(231, 23);
-			txtNumero.TabIndex = 87;
-			// 
-			// label13
-			// 
-			label13.AutoSize = true;
-			label13.Location = new Point(50, 501);
-			label13.Name = "label13";
-			label13.Size = new Size(51, 15);
-			label13.TabIndex = 86;
-			label13.Text = "Número";
-			// 
-			// txtRua
-			// 
-			txtRua.Location = new Point(158, 469);
-			txtRua.Name = "txtRua";
-			txtRua.Size = new Size(231, 23);
-			txtRua.TabIndex = 85;
-			// 
-			// label12
-			// 
-			label12.AutoSize = true;
-			label12.Location = new Point(50, 472);
-			label12.Name = "label12";
-			label12.Size = new Size(32, 15);
-			label12.TabIndex = 84;
-			label12.Text = "Rua*";
-			// 
-			// txtCep
-			// 
-			txtCep.Location = new Point(158, 440);
-			txtCep.Name = "txtCep";
-			txtCep.Size = new Size(116, 23);
-			txtCep.TabIndex = 83;
-			// 
-			// label11
-			// 
-			label11.AutoSize = true;
-			label11.Location = new Point(50, 443);
-			label11.Name = "label11";
-			label11.Size = new Size(33, 15);
-			label11.TabIndex = 82;
-			label11.Text = "CEP*";
-			// 
-			// label10
-			// 
-			label10.AutoSize = true;
-			label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label10.Location = new Point(233, 412);
-			label10.Name = "label10";
-			label10.Size = new Size(74, 21);
-			label10.TabIndex = 81;
-			label10.Text = "Endereço";
 			// 
 			// txtEmailCorporativo
 			// 
@@ -208,13 +106,6 @@
 			label8.TabIndex = 77;
 			label8.Text = "Email Pessoal";
 			// 
-			// txtCelular
-			// 
-			txtCelular.Location = new Point(158, 304);
-			txtCelular.Name = "txtCelular";
-			txtCelular.Size = new Size(110, 23);
-			txtCelular.TabIndex = 76;
-			// 
 			// label7
 			// 
 			label7.AutoSize = true;
@@ -223,13 +114,6 @@
 			label7.Size = new Size(44, 15);
 			label7.TabIndex = 75;
 			label7.Text = "Celular";
-			// 
-			// txtTelefone
-			// 
-			txtTelefone.Location = new Point(158, 275);
-			txtTelefone.Name = "txtTelefone";
-			txtTelefone.Size = new Size(110, 23);
-			txtTelefone.TabIndex = 74;
 			// 
 			// label6
 			// 
@@ -277,14 +161,6 @@
 			label3.TabIndex = 69;
 			label3.Text = "Observações";
 			// 
-			// txtCnpj
-			// 
-			txtCnpj.Location = new Point(158, 132);
-			txtCnpj.Name = "txtCnpj";
-			txtCnpj.ReadOnly = true;
-			txtCnpj.Size = new Size(231, 23);
-			txtCnpj.TabIndex = 68;
-			// 
 			// label2
 			// 
 			label2.AutoSize = true;
@@ -313,25 +189,27 @@
 			// btn_voltar
 			// 
 			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(287, 630);
+			btn_voltar.Location = new Point(285, 692);
 			btn_voltar.Name = "btn_voltar";
 			btn_voltar.Size = new Size(75, 40);
 			btn_voltar.TabIndex = 64;
 			btn_voltar.Text = "Voltar";
 			btn_voltar.UseVisualStyleBackColor = false;
+			btn_voltar.Click += btn_voltar_Click;
 			// 
-			// button1
+			// btnEditar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(368, 630);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 63;
-			button1.Text = "Salvar";
-			button1.UseVisualStyleBackColor = false;
+			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
+			btnEditar.FlatAppearance.BorderSize = 0;
+			btnEditar.FlatStyle = FlatStyle.Flat;
+			btnEditar.ForeColor = Color.White;
+			btnEditar.Location = new Point(366, 692);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 63;
+			btnEditar.Text = "Editar";
+			btnEditar.UseVisualStyleBackColor = false;
+			btnEditar.Click += btnEditar_Click;
 			// 
 			// panel1
 			// 
@@ -376,57 +254,238 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
-			// button3
+			// btnExcluir
 			// 
-			button3.BackColor = Color.FromArgb(239, 43, 65);
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatStyle = FlatStyle.Flat;
-			button3.ForeColor = Color.White;
-			button3.Location = new Point(449, 630);
-			button3.Name = "button3";
-			button3.Size = new Size(75, 40);
-			button3.TabIndex = 96;
-			button3.Text = "Excluir";
-			button3.UseVisualStyleBackColor = false;
+			btnExcluir.BackColor = Color.FromArgb(239, 43, 65);
+			btnExcluir.FlatAppearance.BorderSize = 0;
+			btnExcluir.FlatStyle = FlatStyle.Flat;
+			btnExcluir.ForeColor = Color.White;
+			btnExcluir.Location = new Point(447, 692);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(75, 40);
+			btnExcluir.TabIndex = 96;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.UseVisualStyleBackColor = false;
+			btnExcluir.Click += btnExcluir_Click;
+			// 
+			// mtbCelular
+			// 
+			mtbCelular.Location = new Point(158, 303);
+			mtbCelular.Mask = "(00) 00000-0000";
+			mtbCelular.Name = "mtbCelular";
+			mtbCelular.Size = new Size(140, 23);
+			mtbCelular.TabIndex = 249;
+			// 
+			// mtbTelefone
+			// 
+			mtbTelefone.Location = new Point(158, 274);
+			mtbTelefone.Mask = "0000-0000";
+			mtbTelefone.Name = "mtbTelefone";
+			mtbTelefone.Size = new Size(140, 23);
+			mtbTelefone.TabIndex = 248;
+			// 
+			// mtbCnpj
+			// 
+			mtbCnpj.Location = new Point(158, 132);
+			mtbCnpj.Mask = "00.000.000/0000-00";
+			mtbCnpj.Name = "mtbCnpj";
+			mtbCnpj.Size = new Size(192, 23);
+			mtbCnpj.TabIndex = 247;
+			// 
+			// mtbCep
+			// 
+			mtbCep.Location = new Point(159, 466);
+			mtbCep.Mask = "00000-000";
+			mtbCep.Name = "mtbCep";
+			mtbCep.Size = new Size(144, 23);
+			mtbCep.TabIndex = 267;
+			// 
+			// lblBairro
+			// 
+			lblBairro.AutoSize = true;
+			lblBairro.Location = new Point(33, 562);
+			lblBairro.Name = "lblBairro";
+			lblBairro.Size = new Size(72, 15);
+			lblBairro.TabIndex = 266;
+			lblBairro.Text = "Logradouro:";
+			// 
+			// txtLogradouro
+			// 
+			txtLogradouro.Location = new Point(158, 554);
+			txtLogradouro.Name = "txtLogradouro";
+			txtLogradouro.Size = new Size(200, 23);
+			txtLogradouro.TabIndex = 265;
+			// 
+			// btnConsultarCep
+			// 
+			btnConsultarCep.Location = new Point(338, 466);
+			btnConsultarCep.Name = "btnConsultarCep";
+			btnConsultarCep.Size = new Size(75, 23);
+			btnConsultarCep.TabIndex = 264;
+			btnConsultarCep.Text = "Consultar";
+			btnConsultarCep.UseVisualStyleBackColor = true;
+			// 
+			// rtbComplemento
+			// 
+			rtbComplemento.Location = new Point(159, 583);
+			rtbComplemento.Name = "rtbComplemento";
+			rtbComplemento.Size = new Size(366, 80);
+			rtbComplemento.TabIndex = 263;
+			rtbComplemento.Text = "";
+			// 
+			// label32
+			// 
+			label32.AutoSize = true;
+			label32.Location = new Point(33, 595);
+			label32.Name = "label32";
+			label32.Size = new Size(87, 15);
+			label32.TabIndex = 262;
+			label32.Text = "Complemento:";
+			// 
+			// label31
+			// 
+			label31.AutoSize = true;
+			label31.Location = new Point(365, 557);
+			label31.Name = "label31";
+			label31.Size = new Size(33, 15);
+			label31.TabIndex = 261;
+			label31.Text = "Tipo:";
+			// 
+			// cbxTipo
+			// 
+			cbxTipo.FormattingEnabled = true;
+			cbxTipo.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
+			cbxTipo.Location = new Point(404, 554);
+			cbxTipo.Name = "cbxTipo";
+			cbxTipo.Size = new Size(121, 23);
+			cbxTipo.TabIndex = 260;
+			// 
+			// txtCidade
+			// 
+			txtCidade.Location = new Point(159, 496);
+			txtCidade.Name = "txtCidade";
+			txtCidade.Size = new Size(144, 23);
+			txtCidade.TabIndex = 259;
+			// 
+			// label27
+			// 
+			label27.AutoSize = true;
+			label27.Location = new Point(32, 504);
+			label27.Name = "label27";
+			label27.Size = new Size(47, 15);
+			label27.TabIndex = 258;
+			label27.Text = "Cidade:";
+			// 
+			// label26
+			// 
+			label26.AutoSize = true;
+			label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			label26.Location = new Point(233, 432);
+			label26.Name = "label26";
+			label26.Size = new Size(74, 21);
+			label26.TabIndex = 257;
+			label26.Text = "Endereço";
+			// 
+			// txtUf
+			// 
+			txtUf.Location = new Point(339, 496);
+			txtUf.Name = "txtUf";
+			txtUf.Size = new Size(74, 23);
+			txtUf.TabIndex = 256;
+			// 
+			// label21
+			// 
+			label21.AutoSize = true;
+			label21.Location = new Point(309, 499);
+			label21.Name = "label21";
+			label21.Size = new Size(24, 15);
+			label21.TabIndex = 255;
+			label21.Text = "UF:";
+			// 
+			// label20
+			// 
+			label20.AutoSize = true;
+			label20.Location = new Point(32, 532);
+			label20.Name = "label20";
+			label20.Size = new Size(30, 15);
+			label20.TabIndex = 254;
+			label20.Text = "Rua:";
+			// 
+			// txtRua
+			// 
+			txtRua.Location = new Point(159, 525);
+			txtRua.Name = "txtRua";
+			txtRua.Size = new Size(283, 23);
+			txtRua.TabIndex = 253;
+			// 
+			// txtNumero
+			// 
+			txtNumero.Location = new Point(478, 525);
+			txtNumero.Name = "txtNumero";
+			txtNumero.Size = new Size(47, 23);
+			txtNumero.TabIndex = 252;
+			// 
+			// label10
+			// 
+			label10.AutoSize = true;
+			label10.Location = new Point(448, 528);
+			label10.Name = "label10";
+			label10.Size = new Size(24, 15);
+			label10.TabIndex = 251;
+			label10.Text = "N°:";
+			// 
+			// label11
+			// 
+			label11.AutoSize = true;
+			label11.Location = new Point(32, 475);
+			label11.Name = "label11";
+			label11.Size = new Size(31, 15);
+			label11.TabIndex = 250;
+			label11.Text = "CEP:";
 			// 
 			// frmEditarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(534, 674);
-			Controls.Add(button3);
-			Controls.Add(panel1);
-			Controls.Add(cbxUf);
-			Controls.Add(label16);
-			Controls.Add(txtCidade);
-			Controls.Add(label15);
+			ClientSize = new Size(534, 744);
+			Controls.Add(mtbCep);
+			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
-			Controls.Add(label14);
-			Controls.Add(txtNumero);
-			Controls.Add(label13);
+			Controls.Add(btnConsultarCep);
+			Controls.Add(rtbComplemento);
+			Controls.Add(label32);
+			Controls.Add(label31);
+			Controls.Add(cbxTipo);
+			Controls.Add(txtCidade);
+			Controls.Add(label27);
+			Controls.Add(label26);
+			Controls.Add(txtUf);
+			Controls.Add(label21);
+			Controls.Add(label20);
 			Controls.Add(txtRua);
-			Controls.Add(label12);
-			Controls.Add(txtCep);
-			Controls.Add(label11);
+			Controls.Add(txtNumero);
 			Controls.Add(label10);
+			Controls.Add(label11);
+			Controls.Add(mtbCelular);
+			Controls.Add(mtbTelefone);
+			Controls.Add(mtbCnpj);
+			Controls.Add(btnExcluir);
+			Controls.Add(panel1);
 			Controls.Add(txtEmailCorporativo);
 			Controls.Add(label9);
 			Controls.Add(txtEmailPessoal);
 			Controls.Add(label8);
-			Controls.Add(txtCelular);
 			Controls.Add(label7);
-			Controls.Add(txtTelefone);
 			Controls.Add(label6);
 			Controls.Add(label5);
 			Controls.Add(label4);
 			Controls.Add(rtbObservacoes);
 			Controls.Add(label3);
-			Controls.Add(txtCnpj);
 			Controls.Add(label2);
 			Controls.Add(txtNome);
 			Controls.Add(label1);
 			Controls.Add(btn_voltar);
-			Controls.Add(button1);
+			Controls.Add(btnEditar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditarFornecedor";
 			Text = "EPICONTROL";
@@ -438,42 +497,46 @@
 		}
 
 		#endregion
-
-		private ComboBox cbxUf;
-		private Label label16;
-		private TextBox txtCidade;
-		private Label label15;
-		private TextBox txtLogradouro;
-		private Label label14;
-		private TextBox txtNumero;
-		private Label label13;
-		private TextBox txtRua;
-		private Label label12;
-		private TextBox txtCep;
-		private Label label11;
-		private Label label10;
 		private TextBox txtEmailCorporativo;
 		private Label label9;
 		private TextBox txtEmailPessoal;
 		private Label label8;
-		private TextBox txtCelular;
 		private Label label7;
-		private TextBox txtTelefone;
 		private Label label6;
 		private Label label5;
 		private Label label4;
 		private RichTextBox rtbObservacoes;
 		private Label label3;
-		private TextBox txtCnpj;
 		private Label label2;
 		private TextBox txtNome;
 		private Label label1;
 		private Button btn_voltar;
-		private Button button1;
+		private Button btnEditar;
 		private Panel panel1;
 		private Label label17;
 		private Label label18;
 		private PictureBox pictureBox1;
-		private Button button3;
+		private Button btnExcluir;
+		private MaskedTextBox mtbCelular;
+		private MaskedTextBox mtbTelefone;
+		private MaskedTextBox mtbCnpj;
+		private MaskedTextBox mtbCep;
+		private Label lblBairro;
+		private TextBox txtLogradouro;
+		private Button btnConsultarCep;
+		private RichTextBox rtbComplemento;
+		private Label label32;
+		private Label label31;
+		private ComboBox cbxTipo;
+		private TextBox txtCidade;
+		private Label label27;
+		private Label label26;
+		private TextBox txtUf;
+		private Label label21;
+		private Label label20;
+		private TextBox txtRua;
+		private TextBox txtNumero;
+		private Label label10;
+		private Label label11;
 	}
 }

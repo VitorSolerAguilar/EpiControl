@@ -32,7 +32,7 @@ namespace EpiControl.epicontrol.dao
 
 				cmdFornecedor.Parameters.AddWithValue("@nome", fornecedor.nome);
 				cmdFornecedor.Parameters.AddWithValue("@cnpj", fornecedor.cnpj);
-				cmdFornecedor.Parameters.AddWithValue("@observacoes", fornecedor.observacao);
+				cmdFornecedor.Parameters.AddWithValue("@observacoes", fornecedor.observacoes);
 
 				cmdFornecedor.ExecuteNonQuery();
 				int idFornecedor = (int)cmdFornecedor.LastInsertedId;
@@ -155,6 +155,103 @@ namespace EpiControl.epicontrol.dao
 			{
 				if (conexao.State == ConnectionState.Open)
 					conexao.Close();
+			}
+		}
+
+		public void editarFornecedor(Fornecedor fornecedor, Endereco endereco, Contato contato)
+		{
+			conexao.Open();
+			MySqlTransaction transaction = conexao.BeginTransaction();
+
+			try
+			{
+				string sqlFornecedor = @"UPDATE tb_fornecedor SET nome=@nome, cnpj=@cnpj, observacoes=@observacoes WHERE id_fornecedor=@id_fornecedor";
+
+				MySqlCommand cmdFornecedor = new MySqlCommand(sqlFornecedor, conexao, transaction);
+
+				cmdFornecedor.Parameters.AddWithValue("@nome", fornecedor.nome);
+				cmdFornecedor.Parameters.AddWithValue("@cnpj", fornecedor.cnpj);
+				cmdFornecedor.Parameters.AddWithValue("@observacoes", fornecedor.observacoes);
+				cmdFornecedor.Parameters.AddWithValue("@id_fornecedor", fornecedor.id);
+
+				cmdFornecedor.ExecuteNonQuery();
+
+				string sqlEndereco = @"UPDATE tb_endereco SET cep=@cep, cidade=@cidade, uf=@uf, rua=@rua, numero=@numero, logradouro=@logradouro, tipo=@tipo, complemento=@complemento WHERE id_endereco=@id_endereco";
+
+				MySqlCommand cmdEndereco = new MySqlCommand(sqlEndereco, conexao, transaction);
+
+				cmdEndereco.Parameters.AddWithValue("@cep", endereco.cep);
+				cmdEndereco.Parameters.AddWithValue("@cidade", endereco.cidade);
+				cmdEndereco.Parameters.AddWithValue("@uf", endereco.uf);
+				cmdEndereco.Parameters.AddWithValue("@rua", endereco.rua);
+				cmdEndereco.Parameters.AddWithValue("@numero", endereco.numero);
+				cmdEndereco.Parameters.AddWithValue("@logradouro", endereco.logradouro);
+				cmdEndereco.Parameters.AddWithValue("@tipo", endereco.tipo);
+				cmdEndereco.Parameters.AddWithValue("@complemento", endereco.complemento);
+				cmdEndereco.Parameters.AddWithValue("@id_endereco", endereco.id);
+
+				cmdEndereco.ExecuteNonQuery();
+
+				string sqlContato = @"UPDATE tb_contato SET telefone=@telefone, celular=@celular, email=@email, email_corporativo=@email_corporativo WHERE id_contato=@id_contato";
+
+				MySqlCommand cmdContato = new MySqlCommand(sqlContato, conexao, transaction);
+
+				cmdContato.Parameters.AddWithValue("@telefone", contato.telefone);
+				cmdContato.Parameters.AddWithValue("@celular", contato.celular);
+				cmdContato.Parameters.AddWithValue("@email", contato.emailPessoal);
+				cmdContato.Parameters.AddWithValue("@email_corporativo", contato.emailCorporativo);
+				cmdContato.Parameters.AddWithValue("@id_contato", contato.id);
+
+				cmdContato.ExecuteNonQuery();
+
+				transaction.Commit();
+			}
+			catch
+			{
+				transaction.Rollback();
+				throw;
+			}
+			finally
+			{
+				conexao.Close();
+			}
+		}
+
+		public void excluirFornecedorId(int idFornecedor)
+		{
+			conexao.Open();
+			MySqlTransaction transaction = conexao.BeginTransaction();
+
+			try
+			{
+				string sqlContato = @"DELETE FROM tb_contato WHERE fk_fornecedor = @id";
+
+				MySqlCommand cmdContato = new MySqlCommand(sqlContato, conexao, transaction);
+				cmdContato.Parameters.AddWithValue("@id", idFornecedor);
+				cmdContato.ExecuteNonQuery();
+
+				string sqlEndereco = @"DELETE FROM tb_endereco WHERE fk_fornecedor = @id";
+
+				MySqlCommand cmdEndereco = new MySqlCommand(sqlEndereco, conexao, transaction);
+				cmdEndereco.Parameters.AddWithValue("@id", idFornecedor);
+				cmdEndereco.ExecuteNonQuery();
+
+				string sqlFornecedor = @"DELETE FROM tb_fornecedor WHERE id_fornecedor = @id";
+
+				MySqlCommand cmdFuncionario = new MySqlCommand(sqlFornecedor, conexao, transaction);
+				cmdFuncionario.Parameters.AddWithValue("@id", idFornecedor);
+
+				cmdFuncionario.ExecuteNonQuery();
+				transaction.Commit();
+			}
+			catch (Exception ex)
+			{
+				transaction.Rollback();
+				throw new Exception("Erro ao excluir fornecedor: " + ex.Message);
+			}
+			finally
+			{
+				conexao.Close();
 			}
 		}
 
