@@ -8,9 +8,6 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.Ca
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.CadastrarEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.EditarEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.ExcluirEpi.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.CadastrarFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.EditarFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.ExcluirFornecedor.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources
@@ -59,3 +56,5 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarFunc
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.frmHome.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmCadastrarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmEditarFornecedor.resources

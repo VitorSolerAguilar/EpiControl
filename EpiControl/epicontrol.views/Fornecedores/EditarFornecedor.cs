@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EpiControl.Views.Fornecedores
 {
-	public partial class EditarFornecedor : Form
+	public partial class frmEditarFornecedor : Form
 	{
-		public EditarFornecedor()
+		public frmEditarFornecedor()
 		{
 			InitializeComponent();
 		}

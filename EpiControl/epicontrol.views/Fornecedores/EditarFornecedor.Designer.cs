@@ -1,6 +1,6 @@
 ﻿namespace EpiControl.Views.Fornecedores
 {
-	partial class EditarFornecedor
+	partial class frmEditarFornecedor
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarFornecedor));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarFornecedor));
 			comboBox1 = new ComboBox();
 			label16 = new Label();
 			textBox11 = new TextBox();
@@ -65,6 +65,7 @@
 			label18 = new Label();
 			pictureBox1 = new PictureBox();
 			button2 = new Button();
+			button3 = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -313,7 +314,7 @@
 			// btn_voltar
 			// 
 			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(297, 629);
+			btn_voltar.Location = new Point(287, 630);
 			btn_voltar.Name = "btn_voltar";
 			btn_voltar.Size = new Size(75, 40);
 			btn_voltar.TabIndex = 64;
@@ -326,7 +327,7 @@
 			button1.FlatAppearance.BorderSize = 0;
 			button1.FlatStyle = FlatStyle.Flat;
 			button1.ForeColor = Color.White;
-			button1.Location = new Point(398, 629);
+			button1.Location = new Point(368, 630);
 			button1.Name = "button1";
 			button1.Size = new Size(75, 40);
 			button1.TabIndex = 63;
@@ -388,11 +389,25 @@
 			button2.Text = "Consultar";
 			button2.UseVisualStyleBackColor = false;
 			// 
-			// EditarFornecedor
+			// button3
+			// 
+			button3.BackColor = Color.FromArgb(239, 43, 65);
+			button3.FlatAppearance.BorderSize = 0;
+			button3.FlatStyle = FlatStyle.Flat;
+			button3.ForeColor = Color.White;
+			button3.Location = new Point(449, 630);
+			button3.Name = "button3";
+			button3.Size = new Size(75, 40);
+			button3.TabIndex = 96;
+			button3.Text = "Excluir";
+			button3.UseVisualStyleBackColor = false;
+			// 
+			// frmEditarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(534, 701);
+			ClientSize = new Size(534, 674);
+			Controls.Add(button3);
 			Controls.Add(button2);
 			Controls.Add(panel1);
 			Controls.Add(comboBox1);
@@ -427,7 +442,7 @@
 			Controls.Add(btn_voltar);
 			Controls.Add(button1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "EditarFornecedor";
+			Name = "frmEditarFornecedor";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
@@ -474,5 +489,6 @@
 		private Label label18;
 		private PictureBox pictureBox1;
 		private Button button2;
+		private Button button3;
 	}
 }

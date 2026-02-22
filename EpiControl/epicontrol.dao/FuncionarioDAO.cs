@@ -166,7 +166,6 @@ namespace EpiControl.epicontrol.dao
 					"e.numero, " +
 					"e.logradouro," +
 					"e.complemento, " +
-					"e.bairro, " +
 					"e.cidade, " +
 					"e.tipo," +
 					"e.uf " +
@@ -228,7 +227,7 @@ namespace EpiControl.epicontrol.dao
 					"e.rua, " +
 					"e.numero, " +
 					"e.complemento, " +
-					"e.bairro, " +
+					"e.logradouro, " +
 					"e.cidade, " +
 					"e.tipo," +
 					"e.uf " +
@@ -282,7 +281,7 @@ namespace EpiControl.epicontrol.dao
 					"e.rua, " +
 					"e.numero, " +
 					"e.complemento, " +
-					"e.bairro, " +
+					"e.logradouro, " +
 					"e.cidade, " +
 					"e.uf " +
 					"FROM tb_funcionario f " +

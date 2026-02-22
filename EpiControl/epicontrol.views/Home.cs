@@ -40,11 +40,19 @@ namespace EpiControl
 		}
 		private void btnConsultarFornecedor_Click(object sender, EventArgs e)
 		{
+			frmEditarFornecedor EditarFornecedor = new frmEditarFornecedor();
 
+			EditarFornecedor.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			EditarFornecedor.Show();
 		}
 		private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
 		{
+			frmCadastrarFornecedor cadastrarFornecedor = new frmCadastrarFornecedor();
 
+			cadastrarFornecedor.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarFornecedor.Show();
 		}
 
 

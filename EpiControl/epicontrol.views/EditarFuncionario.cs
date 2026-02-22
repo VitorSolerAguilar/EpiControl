@@ -48,7 +48,7 @@ namespace EpiControl.Views
 			txtNomeMae.Text = row["nome_mae"].ToString();
 			txtRua.Text = row["rua"].ToString();
 			txtNumero.Text = row["numero"].ToString();
-			txtLogradouro.Text = row["bairro"].ToString();
+			txtLogradouro.Text = row["logradouro"].ToString();
 			txtCidade.Text = row["cidade"].ToString();
 			txtUf.Text = row["uf"].ToString();
 			txtNomePai.Text = row["nome_pai"].ToString();

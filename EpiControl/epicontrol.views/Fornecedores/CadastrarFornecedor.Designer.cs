@@ -1,6 +1,6 @@
 ﻿namespace EpiControl.Views.Fornecedores
 {
-	partial class CadastrarFornecedor
+	partial class frmCadastrarFornecedor
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFornecedor));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarFornecedor));
 			btn_voltar = new Button();
 			btnSalvar = new Button();
 			label1 = new Label();
@@ -424,7 +424,7 @@
 			label11.TabIndex = 225;
 			label11.Text = "CEP:";
 			// 
-			// CadastrarFornecedor
+			// frmCadastrarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
@@ -467,7 +467,7 @@
 			Controls.Add(btn_voltar);
 			Controls.Add(btnSalvar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "CadastrarFornecedor";
+			Name = "frmCadastrarFornecedor";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();

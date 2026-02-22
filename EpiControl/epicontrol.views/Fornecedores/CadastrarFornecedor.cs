@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace EpiControl.Views.Fornecedores
 {
-	public partial class CadastrarFornecedor : Form
+	public partial class frmCadastrarFornecedor : Form
 	{
-		public CadastrarFornecedor()
+		public frmCadastrarFornecedor()
 		{
 			InitializeComponent();
 		}
