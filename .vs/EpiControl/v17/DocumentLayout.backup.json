@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\editarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\editarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|D:\\EpiControl\\epicontrol\\epicontrol.views\\cadastrarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\funcionariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\funcionariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\fornecedores\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\fornecedores\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\fornecedores\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\fornecedores\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\fornecedordao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\fornecedordao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,49 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditarFuncionario.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFuncionario.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarFuncionario.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFuncionario.cs*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarFuncionario.cs*",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwI8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:04:16.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EditarFuncionario.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFuncionario.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarFuncionario.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFuncionario.cs [Projeto]*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarFuncionario.cs [Projeto]*",
+              "Title": "CadastrarFornecedor.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:04:14.752Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FuncionarioDAO.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FuncionarioDAO.cs*",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs*",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAwwGABAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T19:02:12.299Z",
+              "WhenOpened": "2026-02-22T20:06:44.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CadastrarFornecedor.cs [Projeto]",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\Fornecedores\\CadastrarFornecedor.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T20:06:41.402Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FornecedorDAO.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T20:06:04.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CadastrarFuncionario.cs [Projeto]",
               "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",

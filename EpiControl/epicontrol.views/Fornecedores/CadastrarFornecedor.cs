@@ -48,12 +48,12 @@ namespace EpiControl.Views.Fornecedores
 				Fornecedor fornecedor = new Fornecedor();
 
 				fornecedor.nome = txtNome.Text;
-				fornecedor.cnpj = txtCnpj.Text;
+				fornecedor.cnpj = mtbCnpj.Text;
 				fornecedor.observacao = rtbObservacao.Text;
 
 				Endereco endereco = new Endereco();
 
-				endereco.cep = txtCep.Text;
+				endereco.cep = mtbCep.Text;
 				endereco.cidade = txtCidade.Text;
 				endereco.uf = txtUf.Text;
 				endereco.rua = txtRua.Text;
@@ -65,8 +65,8 @@ namespace EpiControl.Views.Fornecedores
 
 				Contato contato = new Contato();
 
-				contato.telefone = txtTelefone.Text;
-				contato.celular = txtCelular.Text;
+				contato.telefone = mtbTelefone.Text;
+				contato.celular = mtbCelular.Text;
 				contato.emailPessoal = txtEmailPessoal.Text;
 				contato.emailCorporativo = txtEmailPessoal.Text;
 

@@ -33,15 +33,12 @@
 			btnSalvar = new Button();
 			label1 = new Label();
 			txtNome = new TextBox();
-			txtCnpj = new TextBox();
 			label2 = new Label();
 			label3 = new Label();
 			rtbObservacao = new RichTextBox();
 			label4 = new Label();
 			label5 = new Label();
-			txtTelefone = new TextBox();
 			label6 = new Label();
-			txtCelular = new TextBox();
 			label7 = new Label();
 			txtEmailPessoal = new TextBox();
 			label8 = new Label();
@@ -67,8 +64,11 @@
 			txtRua = new TextBox();
 			txtNumero = new TextBox();
 			label10 = new Label();
-			txtCep = new TextBox();
 			label11 = new Label();
+			mtbCnpj = new MaskedTextBox();
+			mtbTelefone = new MaskedTextBox();
+			mtbCelular = new MaskedTextBox();
+			mtbCep = new MaskedTextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -76,7 +76,7 @@
 			// btn_voltar
 			// 
 			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(378, 649);
+			btn_voltar.Location = new Point(398, 649);
 			btn_voltar.Name = "btn_voltar";
 			btn_voltar.Size = new Size(75, 40);
 			btn_voltar.TabIndex = 33;
@@ -108,17 +108,10 @@
 			// 
 			// txtNome
 			// 
-			txtNome.Location = new Point(170, 103);
+			txtNome.Location = new Point(187, 104);
 			txtNome.Name = "txtNome";
 			txtNome.Size = new Size(231, 23);
 			txtNome.TabIndex = 35;
-			// 
-			// txtCnpj
-			// 
-			txtCnpj.Location = new Point(170, 132);
-			txtCnpj.Name = "txtCnpj";
-			txtCnpj.Size = new Size(231, 23);
-			txtCnpj.TabIndex = 37;
 			// 
 			// label2
 			// 
@@ -140,7 +133,7 @@
 			// 
 			// rtbObservacao
 			// 
-			rtbObservacao.Location = new Point(170, 161);
+			rtbObservacao.Location = new Point(187, 162);
 			rtbObservacao.Name = "rtbObservacao";
 			rtbObservacao.Size = new Size(231, 58);
 			rtbObservacao.TabIndex = 39;
@@ -150,7 +143,7 @@
 			// 
 			label4.AutoSize = true;
 			label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label4.Location = new Point(218, 70);
+			label4.Location = new Point(235, 71);
 			label4.Name = "label4";
 			label4.Size = new Size(125, 21);
 			label4.TabIndex = 40;
@@ -160,18 +153,11 @@
 			// 
 			label5.AutoSize = true;
 			label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label5.Location = new Point(245, 244);
+			label5.Location = new Point(262, 244);
 			label5.Name = "label5";
 			label5.Size = new Size(65, 21);
 			label5.TabIndex = 41;
 			label5.Text = "Contato";
-			// 
-			// txtTelefone
-			// 
-			txtTelefone.Location = new Point(170, 275);
-			txtTelefone.Name = "txtTelefone";
-			txtTelefone.Size = new Size(110, 23);
-			txtTelefone.TabIndex = 43;
 			// 
 			// label6
 			// 
@@ -181,13 +167,6 @@
 			label6.Size = new Size(56, 15);
 			label6.TabIndex = 42;
 			label6.Text = "Telefone*";
-			// 
-			// txtCelular
-			// 
-			txtCelular.Location = new Point(170, 304);
-			txtCelular.Name = "txtCelular";
-			txtCelular.Size = new Size(110, 23);
-			txtCelular.TabIndex = 45;
 			// 
 			// label7
 			// 
@@ -200,7 +179,7 @@
 			// 
 			// txtEmailPessoal
 			// 
-			txtEmailPessoal.Location = new Point(170, 333);
+			txtEmailPessoal.Location = new Point(187, 333);
 			txtEmailPessoal.Name = "txtEmailPessoal";
 			txtEmailPessoal.Size = new Size(231, 23);
 			txtEmailPessoal.TabIndex = 47;
@@ -216,7 +195,7 @@
 			// 
 			// txtEmailCorporativo
 			// 
-			txtEmailCorporativo.Location = new Point(170, 362);
+			txtEmailCorporativo.Location = new Point(187, 362);
 			txtEmailCorporativo.Name = "txtEmailCorporativo";
 			txtEmailCorporativo.Size = new Size(231, 23);
 			txtEmailCorporativo.TabIndex = 49;
@@ -354,7 +333,7 @@
 			// 
 			label26.AutoSize = true;
 			label26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label26.Location = new Point(245, 398);
+			label26.Location = new Point(262, 397);
 			label26.Name = "label26";
 			label26.Size = new Size(74, 21);
 			label26.TabIndex = 233;
@@ -408,13 +387,6 @@
 			label10.TabIndex = 227;
 			label10.Text = "N°:";
 			// 
-			// txtCep
-			// 
-			txtCep.Location = new Point(188, 432);
-			txtCep.Name = "txtCep";
-			txtCep.Size = new Size(144, 23);
-			txtCep.TabIndex = 226;
-			// 
 			// label11
 			// 
 			label11.AutoSize = true;
@@ -424,11 +396,47 @@
 			label11.TabIndex = 225;
 			label11.Text = "CEP:";
 			// 
+			// mtbCnpj
+			// 
+			mtbCnpj.Location = new Point(187, 133);
+			mtbCnpj.Mask = "00.000.000/0000-00";
+			mtbCnpj.Name = "mtbCnpj";
+			mtbCnpj.Size = new Size(192, 23);
+			mtbCnpj.TabIndex = 243;
+			// 
+			// mtbTelefone
+			// 
+			mtbTelefone.Location = new Point(187, 275);
+			mtbTelefone.Mask = "0000-0000";
+			mtbTelefone.Name = "mtbTelefone";
+			mtbTelefone.Size = new Size(140, 23);
+			mtbTelefone.TabIndex = 244;
+			// 
+			// mtbCelular
+			// 
+			mtbCelular.Location = new Point(187, 304);
+			mtbCelular.Mask = "(00) 00000-0000";
+			mtbCelular.Name = "mtbCelular";
+			mtbCelular.Size = new Size(140, 23);
+			mtbCelular.TabIndex = 245;
+			// 
+			// mtbCep
+			// 
+			mtbCep.Location = new Point(188, 431);
+			mtbCep.Mask = "00000-000";
+			mtbCep.Name = "mtbCep";
+			mtbCep.Size = new Size(144, 23);
+			mtbCep.TabIndex = 246;
+			// 
 			// frmCadastrarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(588, 701);
+			Controls.Add(mtbCep);
+			Controls.Add(mtbCelular);
+			Controls.Add(mtbTelefone);
+			Controls.Add(mtbCnpj);
 			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
 			Controls.Add(btnConsultarCep);
@@ -445,22 +453,18 @@
 			Controls.Add(txtRua);
 			Controls.Add(txtNumero);
 			Controls.Add(label10);
-			Controls.Add(txtCep);
 			Controls.Add(label11);
 			Controls.Add(panel1);
 			Controls.Add(txtEmailCorporativo);
 			Controls.Add(label9);
 			Controls.Add(txtEmailPessoal);
 			Controls.Add(label8);
-			Controls.Add(txtCelular);
 			Controls.Add(label7);
-			Controls.Add(txtTelefone);
 			Controls.Add(label6);
 			Controls.Add(label5);
 			Controls.Add(label4);
 			Controls.Add(rtbObservacao);
 			Controls.Add(label3);
-			Controls.Add(txtCnpj);
 			Controls.Add(label2);
 			Controls.Add(txtNome);
 			Controls.Add(label1);
@@ -482,15 +486,12 @@
 		private Button btnSalvar;
 		private Label label1;
 		private TextBox txtNome;
-		private TextBox txtCnpj;
 		private Label label2;
 		private Label label3;
 		private RichTextBox rtbObservacao;
 		private Label label4;
 		private Label label5;
-		private TextBox txtTelefone;
 		private Label label6;
-		private TextBox txtCelular;
 		private Label label7;
 		private TextBox txtEmailPessoal;
 		private Label label8;
@@ -516,7 +517,10 @@
 		private TextBox txtRua;
 		private TextBox txtNumero;
 		private Label label10;
-		private TextBox txtCep;
 		private Label label11;
+		private MaskedTextBox mtbCnpj;
+		private MaskedTextBox mtbTelefone;
+		private MaskedTextBox mtbCelular;
+		private MaskedTextBox mtbCep;
 	}
 }
