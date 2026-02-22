@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarFornecedor));
-			btn_voltar = new Button();
+			btnVoltar = new Button();
 			btnSalvar = new Button();
 			label1 = new Label();
 			txtNome = new TextBox();
@@ -73,15 +73,16 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
-			// btn_voltar
+			// btnVoltar
 			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(398, 649);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 33;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(398, 649);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.TabIndex = 33;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// btnSalvar
 			// 
@@ -468,7 +469,7 @@
 			Controls.Add(label2);
 			Controls.Add(txtNome);
 			Controls.Add(label1);
-			Controls.Add(btn_voltar);
+			Controls.Add(btnVoltar);
 			Controls.Add(btnSalvar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmCadastrarFornecedor";
@@ -482,7 +483,7 @@
 
 		#endregion
 
-		private Button btn_voltar;
+		private Button btnVoltar;
 		private Button btnSalvar;
 		private Label label1;
 		private TextBox txtNome;

@@ -205,6 +205,7 @@
 			btnVoltar.TabIndex = 158;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// txtPisPasep
 			// 

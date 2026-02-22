@@ -20,6 +20,9 @@
     <Compile Update="epicontrol.views\Fornecedores\CadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="epicontrol.views\Fornecedores\ConsultarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="epicontrol.views\Fornecedores\EditarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>

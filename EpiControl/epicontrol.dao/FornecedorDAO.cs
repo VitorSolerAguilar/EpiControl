@@ -3,6 +3,7 @@ using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,6 @@ namespace EpiControl.epicontrol.dao
 			this.conexao = new ConnectionFactory().getconnetion();
 		}
 
-		#region cadastrarFornecedor
 		public void cadastrarFornecedor(Fornecedor fornecedor, Endereco endereco, Contato contato)
 		{
 			conexao.Open();
@@ -79,6 +79,84 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
-		#endregion
+
+		public DataTable listarFornecedor()
+		{
+			try
+			{
+				DataTable tabelaFornecedor = new DataTable();
+
+				string sql = @"SELECT f.id_fornecedor, f.nome, f.cnpj, f.observacoes, c.id_contato AS id_contato, c.telefone, c.celular, c.email, c.email_corporativo, e.id_endereco AS id_endereco, e.cep, e.rua, e.numero,
+				e.logradouro, e.complemento, e.cidade, e.tipo, e.uf FROM tb_fornecedor f LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor ORDER BY f.nome;";
+
+				MySqlCommand cmd = new MySqlCommand(sql, conexao);
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+				da.Fill(tabelaFornecedor);
+
+				return tabelaFornecedor;
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Erro ao listar fornecedores: " + ex.Message);
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
+
+		public DataTable buscarFornecedorId(int idFornecedor)
+		{
+			try
+			{
+				DataTable tabelaFornecedor = new DataTable();
+
+				string sql = "SELECT " +
+					"f.id_fornecedor, " +
+					"f.nome, " +
+					"f.cnpj," +
+					"f.observacoes," +					
+					"" +
+					"c.id_contato," +
+					"c.telefone, " +
+					"c.celular, " +
+					"c.email, " +
+					"c.email_corporativo, " +
+					"" +
+					"e.id_endereco," +
+					"e.cep, " +
+					"e.rua, " +
+					"e.numero, " +
+					"e.complemento, " +
+					"e.logradouro, " +
+					"e.cidade, " +
+					"e.tipo," +
+					"e.uf " +
+					"FROM tb_fornecedor f LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor ORDER BY f.nome;";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@id", idFornecedor);
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaFornecedor);
+
+				return tabelaFornecedor;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
+
 	}
 }

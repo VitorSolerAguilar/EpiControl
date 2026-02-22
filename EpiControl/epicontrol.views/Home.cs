@@ -1,4 +1,5 @@
 using EpiControl.epicontrol.views;
+using EpiControl.epicontrol.views.Fornecedores;
 using EpiControl.Views.Fornecedores;
 
 namespace EpiControl
@@ -40,11 +41,11 @@ namespace EpiControl
 		}
 		private void btnConsultarFornecedor_Click(object sender, EventArgs e)
 		{
-			frmEditarFornecedor EditarFornecedor = new frmEditarFornecedor();
+			frmConsultarFornecedor consultarFornecedor = new frmConsultarFornecedor();
 
-			EditarFornecedor.FormClosed += (s, args) => this.Show();
+			consultarFornecedor.FormClosed += (s, args) => this.Show();
 			this.Hide();
-			EditarFornecedor.Show();
+			consultarFornecedor.Show();
 		}
 		private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
 		{

@@ -23,7 +23,7 @@ namespace EpiControl.Views.Fornecedores
 		{
 			try
 			{
-				string cep = txtCep.Text;
+				string cep = mtbCep.Text;
 				string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
 
 				DataSet dados = new DataSet();
@@ -79,6 +79,11 @@ namespace EpiControl.Views.Fornecedores
 			{
 				MessageBox.Show("Erro ao salvar: " + ex.Message);
 			}
+		}
+
+		private void btnVoltar_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 	}
 }

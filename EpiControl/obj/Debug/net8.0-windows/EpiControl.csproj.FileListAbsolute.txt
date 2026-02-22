@@ -58,3 +58,4 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.fr
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.frmHome.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmCadastrarFornecedor.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmEditarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.Fornecedores.frmConsultarFornecedor.resources

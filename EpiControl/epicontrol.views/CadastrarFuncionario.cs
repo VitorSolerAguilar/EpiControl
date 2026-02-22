@@ -130,6 +130,11 @@ namespace EpiControl.epicontrol.views
 			cbxEstadoCivil.SelectedIndex = -1;
 			cbxTipo.SelectedIndex = -1;
 		}
+
+		private void btnVoltar_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }
 
