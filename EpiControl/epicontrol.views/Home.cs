@@ -22,14 +22,6 @@ namespace EpiControl
 		{
 			this.Close();
 		}
-		private void btn_cadastroFornecedor_Click(object sender, EventArgs e)
-		{
-			CadastrarFornecedor cadastrarFornecedor = new CadastrarFornecedor();
-
-			cadastrarFornecedor.FormClosed += (s, args) => this.Show();
-			this.Hide();
-			cadastrarFornecedor.Show();
-		}
 		private void btnConsultarFrm_Click(object sender, EventArgs e)
 		{
 			frmConsultarFuncionario consultarFuncionario = new frmConsultarFuncionario();
@@ -46,6 +38,14 @@ namespace EpiControl
 			this.Hide();
 			cadastrarFuncionario.Show();
 		}
+		private void btnConsultarFornecedor_Click(object sender, EventArgs e)
+		{
+
+		}
+		private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
+		{
+
+		}
 
 
 
@@ -60,7 +60,7 @@ namespace EpiControl
 			{
 				flpContainer.Height += 1;
 
-				if (flpContainer.Height >= 178)
+				if (flpContainer.Height >= 153)
 				{
 					trasicaoMenu.Stop();
 					menuExpand = true;
@@ -78,10 +78,39 @@ namespace EpiControl
 			}
 		}
 
+		private void transicaoMenuFornecedor_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpContainerFornecedor.Height += 1;
+
+				if (flpContainerFornecedor.Height >= 153)
+				{
+					transicaoMenuFornecedor.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpContainerFornecedor.Height -= 10;
+				if (flpContainerFornecedor.Height <= 54)
+				{
+					transicaoMenuFornecedor.Stop();
+					menuExpand = false;
+				}
+			}
+		}
+
 		private void btnFuncionario_Click(object sender, EventArgs e)
 		{
 			trasicaoMenu.Start();
 		}
-				
+
+		private void btn_cadastroFornecedor_Click(object sender, EventArgs e)
+		{
+			transicaoMenuFornecedor.Start();
+		}
+
 	}
 }
