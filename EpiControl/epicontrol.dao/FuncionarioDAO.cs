@@ -270,10 +270,14 @@ namespace EpiControl.epicontrol.dao
 					"f.cpf, " +
 					"f.cargo, " +
 					"f.status, " +
+					"" +
+					"c.id_contato AS id_contato," +
 					"c.telefone, " +
 					"c.celular, " +
 					"c.email, " +
 					"c.email_corporativo, " +
+					"" +
+					"e.id_endereco AS id_endereco," +
 					"e.cep, " +
 					"e.rua, " +
 					"e.numero, " +

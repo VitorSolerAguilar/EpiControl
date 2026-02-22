@@ -29,13 +29,12 @@ namespace EpiControl.epicontrol.views
 
 		private void dgvFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
-			FuncionarioDAO dao = new FuncionarioDAO();
-
-			dgvFuncionario.AutoGenerateColumns = true;
-			dgvFuncionario.DataSource = dao.listarFuncionarios();
+			if (e.RowIndex < 0) return;
 
 			int idFuncionario = Convert.ToInt32(dgvFuncionario.Rows[e.RowIndex].Cells["id_funcionario"].Value);
+
 			int idEndereco = Convert.ToInt32(dgvFuncionario.Rows[e.RowIndex].Cells["id_endereco"].Value);
+
 			int idContato = Convert.ToInt32(dgvFuncionario.Rows[e.RowIndex].Cells["id_contato"].Value);
 
 			frmEditarFuncionario frm = new frmEditarFuncionario(idFuncionario, idEndereco, idContato);
@@ -44,10 +43,8 @@ namespace EpiControl.epicontrol.views
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			string nomeFuncionario = txtConsultaNome.Text;
-
 			FuncionarioDAO dao = new FuncionarioDAO();
-			dgvFuncionario.DataSource = dao.buscarFuncionarioNome(nomeFuncionario);
+			dgvFuncionario.DataSource = dao.buscarFuncionarioNome(txtConsultaNome.Text);
 		}
 	}
 }

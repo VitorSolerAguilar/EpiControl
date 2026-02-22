@@ -71,9 +71,6 @@
 			txtNacionalidade = new TextBox();
 			label10 = new Label();
 			label9 = new Label();
-			rdbOutro = new RadioButton();
-			rdbFeminino = new RadioButton();
-			rdbMasculino = new RadioButton();
 			label8 = new Label();
 			label7 = new Label();
 			rdbInativo = new RadioButton();
@@ -94,6 +91,9 @@
 			mtbTelefone = new MaskedTextBox();
 			mtbCelular = new MaskedTextBox();
 			btnConsultarCep = new Button();
+			rdbMasculino = new RadioButton();
+			rdbFeminino = new RadioButton();
+			rdbOutros = new RadioButton();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -470,39 +470,6 @@
 			label9.TabIndex = 189;
 			label9.Text = "Estado Civil:";
 			// 
-			// rdbOutro
-			// 
-			rdbOutro.AutoSize = true;
-			rdbOutro.Location = new Point(352, 215);
-			rdbOutro.Name = "rdbOutro";
-			rdbOutro.Size = new Size(56, 19);
-			rdbOutro.TabIndex = 188;
-			rdbOutro.TabStop = true;
-			rdbOutro.Text = "Outro";
-			rdbOutro.UseVisualStyleBackColor = true;
-			// 
-			// rdbFeminino
-			// 
-			rdbFeminino.AutoSize = true;
-			rdbFeminino.Location = new Point(271, 215);
-			rdbFeminino.Name = "rdbFeminino";
-			rdbFeminino.Size = new Size(75, 19);
-			rdbFeminino.TabIndex = 187;
-			rdbFeminino.TabStop = true;
-			rdbFeminino.Text = "Feminino";
-			rdbFeminino.UseVisualStyleBackColor = true;
-			// 
-			// rdbMasculino
-			// 
-			rdbMasculino.AutoSize = true;
-			rdbMasculino.Location = new Point(185, 215);
-			rdbMasculino.Name = "rdbMasculino";
-			rdbMasculino.Size = new Size(80, 19);
-			rdbMasculino.TabIndex = 186;
-			rdbMasculino.TabStop = true;
-			rdbMasculino.Text = "Masculino";
-			rdbMasculino.UseVisualStyleBackColor = true;
-			// 
 			// label8
 			// 
 			label8.AutoSize = true;
@@ -685,11 +652,47 @@
 			btnConsultarCep.UseVisualStyleBackColor = true;
 			btnConsultarCep.Click += btnConsultarCep_Click;
 			// 
+			// rdbMasculino
+			// 
+			rdbMasculino.AutoSize = true;
+			rdbMasculino.Location = new Point(185, 215);
+			rdbMasculino.Name = "rdbMasculino";
+			rdbMasculino.Size = new Size(80, 19);
+			rdbMasculino.TabIndex = 245;
+			rdbMasculino.TabStop = true;
+			rdbMasculino.Text = "Masculino";
+			rdbMasculino.UseVisualStyleBackColor = true;
+			// 
+			// rdbFeminino
+			// 
+			rdbFeminino.AutoSize = true;
+			rdbFeminino.Location = new Point(285, 215);
+			rdbFeminino.Name = "rdbFeminino";
+			rdbFeminino.Size = new Size(75, 19);
+			rdbFeminino.TabIndex = 246;
+			rdbFeminino.TabStop = true;
+			rdbFeminino.Text = "Feminino";
+			rdbFeminino.UseVisualStyleBackColor = true;
+			// 
+			// rdbOutros
+			// 
+			rdbOutros.AutoSize = true;
+			rdbOutros.Location = new Point(370, 215);
+			rdbOutros.Name = "rdbOutros";
+			rdbOutros.Size = new Size(61, 19);
+			rdbOutros.TabIndex = 247;
+			rdbOutros.TabStop = true;
+			rdbOutros.Text = "Outros";
+			rdbOutros.UseVisualStyleBackColor = true;
+			// 
 			// frmEditarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 989);
+			Controls.Add(rdbOutros);
+			Controls.Add(rdbFeminino);
+			Controls.Add(rdbMasculino);
 			Controls.Add(btnConsultarCep);
 			Controls.Add(mtbTelefone);
 			Controls.Add(mtbCelular);
@@ -737,9 +740,6 @@
 			Controls.Add(txtNacionalidade);
 			Controls.Add(label10);
 			Controls.Add(label9);
-			Controls.Add(rdbOutro);
-			Controls.Add(rdbFeminino);
-			Controls.Add(rdbMasculino);
 			Controls.Add(label8);
 			Controls.Add(label7);
 			Controls.Add(rdbInativo);
@@ -806,9 +806,6 @@
 		private TextBox txtNacionalidade;
 		private Label label10;
 		private Label label9;
-		private RadioButton rdbOutro;
-		private RadioButton rdbFeminino;
-		private RadioButton rdbMasculino;
 		private Label label8;
 		private Label label7;
 		private RadioButton rdbInativo;
@@ -829,5 +826,8 @@
 		private MaskedTextBox mtbTelefone;
 		private MaskedTextBox mtbCelular;
 		private Button btnConsultarCep;
+		private RadioButton rdbMasculino;
+		private RadioButton rdbFeminino;
+		private RadioButton rdbOutros;
 	}
 }
