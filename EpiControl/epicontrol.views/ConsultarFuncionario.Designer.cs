@@ -34,6 +34,9 @@
 			pictureBox1 = new PictureBox();
 			panel1 = new Panel();
 			label1 = new Label();
+			txtConsultaNome = new TextBox();
+			btnConsultar = new Button();
+			label = new Label();
 			((System.ComponentModel.ISupportInitialize)dgvFuncionario).BeginInit();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
@@ -91,14 +94,44 @@
 			label1.TabIndex = 2;
 			label1.Text = "EPI CONTROL";
 			// 
+			// txtConsultaNome
+			// 
+			txtConsultaNome.Location = new Point(298, 74);
+			txtConsultaNome.Name = "txtConsultaNome";
+			txtConsultaNome.Size = new Size(226, 23);
+			txtConsultaNome.TabIndex = 8;
+			// 
+			// btnConsultar
+			// 
+			btnConsultar.Location = new Point(530, 73);
+			btnConsultar.Name = "btnConsultar";
+			btnConsultar.Size = new Size(75, 24);
+			btnConsultar.TabIndex = 9;
+			btnConsultar.Text = "Consultar";
+			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
+			// 
+			// label
+			// 
+			label.AutoSize = true;
+			label.Location = new Point(223, 77);
+			label.Name = "label";
+			label.Size = new Size(43, 15);
+			label.TabIndex = 10;
+			label.Text = "Nome:";
+			// 
 			// frmConsultarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(label);
+			Controls.Add(btnConsultar);
+			Controls.Add(txtConsultaNome);
 			Controls.Add(panel1);
 			Controls.Add(dgvFuncionario);
 			Name = "frmConsultarFuncionario";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			Load += ConsultarFuncionario_Load;
 			((System.ComponentModel.ISupportInitialize)dgvFuncionario).EndInit();
@@ -106,6 +139,7 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
@@ -115,5 +149,8 @@
 		private PictureBox pictureBox1;
 		private Panel panel1;
 		private Label label1;
+		private TextBox txtConsultaNome;
+		private Button btnConsultar;
+		private Label label;
 	}
 }

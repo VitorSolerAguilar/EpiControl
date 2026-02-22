@@ -20,7 +20,7 @@ namespace EpiControl
 			.Build();
 
 			ApplicationConfiguration.Initialize();
-            Application.Run(new frmConsultarFuncionario());
+            Application.Run(new frmHome());
         }
     }
 }

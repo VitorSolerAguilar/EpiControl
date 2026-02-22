@@ -28,14 +28,14 @@ namespace EpiControl.epicontrol.views
 				Funcionario funcionario = new Funcionario();
 
 				funcionario.nome = txtNome.Text;
-				funcionario.dataNascimento = dtpDataNascimento.Value;
-				funcionario.estadoCivil = txtEstadoCivil.Text;
+				funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
+				funcionario.estadoCivil = cbxEstadoCivil.Text;
 				funcionario.nacionalidade = txtNacionalidade.Text;
 				funcionario.nomeMae = txtNomeMae.Text;
 				funcionario.nomePai = txtNomePai.Text;
 				funcionario.pisPasep = txtPisPasep.Text;
-				funcionario.rg = txtRg.Text;
-				funcionario.cpf = txtCpf.Text;
+				funcionario.rg = mtbRg.Text;
+				funcionario.cpf = mtbCpf.Text;
 				funcionario.matricula = txtMatricula.Text;
 				funcionario.cargo = txtCargo.Text;
 
@@ -52,7 +52,7 @@ namespace EpiControl.epicontrol.views
 
 				Endereco endereco = new Endereco();
 
-				endereco.cep = txtCep.Text;
+				endereco.cep = mtbCep.Text;
 				endereco.cidade = txtCidade.Text;
 				endereco.uf = txtUf.Text;
 				endereco.rua = txtRua.Text;
@@ -64,8 +64,8 @@ namespace EpiControl.epicontrol.views
 
 				Contato contato = new Contato();
 
-				contato.telefone = txtTelefone.Text;
-				contato.celular = txtCelular.Text;
+				contato.telefone = mtbTelefone.Text;
+				contato.celular = mtbCelular.Text;
 				contato.emailPessoal = txtEmailPessoal.Text;
 				contato.emailCorporativo = txtEmailCorporativo.Text;
 
@@ -73,6 +73,7 @@ namespace EpiControl.epicontrol.views
 				dao.cadastrarFuncionario(funcionario, endereco, contato);
 
 				MessageBox.Show("Funcionário cadastrado com sucesso!");
+				limparCampos();
 			}
 			catch (Exception ex)
 			{
@@ -84,7 +85,7 @@ namespace EpiControl.epicontrol.views
 		{
 			try
 			{
-				string cep = txtCep.Text;
+				string cep = mtbCep.Text;
 				string xml = "https://viacep.com.br/ws/" + cep + "/xml/";
 
 				DataSet dados = new DataSet();
@@ -102,6 +103,33 @@ namespace EpiControl.epicontrol.views
 			}
 		}
 
+		private void limparCampos()
+		{
+			txtNome.Clear();
+			txtNomeMae.Clear();
+			txtNomePai.Clear();
+			txtCargo.Clear();
+			txtMatricula.Clear();
+			txtEmailPessoal.Clear();
+			txtEmailCorporativo.Clear();
+			txtPisPasep.Clear();
+			txtNumero.Clear();
+			txtUf.Clear();
+			txtNacionalidade.Clear();
+			txtCidade.Clear();
+			txtRua.Clear();
+			txtLogradouro.Clear();
+
+			mtbCpf.Clear();
+			mtbRg.Clear();
+			mtbTelefone.Clear();
+			mtbCelular.Clear();
+			mtbCep.Clear();
+			mtbDataNascimento.Clear();
+
+			cbxEstadoCivil.SelectedIndex = -1;
+			cbxTipo.SelectedIndex = -1;
+		}
 	}
 }
 

@@ -42,21 +42,17 @@
 			btnVoltar = new Button();
 			txtPisPasep = new TextBox();
 			label23 = new Label();
-			txtUf = new TextBox();
 			label21 = new Label();
 			label20 = new Label();
 			txtRua = new TextBox();
 			txtNumero = new TextBox();
 			label18 = new Label();
-			txtCep = new TextBox();
 			label17 = new Label();
 			txtEmailCorporativo = new TextBox();
 			label16 = new Label();
 			txtEmailPessoal = new TextBox();
 			label15 = new Label();
-			txtCelular = new TextBox();
 			label14 = new Label();
-			txtTelefone = new TextBox();
 			label13 = new Label();
 			txtNomePai = new TextBox();
 			label12 = new Label();
@@ -64,13 +60,11 @@
 			label11 = new Label();
 			txtNacionalidade = new TextBox();
 			label10 = new Label();
-			txtEstadoCivil = new TextBox();
 			label9 = new Label();
 			rdbOutro = new RadioButton();
 			rdbFeminino = new RadioButton();
 			rdbMasculino = new RadioButton();
 			label8 = new Label();
-			dtpDataNascimento = new DateTimePicker();
 			label7 = new Label();
 			rdbInativo = new RadioButton();
 			rdbAtivo = new RadioButton();
@@ -81,9 +75,7 @@
 			label4 = new Label();
 			txtNome = new TextBox();
 			label3 = new Label();
-			txtRg = new TextBox();
 			label29 = new Label();
-			txtCpf = new TextBox();
 			label30 = new Label();
 			cbxTipo = new ComboBox();
 			label31 = new Label();
@@ -93,6 +85,14 @@
 			btnConsultarCep = new Button();
 			lblBairro = new Label();
 			txtLogradouro = new TextBox();
+			cbxEstadoCivil = new ComboBox();
+			mtbRg = new MaskedTextBox();
+			mtbCpf = new MaskedTextBox();
+			mtbDataNascimento = new MaskedTextBox();
+			mtbCelular = new MaskedTextBox();
+			mtbCep = new MaskedTextBox();
+			mtbTelefone = new MaskedTextBox();
+			txtUf = new TextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -222,13 +222,6 @@
 			label23.TabIndex = 156;
 			label23.Text = "PIS/PASEP:";
 			// 
-			// txtUf
-			// 
-			txtUf.Location = new Point(364, 645);
-			txtUf.Name = "txtUf";
-			txtUf.Size = new Size(74, 23);
-			txtUf.TabIndex = 153;
-			// 
 			// label21
 			// 
 			label21.AutoSize = true;
@@ -269,13 +262,6 @@
 			label18.Size = new Size(24, 15);
 			label18.TabIndex = 146;
 			label18.Text = "N°:";
-			// 
-			// txtCep
-			// 
-			txtCep.Location = new Point(184, 616);
-			txtCep.Name = "txtCep";
-			txtCep.Size = new Size(144, 23);
-			txtCep.TabIndex = 145;
 			// 
 			// label17
 			// 
@@ -318,13 +304,6 @@
 			label15.TabIndex = 140;
 			label15.Text = "Email pessoal:";
 			// 
-			// txtCelular
-			// 
-			txtCelular.Location = new Point(184, 476);
-			txtCelular.Name = "txtCelular";
-			txtCelular.Size = new Size(167, 23);
-			txtCelular.TabIndex = 139;
-			// 
 			// label14
 			// 
 			label14.AutoSize = true;
@@ -333,13 +312,6 @@
 			label14.Size = new Size(47, 15);
 			label14.TabIndex = 138;
 			label14.Text = "Celular:";
-			// 
-			// txtTelefone
-			// 
-			txtTelefone.Location = new Point(184, 447);
-			txtTelefone.Name = "txtTelefone";
-			txtTelefone.Size = new Size(167, 23);
-			txtTelefone.TabIndex = 137;
 			// 
 			// label13
 			// 
@@ -398,13 +370,6 @@
 			label10.TabIndex = 130;
 			label10.Text = "Nacionalidade:";
 			// 
-			// txtEstadoCivil
-			// 
-			txtEstadoCivil.Location = new Point(183, 153);
-			txtEstadoCivil.Name = "txtEstadoCivil";
-			txtEstadoCivil.Size = new Size(138, 23);
-			txtEstadoCivil.TabIndex = 129;
-			// 
 			// label9
 			// 
 			label9.AutoSize = true;
@@ -455,14 +420,6 @@
 			label8.Size = new Size(48, 15);
 			label8.TabIndex = 124;
 			label8.Text = "Gênero:";
-			// 
-			// dtpDataNascimento
-			// 
-			dtpDataNascimento.Format = DateTimePickerFormat.Short;
-			dtpDataNascimento.Location = new Point(183, 124);
-			dtpDataNascimento.Name = "dtpDataNascimento";
-			dtpDataNascimento.Size = new Size(200, 23);
-			dtpDataNascimento.TabIndex = 123;
 			// 
 			// label7
 			// 
@@ -552,13 +509,6 @@
 			label3.TabIndex = 113;
 			label3.Text = "Nome:";
 			// 
-			// txtRg
-			// 
-			txtRg.Location = new Point(182, 341);
-			txtRg.Name = "txtRg";
-			txtRg.Size = new Size(147, 23);
-			txtRg.TabIndex = 167;
-			// 
 			// label29
 			// 
 			label29.AutoSize = true;
@@ -567,13 +517,6 @@
 			label29.Size = new Size(25, 15);
 			label29.TabIndex = 166;
 			label29.Text = "RG:";
-			// 
-			// txtCpf
-			// 
-			txtCpf.Location = new Point(181, 370);
-			txtCpf.Name = "txtCpf";
-			txtCpf.Size = new Size(147, 23);
-			txtCpf.TabIndex = 169;
 			// 
 			// label30
 			// 
@@ -659,11 +602,87 @@
 			txtLogradouro.Size = new Size(200, 23);
 			txtLogradouro.TabIndex = 223;
 			// 
+			// cbxEstadoCivil
+			// 
+			cbxEstadoCivil.FormattingEnabled = true;
+			cbxEstadoCivil.Items.AddRange(new object[] { "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)", "Separado(a)", "União estável" });
+			cbxEstadoCivil.Location = new Point(181, 153);
+			cbxEstadoCivil.Name = "cbxEstadoCivil";
+			cbxEstadoCivil.Size = new Size(137, 23);
+			cbxEstadoCivil.TabIndex = 225;
+			// 
+			// mtbRg
+			// 
+			mtbRg.Location = new Point(181, 341);
+			mtbRg.Mask = "00.000.000-0";
+			mtbRg.Name = "mtbRg";
+			mtbRg.Size = new Size(147, 23);
+			mtbRg.TabIndex = 226;
+			mtbRg.ValidatingType = typeof(DateTime);
+			// 
+			// mtbCpf
+			// 
+			mtbCpf.Location = new Point(181, 370);
+			mtbCpf.Mask = "000.000.000-00";
+			mtbCpf.Name = "mtbCpf";
+			mtbCpf.Size = new Size(147, 23);
+			mtbCpf.TabIndex = 227;
+			mtbCpf.ValidatingType = typeof(DateTime);
+			// 
+			// mtbDataNascimento
+			// 
+			mtbDataNascimento.Location = new Point(183, 124);
+			mtbDataNascimento.Mask = "00/00/0000";
+			mtbDataNascimento.Name = "mtbDataNascimento";
+			mtbDataNascimento.Size = new Size(147, 23);
+			mtbDataNascimento.TabIndex = 228;
+			mtbDataNascimento.ValidatingType = typeof(DateTime);
+			// 
+			// mtbCelular
+			// 
+			mtbCelular.Location = new Point(185, 476);
+			mtbCelular.Mask = "(99) 00000-0000";
+			mtbCelular.Name = "mtbCelular";
+			mtbCelular.Size = new Size(147, 23);
+			mtbCelular.TabIndex = 229;
+			// 
+			// mtbCep
+			// 
+			mtbCep.Location = new Point(182, 615);
+			mtbCep.Mask = "00000-000";
+			mtbCep.Name = "mtbCep";
+			mtbCep.Size = new Size(147, 23);
+			mtbCep.TabIndex = 230;
+			mtbCep.ValidatingType = typeof(DateTime);
+			// 
+			// mtbTelefone
+			// 
+			mtbTelefone.Location = new Point(185, 447);
+			mtbTelefone.Mask = "000-0000";
+			mtbTelefone.Name = "mtbTelefone";
+			mtbTelefone.Size = new Size(147, 23);
+			mtbTelefone.TabIndex = 231;
+			// 
+			// txtUf
+			// 
+			txtUf.Location = new Point(363, 644);
+			txtUf.Name = "txtUf";
+			txtUf.Size = new Size(74, 23);
+			txtUf.TabIndex = 232;
+			// 
 			// frmCadastrarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 979);
+			Controls.Add(txtUf);
+			Controls.Add(mtbTelefone);
+			Controls.Add(mtbCep);
+			Controls.Add(mtbCelular);
+			Controls.Add(mtbDataNascimento);
+			Controls.Add(mtbCpf);
+			Controls.Add(mtbRg);
+			Controls.Add(cbxEstadoCivil);
 			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
 			Controls.Add(btnConsultarCep);
@@ -672,9 +691,7 @@
 			Controls.Add(label32);
 			Controls.Add(label31);
 			Controls.Add(cbxTipo);
-			Controls.Add(txtCpf);
 			Controls.Add(label30);
-			Controls.Add(txtRg);
 			Controls.Add(label29);
 			Controls.Add(label28);
 			Controls.Add(txtCidade);
@@ -685,21 +702,17 @@
 			Controls.Add(btnVoltar);
 			Controls.Add(txtPisPasep);
 			Controls.Add(label23);
-			Controls.Add(txtUf);
 			Controls.Add(label21);
 			Controls.Add(label20);
 			Controls.Add(txtRua);
 			Controls.Add(txtNumero);
 			Controls.Add(label18);
-			Controls.Add(txtCep);
 			Controls.Add(label17);
 			Controls.Add(txtEmailCorporativo);
 			Controls.Add(label16);
 			Controls.Add(txtEmailPessoal);
 			Controls.Add(label15);
-			Controls.Add(txtCelular);
 			Controls.Add(label14);
-			Controls.Add(txtTelefone);
 			Controls.Add(label13);
 			Controls.Add(txtNomePai);
 			Controls.Add(label12);
@@ -707,13 +720,11 @@
 			Controls.Add(label11);
 			Controls.Add(txtNacionalidade);
 			Controls.Add(label10);
-			Controls.Add(txtEstadoCivil);
 			Controls.Add(label9);
 			Controls.Add(rdbOutro);
 			Controls.Add(rdbFeminino);
 			Controls.Add(rdbMasculino);
 			Controls.Add(label8);
-			Controls.Add(dtpDataNascimento);
 			Controls.Add(label7);
 			Controls.Add(rdbInativo);
 			Controls.Add(rdbAtivo);
@@ -752,21 +763,17 @@
 		private Button btnVoltar;
 		private TextBox txtPisPasep;
 		private Label label23;
-		private TextBox txtUf;
 		private Label label21;
 		private Label label20;
 		private TextBox txtRua;
 		private TextBox txtNumero;
 		private Label label18;
-		private TextBox txtCep;
 		private Label label17;
 		private TextBox txtEmailCorporativo;
 		private Label label16;
 		private TextBox txtEmailPessoal;
 		private Label label15;
-		private TextBox txtCelular;
 		private Label label14;
-		private TextBox txtTelefone;
 		private Label label13;
 		private TextBox txtNomePai;
 		private Label label12;
@@ -774,13 +781,11 @@
 		private Label label11;
 		private TextBox txtNacionalidade;
 		private Label label10;
-		private TextBox txtEstadoCivil;
 		private Label label9;
 		private RadioButton rdbOutro;
 		private RadioButton rdbFeminino;
 		private RadioButton rdbMasculino;
 		private Label label8;
-		private DateTimePicker dtpDataNascimento;
 		private Label label7;
 		private RadioButton rdbInativo;
 		private RadioButton rdbAtivo;
@@ -791,9 +796,7 @@
 		private Label label4;
 		private TextBox txtNome;
 		private Label label3;
-		private TextBox txtRg;
 		private Label label29;
-		private TextBox txtCpf;
 		private Label label30;
 		private ComboBox cbxTipo;
 		private Label label31;
@@ -803,5 +806,13 @@
 		private Button btnConsultarCep;
 		private Label lblBairro;
 		private TextBox txtLogradouro;
+		private ComboBox cbxEstadoCivil;
+		private MaskedTextBox mtbRg;
+		private MaskedTextBox mtbCpf;
+		private MaskedTextBox mtbDataNascimento;
+		private MaskedTextBox mtbCelular;
+		private MaskedTextBox mtbCep;
+		private MaskedTextBox mtbTelefone;
+		private TextBox txtUf;
 	}
 }

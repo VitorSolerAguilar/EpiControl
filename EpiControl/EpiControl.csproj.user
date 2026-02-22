@@ -32,9 +32,6 @@
     <Compile Update="epicontrol.views\EditarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\ExcluirFuncionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="epicontrol.views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
