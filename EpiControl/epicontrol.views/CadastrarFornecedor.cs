@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Fornecedores
+namespace EpiControl.Views
 {
 	public partial class frmCadastrarFornecedor : Form
 	{

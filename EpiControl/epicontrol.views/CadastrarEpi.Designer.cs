@@ -1,6 +1,6 @@
-﻿namespace EpiControl.Views.EPI
+﻿namespace EpiControl.Views
 {
-    partial class CadastrarEpi
+    partial class frmCadastrarEpi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarEpi));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarEpi));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -43,7 +43,6 @@
 			label6 = new Label();
 			txtCa = new TextBox();
 			label7 = new Label();
-			dtpValidadeCa = new DateTimePicker();
 			label8 = new Label();
 			txtTamanho = new TextBox();
 			label9 = new Label();
@@ -54,6 +53,11 @@
 			label10 = new Label();
 			label11 = new Label();
 			rtbDescricao = new RichTextBox();
+			label12 = new Label();
+			label13 = new Label();
+			cbxCategoria = new ComboBox();
+			cbxFornecedor = new ComboBox();
+			mtbValidadeCa = new MaskedTextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -136,7 +140,7 @@
 			// label5
 			// 
 			label5.AutoSize = true;
-			label5.Location = new Point(58, 329);
+			label5.Location = new Point(57, 329);
 			label5.Name = "label5";
 			label5.Size = new Size(42, 15);
 			label5.TabIndex = 58;
@@ -189,14 +193,6 @@
 			label7.TabIndex = 63;
 			label7.Text = "Validade do CA:";
 			// 
-			// dtpValidadeCa
-			// 
-			dtpValidadeCa.Format = DateTimePickerFormat.Short;
-			dtpValidadeCa.Location = new Point(153, 214);
-			dtpValidadeCa.Name = "dtpValidadeCa";
-			dtpValidadeCa.Size = new Size(132, 23);
-			dtpValidadeCa.TabIndex = 64;
-			// 
 			// label8
 			// 
 			label8.AutoSize = true;
@@ -232,12 +228,13 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(275, 479);
+			btnVoltar.Location = new Point(274, 553);
 			btnVoltar.Name = "btnVoltar";
 			btnVoltar.Size = new Size(75, 40);
 			btnVoltar.TabIndex = 69;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// btnSalvar
 			// 
@@ -245,7 +242,7 @@
 			btnSalvar.FlatAppearance.BorderSize = 0;
 			btnSalvar.FlatStyle = FlatStyle.Flat;
 			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(356, 479);
+			btnSalvar.Location = new Point(355, 553);
 			btnSalvar.Name = "btnSalvar";
 			btnSalvar.Size = new Size(75, 40);
 			btnSalvar.TabIndex = 70;
@@ -272,7 +269,7 @@
 			// label11
 			// 
 			label11.AutoSize = true;
-			label11.Location = new Point(58, 370);
+			label11.Location = new Point(57, 444);
 			label11.Name = "label11";
 			label11.Size = new Size(61, 15);
 			label11.TabIndex = 73;
@@ -280,17 +277,66 @@
 			// 
 			// rtbDescricao
 			// 
-			rtbDescricao.Location = new Point(153, 370);
+			rtbDescricao.Location = new Point(152, 444);
 			rtbDescricao.Name = "rtbDescricao";
 			rtbDescricao.Size = new Size(278, 82);
 			rtbDescricao.TabIndex = 74;
 			rtbDescricao.Text = "";
 			// 
-			// CadastrarEpi
+			// label12
+			// 
+			label12.AutoSize = true;
+			label12.Location = new Point(57, 365);
+			label12.Name = "label12";
+			label12.Size = new Size(61, 15);
+			label12.TabIndex = 75;
+			label12.Text = "Categoria:";
+			// 
+			// label13
+			// 
+			label13.AutoSize = true;
+			label13.Location = new Point(57, 404);
+			label13.Name = "label13";
+			label13.Size = new Size(67, 15);
+			label13.TabIndex = 76;
+			label13.Text = "Fornecedor";
+			// 
+			// cbxCategoria
+			// 
+			cbxCategoria.FormattingEnabled = true;
+			cbxCategoria.Items.AddRange(new object[] { "Proteção da cabeça", "Proteção dos olhos e face", "Proteção auditiva", "Proteção respiratória", "Proteção do tronco", "Proteção das mãos e braços", "Proteção de pernas e pés", "Proteção contra quedas" });
+			cbxCategoria.Location = new Point(153, 357);
+			cbxCategoria.Name = "cbxCategoria";
+			cbxCategoria.Size = new Size(179, 23);
+			cbxCategoria.TabIndex = 77;
+			// 
+			// cbxFornecedor
+			// 
+			cbxFornecedor.FormattingEnabled = true;
+			cbxFornecedor.Location = new Point(152, 396);
+			cbxFornecedor.Name = "cbxFornecedor";
+			cbxFornecedor.Size = new Size(121, 23);
+			cbxFornecedor.TabIndex = 78;
+			// 
+			// mtbValidadeCa
+			// 
+			mtbValidadeCa.Location = new Point(152, 214);
+			mtbValidadeCa.Mask = "00/00/0000";
+			mtbValidadeCa.Name = "mtbValidadeCa";
+			mtbValidadeCa.Size = new Size(100, 23);
+			mtbValidadeCa.TabIndex = 79;
+			mtbValidadeCa.ValidatingType = typeof(DateTime);
+			// 
+			// frmCadastrarEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(484, 531);
+			ClientSize = new Size(484, 608);
+			Controls.Add(mtbValidadeCa);
+			Controls.Add(cbxFornecedor);
+			Controls.Add(cbxCategoria);
+			Controls.Add(label13);
+			Controls.Add(label12);
 			Controls.Add(rtbDescricao);
 			Controls.Add(label11);
 			Controls.Add(txtMarca);
@@ -301,7 +347,6 @@
 			Controls.Add(label9);
 			Controls.Add(txtTamanho);
 			Controls.Add(label8);
-			Controls.Add(dtpValidadeCa);
 			Controls.Add(label7);
 			Controls.Add(txtCa);
 			Controls.Add(label6);
@@ -314,9 +359,10 @@
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "CadastrarEpi";
+			Name = "frmCadastrarEpi";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
+			Load += frmCadastrarEpi_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -340,7 +386,6 @@
         private Label label6;
         private TextBox txtCa;
         private Label label7;
-        private DateTimePicker dtpValidadeCa;
         private Label label8;
         private TextBox txtTamanho;
         private Label label9;
@@ -351,5 +396,10 @@
 		private Label label10;
 		private Label label11;
 		private RichTextBox rtbDescricao;
+		private Label label12;
+		private Label label13;
+		private ComboBox cbxCategoria;
+		private ComboBox cbxFornecedor;
+		private MaskedTextBox mtbValidadeCa;
 	}
 }

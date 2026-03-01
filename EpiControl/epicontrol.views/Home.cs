@@ -1,6 +1,5 @@
 using EpiControl.epicontrol.views;
-using EpiControl.epicontrol.views.Fornecedores;
-using EpiControl.Views.Fornecedores;
+using EpiControl.Views;
 
 namespace EpiControl
 {
@@ -11,7 +10,7 @@ namespace EpiControl
 			InitializeComponent();
 		}
 
-		private void btn_normasRegulamentadoras_Click(object sender, EventArgs e)
+		private void btnNormasRegulamentadoras_Click(object sender, EventArgs e)
 		{
 			CadastrarNr normasRegulamentadoras = new CadastrarNr();
 
@@ -19,7 +18,7 @@ namespace EpiControl
 			this.Hide();
 			normasRegulamentadoras.Show();
 		}
-		private void btn_sair_Click(object sender, EventArgs e)
+		private void btnSair_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
@@ -55,15 +54,29 @@ namespace EpiControl
 			this.Hide();
 			cadastrarFornecedor.Show();
 		}
+		private void btnCadastrarEpi_Click(object sender, EventArgs e)
+		{
+			frmCadastrarEpi cadastrarEpi = new frmCadastrarEpi();
 
+			cadastrarEpi.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarEpi.Show();
+		}
+		private void btnConsultarEpi_Click(object sender, EventArgs e)
+		{
+			frmConsultarEpi consultarEpi = new frmConsultarEpi();
 
+			consultarEpi.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultarEpi.Show();
+		}
 
 
 
 
 
 		bool menuExpand = false;
-		private void trasicaoMenu_Tick(object sender, EventArgs e)
+		private void trasicaoMenuFuncionario_Tick(object sender, EventArgs e)
 		{
 			if (menuExpand == false)
 			{
@@ -71,7 +84,7 @@ namespace EpiControl
 
 				if (flpContainer.Height >= 153)
 				{
-					trasicaoMenu.Stop();
+					trasicaoMenuFuncionario.Stop();
 					menuExpand = true;
 
 				}
@@ -81,12 +94,11 @@ namespace EpiControl
 				flpContainer.Height -= 10;
 				if (flpContainer.Height <= 51)
 				{
-					trasicaoMenu.Stop();
+					trasicaoMenuFuncionario.Stop();
 					menuExpand = false;
 				}
 			}
 		}
-
 		private void transicaoMenuFornecedor_Tick(object sender, EventArgs e)
 		{
 			if (menuExpand == false)
@@ -110,16 +122,41 @@ namespace EpiControl
 				}
 			}
 		}
+		private void transicaoMenuEpi_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpContainerEpi.Height += 1;
+
+				if (flpContainerEpi.Height >= 153)
+				{
+					transicaoMenuEpi.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpContainerEpi.Height -= 10;
+				if (flpContainerEpi.Height <= 51)
+				{
+					transicaoMenuEpi.Stop();
+					menuExpand = false;
+				}
+			}
+		}
 
 		private void btnFuncionario_Click(object sender, EventArgs e)
 		{
-			trasicaoMenu.Start();
+			trasicaoMenuFuncionario.Start();
 		}
-
-		private void btn_cadastroFornecedor_Click(object sender, EventArgs e)
+		private void btnCadastroFornecedor_Click(object sender, EventArgs e)
 		{
 			transicaoMenuFornecedor.Start();
 		}
-
+		private void btnEpi_Click(object sender, EventArgs e)
+		{
+			transicaoMenuEpi.Start();
+		}
 	}
 }

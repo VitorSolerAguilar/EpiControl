@@ -1,6 +1,5 @@
 ﻿using EpiControl.epicontrol.dao;
 using EpiControl.Views;
-using EpiControl.Views.Fornecedores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.epicontrol.views.Fornecedores
+namespace EpiControl.epicontrol.views
 {
 	public partial class frmConsultarFornecedor : Form
 	{

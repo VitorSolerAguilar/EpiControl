@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace EpiControl.epicontrol.model
 {
 	public class Epi
 	{
+		public int id { get; set; }
 		public string nome { get; set; }
 		public string codigoInterno{ get; set; }
 		public string ca { get; set; }
@@ -18,5 +20,8 @@ namespace EpiControl.epicontrol.model
 		public string categoria { get; set; }
 		public string tamanho { get; set; }
 		public string cor { get; set; }
+
+		//FK
+		public int fornecedorId { get; set; }
 	}
 }

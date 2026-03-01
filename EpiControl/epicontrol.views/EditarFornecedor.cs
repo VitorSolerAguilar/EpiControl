@@ -1,6 +1,5 @@
 ﻿using EpiControl.epicontrol.dao;
 using EpiControl.epicontrol.model;
-using EpiControl.Views.EPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EpiControl.Views.Fornecedores
+namespace EpiControl.Views
 {
 	public partial class frmEditarFornecedor : Form
 	{
@@ -50,6 +49,7 @@ namespace EpiControl.Views.Fornecedores
 				txtCidade.Text = row["cidade"].ToString();
 				txtUf.Text = row["uf"].ToString();
 				cbxTipo.Text = row["tipo"].ToString();
+				rtbComplemento.Text = row["complemento"].ToString();
 			}
 			catch (Exception ex)
 			{

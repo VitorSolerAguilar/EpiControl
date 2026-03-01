@@ -40,23 +40,28 @@
 			btnCadastrarFrm = new Button();
 			btnConsultarFrm = new Button();
 			flpContainerFornecedor = new FlowLayoutPanel();
-			btnConsultarFornecedor = new Button();
-			btn_cadastroFornecedor = new Button();
+			btnCadastroFornecedor = new Button();
 			btnCadastrarFornecedor = new Button();
-			btn_normasRegulamentadoras = new Button();
+			btnConsultarFornecedor = new Button();
+			flpContainerEpi = new FlowLayoutPanel();
+			btnEpi = new Button();
+			btnCadastrarEpi = new Button();
+			btnConsultarEpi = new Button();
+			btnNormasRegulamentadoras = new Button();
 			button3 = new Button();
 			button5 = new Button();
 			button6 = new Button();
 			pictureBox2 = new PictureBox();
-			btn_sair = new Button();
-			button2 = new Button();
-			trasicaoMenu = new System.Windows.Forms.Timer(components);
+			btnSair = new Button();
+			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
+			transicaoMenuEpi = new System.Windows.Forms.Timer(components);
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
 			flpContainer.SuspendLayout();
 			flpContainerFornecedor.SuspendLayout();
+			flpContainerEpi.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
 			// 
@@ -108,10 +113,11 @@
 			flowLayoutPanel1.BackColor = Color.FromArgb(0, 45, 71);
 			flowLayoutPanel1.Controls.Add(flpContainer);
 			flowLayoutPanel1.Controls.Add(flpContainerFornecedor);
+			flowLayoutPanel1.Controls.Add(flpContainerEpi);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(221, 598);
+			flowLayoutPanel1.Size = new Size(219, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
 			// flpContainer
@@ -134,8 +140,8 @@
 			btnFuncionario.FlatStyle = FlatStyle.Flat;
 			btnFuncionario.Image = (Image)resources.GetObject("btnFuncionario.Image");
 			btnFuncionario.ImageAlign = ContentAlignment.MiddleLeft;
-			btnFuncionario.Location = new Point(0, 2);
-			btnFuncionario.Margin = new Padding(0, 2, 0, 0);
+			btnFuncionario.Location = new Point(0, 0);
+			btnFuncionario.Margin = new Padding(0);
 			btnFuncionario.Name = "btnFuncionario";
 			btnFuncionario.Size = new Size(220, 51);
 			btnFuncionario.TabIndex = 2;
@@ -150,7 +156,7 @@
 			btnCadastrarFrm.FlatStyle = FlatStyle.Flat;
 			btnCadastrarFrm.Image = (Image)resources.GetObject("btnCadastrarFrm.Image");
 			btnCadastrarFrm.ImageAlign = ContentAlignment.MiddleLeft;
-			btnCadastrarFrm.Location = new Point(0, 53);
+			btnCadastrarFrm.Location = new Point(0, 51);
 			btnCadastrarFrm.Margin = new Padding(0);
 			btnCadastrarFrm.Name = "btnCadastrarFrm";
 			btnCadastrarFrm.Size = new Size(220, 51);
@@ -166,7 +172,7 @@
 			btnConsultarFrm.FlatStyle = FlatStyle.Flat;
 			btnConsultarFrm.Image = (Image)resources.GetObject("btnConsultarFrm.Image");
 			btnConsultarFrm.ImageAlign = ContentAlignment.MiddleLeft;
-			btnConsultarFrm.Location = new Point(0, 104);
+			btnConsultarFrm.Location = new Point(0, 102);
 			btnConsultarFrm.Margin = new Padding(0);
 			btnConsultarFrm.Name = "btnConsultarFrm";
 			btnConsultarFrm.Size = new Size(220, 51);
@@ -178,7 +184,7 @@
 			// flpContainerFornecedor
 			// 
 			flpContainerFornecedor.BackColor = Color.FromArgb(0, 45, 71);
-			flpContainerFornecedor.Controls.Add(btn_cadastroFornecedor);
+			flpContainerFornecedor.Controls.Add(btnCadastroFornecedor);
 			flpContainerFornecedor.Controls.Add(btnCadastrarFornecedor);
 			flpContainerFornecedor.Controls.Add(btnConsultarFornecedor);
 			flpContainerFornecedor.Location = new Point(0, 53);
@@ -187,37 +193,21 @@
 			flpContainerFornecedor.Size = new Size(264, 54);
 			flpContainerFornecedor.TabIndex = 5;
 			// 
-			// btnConsultarFornecedor
+			// btnCadastroFornecedor
 			// 
-			btnConsultarFornecedor.BackColor = Color.FromArgb(0, 45, 71);
-			btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
-			btnConsultarFornecedor.FlatStyle = FlatStyle.Flat;
-			btnConsultarFornecedor.Image = (Image)resources.GetObject("btnConsultarFornecedor.Image");
-			btnConsultarFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
-			btnConsultarFornecedor.Location = new Point(0, 105);
-			btnConsultarFornecedor.Margin = new Padding(0);
-			btnConsultarFornecedor.Name = "btnConsultarFornecedor";
-			btnConsultarFornecedor.Size = new Size(220, 51);
-			btnConsultarFornecedor.TabIndex = 6;
-			btnConsultarFornecedor.Text = "Consultar";
-			btnConsultarFornecedor.UseVisualStyleBackColor = false;
-			btnConsultarFornecedor.Click += btnConsultarFornecedor_Click;
-			// 
-			// btn_cadastroFornecedor
-			// 
-			btn_cadastroFornecedor.BackColor = Color.FromArgb(74, 146, 247);
-			btn_cadastroFornecedor.FlatAppearance.BorderSize = 0;
-			btn_cadastroFornecedor.FlatStyle = FlatStyle.Flat;
-			btn_cadastroFornecedor.Image = (Image)resources.GetObject("btn_cadastroFornecedor.Image");
-			btn_cadastroFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
-			btn_cadastroFornecedor.Location = new Point(0, 0);
-			btn_cadastroFornecedor.Margin = new Padding(0);
-			btn_cadastroFornecedor.Name = "btn_cadastroFornecedor";
-			btn_cadastroFornecedor.Size = new Size(220, 54);
-			btn_cadastroFornecedor.TabIndex = 2;
-			btn_cadastroFornecedor.Text = "Cadastro Fonecedor";
-			btn_cadastroFornecedor.UseVisualStyleBackColor = false;
-			btn_cadastroFornecedor.Click += btn_cadastroFornecedor_Click;
+			btnCadastroFornecedor.BackColor = Color.FromArgb(74, 146, 247);
+			btnCadastroFornecedor.FlatAppearance.BorderSize = 0;
+			btnCadastroFornecedor.FlatStyle = FlatStyle.Flat;
+			btnCadastroFornecedor.Image = (Image)resources.GetObject("btnCadastroFornecedor.Image");
+			btnCadastroFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastroFornecedor.Location = new Point(0, 0);
+			btnCadastroFornecedor.Margin = new Padding(0);
+			btnCadastroFornecedor.Name = "btnCadastroFornecedor";
+			btnCadastroFornecedor.Size = new Size(220, 54);
+			btnCadastroFornecedor.TabIndex = 2;
+			btnCadastroFornecedor.Text = "Cadastro Fonecedor";
+			btnCadastroFornecedor.UseVisualStyleBackColor = false;
+			btnCadastroFornecedor.Click += btnCadastroFornecedor_Click;
 			// 
 			// btnCadastrarFornecedor
 			// 
@@ -235,20 +225,96 @@
 			btnCadastrarFornecedor.UseVisualStyleBackColor = false;
 			btnCadastrarFornecedor.Click += btnCadastrarFornecedor_Click;
 			// 
-			// btn_normasRegulamentadoras
+			// btnConsultarFornecedor
 			// 
-			btn_normasRegulamentadoras.BackColor = Color.FromArgb(74, 146, 247);
-			btn_normasRegulamentadoras.FlatAppearance.BorderSize = 0;
-			btn_normasRegulamentadoras.FlatStyle = FlatStyle.Flat;
-			btn_normasRegulamentadoras.Image = (Image)resources.GetObject("btn_normasRegulamentadoras.Image");
-			btn_normasRegulamentadoras.ImageAlign = ContentAlignment.MiddleLeft;
-			btn_normasRegulamentadoras.Location = new Point(239, 151);
-			btn_normasRegulamentadoras.Name = "btn_normasRegulamentadoras";
-			btn_normasRegulamentadoras.Size = new Size(220, 54);
-			btn_normasRegulamentadoras.TabIndex = 2;
-			btn_normasRegulamentadoras.Text = "Normas Regulamentadoras";
-			btn_normasRegulamentadoras.UseVisualStyleBackColor = false;
-			btn_normasRegulamentadoras.Click += btn_normasRegulamentadoras_Click;
+			btnConsultarFornecedor.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
+			btnConsultarFornecedor.FlatStyle = FlatStyle.Flat;
+			btnConsultarFornecedor.Image = (Image)resources.GetObject("btnConsultarFornecedor.Image");
+			btnConsultarFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarFornecedor.Location = new Point(0, 105);
+			btnConsultarFornecedor.Margin = new Padding(0);
+			btnConsultarFornecedor.Name = "btnConsultarFornecedor";
+			btnConsultarFornecedor.Size = new Size(220, 51);
+			btnConsultarFornecedor.TabIndex = 6;
+			btnConsultarFornecedor.Text = "Consultar";
+			btnConsultarFornecedor.UseVisualStyleBackColor = false;
+			btnConsultarFornecedor.Click += btnConsultarFornecedor_Click;
+			// 
+			// flpContainerEpi
+			// 
+			flpContainerEpi.BackColor = Color.FromArgb(0, 45, 71);
+			flpContainerEpi.Controls.Add(btnEpi);
+			flpContainerEpi.Controls.Add(btnCadastrarEpi);
+			flpContainerEpi.Controls.Add(btnConsultarEpi);
+			flpContainerEpi.Location = new Point(0, 109);
+			flpContainerEpi.Margin = new Padding(0, 2, 0, 0);
+			flpContainerEpi.Name = "flpContainerEpi";
+			flpContainerEpi.Size = new Size(264, 54);
+			flpContainerEpi.TabIndex = 7;
+			// 
+			// btnEpi
+			// 
+			btnEpi.BackColor = Color.FromArgb(74, 146, 247);
+			btnEpi.FlatAppearance.BorderSize = 0;
+			btnEpi.FlatStyle = FlatStyle.Flat;
+			btnEpi.Image = (Image)resources.GetObject("btnEpi.Image");
+			btnEpi.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEpi.Location = new Point(0, 0);
+			btnEpi.Margin = new Padding(0);
+			btnEpi.Name = "btnEpi";
+			btnEpi.Size = new Size(220, 54);
+			btnEpi.TabIndex = 2;
+			btnEpi.Text = "EPI";
+			btnEpi.UseVisualStyleBackColor = false;
+			btnEpi.Click += btnEpi_Click;
+			// 
+			// btnCadastrarEpi
+			// 
+			btnCadastrarEpi.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarEpi.FlatAppearance.BorderSize = 0;
+			btnCadastrarEpi.FlatStyle = FlatStyle.Flat;
+			btnCadastrarEpi.Image = (Image)resources.GetObject("btnCadastrarEpi.Image");
+			btnCadastrarEpi.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarEpi.Location = new Point(0, 54);
+			btnCadastrarEpi.Margin = new Padding(0);
+			btnCadastrarEpi.Name = "btnCadastrarEpi";
+			btnCadastrarEpi.Size = new Size(220, 51);
+			btnCadastrarEpi.TabIndex = 6;
+			btnCadastrarEpi.Text = "Cadastrar";
+			btnCadastrarEpi.UseVisualStyleBackColor = false;
+			btnCadastrarEpi.Click += btnCadastrarEpi_Click;
+			// 
+			// btnConsultarEpi
+			// 
+			btnConsultarEpi.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarEpi.FlatAppearance.BorderSize = 0;
+			btnConsultarEpi.FlatStyle = FlatStyle.Flat;
+			btnConsultarEpi.Image = (Image)resources.GetObject("btnConsultarEpi.Image");
+			btnConsultarEpi.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarEpi.Location = new Point(0, 105);
+			btnConsultarEpi.Margin = new Padding(0);
+			btnConsultarEpi.Name = "btnConsultarEpi";
+			btnConsultarEpi.Size = new Size(220, 51);
+			btnConsultarEpi.TabIndex = 6;
+			btnConsultarEpi.Text = "Consultar";
+			btnConsultarEpi.UseVisualStyleBackColor = false;
+			btnConsultarEpi.Click += btnConsultarEpi_Click;
+			// 
+			// btnNormasRegulamentadoras
+			// 
+			btnNormasRegulamentadoras.BackColor = Color.FromArgb(74, 146, 247);
+			btnNormasRegulamentadoras.FlatAppearance.BorderSize = 0;
+			btnNormasRegulamentadoras.FlatStyle = FlatStyle.Flat;
+			btnNormasRegulamentadoras.Image = (Image)resources.GetObject("btnNormasRegulamentadoras.Image");
+			btnNormasRegulamentadoras.ImageAlign = ContentAlignment.MiddleLeft;
+			btnNormasRegulamentadoras.Location = new Point(239, 151);
+			btnNormasRegulamentadoras.Name = "btnNormasRegulamentadoras";
+			btnNormasRegulamentadoras.Size = new Size(220, 54);
+			btnNormasRegulamentadoras.TabIndex = 2;
+			btnNormasRegulamentadoras.Text = "Normas Regulamentadoras";
+			btnNormasRegulamentadoras.UseVisualStyleBackColor = false;
+			btnNormasRegulamentadoras.Click += btnNormasRegulamentadoras_Click;
 			// 
 			// button3
 			// 
@@ -301,44 +367,35 @@
 			pictureBox2.TabIndex = 4;
 			pictureBox2.TabStop = false;
 			// 
-			// btn_sair
+			// btnSair
 			// 
-			btn_sair.BackColor = Color.FromArgb(74, 146, 247);
-			btn_sair.FlatAppearance.BorderSize = 0;
-			btn_sair.FlatStyle = FlatStyle.Flat;
-			btn_sair.Image = (Image)resources.GetObject("btn_sair.Image");
-			btn_sair.ImageAlign = ContentAlignment.MiddleLeft;
-			btn_sair.Location = new Point(239, 432);
-			btn_sair.Name = "btn_sair";
-			btn_sair.Size = new Size(220, 54);
-			btn_sair.TabIndex = 2;
-			btn_sair.Text = "Sair";
-			btn_sair.UseVisualStyleBackColor = false;
-			btn_sair.Click += btn_sair_Click;
+			btnSair.BackColor = Color.FromArgb(74, 146, 247);
+			btnSair.FlatAppearance.BorderSize = 0;
+			btnSair.FlatStyle = FlatStyle.Flat;
+			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
+			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSair.Location = new Point(273, 450);
+			btnSair.Name = "btnSair";
+			btnSair.Size = new Size(220, 54);
+			btnSair.TabIndex = 2;
+			btnSair.Text = "Sair";
+			btnSair.UseVisualStyleBackColor = false;
+			btnSair.Click += btnSair_Click;
 			// 
-			// button2
+			// trasicaoMenuFuncionario
 			// 
-			button2.BackColor = Color.FromArgb(74, 146, 247);
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatStyle = FlatStyle.Flat;
-			button2.Image = (Image)resources.GetObject("button2.Image");
-			button2.ImageAlign = ContentAlignment.MiddleLeft;
-			button2.Location = new Point(1051, 356);
-			button2.Name = "button2";
-			button2.Size = new Size(220, 54);
-			button2.TabIndex = 2;
-			button2.Text = "EPI";
-			button2.UseVisualStyleBackColor = false;
-			// 
-			// trasicaoMenu
-			// 
-			trasicaoMenu.Interval = 1;
-			trasicaoMenu.Tick += trasicaoMenu_Tick;
+			trasicaoMenuFuncionario.Interval = 1;
+			trasicaoMenuFuncionario.Tick += trasicaoMenuFuncionario_Tick;
 			// 
 			// transicaoMenuFornecedor
 			// 
 			transicaoMenuFornecedor.Interval = 1;
 			transicaoMenuFornecedor.Tick += transicaoMenuFornecedor_Tick;
+			// 
+			// transicaoMenuEpi
+			// 
+			transicaoMenuEpi.Interval = 1;
+			transicaoMenuEpi.Tick += transicaoMenuEpi_Tick;
 			// 
 			// frmHome
 			// 
@@ -346,11 +403,10 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
-			Controls.Add(btn_sair);
-			Controls.Add(btn_normasRegulamentadoras);
+			Controls.Add(btnNormasRegulamentadoras);
 			Controls.Add(button3);
-			Controls.Add(button2);
 			Controls.Add(button5);
+			Controls.Add(btnSair);
 			Controls.Add(button6);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
@@ -367,6 +423,7 @@
 			flowLayoutPanel1.ResumeLayout(false);
 			flpContainer.ResumeLayout(false);
 			flpContainerFornecedor.ResumeLayout(false);
+			flpContainerEpi.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
 		}
@@ -378,22 +435,26 @@
 		private Label label1;
 		private Label label2;
 		private FlowLayoutPanel flowLayoutPanel1;
-		private Button btn_cadastroFornecedor;
+		private Button btnCadastroFornecedor;
 		private Button button3;
 		private Button btnFuncionario;
 		private Button button5;
 		private Button button6;
-		private Button btn_normasRegulamentadoras;
+		private Button btnNormasRegulamentadoras;
 		private PictureBox pictureBox2;
-		private Button btn_sair;
-		private Button button2;
+		private Button btnSair;
+		private Button btnEpi;
 		private FlowLayoutPanel flpContainer;
-		private System.Windows.Forms.Timer trasicaoMenu;
+		private System.Windows.Forms.Timer trasicaoMenuFuncionario;
 		private Button btnCadastrarFrm;
 		private Button btnConsultarFrm;
 		private FlowLayoutPanel flpContainerFornecedor;
 		private Button btnCadastrarFornecedor;
 		private Button btnConsultarFornecedor;
 		private System.Windows.Forms.Timer transicaoMenuFornecedor;
+		private FlowLayoutPanel flpContainerEpi;
+		private Button btnConsultarEpi;
+		private Button btnCadastrarEpi;
+		private System.Windows.Forms.Timer transicaoMenuEpi;
 	}
 }

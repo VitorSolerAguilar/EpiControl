@@ -255,5 +255,29 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
+		public List<Fornecedor> listarNomesFornecedores()
+		{
+			List<Fornecedor> lista = new List<Fornecedor>();
+
+			string sql = "SELECT id_fornecedor, nome FROM tb_fornecedor ORDER BY nome";
+
+			MySqlCommand cmd = new MySqlCommand(sql, conexao);
+			conexao.Open();
+
+			MySqlDataReader reader = cmd.ExecuteReader();
+
+			while (reader.Read())
+			{
+				lista.Add(new Fornecedor
+				{
+					id = reader.GetInt32("id_fornecedor"),
+					nome = reader.GetString("nome")
+				});
+			}
+
+			conexao.Close();
+			return lista;
+		}
 	}
 }
+

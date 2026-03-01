@@ -1,4 +1,4 @@
-﻿namespace EpiControl.Views.Fornecedores
+﻿namespace EpiControl.Views
 {
 	partial class frmCadastrarFornecedor
 	{

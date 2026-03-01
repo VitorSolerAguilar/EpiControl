@@ -1,4 +1,4 @@
-﻿namespace EpiControl.epicontrol.views.Fornecedores
+﻿namespace EpiControl.epicontrol.views
 {
 	partial class frmConsultarFornecedor
 	{

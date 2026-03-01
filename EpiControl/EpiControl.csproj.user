@@ -8,22 +8,22 @@
     <Compile Update="epicontrol.views\Emprestimo\CadastrarEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\EPI\CadastrarEpi.cs">
+    <Compile Update="epicontrol.views\CadastrarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\EPI\EditarEpi.cs">
+    <Compile Update="epicontrol.views\ConsultarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\EPI\ExcluirEpi.cs">
+    <Compile Update="epicontrol.views\EditarEpi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Fornecedores\CadastrarFornecedor.cs">
+    <Compile Update="epicontrol.views\CadastrarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Fornecedores\ConsultarFornecedor.cs">
+    <Compile Update="epicontrol.views\ConsultarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Fornecedores\EditarFornecedor.cs">
+    <Compile Update="epicontrol.views\EditarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\CadastrarFuncionario.cs">

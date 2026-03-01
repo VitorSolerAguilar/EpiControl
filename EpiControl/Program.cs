@@ -1,8 +1,4 @@
 using EpiControl.epicontrol.views;
-using EpiControl.Views.Emprestimo;
-using EpiControl.Views.EPI;
-using EpiControl.Views.Fornecedores;
-using EpiControl.Views.Norma_Regulamentadora;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 

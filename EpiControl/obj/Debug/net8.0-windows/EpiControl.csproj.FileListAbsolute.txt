@@ -5,9 +5,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.CadastrarEmprestimo.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.CadastrarEpi.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.EditarEpi.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.EPI.ExcluirEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources
@@ -56,6 +53,9 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarFunc
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarFuncionario.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.frmHome.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmCadastrarFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Fornecedores.frmEditarFornecedor.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.Fornecedores.frmConsultarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmCadastrarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarFornecedor.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmCadastrarEpi.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarEpi.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarEpi.resources
