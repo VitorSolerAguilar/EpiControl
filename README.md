@@ -18,7 +18,8 @@
 | MaskedTextBox| `mtb`   | `mtbRg`        |
 | RichTextBox  | `rtb`   | `rtbComplemento`|
 | DateTimePicker| `dtp`  | `dtpDataNascimento`|
-|FlowLayoutPanel| `flp`  | `flpContainer` |
+| FlowLayoutPanel| `flp` | `flpContainer` |
+| NumericUpDown| `nud`   | `nudNumero`|
 
 ## 🏗️ Padrão para Classes
 Use a convenção "PascalCase" e nomes que representem claramente o papel da classe.
