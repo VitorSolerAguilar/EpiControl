@@ -1,6 +1,6 @@
-﻿namespace EpiControl
+﻿namespace EpiControl.views
 {
-	partial class CadastrarNr
+	partial class frmCadastrarNormaRegulamentadora
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,26 +28,26 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarNr));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarNormaRegulamentadora));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
 			label3 = new Label();
-			textBox2 = new TextBox();
+			txtTitulo = new TextBox();
 			label4 = new Label();
 			label5 = new Label();
-			richTextBox1 = new RichTextBox();
-			dateTimePicker1 = new DateTimePicker();
+			rtbDescricao = new RichTextBox();
 			label6 = new Label();
 			label7 = new Label();
-			textBox3 = new TextBox();
-			numericUpDown1 = new NumericUpDown();
-			button1 = new Button();
-			btn_voltar = new Button();
+			txtLinkMte = new TextBox();
+			nudNumeroNr = new NumericUpDown();
+			btnSalvar = new Button();
+			btnVoltar = new Button();
+			mtbDataVigencia = new MaskedTextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)nudNumeroNr).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -59,7 +59,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(626, 46);
+			panel1.Size = new Size(578, 46);
 			panel1.TabIndex = 5;
 			// 
 			// label2
@@ -102,12 +102,12 @@
 			label3.TabIndex = 8;
 			label3.Text = "Numero da NR*";
 			// 
-			// textBox2
+			// txtTitulo
 			// 
-			textBox2.Location = new Point(187, 143);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(349, 23);
-			textBox2.TabIndex = 11;
+			txtTitulo.Location = new Point(187, 135);
+			txtTitulo.Name = "txtTitulo";
+			txtTitulo.Size = new Size(349, 23);
+			txtTitulo.TabIndex = 11;
 			// 
 			// label4
 			// 
@@ -127,20 +127,13 @@
 			label5.TabIndex = 13;
 			label5.Text = "Descrição*";
 			// 
-			// richTextBox1
+			// rtbDescricao
 			// 
-			richTextBox1.Location = new Point(187, 195);
-			richTextBox1.Name = "richTextBox1";
-			richTextBox1.Size = new Size(349, 74);
-			richTextBox1.TabIndex = 14;
-			richTextBox1.Text = "";
-			// 
-			// dateTimePicker1
-			// 
-			dateTimePicker1.Location = new Point(187, 337);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(234, 23);
-			dateTimePicker1.TabIndex = 15;
+			rtbDescricao.Location = new Point(187, 195);
+			rtbDescricao.Name = "rtbDescricao";
+			rtbDescricao.Size = new Size(349, 74);
+			rtbDescricao.TabIndex = 14;
+			rtbDescricao.Text = "";
 			// 
 			// label6
 			// 
@@ -160,69 +153,79 @@
 			label7.TabIndex = 17;
 			label7.Text = "Link Oficial (MTE)*";
 			// 
-			// textBox3
+			// txtLinkMte
 			// 
-			textBox3.Location = new Point(187, 285);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(349, 23);
-			textBox3.TabIndex = 18;
+			txtLinkMte.Location = new Point(187, 277);
+			txtLinkMte.Name = "txtLinkMte";
+			txtLinkMte.Size = new Size(349, 23);
+			txtLinkMte.TabIndex = 18;
 			// 
-			// numericUpDown1
+			// nudNumeroNr
 			// 
-			numericUpDown1.Location = new Point(187, 101);
-			numericUpDown1.Name = "numericUpDown1";
-			numericUpDown1.Size = new Size(49, 23);
-			numericUpDown1.TabIndex = 19;
+			nudNumeroNr.Location = new Point(187, 93);
+			nudNumeroNr.Name = "nudNumeroNr";
+			nudNumeroNr.Size = new Size(63, 23);
+			nudNumeroNr.TabIndex = 19;
 			// 
-			// button1
+			// btnSalvar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(461, 416);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 20;
-			button1.Text = " Salvar";
-			button1.UseVisualStyleBackColor = false;
+			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
+			btnSalvar.FlatAppearance.BorderSize = 0;
+			btnSalvar.FlatStyle = FlatStyle.Flat;
+			btnSalvar.ForeColor = Color.White;
+			btnSalvar.Location = new Point(461, 416);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(75, 40);
+			btnSalvar.TabIndex = 20;
+			btnSalvar.Text = " Salvar";
+			btnSalvar.UseVisualStyleBackColor = false;
+			btnSalvar.Click += btnSalvar_Click;
 			// 
-			// btn_voltar
+			// btnVoltar
 			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(360, 416);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 21;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
-			btn_voltar.Click += btn_voltar_Click;
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(360, 416);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.TabIndex = 21;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
-			// CadastrarNr
+			// mtbDataVigencia
+			// 
+			mtbDataVigencia.Location = new Point(187, 335);
+			mtbDataVigencia.Mask = "00/00/0000";
+			mtbDataVigencia.Name = "mtbDataVigencia";
+			mtbDataVigencia.Size = new Size(125, 23);
+			mtbDataVigencia.TabIndex = 22;
+			mtbDataVigencia.ValidatingType = typeof(DateTime);
+			// 
+			// frmCadastrarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(626, 498);
-			Controls.Add(btn_voltar);
-			Controls.Add(button1);
-			Controls.Add(numericUpDown1);
-			Controls.Add(textBox3);
+			ClientSize = new Size(578, 478);
+			Controls.Add(mtbDataVigencia);
+			Controls.Add(btnVoltar);
+			Controls.Add(btnSalvar);
+			Controls.Add(nudNumeroNr);
+			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
-			Controls.Add(dateTimePicker1);
-			Controls.Add(richTextBox1);
+			Controls.Add(rtbDescricao);
 			Controls.Add(label5);
-			Controls.Add(textBox2);
+			Controls.Add(txtTitulo);
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(label3);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "CadastrarNr";
+			Name = "frmCadastrarNormaRegulamentadora";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+			((System.ComponentModel.ISupportInitialize)nudNumeroNr).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -233,16 +236,16 @@
 		private Label label1;
 		private PictureBox pictureBox1;
 		private Label label3;
-		private TextBox textBox2;
+		private TextBox txtTitulo;
 		private Label label4;
 		private Label label5;
-		private RichTextBox richTextBox1;
-		private DateTimePicker dateTimePicker1;
+		private RichTextBox rtbDescricao;
 		private Label label6;
 		private Label label7;
-		private TextBox textBox3;
-		private NumericUpDown numericUpDown1;
-		private Button button1;
-		private Button btn_voltar;
+		private TextBox txtLinkMte;
+		private NumericUpDown nudNumeroNr;
+		private Button btnSalvar;
+		private Button btnVoltar;
+		private MaskedTextBox mtbDataVigencia;
 	}
 }

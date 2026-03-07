@@ -56,6 +56,10 @@
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
 			transicaoMenuEpi = new System.Windows.Forms.Timer(components);
+			flpNormaRegulamentadora = new FlowLayoutPanel();
+			btnCadastrarNormaRegulamentadora = new Button();
+			btnConsultarNormaRegulamentadora = new Button();
+			transicaoMenuNorma = new System.Windows.Forms.Timer(components);
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -63,6 +67,7 @@
 			flpContainerFornecedor.SuspendLayout();
 			flpContainerEpi.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+			flpNormaRegulamentadora.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panel1
@@ -114,10 +119,11 @@
 			flowLayoutPanel1.Controls.Add(flpContainer);
 			flowLayoutPanel1.Controls.Add(flpContainerFornecedor);
 			flowLayoutPanel1.Controls.Add(flpContainerEpi);
+			flowLayoutPanel1.Controls.Add(flpNormaRegulamentadora);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(219, 598);
+			flowLayoutPanel1.Size = new Size(244, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
 			// flpContainer
@@ -308,7 +314,8 @@
 			btnNormasRegulamentadoras.FlatStyle = FlatStyle.Flat;
 			btnNormasRegulamentadoras.Image = (Image)resources.GetObject("btnNormasRegulamentadoras.Image");
 			btnNormasRegulamentadoras.ImageAlign = ContentAlignment.MiddleLeft;
-			btnNormasRegulamentadoras.Location = new Point(239, 151);
+			btnNormasRegulamentadoras.Location = new Point(0, 0);
+			btnNormasRegulamentadoras.Margin = new Padding(0);
 			btnNormasRegulamentadoras.Name = "btnNormasRegulamentadoras";
 			btnNormasRegulamentadoras.Size = new Size(220, 54);
 			btnNormasRegulamentadoras.TabIndex = 2;
@@ -337,7 +344,7 @@
 			button5.FlatStyle = FlatStyle.Flat;
 			button5.Image = (Image)resources.GetObject("button5.Image");
 			button5.ImageAlign = ContentAlignment.MiddleLeft;
-			button5.Location = new Point(239, 236);
+			button5.Location = new Point(1051, 299);
 			button5.Name = "button5";
 			button5.Size = new Size(220, 54);
 			button5.TabIndex = 2;
@@ -351,7 +358,7 @@
 			button6.FlatStyle = FlatStyle.Flat;
 			button6.Image = (Image)resources.GetObject("button6.Image");
 			button6.ImageAlign = ContentAlignment.MiddleLeft;
-			button6.Location = new Point(239, 296);
+			button6.Location = new Point(1051, 359);
 			button6.Name = "button6";
 			button6.Size = new Size(220, 54);
 			button6.TabIndex = 2;
@@ -374,7 +381,7 @@
 			btnSair.FlatStyle = FlatStyle.Flat;
 			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
 			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-			btnSair.Location = new Point(273, 450);
+			btnSair.Location = new Point(1051, 476);
 			btnSair.Name = "btnSair";
 			btnSair.Size = new Size(220, 54);
 			btnSair.TabIndex = 2;
@@ -397,13 +404,61 @@
 			transicaoMenuEpi.Interval = 1;
 			transicaoMenuEpi.Tick += transicaoMenuEpi_Tick;
 			// 
+			// flpNormaRegulamentadora
+			// 
+			flpNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			flpNormaRegulamentadora.Controls.Add(btnNormasRegulamentadoras);
+			flpNormaRegulamentadora.Controls.Add(btnCadastrarNormaRegulamentadora);
+			flpNormaRegulamentadora.Controls.Add(btnConsultarNormaRegulamentadora);
+			flpNormaRegulamentadora.Location = new Point(0, 165);
+			flpNormaRegulamentadora.Margin = new Padding(0, 2, 0, 0);
+			flpNormaRegulamentadora.Name = "flpNormaRegulamentadora";
+			flpNormaRegulamentadora.Size = new Size(264, 54);
+			flpNormaRegulamentadora.TabIndex = 8;
+			// 
+			// btnCadastrarNormaRegulamentadora
+			// 
+			btnCadastrarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
+			btnCadastrarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
+			btnCadastrarNormaRegulamentadora.Image = (Image)resources.GetObject("btnCadastrarNormaRegulamentadora.Image");
+			btnCadastrarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarNormaRegulamentadora.Location = new Point(0, 54);
+			btnCadastrarNormaRegulamentadora.Margin = new Padding(0);
+			btnCadastrarNormaRegulamentadora.Name = "btnCadastrarNormaRegulamentadora";
+			btnCadastrarNormaRegulamentadora.Size = new Size(220, 51);
+			btnCadastrarNormaRegulamentadora.TabIndex = 6;
+			btnCadastrarNormaRegulamentadora.Text = "Cadastrar";
+			btnCadastrarNormaRegulamentadora.UseVisualStyleBackColor = false;
+			btnCadastrarNormaRegulamentadora.Click += btnCadastrarNormaRegulamentadora_Click;
+			// 
+			// btnConsultarNormaRegulamentadora
+			// 
+			btnConsultarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
+			btnConsultarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
+			btnConsultarNormaRegulamentadora.Image = (Image)resources.GetObject("btnConsultarNormaRegulamentadora.Image");
+			btnConsultarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarNormaRegulamentadora.Location = new Point(0, 105);
+			btnConsultarNormaRegulamentadora.Margin = new Padding(0);
+			btnConsultarNormaRegulamentadora.Name = "btnConsultarNormaRegulamentadora";
+			btnConsultarNormaRegulamentadora.Size = new Size(220, 51);
+			btnConsultarNormaRegulamentadora.TabIndex = 6;
+			btnConsultarNormaRegulamentadora.Text = "Consultar";
+			btnConsultarNormaRegulamentadora.UseVisualStyleBackColor = false;
+			btnConsultarNormaRegulamentadora.Click += btnConsultarNormaRegulamentadora_Click;
+			// 
+			// transicaoMenuNorma
+			// 
+			transicaoMenuNorma.Interval = 1;
+			transicaoMenuNorma.Tick += transicaoMenuNorma_Tick;
+			// 
 			// frmHome
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
-			Controls.Add(btnNormasRegulamentadoras);
 			Controls.Add(button3);
 			Controls.Add(button5);
 			Controls.Add(btnSair);
@@ -425,6 +480,7 @@
 			flpContainerFornecedor.ResumeLayout(false);
 			flpContainerEpi.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+			flpNormaRegulamentadora.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -456,5 +512,9 @@
 		private Button btnConsultarEpi;
 		private Button btnCadastrarEpi;
 		private System.Windows.Forms.Timer transicaoMenuEpi;
+		private FlowLayoutPanel flpNormaRegulamentadora;
+		private Button btnCadastrarNormaRegulamentadora;
+		private Button btnConsultarNormaRegulamentadora;
+		private System.Windows.Forms.Timer transicaoMenuNorma;
 	}
 }

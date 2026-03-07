@@ -1,6 +1,6 @@
-﻿namespace EpiControl.Views.Norma_Regulamentadora
+﻿namespace EpiControl.Views
 {
-	partial class EditarNr
+	partial class frmEditarNormaRegulamentadora
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,27 +28,27 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarNr));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarNormaRegulamentadora));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			btn_voltar = new Button();
-			button1 = new Button();
-			numericUpDown1 = new NumericUpDown();
-			textBox3 = new TextBox();
+			btnVoltar = new Button();
+			btnEditar = new Button();
+			nudNumeroNr = new NumericUpDown();
+			txtLinkMte = new TextBox();
 			label7 = new Label();
 			label6 = new Label();
-			dateTimePicker1 = new DateTimePicker();
-			richTextBox1 = new RichTextBox();
+			rtbDescricao = new RichTextBox();
 			label5 = new Label();
-			textBox2 = new TextBox();
+			txtTitulo = new TextBox();
 			label4 = new Label();
 			label3 = new Label();
-			button2 = new Button();
+			btnExcluir = new Button();
+			mtbDataVigencia = new MaskedTextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)nudNumeroNr).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -94,43 +94,44 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
-			// btn_voltar
+			// btnVoltar
 			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(359, 415);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 33;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(359, 415);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.TabIndex = 33;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
-			// button1
+			// btnEditar
 			// 
-			button1.BackColor = Color.FromArgb(17, 138, 254);
-			button1.FlatAppearance.BorderSize = 0;
-			button1.FlatStyle = FlatStyle.Flat;
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(460, 415);
-			button1.Name = "button1";
-			button1.Size = new Size(75, 40);
-			button1.TabIndex = 32;
-			button1.Text = " Salvar";
-			button1.UseVisualStyleBackColor = false;
-			button1.Click += button1_Click;
+			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
+			btnEditar.FlatAppearance.BorderSize = 0;
+			btnEditar.FlatStyle = FlatStyle.Flat;
+			btnEditar.ForeColor = Color.White;
+			btnEditar.Location = new Point(440, 415);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 32;
+			btnEditar.Text = "Editar";
+			btnEditar.UseVisualStyleBackColor = false;
+			btnEditar.Click += btnEditar_Click;
 			// 
-			// numericUpDown1
+			// nudNumeroNr
 			// 
-			numericUpDown1.Location = new Point(186, 100);
-			numericUpDown1.Name = "numericUpDown1";
-			numericUpDown1.Size = new Size(49, 23);
-			numericUpDown1.TabIndex = 31;
+			nudNumeroNr.Location = new Point(186, 100);
+			nudNumeroNr.Name = "nudNumeroNr";
+			nudNumeroNr.Size = new Size(49, 23);
+			nudNumeroNr.TabIndex = 31;
 			// 
-			// textBox3
+			// txtLinkMte
 			// 
-			textBox3.Location = new Point(186, 284);
-			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(349, 23);
-			textBox3.TabIndex = 30;
+			txtLinkMte.Location = new Point(186, 284);
+			txtLinkMte.Name = "txtLinkMte";
+			txtLinkMte.Size = new Size(349, 23);
+			txtLinkMte.TabIndex = 30;
 			// 
 			// label7
 			// 
@@ -150,20 +151,13 @@
 			label6.TabIndex = 28;
 			label6.Text = "Data de Vigência ";
 			// 
-			// dateTimePicker1
+			// rtbDescricao
 			// 
-			dateTimePicker1.Location = new Point(186, 336);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(200, 23);
-			dateTimePicker1.TabIndex = 27;
-			// 
-			// richTextBox1
-			// 
-			richTextBox1.Location = new Point(186, 194);
-			richTextBox1.Name = "richTextBox1";
-			richTextBox1.Size = new Size(349, 74);
-			richTextBox1.TabIndex = 26;
-			richTextBox1.Text = "";
+			rtbDescricao.Location = new Point(186, 194);
+			rtbDescricao.Name = "rtbDescricao";
+			rtbDescricao.Size = new Size(349, 74);
+			rtbDescricao.TabIndex = 26;
+			rtbDescricao.Text = "";
 			// 
 			// label5
 			// 
@@ -174,12 +168,12 @@
 			label5.TabIndex = 25;
 			label5.Text = "Descrição*";
 			// 
-			// textBox2
+			// txtTitulo
 			// 
-			textBox2.Location = new Point(186, 142);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(349, 23);
-			textBox2.TabIndex = 24;
+			txtTitulo.Location = new Point(186, 142);
+			txtTitulo.Name = "txtTitulo";
+			txtTitulo.Size = new Size(349, 23);
+			txtTitulo.TabIndex = 24;
 			// 
 			// label4
 			// 
@@ -199,44 +193,55 @@
 			label3.TabIndex = 22;
 			label3.Text = "Numero da NR*";
 			// 
-			// button2
+			// btnExcluir
 			// 
-			button2.BackColor = Color.FromArgb(136, 186, 163);
-			button2.FlatAppearance.BorderSize = 0;
-			button2.FlatStyle = FlatStyle.Flat;
-			button2.Location = new Point(262, 100);
-			button2.Name = "button2";
-			button2.Size = new Size(75, 23);
-			button2.TabIndex = 46;
-			button2.Text = "Consultar";
-			button2.UseVisualStyleBackColor = false;
+			btnExcluir.BackColor = Color.Red;
+			btnExcluir.FlatAppearance.BorderSize = 0;
+			btnExcluir.FlatStyle = FlatStyle.Flat;
+			btnExcluir.ForeColor = Color.White;
+			btnExcluir.Location = new Point(521, 415);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(75, 40);
+			btnExcluir.TabIndex = 34;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.UseVisualStyleBackColor = false;
+			btnExcluir.Click += btnExcluir_Click;
 			// 
-			// EditarNr
+			// mtbDataVigencia
+			// 
+			mtbDataVigencia.Location = new Point(186, 334);
+			mtbDataVigencia.Mask = "00/00/0000";
+			mtbDataVigencia.Name = "mtbDataVigencia";
+			mtbDataVigencia.Size = new Size(125, 23);
+			mtbDataVigencia.TabIndex = 35;
+			mtbDataVigencia.ValidatingType = typeof(DateTime);
+			// 
+			// frmEditarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(626, 498);
-			Controls.Add(button2);
-			Controls.Add(btn_voltar);
-			Controls.Add(button1);
-			Controls.Add(numericUpDown1);
-			Controls.Add(textBox3);
+			Controls.Add(mtbDataVigencia);
+			Controls.Add(btnExcluir);
+			Controls.Add(btnVoltar);
+			Controls.Add(btnEditar);
+			Controls.Add(nudNumeroNr);
+			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
-			Controls.Add(dateTimePicker1);
-			Controls.Add(richTextBox1);
+			Controls.Add(rtbDescricao);
 			Controls.Add(label5);
-			Controls.Add(textBox2);
+			Controls.Add(txtTitulo);
 			Controls.Add(label4);
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "EditarNr";
+			Name = "frmEditarNormaRegulamentadora";
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+			((System.ComponentModel.ISupportInitialize)nudNumeroNr).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -247,18 +252,18 @@
 		private Label label2;
 		private Label label1;
 		private PictureBox pictureBox1;
-		private Button btn_voltar;
-		private Button button1;
-		private NumericUpDown numericUpDown1;
-		private TextBox textBox3;
+		private Button btnVoltar;
+		private Button btnEditar;
+		private NumericUpDown nudNumeroNr;
+		private TextBox txtLinkMte;
 		private Label label7;
 		private Label label6;
-		private DateTimePicker dateTimePicker1;
-		private RichTextBox richTextBox1;
+		private RichTextBox rtbDescricao;
 		private Label label5;
-		private TextBox textBox2;
+		private TextBox txtTitulo;
 		private Label label4;
 		private Label label3;
-		private Button button2;
+		private Button btnExcluir;
+		private MaskedTextBox mtbDataVigencia;
 	}
 }

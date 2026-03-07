@@ -1,4 +1,5 @@
 using EpiControl.epicontrol.views;
+using EpiControl.views;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 

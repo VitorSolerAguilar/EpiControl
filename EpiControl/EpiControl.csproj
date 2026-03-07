@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="epicontrol.views\Estoque\" />
+    <Folder Include="epicontrol.views\Norma Regulamentadora\" />
   </ItemGroup>
 
   <ItemGroup>

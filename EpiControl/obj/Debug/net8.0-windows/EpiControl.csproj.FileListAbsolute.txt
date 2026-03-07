@@ -5,9 +5,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.CadastrarEmprestimo.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.CadastrarNr.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.EditarNr.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Norma_Regulamentadora.ExcluirNr.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.CadastrarTreinamento.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.EditarTreinamento.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.ExcluirTreinamento.resources
@@ -59,3 +56,8 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarForn
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmCadastrarEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarEpi.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCurso.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.FuncionarioCurso.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.views.frmCadastrarNormaRegulamentadora.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarNormaRegulamentadora.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarNormaRegulamentadora.resources

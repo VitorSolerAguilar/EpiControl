@@ -41,13 +41,13 @@
     <Compile Update="epicontrol.views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Norma Regulamentadora\CadastrarNr.cs">
+    <Compile Update="epicontrol.views\CadastrarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Norma Regulamentadora\EditarNr.cs">
+    <Compile Update="epicontrol.views\ConsultarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\Norma Regulamentadora\ExcluirNr.cs">
+    <Compile Update="epicontrol.views\EditarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\Treinamentos\CadastrarTreinamento.cs">

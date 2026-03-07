@@ -1,4 +1,5 @@
 using EpiControl.epicontrol.views;
+using EpiControl.views;
 using EpiControl.Views;
 
 namespace EpiControl
@@ -10,14 +11,6 @@ namespace EpiControl
 			InitializeComponent();
 		}
 
-		private void btnNormasRegulamentadoras_Click(object sender, EventArgs e)
-		{
-			CadastrarNr normasRegulamentadoras = new CadastrarNr();
-
-			normasRegulamentadoras.FormClosed += (s, args) => this.Show();
-			this.Hide();
-			normasRegulamentadoras.Show();
-		}
 		private void btnSair_Click(object sender, EventArgs e)
 		{
 			this.Close();
@@ -70,8 +63,22 @@ namespace EpiControl
 			this.Hide();
 			consultarEpi.Show();
 		}
+		private void btnCadastrarNormaRegulamentadora_Click(object sender, EventArgs e)
+		{
+			frmCadastrarNormaRegulamentadora cadastrarNorma = new frmCadastrarNormaRegulamentadora();
 
+			cadastrarNorma.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarNorma.Show();
+		}
+		private void btnConsultarNormaRegulamentadora_Click(object sender, EventArgs e)
+		{
+			frmConsultarNormaRegulamentadora consultarNorma = new frmConsultarNormaRegulamentadora();
 
+			consultarNorma.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultarNorma.Show();
+		}
 
 
 
@@ -145,6 +152,30 @@ namespace EpiControl
 				}
 			}
 		}
+		private void transicaoMenuNorma_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpNormaRegulamentadora.Height += 1;
+
+				if (flpNormaRegulamentadora.Height >= 153)
+				{
+					transicaoMenuNorma.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpNormaRegulamentadora.Height -= 10;
+				if (flpNormaRegulamentadora.Height <= 51)
+				{
+					transicaoMenuNorma.Stop();
+					menuExpand = false;
+				}
+			}
+		}
+
 
 		private void btnFuncionario_Click(object sender, EventArgs e)
 		{
@@ -158,5 +189,10 @@ namespace EpiControl
 		{
 			transicaoMenuEpi.Start();
 		}
+		private void btnNormasRegulamentadoras_Click(object sender, EventArgs e)
+		{
+			transicaoMenuNorma.Start();
+		}
+
 	}
 }
