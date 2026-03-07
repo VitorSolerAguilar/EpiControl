@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\funcionariocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\funcionariocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|C:\\EpiControl\\epicontrol\\epicontrol.views\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,25 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CadastrarEpi.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarEpi.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T23:44:54.211Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Curso.cs [Projeto]",
               "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Curso.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Curso.cs",
               "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Curso.cs [Projeto]",
               "RelativeToolTip": "EpiControl\\epicontrol.views\\Curso.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T23:42:44.489Z",
+              "WhenOpened": "2026-03-07T01:40:52.353Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FuncionarioCurso.cs [Projeto]",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\FuncionarioCurso.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\FuncionarioCurso.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\FuncionarioCurso.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\FuncionarioCurso.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T01:27:47.931Z",
               "EditorCaption": " [Projeto]"
             }
           ]
