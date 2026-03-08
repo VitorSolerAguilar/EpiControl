@@ -25,8 +25,15 @@ namespace EpiControl.epicontrol.views
 
 			dgvFornecedor.DataSource = dao.listarFornecedor();
 		}
+		
+		private void btnConsultar_Click(object sender, EventArgs e)
+		{
+			FornecedorDAO dao = new FornecedorDAO();
 
-		private void dgvFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+			dgvFornecedor.DataSource = dao.buscarFornecedorNome(txtConsultaNome.Text);
+		}
+
+		private void dgvFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 

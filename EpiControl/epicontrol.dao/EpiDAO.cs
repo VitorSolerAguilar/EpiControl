@@ -147,5 +147,33 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
+		public DataTable buscarEpiNome(string nomeEpi)
+		{
+			try
+			{
+				DataTable tabelaEpi = new DataTable();
+
+				string sql = "SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @nome";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@nome", "%" + nomeEpi + "%");
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaEpi);
+
+				return tabelaEpi;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
 	}
 }

@@ -375,6 +375,7 @@
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditarEpi";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EditarEpi";
 			Load += frmEditarEpi_Load;
 			panel1.ResumeLayout(false);

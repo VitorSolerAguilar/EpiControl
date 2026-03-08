@@ -26,7 +26,13 @@ namespace EpiControl.epicontrol.views
 			dgvNormaRegulamentadora.DataSource = dao.listarNormaRegulamentadora();
 		}
 
-		private void dgvNormaRegulamentadora_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void btnConsultar_Click(object sender, EventArgs e)
+		{
+			NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
+			dgvNormaRegulamentadora.DataSource = dao.buscarNormaNome(txtConsultaNorma.Text);
+		}
+
+		private void dgvNormaRegulamentadora_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 

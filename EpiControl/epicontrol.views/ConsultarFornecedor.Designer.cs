@@ -59,6 +59,7 @@
 			btnConsultar.TabIndex = 13;
 			btnConsultar.Text = "Consultar";
 			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
 			// 
 			// txtConsultaNome
 			// 
@@ -74,7 +75,7 @@
 			dgvFornecedor.Name = "dgvFornecedor";
 			dgvFornecedor.Size = new Size(776, 335);
 			dgvFornecedor.TabIndex = 11;
-			dgvFornecedor.CellContentClick += dgvFornecedor_CellContentClick;
+			dgvFornecedor.CellClick += dgvFornecedor_CellClick;
 			// 
 			// label2
 			// 
@@ -129,7 +130,9 @@
 			Controls.Add(btnConsultar);
 			Controls.Add(txtConsultaNome);
 			Controls.Add(dgvFornecedor);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarFornecedor";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			Load += frmConsultarFornecedor_Load;
 			((System.ComponentModel.ISupportInitialize)dgvFornecedor).EndInit();

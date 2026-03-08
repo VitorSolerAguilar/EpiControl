@@ -27,7 +27,14 @@ namespace EpiControl.epicontrol.views
 			dgvEpi.DataSource = dao.listarEpi();
 		}
 
-		private void dgvEpi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void btnConsultar_Click(object sender, EventArgs e)
+		{
+			EpiDAO dao = new EpiDAO();
+
+			dgvEpi.DataSource = dao.buscarEpiNome(txtConsultaNome.Text);
+		}
+
+		private void dgvEpi_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 

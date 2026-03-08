@@ -5,9 +5,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.CadastrarEmprestimo.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.CadastrarTreinamento.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.EditarTreinamento.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Treinamentos.ExcluirTreinamento.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.GenerateResource.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.GeneratedMSBuildEditorConfig.editorconfig
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.AssemblyInfoInputs.cache

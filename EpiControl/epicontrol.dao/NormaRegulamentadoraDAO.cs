@@ -166,5 +166,34 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
+
+		public DataTable buscarNormaNome(string nomeNorma)
+		{
+			try
+			{
+				DataTable tabelaNorma = new DataTable();
+
+				string sql = @"SELECT id_norma_regulamentadora, codigo_nr, titulo, descricao, link_mte, data_vigencia FROM tb_norma_regulamentadora WHERE titulo LIKE @titulo";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@titulo", "%" + nomeNorma + "%");
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaNorma);
+
+				return tabelaNorma;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
 	}
 }

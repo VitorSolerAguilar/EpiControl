@@ -177,6 +177,7 @@ namespace EpiControl
 		}
 
 
+
 		private void btnFuncionario_Click(object sender, EventArgs e)
 		{
 			trasicaoMenuFuncionario.Start();

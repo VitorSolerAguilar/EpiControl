@@ -47,7 +47,10 @@
 			btnEpi = new Button();
 			btnCadastrarEpi = new Button();
 			btnConsultarEpi = new Button();
+			flpNormaRegulamentadora = new FlowLayoutPanel();
 			btnNormasRegulamentadoras = new Button();
+			btnCadastrarNormaRegulamentadora = new Button();
+			btnConsultarNormaRegulamentadora = new Button();
 			button3 = new Button();
 			button5 = new Button();
 			button6 = new Button();
@@ -56,18 +59,18 @@
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
 			transicaoMenuEpi = new System.Windows.Forms.Timer(components);
-			flpNormaRegulamentadora = new FlowLayoutPanel();
-			btnCadastrarNormaRegulamentadora = new Button();
-			btnConsultarNormaRegulamentadora = new Button();
 			transicaoMenuNorma = new System.Windows.Forms.Timer(components);
+			flowLayoutPanel2 = new FlowLayoutPanel();
+			button2 = new Button();
+			button4 = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
 			flpContainer.SuspendLayout();
 			flpContainerFornecedor.SuspendLayout();
 			flpContainerEpi.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			flpNormaRegulamentadora.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -120,10 +123,11 @@
 			flowLayoutPanel1.Controls.Add(flpContainerFornecedor);
 			flowLayoutPanel1.Controls.Add(flpContainerEpi);
 			flowLayoutPanel1.Controls.Add(flpNormaRegulamentadora);
+			flowLayoutPanel1.Controls.Add(btnSair);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(244, 598);
+			flowLayoutPanel1.Size = new Size(220, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
 			// flpContainer
@@ -271,7 +275,7 @@
 			btnEpi.Name = "btnEpi";
 			btnEpi.Size = new Size(220, 54);
 			btnEpi.TabIndex = 2;
-			btnEpi.Text = "EPI";
+			btnEpi.Text = "E.P.I";
 			btnEpi.UseVisualStyleBackColor = false;
 			btnEpi.Click += btnEpi_Click;
 			// 
@@ -307,6 +311,18 @@
 			btnConsultarEpi.UseVisualStyleBackColor = false;
 			btnConsultarEpi.Click += btnConsultarEpi_Click;
 			// 
+			// flpNormaRegulamentadora
+			// 
+			flpNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			flpNormaRegulamentadora.Controls.Add(btnNormasRegulamentadoras);
+			flpNormaRegulamentadora.Controls.Add(btnCadastrarNormaRegulamentadora);
+			flpNormaRegulamentadora.Controls.Add(btnConsultarNormaRegulamentadora);
+			flpNormaRegulamentadora.Location = new Point(0, 165);
+			flpNormaRegulamentadora.Margin = new Padding(0, 2, 0, 0);
+			flpNormaRegulamentadora.Name = "flpNormaRegulamentadora";
+			flpNormaRegulamentadora.Size = new Size(264, 54);
+			flpNormaRegulamentadora.TabIndex = 8;
+			// 
 			// btnNormasRegulamentadoras
 			// 
 			btnNormasRegulamentadoras.BackColor = Color.FromArgb(74, 146, 247);
@@ -322,6 +338,38 @@
 			btnNormasRegulamentadoras.Text = "Normas Regulamentadoras";
 			btnNormasRegulamentadoras.UseVisualStyleBackColor = false;
 			btnNormasRegulamentadoras.Click += btnNormasRegulamentadoras_Click;
+			// 
+			// btnCadastrarNormaRegulamentadora
+			// 
+			btnCadastrarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
+			btnCadastrarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
+			btnCadastrarNormaRegulamentadora.Image = (Image)resources.GetObject("btnCadastrarNormaRegulamentadora.Image");
+			btnCadastrarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarNormaRegulamentadora.Location = new Point(0, 54);
+			btnCadastrarNormaRegulamentadora.Margin = new Padding(0);
+			btnCadastrarNormaRegulamentadora.Name = "btnCadastrarNormaRegulamentadora";
+			btnCadastrarNormaRegulamentadora.Size = new Size(220, 51);
+			btnCadastrarNormaRegulamentadora.TabIndex = 6;
+			btnCadastrarNormaRegulamentadora.Text = "Cadastrar";
+			btnCadastrarNormaRegulamentadora.UseVisualStyleBackColor = false;
+			btnCadastrarNormaRegulamentadora.Click += btnCadastrarNormaRegulamentadora_Click;
+			// 
+			// btnConsultarNormaRegulamentadora
+			// 
+			btnConsultarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
+			btnConsultarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
+			btnConsultarNormaRegulamentadora.Image = (Image)resources.GetObject("btnConsultarNormaRegulamentadora.Image");
+			btnConsultarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarNormaRegulamentadora.Location = new Point(0, 105);
+			btnConsultarNormaRegulamentadora.Margin = new Padding(0);
+			btnConsultarNormaRegulamentadora.Name = "btnConsultarNormaRegulamentadora";
+			btnConsultarNormaRegulamentadora.Size = new Size(220, 51);
+			btnConsultarNormaRegulamentadora.TabIndex = 6;
+			btnConsultarNormaRegulamentadora.Text = "Consultar";
+			btnConsultarNormaRegulamentadora.UseVisualStyleBackColor = false;
+			btnConsultarNormaRegulamentadora.Click += btnConsultarNormaRegulamentadora_Click;
 			// 
 			// button3
 			// 
@@ -358,7 +406,7 @@
 			button6.FlatStyle = FlatStyle.Flat;
 			button6.Image = (Image)resources.GetObject("button6.Image");
 			button6.ImageAlign = ContentAlignment.MiddleLeft;
-			button6.Location = new Point(1051, 359);
+			button6.Location = new Point(509, 157);
 			button6.Name = "button6";
 			button6.Size = new Size(220, 54);
 			button6.TabIndex = 2;
@@ -381,7 +429,8 @@
 			btnSair.FlatStyle = FlatStyle.Flat;
 			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
 			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-			btnSair.Location = new Point(1051, 476);
+			btnSair.Location = new Point(0, 221);
+			btnSair.Margin = new Padding(0, 2, 0, 0);
 			btnSair.Name = "btnSair";
 			btnSair.Size = new Size(220, 54);
 			btnSair.TabIndex = 2;
@@ -404,54 +453,49 @@
 			transicaoMenuEpi.Interval = 1;
 			transicaoMenuEpi.Tick += transicaoMenuEpi_Tick;
 			// 
-			// flpNormaRegulamentadora
-			// 
-			flpNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
-			flpNormaRegulamentadora.Controls.Add(btnNormasRegulamentadoras);
-			flpNormaRegulamentadora.Controls.Add(btnCadastrarNormaRegulamentadora);
-			flpNormaRegulamentadora.Controls.Add(btnConsultarNormaRegulamentadora);
-			flpNormaRegulamentadora.Location = new Point(0, 165);
-			flpNormaRegulamentadora.Margin = new Padding(0, 2, 0, 0);
-			flpNormaRegulamentadora.Name = "flpNormaRegulamentadora";
-			flpNormaRegulamentadora.Size = new Size(264, 54);
-			flpNormaRegulamentadora.TabIndex = 8;
-			// 
-			// btnCadastrarNormaRegulamentadora
-			// 
-			btnCadastrarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
-			btnCadastrarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
-			btnCadastrarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
-			btnCadastrarNormaRegulamentadora.Image = (Image)resources.GetObject("btnCadastrarNormaRegulamentadora.Image");
-			btnCadastrarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
-			btnCadastrarNormaRegulamentadora.Location = new Point(0, 54);
-			btnCadastrarNormaRegulamentadora.Margin = new Padding(0);
-			btnCadastrarNormaRegulamentadora.Name = "btnCadastrarNormaRegulamentadora";
-			btnCadastrarNormaRegulamentadora.Size = new Size(220, 51);
-			btnCadastrarNormaRegulamentadora.TabIndex = 6;
-			btnCadastrarNormaRegulamentadora.Text = "Cadastrar";
-			btnCadastrarNormaRegulamentadora.UseVisualStyleBackColor = false;
-			btnCadastrarNormaRegulamentadora.Click += btnCadastrarNormaRegulamentadora_Click;
-			// 
-			// btnConsultarNormaRegulamentadora
-			// 
-			btnConsultarNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
-			btnConsultarNormaRegulamentadora.FlatAppearance.BorderSize = 0;
-			btnConsultarNormaRegulamentadora.FlatStyle = FlatStyle.Flat;
-			btnConsultarNormaRegulamentadora.Image = (Image)resources.GetObject("btnConsultarNormaRegulamentadora.Image");
-			btnConsultarNormaRegulamentadora.ImageAlign = ContentAlignment.MiddleLeft;
-			btnConsultarNormaRegulamentadora.Location = new Point(0, 105);
-			btnConsultarNormaRegulamentadora.Margin = new Padding(0);
-			btnConsultarNormaRegulamentadora.Name = "btnConsultarNormaRegulamentadora";
-			btnConsultarNormaRegulamentadora.Size = new Size(220, 51);
-			btnConsultarNormaRegulamentadora.TabIndex = 6;
-			btnConsultarNormaRegulamentadora.Text = "Consultar";
-			btnConsultarNormaRegulamentadora.UseVisualStyleBackColor = false;
-			btnConsultarNormaRegulamentadora.Click += btnConsultarNormaRegulamentadora_Click;
-			// 
 			// transicaoMenuNorma
 			// 
 			transicaoMenuNorma.Interval = 1;
 			transicaoMenuNorma.Tick += transicaoMenuNorma_Tick;
+			// 
+			// flowLayoutPanel2
+			// 
+			flowLayoutPanel2.BackColor = Color.FromArgb(0, 45, 71);
+			flowLayoutPanel2.Location = new Point(257, 402);
+			flowLayoutPanel2.Margin = new Padding(0, 2, 0, 0);
+			flowLayoutPanel2.Name = "flowLayoutPanel2";
+			flowLayoutPanel2.Size = new Size(264, 54);
+			flowLayoutPanel2.TabIndex = 9;
+			// 
+			// button2
+			// 
+			button2.BackColor = Color.FromArgb(0, 45, 71);
+			button2.FlatAppearance.BorderSize = 0;
+			button2.FlatStyle = FlatStyle.Flat;
+			button2.Image = (Image)resources.GetObject("button2.Image");
+			button2.ImageAlign = ContentAlignment.MiddleLeft;
+			button2.Location = new Point(509, 223);
+			button2.Margin = new Padding(0);
+			button2.Name = "button2";
+			button2.Size = new Size(220, 51);
+			button2.TabIndex = 6;
+			button2.Text = "Cadastrar";
+			button2.UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			button4.BackColor = Color.FromArgb(0, 45, 71);
+			button4.FlatAppearance.BorderSize = 0;
+			button4.FlatStyle = FlatStyle.Flat;
+			button4.Image = (Image)resources.GetObject("button4.Image");
+			button4.ImageAlign = ContentAlignment.MiddleLeft;
+			button4.Location = new Point(509, 284);
+			button4.Margin = new Padding(0);
+			button4.Name = "button4";
+			button4.Size = new Size(220, 51);
+			button4.TabIndex = 6;
+			button4.Text = "Consultar";
+			button4.UseVisualStyleBackColor = false;
 			// 
 			// frmHome
 			// 
@@ -459,9 +503,11 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
+			Controls.Add(button4);
+			Controls.Add(button2);
+			Controls.Add(flowLayoutPanel2);
 			Controls.Add(button3);
 			Controls.Add(button5);
-			Controls.Add(btnSair);
 			Controls.Add(button6);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
@@ -479,8 +525,8 @@
 			flpContainer.ResumeLayout(false);
 			flpContainerFornecedor.ResumeLayout(false);
 			flpContainerEpi.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			flpNormaRegulamentadora.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -516,5 +562,8 @@
 		private Button btnCadastrarNormaRegulamentadora;
 		private Button btnConsultarNormaRegulamentadora;
 		private System.Windows.Forms.Timer transicaoMenuNorma;
+		private FlowLayoutPanel flowLayoutPanel2;
+		private Button button2;
+		private Button button4;
 	}
 }

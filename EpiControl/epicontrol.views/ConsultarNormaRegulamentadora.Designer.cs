@@ -31,7 +31,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarNormaRegulamentadora));
 			label = new Label();
 			btnConsultar = new Button();
-			txtConsultaNome = new TextBox();
+			txtConsultaNorma = new TextBox();
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -59,13 +59,14 @@
 			btnConsultar.TabIndex = 14;
 			btnConsultar.Text = "Consultar";
 			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
 			// 
-			// txtConsultaNome
+			// txtConsultaNorma
 			// 
-			txtConsultaNome.Location = new Point(298, 80);
-			txtConsultaNome.Name = "txtConsultaNome";
-			txtConsultaNome.Size = new Size(226, 23);
-			txtConsultaNome.TabIndex = 13;
+			txtConsultaNorma.Location = new Point(298, 80);
+			txtConsultaNorma.Name = "txtConsultaNorma";
+			txtConsultaNorma.Size = new Size(226, 23);
+			txtConsultaNorma.TabIndex = 13;
 			// 
 			// panel1
 			// 
@@ -117,7 +118,7 @@
 			dgvNormaRegulamentadora.Name = "dgvNormaRegulamentadora";
 			dgvNormaRegulamentadora.Size = new Size(776, 335);
 			dgvNormaRegulamentadora.TabIndex = 11;
-			dgvNormaRegulamentadora.CellContentClick += dgvNormaRegulamentadora_CellContentClick;
+			dgvNormaRegulamentadora.CellClick += dgvNormaRegulamentadora_CellClick;
 			// 
 			// frmConsultarNormaRegulamentadora
 			// 
@@ -126,10 +127,12 @@
 			ClientSize = new Size(800, 450);
 			Controls.Add(label);
 			Controls.Add(btnConsultar);
-			Controls.Add(txtConsultaNome);
+			Controls.Add(txtConsultaNorma);
 			Controls.Add(panel1);
 			Controls.Add(dgvNormaRegulamentadora);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarNormaRegulamentadora";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ConsultarNormaRegulamentadora";
 			Load += frmConsultarNormaRegulamentadora_Load;
 			panel1.ResumeLayout(false);
@@ -144,7 +147,7 @@
 
 		private Label label;
 		private Button btnConsultar;
-		private TextBox txtConsultaNome;
+		private TextBox txtConsultaNorma;
 		private Panel panel1;
 		private Label label2;
 		private Label label1;

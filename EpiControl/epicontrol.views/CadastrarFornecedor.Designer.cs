@@ -473,6 +473,7 @@
 			Controls.Add(btnSalvar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmCadastrarFornecedor";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();

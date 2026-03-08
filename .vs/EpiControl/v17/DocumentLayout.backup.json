@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\consultarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\consultarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\Program.cs",
-              "RelativeDocumentMoniker": "EpiControl\\Program.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\Program.cs*",
-              "RelativeToolTip": "EpiControl\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:19:01.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Home.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Home.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Home.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "Title": "ConsultarFornecedor.cs [Projeto]",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFornecedor.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarFornecedor.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:18:58.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T01:32:41.86Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultarNormaRegulamentadora.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ConsultarFornecedor.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarFornecedor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAvwBsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:18:48.334Z",
+              "WhenOpened": "2026-03-08T01:32:29.328Z",
               "EditorCaption": ""
             }
           ]

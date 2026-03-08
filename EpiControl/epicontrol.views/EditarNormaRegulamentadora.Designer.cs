@@ -237,6 +237,7 @@
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditarNormaRegulamentadora";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();

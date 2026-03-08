@@ -111,10 +111,16 @@ namespace EpiControl.Views
 
 				MessageBox.Show("Fornecedor atualizado!");
 				Close();
-			}catch(Exception ex)
+			}
+			catch (Exception ex)
 			{
 				MessageBox.Show("Erro ao alterar fornecedor: " + ex);
 			}
+		}
+
+		private void frmEditarFornecedor_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

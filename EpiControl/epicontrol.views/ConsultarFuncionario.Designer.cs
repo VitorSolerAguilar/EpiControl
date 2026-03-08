@@ -130,6 +130,7 @@
 			Controls.Add(txtConsultaNome);
 			Controls.Add(panel1);
 			Controls.Add(dgvFuncionario);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarFuncionario";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
