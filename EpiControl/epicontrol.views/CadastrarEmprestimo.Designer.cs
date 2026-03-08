@@ -220,7 +220,9 @@
 			Controls.Add(cbxFuncionario);
 			Controls.Add(label3);
 			Controls.Add(panel1);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmCadastrarEmprestimo";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "CadastrarEmprestimo";
 			Load += CadastrarEmprestimo_Load;
 			((System.ComponentModel.ISupportInitialize)nudQuantidade).EndInit();

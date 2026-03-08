@@ -5,6 +5,9 @@
     <Compile Update="epicontrol.views\CadastrarEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="epicontrol.views\ConsultarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="epicontrol.views\ConsultarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>

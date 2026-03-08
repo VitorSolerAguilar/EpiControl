@@ -3,6 +3,7 @@ using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,35 @@ namespace EpiControl.epicontrol.dao
 			finally
 			{
 				conexao.Close();
+			}
+		}
+
+		public DataTable listarEmprestimo()
+		{
+			try
+			{
+				DataTable tabelaEmprestimo = new DataTable();
+
+				string sql = @"SELECT em.id_emprestimo, f.nome AS funcionario, e.nome AS epi, em.quantidade, em.data_entrega, em.observacoes FROM tb_emprestimo em 
+				INNER JOIN tb_funcionario f ON em.fk_funcionario = f.id_funcionario INNER JOIN tb_epi e ON em.fk_epi = e.id_epi ORDER BY em.data_entrega DESC";
+
+				MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+				da.Fill(tabelaEmprestimo);
+
+				return tabelaEmprestimo;
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Erro ao listar empréstimos: " + ex.Message);
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
 			}
 		}
 	}

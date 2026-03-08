@@ -36,10 +36,10 @@
 			label = new Label();
 			btnConsultar = new Button();
 			txtConsultaNome = new TextBox();
-			dgvEpi = new DataGridView();
+			dgvEmprestimo = new DataGridView();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)dgvEpi).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -111,14 +111,14 @@
 			txtConsultaNome.Size = new Size(226, 23);
 			txtConsultaNome.TabIndex = 18;
 			// 
-			// dgvEpi
+			// dgvEmprestimo
 			// 
-			dgvEpi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dgvEpi.Location = new Point(12, 103);
-			dgvEpi.Name = "dgvEpi";
-			dgvEpi.Size = new Size(776, 335);
-			dgvEpi.TabIndex = 17;
-			dgvEpi.CellClick += dgvEpi_CellClick;
+			dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dgvEmprestimo.Location = new Point(12, 103);
+			dgvEmprestimo.Name = "dgvEmprestimo";
+			dgvEmprestimo.Size = new Size(776, 335);
+			dgvEmprestimo.TabIndex = 17;
+			dgvEmprestimo.CellClick += dgvEpi_CellClick;
 			// 
 			// frmConsultarEpi
 			// 
@@ -128,7 +128,7 @@
 			Controls.Add(label);
 			Controls.Add(btnConsultar);
 			Controls.Add(txtConsultaNome);
-			Controls.Add(dgvEpi);
+			Controls.Add(dgvEmprestimo);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarEpi";
@@ -138,7 +138,7 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)dgvEpi).EndInit();
+			((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -152,6 +152,6 @@
 		private Label label;
 		private Button btnConsultar;
 		private TextBox txtConsultaNome;
-		private DataGridView dgvEpi;
+		private DataGridView dgvEmprestimo;
 	}
 }

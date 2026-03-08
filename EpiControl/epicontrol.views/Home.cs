@@ -87,6 +87,15 @@ namespace EpiControl
 			this.Hide();
 			cadastroEmprestimo.Show();
 		}
+		private void btnConsultarEmprestimo_Click(object sender, EventArgs e)
+		{
+			frmConsultarEmprestimo consultaEmprestimo = new frmConsultarEmprestimo();
+
+			consultaEmprestimo.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultaEmprestimo.Show();
+		}
+
 
 
 		bool menuExpand = false;
@@ -182,6 +191,30 @@ namespace EpiControl
 				}
 			}
 		}
+		private void transicaoMenuEmprestimo_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpEmprestimo.Height += 1;
+
+				if (flpEmprestimo.Height >= 153)
+				{
+					transicaoMenuEmprestimo.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpEmprestimo.Height -= 10;
+				if (flpEmprestimo.Height <= 51)
+				{
+					transicaoMenuEmprestimo.Stop();
+					menuExpand = false;
+				}
+			}
+
+		}
 
 
 
@@ -201,7 +234,9 @@ namespace EpiControl
 		{
 			transicaoMenuNorma.Start();
 		}
-
-		
+		private void btnEmprestimo_Click(object sender, EventArgs e)
+		{
+			transicaoMenuEmprestimo.Start();
+		}
 	}
 }

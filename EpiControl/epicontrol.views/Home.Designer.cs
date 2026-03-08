@@ -51,18 +51,19 @@
 			btnNormasRegulamentadoras = new Button();
 			btnCadastrarNormaRegulamentadora = new Button();
 			btnConsultarNormaRegulamentadora = new Button();
+			flpEmprestimo = new FlowLayoutPanel();
+			btnEmprestimo = new Button();
+			btnCadastrarEmprestimo = new Button();
+			btnConsultarEmprestimo = new Button();
 			btnSair = new Button();
 			button3 = new Button();
 			button5 = new Button();
-			button6 = new Button();
 			pictureBox2 = new PictureBox();
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
 			transicaoMenuEpi = new System.Windows.Forms.Timer(components);
 			transicaoMenuNorma = new System.Windows.Forms.Timer(components);
-			flowLayoutPanel2 = new FlowLayoutPanel();
-			btnCadastrarEmprestimo = new Button();
-			button4 = new Button();
+			transicaoMenuEmprestimo = new System.Windows.Forms.Timer(components);
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -70,6 +71,7 @@
 			flpContainerFornecedor.SuspendLayout();
 			flpContainerEpi.SuspendLayout();
 			flpNormaRegulamentadora.SuspendLayout();
+			flpEmprestimo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
 			// 
@@ -123,6 +125,7 @@
 			flowLayoutPanel1.Controls.Add(flpContainerFornecedor);
 			flowLayoutPanel1.Controls.Add(flpContainerEpi);
 			flowLayoutPanel1.Controls.Add(flpNormaRegulamentadora);
+			flowLayoutPanel1.Controls.Add(flpEmprestimo);
 			flowLayoutPanel1.Controls.Add(btnSair);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
@@ -335,7 +338,7 @@
 			btnNormasRegulamentadoras.Name = "btnNormasRegulamentadoras";
 			btnNormasRegulamentadoras.Size = new Size(220, 54);
 			btnNormasRegulamentadoras.TabIndex = 2;
-			btnNormasRegulamentadoras.Text = "Normas Regulamentadoras";
+			btnNormasRegulamentadoras.Text = "             Normas Regulamentadoras";
 			btnNormasRegulamentadoras.UseVisualStyleBackColor = false;
 			btnNormasRegulamentadoras.Click += btnNormasRegulamentadoras_Click;
 			// 
@@ -371,6 +374,66 @@
 			btnConsultarNormaRegulamentadora.UseVisualStyleBackColor = false;
 			btnConsultarNormaRegulamentadora.Click += btnConsultarNormaRegulamentadora_Click;
 			// 
+			// flpEmprestimo
+			// 
+			flpEmprestimo.BackColor = Color.FromArgb(0, 45, 71);
+			flpEmprestimo.Controls.Add(btnEmprestimo);
+			flpEmprestimo.Controls.Add(btnCadastrarEmprestimo);
+			flpEmprestimo.Controls.Add(btnConsultarEmprestimo);
+			flpEmprestimo.Location = new Point(0, 221);
+			flpEmprestimo.Margin = new Padding(0, 2, 0, 0);
+			flpEmprestimo.Name = "flpEmprestimo";
+			flpEmprestimo.Size = new Size(264, 54);
+			flpEmprestimo.TabIndex = 9;
+			// 
+			// btnEmprestimo
+			// 
+			btnEmprestimo.BackColor = Color.FromArgb(74, 146, 247);
+			btnEmprestimo.FlatAppearance.BorderSize = 0;
+			btnEmprestimo.FlatStyle = FlatStyle.Flat;
+			btnEmprestimo.Image = (Image)resources.GetObject("btnEmprestimo.Image");
+			btnEmprestimo.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEmprestimo.Location = new Point(0, 0);
+			btnEmprestimo.Margin = new Padding(0);
+			btnEmprestimo.Name = "btnEmprestimo";
+			btnEmprestimo.Size = new Size(220, 54);
+			btnEmprestimo.TabIndex = 2;
+			btnEmprestimo.Text = "Emprestimo";
+			btnEmprestimo.UseVisualStyleBackColor = false;
+			btnEmprestimo.Click += btnEmprestimo_Click;
+			// 
+			// btnCadastrarEmprestimo
+			// 
+			btnCadastrarEmprestimo.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarEmprestimo.FlatAppearance.BorderSize = 0;
+			btnCadastrarEmprestimo.FlatStyle = FlatStyle.Flat;
+			btnCadastrarEmprestimo.Image = (Image)resources.GetObject("btnCadastrarEmprestimo.Image");
+			btnCadastrarEmprestimo.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarEmprestimo.Location = new Point(0, 54);
+			btnCadastrarEmprestimo.Margin = new Padding(0);
+			btnCadastrarEmprestimo.Name = "btnCadastrarEmprestimo";
+			btnCadastrarEmprestimo.Size = new Size(220, 51);
+			btnCadastrarEmprestimo.TabIndex = 6;
+			btnCadastrarEmprestimo.Text = "Cadastrar";
+			btnCadastrarEmprestimo.UseVisualStyleBackColor = false;
+			btnCadastrarEmprestimo.Click += btnCadastrarEmprestimo_Click;
+			// 
+			// btnConsultarEmprestimo
+			// 
+			btnConsultarEmprestimo.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarEmprestimo.FlatAppearance.BorderSize = 0;
+			btnConsultarEmprestimo.FlatStyle = FlatStyle.Flat;
+			btnConsultarEmprestimo.Image = (Image)resources.GetObject("btnConsultarEmprestimo.Image");
+			btnConsultarEmprestimo.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarEmprestimo.Location = new Point(0, 105);
+			btnConsultarEmprestimo.Margin = new Padding(0);
+			btnConsultarEmprestimo.Name = "btnConsultarEmprestimo";
+			btnConsultarEmprestimo.Size = new Size(220, 51);
+			btnConsultarEmprestimo.TabIndex = 6;
+			btnConsultarEmprestimo.Text = "Consultar";
+			btnConsultarEmprestimo.UseVisualStyleBackColor = false;
+			btnConsultarEmprestimo.Click += btnConsultarEmprestimo_Click;
+			// 
 			// btnSair
 			// 
 			btnSair.BackColor = Color.FromArgb(74, 146, 247);
@@ -378,7 +441,7 @@
 			btnSair.FlatStyle = FlatStyle.Flat;
 			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
 			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-			btnSair.Location = new Point(0, 221);
+			btnSair.Location = new Point(0, 277);
 			btnSair.Margin = new Padding(0, 2, 0, 0);
 			btnSair.Name = "btnSair";
 			btnSair.Size = new Size(220, 54);
@@ -415,20 +478,6 @@
 			button5.Text = "Treinamentos";
 			button5.UseVisualStyleBackColor = false;
 			// 
-			// button6
-			// 
-			button6.BackColor = Color.FromArgb(74, 146, 247);
-			button6.FlatAppearance.BorderSize = 0;
-			button6.FlatStyle = FlatStyle.Flat;
-			button6.Image = (Image)resources.GetObject("button6.Image");
-			button6.ImageAlign = ContentAlignment.MiddleLeft;
-			button6.Location = new Point(509, 157);
-			button6.Name = "button6";
-			button6.Size = new Size(220, 54);
-			button6.TabIndex = 2;
-			button6.Text = "Emprestimo";
-			button6.UseVisualStyleBackColor = false;
-			// 
 			// pictureBox2
 			// 
 			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -458,45 +507,10 @@
 			transicaoMenuNorma.Interval = 1;
 			transicaoMenuNorma.Tick += transicaoMenuNorma_Tick;
 			// 
-			// flowLayoutPanel2
+			// transicaoMenuEmprestimo
 			// 
-			flowLayoutPanel2.BackColor = Color.FromArgb(0, 45, 71);
-			flowLayoutPanel2.Location = new Point(257, 402);
-			flowLayoutPanel2.Margin = new Padding(0, 2, 0, 0);
-			flowLayoutPanel2.Name = "flowLayoutPanel2";
-			flowLayoutPanel2.Size = new Size(264, 54);
-			flowLayoutPanel2.TabIndex = 9;
-			// 
-			// btnCadastrarEmprestimo
-			// 
-			btnCadastrarEmprestimo.BackColor = Color.FromArgb(0, 45, 71);
-			btnCadastrarEmprestimo.FlatAppearance.BorderSize = 0;
-			btnCadastrarEmprestimo.FlatStyle = FlatStyle.Flat;
-			btnCadastrarEmprestimo.Image = (Image)resources.GetObject("btnCadastrarEmprestimo.Image");
-			btnCadastrarEmprestimo.ImageAlign = ContentAlignment.MiddleLeft;
-			btnCadastrarEmprestimo.Location = new Point(509, 223);
-			btnCadastrarEmprestimo.Margin = new Padding(0);
-			btnCadastrarEmprestimo.Name = "btnCadastrarEmprestimo";
-			btnCadastrarEmprestimo.Size = new Size(220, 51);
-			btnCadastrarEmprestimo.TabIndex = 6;
-			btnCadastrarEmprestimo.Text = "Cadastrar";
-			btnCadastrarEmprestimo.UseVisualStyleBackColor = false;
-			btnCadastrarEmprestimo.Click += btnCadastrarEmprestimo_Click;
-			// 
-			// button4
-			// 
-			button4.BackColor = Color.FromArgb(0, 45, 71);
-			button4.FlatAppearance.BorderSize = 0;
-			button4.FlatStyle = FlatStyle.Flat;
-			button4.Image = (Image)resources.GetObject("button4.Image");
-			button4.ImageAlign = ContentAlignment.MiddleLeft;
-			button4.Location = new Point(509, 284);
-			button4.Margin = new Padding(0);
-			button4.Name = "button4";
-			button4.Size = new Size(220, 51);
-			button4.TabIndex = 6;
-			button4.Text = "Consultar";
-			button4.UseVisualStyleBackColor = false;
+			transicaoMenuEmprestimo.Interval = 1;
+			transicaoMenuEmprestimo.Tick += transicaoMenuEmprestimo_Tick;
 			// 
 			// frmHome
 			// 
@@ -504,12 +518,8 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
-			Controls.Add(button4);
-			Controls.Add(btnCadastrarEmprestimo);
-			Controls.Add(flowLayoutPanel2);
 			Controls.Add(button3);
 			Controls.Add(button5);
-			Controls.Add(button6);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
 			Controls.Add(panel1);
@@ -527,6 +537,7 @@
 			flpContainerFornecedor.ResumeLayout(false);
 			flpContainerEpi.ResumeLayout(false);
 			flpNormaRegulamentadora.ResumeLayout(false);
+			flpEmprestimo.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
 		}
@@ -542,7 +553,7 @@
 		private Button button3;
 		private Button btnFuncionario;
 		private Button button5;
-		private Button button6;
+		private Button btnEmprestimo;
 		private Button btnNormasRegulamentadoras;
 		private PictureBox pictureBox2;
 		private Button btnSair;
@@ -563,8 +574,9 @@
 		private Button btnCadastrarNormaRegulamentadora;
 		private Button btnConsultarNormaRegulamentadora;
 		private System.Windows.Forms.Timer transicaoMenuNorma;
-		private FlowLayoutPanel flowLayoutPanel2;
+		private FlowLayoutPanel flpEmprestimo;
 		private Button btnCadastrarEmprestimo;
-		private Button button4;
+		private Button btnConsultarEmprestimo;
+		private System.Windows.Forms.Timer transicaoMenuEmprestimo;
 	}
 }
