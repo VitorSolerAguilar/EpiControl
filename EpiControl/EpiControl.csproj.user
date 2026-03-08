@@ -2,13 +2,13 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="epicontrol.views\CadastrarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="epicontrol.views\ConsultarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\Curso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="epicontrol.views\Emprestimo\CadastrarEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\CadastrarEpi.cs">

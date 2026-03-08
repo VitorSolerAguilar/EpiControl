@@ -1,7 +1,6 @@
 using EpiControl.epicontrol.views;
 using EpiControl.views;
 using EpiControl.Views;
-using EpiControl.Views.Emprestimo;
 
 namespace EpiControl
 {
@@ -82,7 +81,7 @@ namespace EpiControl
 		}
 		private void btnCadastrarEmprestimo_Click(object sender, EventArgs e)
 		{
-			frmCadastroEmprestimo cadastroEmprestimo = new frmCadastroEmprestimo();
+			frmCadastrarEmprestimo cadastroEmprestimo = new frmCadastrarEmprestimo();
 
 			cadastroEmprestimo.FormClosed += (s, args) => this.Show();
 			this.Hide();

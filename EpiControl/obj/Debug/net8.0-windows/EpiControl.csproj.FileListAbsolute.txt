@@ -57,4 +57,4 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.Fu
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.views.frmCadastrarNormaRegulamentadora.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarNormaRegulamentadora.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarNormaRegulamentadora.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.frmCadastroEmprestimo.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarEmprestimo.resources

@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "D:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\editarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\emprestimodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\emprestimodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.model\\normaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.model\\normaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\normaregulamentadoradao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\normaregulamentadoradao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\editarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\emprestimo\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\emprestimo\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\funcionariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\funcionariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\epidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\epidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastraremprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,153 +35,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "NormaRegulamentadora.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.model\\NormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.model\\NormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.model\\NormaRegulamentadora.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.model\\NormaRegulamentadora.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Title": "CadastrarFuncionario.cs [Projeto]",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFuncionario.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:08:30.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NormaRegulamentadoraDAO.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\NormaRegulamentadoraDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\NormaRegulamentadoraDAO.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\NormaRegulamentadoraDAO.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\NormaRegulamentadoraDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:08:23.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T05:17:23.439Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CadastrarNormaRegulamentadora.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwCAAAAA0AAAAAAAAAA==",
+              "Title": "EmprestimoDAO.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\EmprestimoDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\EmprestimoDAO.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\EmprestimoDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\EmprestimoDAO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:06:47.667Z",
+              "WhenOpened": "2026-03-08T05:03:40.802Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CadastrarNormaRegulamentadora.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarNormaRegulamentadora.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:06:16.836Z",
-              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditarNormaRegulamentadora.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCIAAAAoAAAAAAAAAA==",
+              "Title": "CadastrarEmprestimo.cs [Projeto]",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs [Projeto]*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs [Projeto]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:02:50.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditarNormaRegulamentadora.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarNormaRegulamentadora.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:02:48.868Z",
+              "WhenOpened": "2026-03-08T04:56:15.598Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConsultarNormaRegulamentadora.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T03:02:32.473Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "CadastrarEmprestimo.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Emprestimo\\CadastrarEmprestimo.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Emprestimo\\CadastrarEmprestimo.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\Emprestimo\\CadastrarEmprestimo.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Emprestimo\\CadastrarEmprestimo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarEmprestimo.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:48:16.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CadastrarEpi.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:47:47.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CadastrarEpi.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarEpi.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarEpi.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarEpi.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:47:42.466Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EpiDAO.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\EpiDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\EpiDAO.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\EpiDAO.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\EpiDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:46:25.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FuncionarioDAO.cs",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\FuncionarioDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUBAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T02:42:41.638Z",
+              "WhenOpened": "2026-03-08T04:54:42.238Z",
               "EditorCaption": ""
             }
           ]

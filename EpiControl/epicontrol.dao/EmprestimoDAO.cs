@@ -13,11 +13,42 @@ namespace EpiControl.epicontrol.dao
 	{
 		private MySqlConnection conexao;
 
-		public EmprestimoDAO(MySqlConnection conexao)
+		public EmprestimoDAO()
 		{
 			this.conexao = new ConnectionFactory().getconnetion();
 		}
 
+		public void cadastrarEmprestimo(Emprestimo emprestimo)
+		{
+			conexao.Open();
+			MySqlTransaction transaction = conexao.BeginTransaction();
 
+			try
+			{
+				string sqlEmprestimo = @"INSERT INTO tb_emprestimo (quantidade, data_entrega, observacoes, fk_funcionario, fk_epi)
+				VALUES (@quantidade, @dataEntrega, @observacoes, @fk_funcionario, @fk_epi)";
+
+				MySqlCommand cmdEmprestimo = new MySqlCommand(sqlEmprestimo, conexao, transaction);
+
+				cmdEmprestimo.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
+				cmdEmprestimo.Parameters.AddWithValue("@dataEntrega", emprestimo.dataEntrega);
+				cmdEmprestimo.Parameters.AddWithValue("@observacoes", emprestimo.observacoes);
+				cmdEmprestimo.Parameters.AddWithValue("@fk_funcionario", emprestimo.funcionarioId);
+				cmdEmprestimo.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
+
+				cmdEmprestimo.ExecuteNonQuery();
+
+				transaction.Commit();
+			}
+			catch (Exception ex)
+			{
+				transaction.Rollback();
+				throw new Exception("Erro ao cadastrar empréstimo de EPI: " + ex.Message);
+			}
+			finally
+			{
+				conexao.Close();
+			}
+		}
 	}
 }

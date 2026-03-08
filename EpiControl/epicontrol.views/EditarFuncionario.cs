@@ -30,53 +30,59 @@ namespace EpiControl.Views
 
 		private void carregarFuncionario()
 		{
-			FuncionarioDAO dao = new FuncionarioDAO();
-			DataTable dt = dao.buscarFuncionarioId(_idFuncionario);
-
-			if (dt == null || dt.Rows.Count == 0)
+			try
 			{
-				MessageBox.Show("Funcionário não encontrado.");
-				return;
+				FuncionarioDAO dao = new FuncionarioDAO();
+				DataTable dt = dao.buscarFuncionarioId(_idFuncionario);
+
+				if (dt == null || dt.Rows.Count == 0)
+				{
+					MessageBox.Show("Funcionário não encontrado.");
+					return;
+				}
+
+				DataRow row = dt.Rows[0];
+
+				txtNome.Text = row["Nome"].ToString();
+				txtEmailPessoal.Text = row["email"].ToString();
+				txtEmailCorporativo.Text = row["email_corporativo"].ToString();
+				txtCargo.Text = row["cargo"].ToString();
+				txtNomeMae.Text = row["nome_mae"].ToString();
+				txtRua.Text = row["rua"].ToString();
+				txtNumero.Text = row["numero"].ToString();
+				txtLogradouro.Text = row["logradouro"].ToString();
+				txtCidade.Text = row["cidade"].ToString();
+				txtUf.Text = row["uf"].ToString();
+				txtNomePai.Text = row["nome_pai"].ToString();
+				txtMatricula.Text = row["matricula"].ToString();
+				txtNacionalidade.Text = row["nacionalidade"].ToString();
+				txtPisPasep.Text = row["pis"].ToString();
+
+				string genero = row["genero"].ToString();
+				string status = row["status"].ToString();
+
+				rdbMasculino.Checked = genero == "Masculino";
+				rdbFeminino.Checked = genero == "Feminino";
+
+				rdbAtivo.Checked = status == "Ativo";
+				rdbInativo.Checked = status == "Inativo";
+
+
+				mtbDataNascimento.Text = row["data_nascimento"].ToString();
+				mtbRg.Text = row["rg"].ToString();
+				mtbCpf.Text = row["cpf"].ToString();
+				mtbTelefone.Text = row["telefone"].ToString();
+				mtbCelular.Text = row["celular"].ToString();
+				mtbCep.Text = row["cep"].ToString();
+
+				rtbComplemento.Text = row["complemento"].ToString();
+
+				cbxTipoEndereco.Text = row["tipo"].ToString();
+				cbxEstadoCivil.Text = row["estado_civil"].ToString();
+			}catch(Exception ex)
+			{
+				MessageBox.Show("Erro ao carregar funcionario: " + ex);
 			}
-
-			DataRow row = dt.Rows[0];
-
-			txtNome.Text = row["Nome"].ToString();
-			txtEmailPessoal.Text = row["email"].ToString();
-			txtEmailCorporativo.Text = row["email_corporativo"].ToString();
-			txtCargo.Text = row["cargo"].ToString();
-			txtNomeMae.Text = row["nome_mae"].ToString();
-			txtRua.Text = row["rua"].ToString();
-			txtNumero.Text = row["numero"].ToString();
-			txtLogradouro.Text = row["logradouro"].ToString();
-			txtCidade.Text = row["cidade"].ToString();
-			txtUf.Text = row["uf"].ToString();
-			txtNomePai.Text = row["nome_pai"].ToString();
-			txtMatricula.Text = row["matricula"].ToString();
-			txtNacionalidade.Text = row["nacionalidade"].ToString();
-			txtPisPasep.Text = row["pis"].ToString();
-
-			string genero = row["genero"].ToString();
-			string status = row["status"].ToString();
-
-			rdbMasculino.Checked = genero == "Masculino";
-			rdbFeminino.Checked = genero == "Feminino";
-
-			rdbAtivo.Checked = status == "Ativo";
-			rdbInativo.Checked = status == "Inativo";
-
-
-			mtbDataNascimento.Text = row["data_nascimento"].ToString();
-			mtbRg.Text = row["rg"].ToString();
-			mtbCpf.Text = row["cpf"].ToString();
-			mtbTelefone.Text = row["telefone"].ToString();
-			mtbCelular.Text = row["celular"].ToString();
-			mtbCep.Text = row["cep"].ToString();
-
-			rtbComplemento.Text = row["complemento"].ToString();
-
-			cbxTipoEndereco.Text = row["tipo"].ToString();
-			cbxEstadoCivil.Text = row["estado_civil"].ToString();
 		}
 
 		private void btnVoltar_Click(object sender, EventArgs e)
