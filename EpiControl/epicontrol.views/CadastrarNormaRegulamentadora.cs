@@ -30,7 +30,7 @@ namespace EpiControl.views
 			{
 				NormaRegulamentadora normaRegulamentadora = new NormaRegulamentadora();
 
-				normaRegulamentadora.codigoNr = Convert.ToInt32(nudNumeroNr.Value);
+				normaRegulamentadora.codigoNr = txtNumeroNr.Text;
 				normaRegulamentadora.titulo = txtTitulo.Text;
 				normaRegulamentadora.descricao = rtbDescricao.Text;
 				normaRegulamentadora.linkMte = txtLinkMte.Text;
@@ -48,6 +48,7 @@ namespace EpiControl.views
 
 		public void limparCampos()
 		{
+			txtNumeroNr.Clear();
 			txtTitulo.Clear();
 			rtbDescricao.Clear();
 			txtLinkMte.Clear();

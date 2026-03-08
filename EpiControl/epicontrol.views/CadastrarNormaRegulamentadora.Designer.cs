@@ -41,13 +41,12 @@
 			label6 = new Label();
 			label7 = new Label();
 			txtLinkMte = new TextBox();
-			nudNumeroNr = new NumericUpDown();
 			btnSalvar = new Button();
 			btnVoltar = new Button();
 			mtbDataVigencia = new MaskedTextBox();
+			txtNumeroNr = new TextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)nudNumeroNr).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -160,13 +159,6 @@
 			txtLinkMte.Size = new Size(349, 23);
 			txtLinkMte.TabIndex = 18;
 			// 
-			// nudNumeroNr
-			// 
-			nudNumeroNr.Location = new Point(187, 93);
-			nudNumeroNr.Name = "nudNumeroNr";
-			nudNumeroNr.Size = new Size(63, 23);
-			nudNumeroNr.TabIndex = 19;
-			// 
 			// btnSalvar
 			// 
 			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
@@ -201,15 +193,22 @@
 			mtbDataVigencia.TabIndex = 22;
 			mtbDataVigencia.ValidatingType = typeof(DateTime);
 			// 
+			// txtNumeroNr
+			// 
+			txtNumeroNr.Location = new Point(187, 93);
+			txtNumeroNr.Name = "txtNumeroNr";
+			txtNumeroNr.Size = new Size(84, 23);
+			txtNumeroNr.TabIndex = 23;
+			// 
 			// frmCadastrarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(578, 478);
+			Controls.Add(txtNumeroNr);
 			Controls.Add(mtbDataVigencia);
 			Controls.Add(btnVoltar);
 			Controls.Add(btnSalvar);
-			Controls.Add(nudNumeroNr);
 			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
@@ -226,7 +225,6 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)nudNumeroNr).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -244,9 +242,9 @@
 		private Label label6;
 		private Label label7;
 		private TextBox txtLinkMte;
-		private NumericUpDown nudNumeroNr;
 		private Button btnSalvar;
 		private Button btnVoltar;
 		private MaskedTextBox mtbDataVigencia;
+		private TextBox txtNumeroNr;
 	}
 }

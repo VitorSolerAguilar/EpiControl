@@ -1,6 +1,7 @@
 using EpiControl.epicontrol.views;
 using EpiControl.views;
 using EpiControl.Views;
+using EpiControl.Views.Emprestimo;
 
 namespace EpiControl
 {
@@ -79,7 +80,14 @@ namespace EpiControl
 			this.Hide();
 			consultarNorma.Show();
 		}
+		private void btnCadastrarEmprestimo_Click(object sender, EventArgs e)
+		{
+			frmCadastroEmprestimo cadastroEmprestimo = new frmCadastroEmprestimo();
 
+			cadastroEmprestimo.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastroEmprestimo.Show();
+		}
 
 
 		bool menuExpand = false;
@@ -195,5 +203,6 @@ namespace EpiControl
 			transicaoMenuNorma.Start();
 		}
 
+		
 	}
 }

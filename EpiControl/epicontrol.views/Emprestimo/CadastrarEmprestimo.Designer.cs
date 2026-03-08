@@ -1,6 +1,6 @@
 ﻿namespace EpiControl.Views.Emprestimo
 {
-	partial class CadastrarEmprestimo
+	partial class frmCadastroEmprestimo
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarEmprestimo));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroEmprestimo));
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
@@ -37,14 +37,12 @@
 			cbxFuncionario = new ComboBox();
 			label4 = new Label();
 			label6 = new Label();
-			label5 = new Label();
 			cbxEpi = new ComboBox();
 			label8 = new Label();
 			nudQuantidade = new NumericUpDown();
 			btnVoltar = new Button();
 			label9 = new Label();
 			mtbDataEmprestimo = new MaskedTextBox();
-			mtbDataDevolucao = new MaskedTextBox();
 			rtbObservacoes = new RichTextBox();
 			btnSalvar = new Button();
 			panel1.SuspendLayout();
@@ -130,15 +128,6 @@
 			label6.TabIndex = 20;
 			label6.Text = "Data do Empréstimo*";
 			// 
-			// label5
-			// 
-			label5.AutoSize = true;
-			label5.Location = new Point(57, 261);
-			label5.Name = "label5";
-			label5.Size = new Size(106, 15);
-			label5.TabIndex = 23;
-			label5.Text = "Data de Devolução";
-			// 
 			// cbxEpi
 			// 
 			cbxEpi.FormattingEnabled = true;
@@ -166,7 +155,7 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(400, 472);
+			btnVoltar.Location = new Point(400, 424);
 			btnVoltar.Name = "btnVoltar";
 			btnVoltar.Size = new Size(75, 40);
 			btnVoltar.TabIndex = 71;
@@ -176,7 +165,7 @@
 			// label9
 			// 
 			label9.AutoSize = true;
-			label9.Location = new Point(251, 314);
+			label9.Location = new Point(251, 258);
 			label9.Name = "label9";
 			label9.Size = new Size(74, 15);
 			label9.TabIndex = 73;
@@ -191,18 +180,9 @@
 			mtbDataEmprestimo.TabIndex = 75;
 			mtbDataEmprestimo.ValidatingType = typeof(DateTime);
 			// 
-			// mtbDataDevolucao
-			// 
-			mtbDataDevolucao.Location = new Point(211, 253);
-			mtbDataDevolucao.Mask = "__/__/____";
-			mtbDataDevolucao.Name = "mtbDataDevolucao";
-			mtbDataDevolucao.Size = new Size(132, 23);
-			mtbDataDevolucao.TabIndex = 76;
-			mtbDataDevolucao.ValidatingType = typeof(DateTime);
-			// 
 			// rtbObservacoes
 			// 
-			rtbObservacoes.Location = new Point(57, 339);
+			rtbObservacoes.Location = new Point(57, 283);
 			rtbObservacoes.Name = "rtbObservacoes";
 			rtbObservacoes.Size = new Size(499, 113);
 			rtbObservacoes.TabIndex = 77;
@@ -214,37 +194,36 @@
 			btnSalvar.FlatAppearance.BorderSize = 0;
 			btnSalvar.FlatStyle = FlatStyle.Flat;
 			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(481, 472);
+			btnSalvar.Location = new Point(481, 424);
 			btnSalvar.Name = "btnSalvar";
 			btnSalvar.Size = new Size(75, 40);
 			btnSalvar.TabIndex = 222;
 			btnSalvar.Text = " Salvar";
 			btnSalvar.UseVisualStyleBackColor = false;
 			// 
-			// CadastrarEmprestimo
+			// frmCadastroEmprestimo
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(608, 518);
+			ClientSize = new Size(608, 469);
 			Controls.Add(btnSalvar);
 			Controls.Add(rtbObservacoes);
-			Controls.Add(mtbDataDevolucao);
 			Controls.Add(mtbDataEmprestimo);
 			Controls.Add(label9);
 			Controls.Add(btnVoltar);
 			Controls.Add(nudQuantidade);
 			Controls.Add(cbxEpi);
 			Controls.Add(label8);
-			Controls.Add(label5);
 			Controls.Add(label6);
 			Controls.Add(label4);
 			Controls.Add(cbxFuncionario);
 			Controls.Add(label3);
 			Controls.Add(panel1);
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Name = "CadastrarEmprestimo";
+			Name = "frmCadastroEmprestimo";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
+			Load += CadastrarEmprestimo_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -263,7 +242,6 @@
 		private ComboBox cbxFuncionario;
 		private Label label4;
 		private Label label6;
-		private Label label5;
 		private ComboBox cbxEpi;
 		private Label label8;
 		private NumericUpDown nudQuantidade;
@@ -272,7 +250,6 @@
 		private Button btnVoltar;
 		private Label label9;
 		private MaskedTextBox mtbDataEmprestimo;
-		private MaskedTextBox mtbDataDevolucao;
 		private RichTextBox rtbObservacoes;
 		private Button btnSalvar;
 	}

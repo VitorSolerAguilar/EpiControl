@@ -381,5 +381,28 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
+		public List<Funcionario> listarNomesFuncionarios()
+		{
+			List<Funcionario> lista = new List<Funcionario>();
+
+			string sql = "SELECT id_funcionario, nome FROM tb_funcionario ORDER BY nome";
+
+			MySqlCommand cmd = new MySqlCommand(sql, conexao);
+			conexao.Open();
+
+			MySqlDataReader reader = cmd.ExecuteReader();
+
+			while (reader.Read())
+			{
+				lista.Add(new Funcionario
+				{
+					id = reader.GetInt32("id_funcionario"),
+					nome = reader.GetString("nome")
+				});
+			}
+
+			conexao.Close();
+			return lista;
+		}
 	}
 }

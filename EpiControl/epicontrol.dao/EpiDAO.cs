@@ -57,6 +57,7 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
+
 		public DataTable listarEpi()
 		{
 			try
@@ -83,6 +84,7 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
+
 		public void editarEpi(Epi epi)
 		{
 			conexao.Open();
@@ -121,6 +123,7 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
+
 		public DataTable buscarEpiId(int idEpi)
 		{
 			try
@@ -147,6 +150,7 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
+
 		public DataTable buscarEpiNome(string nomeEpi)
 		{
 			try
@@ -174,6 +178,30 @@ namespace EpiControl.epicontrol.dao
 				if (conexao.State == ConnectionState.Open)
 					conexao.Close();
 			}
+		}
+
+		public List<Epi> listarNomesEpi()
+		{
+			List<Epi> lista = new List<Epi>();
+
+			string sql = "SELECT id_epi, nome FROM tb_epi ORDER BY nome";
+
+			MySqlCommand cmd = new MySqlCommand(sql, conexao);
+			conexao.Open();
+
+			MySqlDataReader reader = cmd.ExecuteReader();
+
+			while (reader.Read())
+			{
+				lista.Add(new Epi
+				{
+					id = reader.GetInt32("id_epi"),
+					nome = reader.GetString("nome")
+				});
+			}
+
+			conexao.Close();
+			return lista;
 		}
 	}
 }

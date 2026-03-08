@@ -4,7 +4,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.runtimeconfig.json
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Properties.Resources.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.CadastrarEmprestimo.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.GenerateResource.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.GeneratedMSBuildEditorConfig.editorconfig
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.AssemblyInfoInputs.cache
@@ -58,3 +57,4 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.Fu
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.views.frmCadastrarNormaRegulamentadora.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarNormaRegulamentadora.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarNormaRegulamentadora.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.Emprestimo.frmCadastroEmprestimo.resources

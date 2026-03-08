@@ -35,7 +35,6 @@
 			pictureBox1 = new PictureBox();
 			btnVoltar = new Button();
 			btnEditar = new Button();
-			nudNumeroNr = new NumericUpDown();
 			txtLinkMte = new TextBox();
 			label7 = new Label();
 			label6 = new Label();
@@ -46,9 +45,9 @@
 			label3 = new Label();
 			btnExcluir = new Button();
 			mtbDataVigencia = new MaskedTextBox();
+			txtNumeroNr = new TextBox();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)nudNumeroNr).BeginInit();
 			SuspendLayout();
 			// 
 			// panel1
@@ -118,13 +117,6 @@
 			btnEditar.Text = "Editar";
 			btnEditar.UseVisualStyleBackColor = false;
 			btnEditar.Click += btnEditar_Click;
-			// 
-			// nudNumeroNr
-			// 
-			nudNumeroNr.Location = new Point(186, 100);
-			nudNumeroNr.Name = "nudNumeroNr";
-			nudNumeroNr.Size = new Size(49, 23);
-			nudNumeroNr.TabIndex = 31;
 			// 
 			// txtLinkMte
 			// 
@@ -216,16 +208,23 @@
 			mtbDataVigencia.TabIndex = 35;
 			mtbDataVigencia.ValidatingType = typeof(DateTime);
 			// 
+			// txtNumeroNr
+			// 
+			txtNumeroNr.Location = new Point(186, 92);
+			txtNumeroNr.Name = "txtNumeroNr";
+			txtNumeroNr.Size = new Size(84, 23);
+			txtNumeroNr.TabIndex = 36;
+			// 
 			// frmEditarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(626, 498);
+			Controls.Add(txtNumeroNr);
 			Controls.Add(mtbDataVigencia);
 			Controls.Add(btnExcluir);
 			Controls.Add(btnVoltar);
 			Controls.Add(btnEditar);
-			Controls.Add(nudNumeroNr);
 			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
@@ -242,7 +241,6 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)nudNumeroNr).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -255,7 +253,6 @@
 		private PictureBox pictureBox1;
 		private Button btnVoltar;
 		private Button btnEditar;
-		private NumericUpDown nudNumeroNr;
 		private TextBox txtLinkMte;
 		private Label label7;
 		private Label label6;
@@ -266,5 +263,6 @@
 		private Label label3;
 		private Button btnExcluir;
 		private MaskedTextBox mtbDataVigencia;
+		private TextBox txtNumeroNr;
 	}
 }

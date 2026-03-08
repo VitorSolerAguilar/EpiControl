@@ -30,7 +30,7 @@ namespace EpiControl.Views
 				NormaRegulamentadora norma = new NormaRegulamentadora();
 
 				norma.id = _idNorma;
-				norma.codigoNr = Convert.ToInt32(nudNumeroNr.Value); 
+				norma.codigoNr = txtNumeroNr.Text; 
 				norma.titulo = txtTitulo.Text;
 				norma.descricao = rtbDescricao.Text;
 				norma.linkMte = txtLinkMte.Text;
@@ -57,7 +57,7 @@ namespace EpiControl.Views
 				DataTable dt = dao.buscarNormaRegulamentadoraId(_idNorma);
 
 				DataRow row = dt.Rows[0];
-				nudNumeroNr.Value = Convert.ToDecimal(row["codigo_nr"]);
+				txtNumeroNr.Text = row["codigo_nr"].ToString();
 				txtTitulo.Text = row["titulo"].ToString();
 				rtbDescricao.Text = row["descricao"].ToString();
 				txtLinkMte.Text = row["link_mte"].ToString();
