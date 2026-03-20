@@ -1,4 +1,5 @@
 ﻿using EpiControl.epicontrol.conexao;
+using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -10,19 +11,7 @@ using System.Threading.Tasks;
 using System.Transactions;
 
 namespace EpiControl.epicontrol.dao
-{
-   
-    public class Curso
-    {
-        public int IdCurso { get; set; }
-        public string Nome { get; set; }
-        public string CargaHoraria { get; set; }
-        public string Descricao { get; set; }
-        public int ValidadeMeses { get; set; }
-        public string TbCursocol { get; set; } 
-    }
-
-    
+{   
     public class CursoDAO
     {
         private MySqlConnection conexao;
@@ -38,15 +27,14 @@ namespace EpiControl.epicontrol.dao
             MySqlTransaction transaction = conexao.BeginTransaction();
             try
             {
-                string sqlCurso = @"INSERT INTO tb_curso(nome, carga_horaria, descricao, validade_meses, tb_cursocol) 
-                                    VALUES (@nome, @carga_horaria, @descricao, @validade_meses, @tb_cursocol)";
+                string sqlCurso = @"INSERT INTO tb_curso(nome, carga_horaria, descricao, validade_meses) 
+                                    VALUES (@nome, @carga_horaria, @descricao, @validade_meses)";
 
                 MySqlCommand cmdCurso = new MySqlCommand(sqlCurso, conexao, transaction);
-                cmdCurso.Parameters.AddWithValue("@nome", curso.Nome);
-                cmdCurso.Parameters.AddWithValue("@carga_horaria", curso.CargaHoraria);
-                cmdCurso.Parameters.AddWithValue("@descricao", curso.Descricao);
-                cmdCurso.Parameters.AddWithValue("@validade_meses", curso.ValidadeMeses);
-                cmdCurso.Parameters.AddWithValue("@tb_cursocol", curso.TbCursocol);
+                cmdCurso.Parameters.AddWithValue("@nome", curso.nome);
+                cmdCurso.Parameters.AddWithValue("@carga_horaria", curso.cargaHoraria);
+                cmdCurso.Parameters.AddWithValue("@descricao", curso.descricao);
+                cmdCurso.Parameters.AddWithValue("@validade_meses", curso.validadeMeses);
 
                 cmdCurso.ExecuteNonQuery();
 
@@ -55,7 +43,7 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 transaction.Rollback();
-                throw new Exception("Erro ao cadastrar curso: " + ex.Message);
+                MessageBox.Show("Erro ao cadastrar curso: " + ex.Message);
             }
             finally
             {
@@ -81,7 +69,7 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 transaction.Rollback();
-                throw new Exception("Erro ao excluir curso: " + ex.Message);
+                MessageBox.Show("Erro ao excluir curso: " + ex.Message);
             }
             finally
             {
@@ -107,11 +95,11 @@ namespace EpiControl.epicontrol.dao
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao listar cursos: " + ex.Message);
+                MessageBox.Show("Erro ao listar cursos: " + ex.Message);
+                return null;
             }
             finally
             {
-                if (conexao.State == ConnectionState.Open)
                     conexao.Close();
             }
         }
@@ -122,7 +110,7 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabelaCurso = new DataTable();
 
-                string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses, tb_cursocol FROM tb_curso WHERE id_curso = @id_curso";
+                string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses FROM tb_curso WHERE id_curso = @id_curso";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@id_curso", idCurso);
@@ -136,11 +124,11 @@ namespace EpiControl.epicontrol.dao
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao buscar curso: " + ex.Message);
+                MessageBox.Show("Erro ao buscar curso: " + ex.Message);
+                return null;
             }
             finally
             {
-                if (conexao.State == ConnectionState.Open)
                     conexao.Close();
             }
         }
@@ -152,16 +140,15 @@ namespace EpiControl.epicontrol.dao
 
             try
             {
-                string sql = @"UPDATE tb_curso SET nome = @nome, carga_horaria = @carga_horaria, descricao = @descricao, validade_meses = @validade_meses, tb_cursocol = @tb_cursocol WHERE id_curso = @id";
+                string sql = @"UPDATE tb_curso SET nome = @nome, carga_horaria = @carga_horaria, descricao = @descricao, validade_meses = @validade_meses WHERE id_curso = @id";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao, transaction);
 
-                cmd.Parameters.AddWithValue("@nome", curso.Nome);
-                cmd.Parameters.AddWithValue("@carga_horaria", curso.CargaHoraria);
-                cmd.Parameters.AddWithValue("@descricao", curso.Descricao);
-                cmd.Parameters.AddWithValue("@validade_meses", curso.ValidadeMeses);
-                cmd.Parameters.AddWithValue("@tb_cursocol", curso.TbCursocol);
-                cmd.Parameters.AddWithValue("@id", curso.IdCurso);
+                cmd.Parameters.AddWithValue("@nome", curso.nome);
+                cmd.Parameters.AddWithValue("@carga_horaria", curso.cargaHoraria);
+                cmd.Parameters.AddWithValue("@descricao", curso.descricao);
+                cmd.Parameters.AddWithValue("@validade_meses", curso.validadeMeses);
+                cmd.Parameters.AddWithValue("@id", curso.id);
 
                 cmd.ExecuteNonQuery();
 
@@ -170,11 +157,10 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 transaction.Rollback();
-                throw new Exception("Erro ao editar curso: " + ex.Message);
+                MessageBox.Show("Erro ao editar curso: " + ex.Message);
             }
             finally
             {
-                if (conexao.State == ConnectionState.Open)
                     conexao.Close();
             }
         }
@@ -185,7 +171,7 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabelaCurso = new DataTable();
 
-                string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses, tb_cursocol FROM tb_curso WHERE nome LIKE @nome";
+                string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses FROM tb_curso WHERE nome LIKE @nome";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@nome", "%" + nomeCurso + "%");
@@ -199,11 +185,11 @@ namespace EpiControl.epicontrol.dao
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao buscar curso por nome: " + ex.Message);
+                 MessageBox.Show("Erro ao buscar curso por nome: " + ex.Message);
+                return null;
             }
             finally
             {
-                if (conexao.State == ConnectionState.Open)
                     conexao.Close();
             }
         }
