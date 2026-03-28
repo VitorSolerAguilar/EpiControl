@@ -56,7 +56,7 @@
 			btnCadastrarEmprestimo = new Button();
 			btnConsultarEmprestimo = new Button();
 			btnSair = new Button();
-			button3 = new Button();
+			btnEstoque = new Button();
 			button5 = new Button();
 			pictureBox2 = new PictureBox();
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
@@ -64,6 +64,10 @@
 			transicaoMenuEpi = new System.Windows.Forms.Timer(components);
 			transicaoMenuNorma = new System.Windows.Forms.Timer(components);
 			transicaoMenuEmprestimo = new System.Windows.Forms.Timer(components);
+			flpEstoque = new FlowLayoutPanel();
+			btnCadastrarEstoque = new Button();
+			btnConsultarEstoque = new Button();
+			transicaoMenuEstoque = new System.Windows.Forms.Timer(components);
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -73,6 +77,7 @@
 			flpNormaRegulamentadora.SuspendLayout();
 			flpEmprestimo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+			flpEstoque.SuspendLayout();
 			SuspendLayout();
 			// 
 			// panel1
@@ -126,11 +131,12 @@
 			flowLayoutPanel1.Controls.Add(flpContainerEpi);
 			flowLayoutPanel1.Controls.Add(flpNormaRegulamentadora);
 			flowLayoutPanel1.Controls.Add(flpEmprestimo);
+			flowLayoutPanel1.Controls.Add(flpEstoque);
 			flowLayoutPanel1.Controls.Add(btnSair);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(220, 598);
+			flowLayoutPanel1.Size = new Size(292, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
 			// flpContainer
@@ -441,7 +447,7 @@
 			btnSair.FlatStyle = FlatStyle.Flat;
 			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
 			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-			btnSair.Location = new Point(0, 277);
+			btnSair.Location = new Point(0, 333);
 			btnSair.Margin = new Padding(0, 2, 0, 0);
 			btnSair.Name = "btnSair";
 			btnSair.Size = new Size(220, 54);
@@ -450,19 +456,21 @@
 			btnSair.UseVisualStyleBackColor = false;
 			btnSair.Click += btnSair_Click;
 			// 
-			// button3
+			// btnEstoque
 			// 
-			button3.BackColor = Color.FromArgb(74, 146, 247);
-			button3.FlatAppearance.BorderSize = 0;
-			button3.FlatStyle = FlatStyle.Flat;
-			button3.Image = (Image)resources.GetObject("button3.Image");
-			button3.ImageAlign = ContentAlignment.MiddleLeft;
-			button3.Location = new Point(1051, 416);
-			button3.Name = "button3";
-			button3.Size = new Size(220, 54);
-			button3.TabIndex = 2;
-			button3.Text = "Estoque";
-			button3.UseVisualStyleBackColor = false;
+			btnEstoque.BackColor = Color.FromArgb(74, 146, 247);
+			btnEstoque.FlatAppearance.BorderSize = 0;
+			btnEstoque.FlatStyle = FlatStyle.Flat;
+			btnEstoque.Image = (Image)resources.GetObject("btnEstoque.Image");
+			btnEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEstoque.Location = new Point(0, 0);
+			btnEstoque.Margin = new Padding(0);
+			btnEstoque.Name = "btnEstoque";
+			btnEstoque.Size = new Size(220, 54);
+			btnEstoque.TabIndex = 2;
+			btnEstoque.Text = "Estoque";
+			btnEstoque.UseVisualStyleBackColor = false;
+			btnEstoque.Click += btnEstoque_Click;
 			// 
 			// button5
 			// 
@@ -512,13 +520,61 @@
 			transicaoMenuEmprestimo.Interval = 1;
 			transicaoMenuEmprestimo.Tick += transicaoMenuEmprestimo_Tick;
 			// 
+			// flpEstoque
+			// 
+			flpEstoque.BackColor = Color.FromArgb(0, 45, 71);
+			flpEstoque.Controls.Add(btnEstoque);
+			flpEstoque.Controls.Add(btnCadastrarEstoque);
+			flpEstoque.Controls.Add(btnConsultarEstoque);
+			flpEstoque.Location = new Point(0, 277);
+			flpEstoque.Margin = new Padding(0, 2, 0, 0);
+			flpEstoque.Name = "flpEstoque";
+			flpEstoque.Size = new Size(264, 54);
+			flpEstoque.TabIndex = 10;
+			// 
+			// btnCadastrarEstoque
+			// 
+			btnCadastrarEstoque.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarEstoque.FlatAppearance.BorderSize = 0;
+			btnCadastrarEstoque.FlatStyle = FlatStyle.Flat;
+			btnCadastrarEstoque.Image = (Image)resources.GetObject("btnCadastrarEstoque.Image");
+			btnCadastrarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarEstoque.Location = new Point(0, 54);
+			btnCadastrarEstoque.Margin = new Padding(0);
+			btnCadastrarEstoque.Name = "btnCadastrarEstoque";
+			btnCadastrarEstoque.Size = new Size(220, 51);
+			btnCadastrarEstoque.TabIndex = 6;
+			btnCadastrarEstoque.Text = "Cadastrar";
+			btnCadastrarEstoque.UseVisualStyleBackColor = false;
+			btnCadastrarEstoque.Click += btnCadastrarEstoque_Click;
+			// 
+			// btnConsultarEstoque
+			// 
+			btnConsultarEstoque.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarEstoque.FlatAppearance.BorderSize = 0;
+			btnConsultarEstoque.FlatStyle = FlatStyle.Flat;
+			btnConsultarEstoque.Image = (Image)resources.GetObject("btnConsultarEstoque.Image");
+			btnConsultarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarEstoque.Location = new Point(0, 105);
+			btnConsultarEstoque.Margin = new Padding(0);
+			btnConsultarEstoque.Name = "btnConsultarEstoque";
+			btnConsultarEstoque.Size = new Size(220, 51);
+			btnConsultarEstoque.TabIndex = 6;
+			btnConsultarEstoque.Text = "Consultar";
+			btnConsultarEstoque.UseVisualStyleBackColor = false;
+			btnConsultarEstoque.Click += btnConsultarEstoque_Click;
+			// 
+			// transicaoMenuEstoque
+			// 
+			transicaoMenuEstoque.Interval = 1;
+			transicaoMenuEstoque.Tick += transicaoMenuEstoque_Tick;
+			// 
 			// frmHome
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
-			Controls.Add(button3);
 			Controls.Add(button5);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
@@ -539,6 +595,7 @@
 			flpNormaRegulamentadora.ResumeLayout(false);
 			flpEmprestimo.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+			flpEstoque.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -550,7 +607,7 @@
 		private Label label2;
 		private FlowLayoutPanel flowLayoutPanel1;
 		private Button btnCadastroFornecedor;
-		private Button button3;
+		private Button btnEstoque;
 		private Button btnFuncionario;
 		private Button button5;
 		private Button btnEmprestimo;
@@ -578,5 +635,9 @@
 		private Button btnCadastrarEmprestimo;
 		private Button btnConsultarEmprestimo;
 		private System.Windows.Forms.Timer transicaoMenuEmprestimo;
+		private FlowLayoutPanel flpEstoque;
+		private Button btnCadastrarEstoque;
+		private Button btnConsultarEstoque;
+		private System.Windows.Forms.Timer transicaoMenuEstoque;
 	}
 }

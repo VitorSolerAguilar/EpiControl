@@ -95,8 +95,22 @@ namespace EpiControl
 			this.Hide();
 			consultaEmprestimo.Show();
 		}
+		private void btnCadastrarEstoque_Click(object sender, EventArgs e)
+		{
+			frmCadastrarEstoqueEpi cadastratEstoqueEpi = new frmCadastrarEstoqueEpi();
 
+			cadastratEstoqueEpi.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastratEstoqueEpi.Show();
+		}
+		private void btnConsultarEstoque_Click(object sender, EventArgs e)
+		{
+			frmConsultaEstoqueEpi consultaEstoqueEpi = new frmConsultaEstoqueEpi();
 
+			consultaEstoqueEpi.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultaEstoqueEpi.Show();
+		}
 
 		bool menuExpand = false;
 		private void trasicaoMenuFuncionario_Tick(object sender, EventArgs e)
@@ -215,7 +229,29 @@ namespace EpiControl
 			}
 
 		}
+		private void transicaoMenuEstoque_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpEstoque.Height += 1;
 
+				if (flpEstoque.Height >= 153)
+				{
+					transicaoMenuEstoque.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpEstoque.Height -= 10;
+				if (flpEstoque.Height <= 51)
+				{
+					transicaoMenuEstoque.Stop();
+					menuExpand = false;
+				}
+			}
+		}
 
 
 		private void btnFuncionario_Click(object sender, EventArgs e)
@@ -238,5 +274,11 @@ namespace EpiControl
 		{
 			transicaoMenuEmprestimo.Start();
 		}
+		private void btnEstoque_Click(object sender, EventArgs e)
+		{
+			transicaoMenuEstoque.Start();
+		}
+
+		
 	}
 }

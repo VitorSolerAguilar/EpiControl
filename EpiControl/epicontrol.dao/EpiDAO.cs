@@ -203,5 +203,32 @@ namespace EpiControl.epicontrol.dao
 			conexao.Close();
 			return lista;
 		}
+
+		public void excluirEpiId(int idEpi)
+		{
+			conexao.Open();
+			MySqlTransaction transaction = conexao.BeginTransaction();
+
+			try
+			{
+				string sql = @"DELETE FROM tb_epi WHERE id_epi = @id";
+
+				MySqlCommand cmd = new MySqlCommand(sql, conexao, transaction);
+				cmd.Parameters.AddWithValue("@id", idEpi);
+
+				cmd.ExecuteNonQuery();
+
+				transaction.Commit();
+			}
+			catch (Exception ex)
+			{
+				transaction.Rollback();
+				throw new Exception("Erro ao excluir EPI: " + ex.Message);
+			}
+			finally
+			{
+				conexao.Close();
+			}
+		}
 	}
 }

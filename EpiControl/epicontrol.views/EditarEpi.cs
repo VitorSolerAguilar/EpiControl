@@ -90,7 +90,7 @@ namespace EpiControl.Views
 				if (rdbAtivo.Checked)
 					epi.status = "Ativo";
 				else if (rdbInativo.Checked)
-					epi.status= "Inativo";
+					epi.status = "Inativo";
 
 				epi.fornecedorId = (int)cbxFornecedor.SelectedValue;
 
@@ -106,5 +106,21 @@ namespace EpiControl.Views
 			}
 		}
 
+		private void btnExcluir_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				EpiDAO dao = new EpiDAO();
+
+				dao.excluirEpiId(_idEpi);
+
+				MessageBox.Show("Epi excluido");
+				Close();
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Erro ao excluir epi: " + ex.Message);
+			}
+		}
 	}
 }

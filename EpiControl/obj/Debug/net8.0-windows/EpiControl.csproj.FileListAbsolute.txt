@@ -59,3 +59,6 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.fr
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarNormaRegulamentadora.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarEmprestimo.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarEmprestimo.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarEstoqueEpi.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultaEstoqueEpi.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarEstoqueEpi.resources

@@ -340,6 +340,7 @@
 			btnExcluir.TabIndex = 105;
 			btnExcluir.Text = "Excluir";
 			btnExcluir.UseVisualStyleBackColor = false;
+			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// frmEditarEpi
 			// 
