@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class FuncionarioCurso : Form
+    public partial class frmCadastrarFuncionarioCurso : Form
     {
-        public FuncionarioCurso()
+        public frmCadastrarFuncionarioCurso()
         {
             InitializeComponent();
         }
