@@ -101,7 +101,7 @@ Campos devem começar com letras minusculas e caso seja uma palavra composta, de
 | 🧪    | `test`     | Testes              |
 | 🔧    | `chore`    | Configuração        |
 | 📝    | `docs`     | Documentação        |
-| 🛡️    | `pull`     | Git pull             |
+| 💣    | `pull`     | Git pull             |
 
 ## ⚠️ Regras importantes
 
