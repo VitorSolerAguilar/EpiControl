@@ -127,7 +127,7 @@
             btnVoltar.TabIndex = 77;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = false;
-            btnVoltar.Click += this.btnVoltar_Click;
+           
             // 
             // btnSalvar
             // 
