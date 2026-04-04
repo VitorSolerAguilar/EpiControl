@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class frmCadastrarFuncionarioCurso : Form
+    public partial class ConsultarCurso : Form
     {
-        public frmCadastrarFuncionarioCurso()
+        public ConsultarCurso()
         {
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

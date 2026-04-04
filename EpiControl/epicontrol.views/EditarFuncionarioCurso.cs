@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class frmCadastrarFuncionarioCurso : Form
+    public partial class EditarFuncionarioCurso : Form
     {
-        public frmCadastrarFuncionarioCurso()
+        public EditarFuncionarioCurso()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

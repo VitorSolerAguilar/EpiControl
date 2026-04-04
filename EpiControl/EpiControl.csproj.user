@@ -17,6 +17,9 @@
     <Compile Update="epicontrol.views\ConsultaEstoqueEpi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="epicontrol.views\ConsultarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="epicontrol.views\ConsultarEmprestimo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -27,6 +30,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\ConsultarEpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="epicontrol.views\ConsultarFuncionarioCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="epicontrol.views\EditarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\EditarEpi.cs">
@@ -53,7 +62,11 @@
     <Compile Update="epicontrol.views\CadastrarFuncionarioCurso.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Update="epicontrol.views\EmitirFichaEntregaEpi.cs">
+=======
+    <Compile Update="epicontrol.views\EditarFuncionarioCurso.cs">
+>>>>>>> 86d21b56990a58794fbdcc6195eccea2369abbd0
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\Home.cs">
@@ -68,5 +81,10 @@
     <Compile Update="epicontrol.views\EditarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="epicontrol.views\CadastrarCurso.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
