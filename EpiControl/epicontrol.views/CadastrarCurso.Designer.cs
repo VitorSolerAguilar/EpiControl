@@ -36,13 +36,13 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtCargaHoraria = new TextBox();
             label5 = new Label();
-            richTextBox1 = new RichTextBox();
+            rtbDescricao = new RichTextBox();
             label6 = new Label();
             btnVoltar = new Button();
             btnSalvar = new Button();
-            maskedTextBox1 = new MaskedTextBox();
+            mtbValidade = new MaskedTextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -116,12 +116,12 @@
             label4.TabIndex = 58;
             label4.Text = "Carga Horária:";
             // 
-            // textBox1
+            // txtCargaHoraria
             // 
-            textBox1.Location = new Point(93, 100);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(107, 23);
-            textBox1.TabIndex = 59;
+            txtCargaHoraria.Location = new Point(93, 100);
+            txtCargaHoraria.Name = "txtCargaHoraria";
+            txtCargaHoraria.Size = new Size(107, 23);
+            txtCargaHoraria.TabIndex = 59;
             // 
             // label5
             // 
@@ -132,13 +132,13 @@
             label5.TabIndex = 60;
             label5.Text = "Descrição:";
             // 
-            // richTextBox1
+            // rtbDescricao
             // 
-            richTextBox1.Location = new Point(93, 158);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(293, 97);
-            richTextBox1.TabIndex = 61;
-            richTextBox1.Text = "";
+            rtbDescricao.Location = new Point(93, 158);
+            rtbDescricao.Name = "rtbDescricao";
+            rtbDescricao.Size = new Size(293, 97);
+            rtbDescricao.TabIndex = 61;
+            rtbDescricao.Text = "";
             // 
             // label6
             // 
@@ -158,6 +158,7 @@
             btnVoltar.TabIndex = 70;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnSalvar
             // 
@@ -172,27 +173,27 @@
             btnSalvar.Text = " Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // maskedTextBox1
+            // mtbValidade
             // 
-            maskedTextBox1.Location = new Point(93, 283);
-            maskedTextBox1.Mask = "00/00/0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(100, 23);
-            maskedTextBox1.TabIndex = 72;
-            maskedTextBox1.ValidatingType = typeof(DateTime);
+            mtbValidade.Location = new Point(93, 283);
+            mtbValidade.Mask = "00/00/0000";
+            mtbValidade.Name = "mtbValidade";
+            mtbValidade.Size = new Size(100, 23);
+            mtbValidade.TabIndex = 72;
+            mtbValidade.ValidatingType = typeof(DateTime);
             // 
             // frmCadastrarCurso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 406);
-            Controls.Add(maskedTextBox1);
+            Controls.Add(mtbValidade);
             Controls.Add(btnSalvar);
             Controls.Add(btnVoltar);
             Controls.Add(label6);
-            Controls.Add(richTextBox1);
+            Controls.Add(rtbDescricao);
             Controls.Add(label5);
-            Controls.Add(textBox1);
+            Controls.Add(txtCargaHoraria);
             Controls.Add(label4);
             Controls.Add(panel1);
             Controls.Add(txtNome);
@@ -216,12 +217,12 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtCargaHoraria;
         private Label label5;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbDescricao;
         private Label label6;
         private Button btnVoltar;
         private Button btnSalvar;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox mtbValidade;
     }
 }
