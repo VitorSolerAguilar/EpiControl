@@ -111,6 +111,15 @@ namespace EpiControl
 			this.Hide();
 			consultaEstoqueEpi.Show();
 		}
+		private void btnMovimentacao_Click(object sender, EventArgs e)
+		{
+			frmCadastrarMovimentacaoEstoque cadastrarMovimentacaoEstoque = new frmCadastrarMovimentacaoEstoque();
+
+			cadastrarMovimentacaoEstoque.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarMovimentacaoEstoque.Show();
+		}
+
 
 		bool menuExpand = false;
 		private void trasicaoMenuFuncionario_Tick(object sender, EventArgs e)
@@ -279,6 +288,5 @@ namespace EpiControl
 			transicaoMenuEstoque.Start();
 		}
 
-		
 	}
 }

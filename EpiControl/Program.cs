@@ -17,7 +17,7 @@ namespace EpiControl
 			.Build();
 
 			ApplicationConfiguration.Initialize();
-            Application.Run(new frmHome());
+            Application.Run(new frmCadastrarCurso());
         }
     }
 }

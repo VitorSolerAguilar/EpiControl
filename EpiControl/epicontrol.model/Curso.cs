@@ -12,6 +12,6 @@ namespace EpiControl.epicontrol.model
         public string nome { get; set; }
         public string cargaHoraria { get; set; }
         public string descricao { get; set; }
-        public int validadeMeses { get; set; }
+        public DateTime validadeMeses { get; set; }
     }
 }

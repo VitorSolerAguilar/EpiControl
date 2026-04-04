@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EpiControl.epicontrol.dao;
+using EpiControl.epicontrol.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +12,41 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class frmCadastrarCurso : Form
-    {
-        public frmCadastrarCurso()
-        {
-            InitializeComponent();
-        }
+	public partial class frmCadastrarCurso : Form
+	{
+		public frmCadastrarCurso()
+		{
+			InitializeComponent();
+		}
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+		private void btnSalvar_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				Curso curso = new Curso();
 
-        }
-    }
+				curso.nome = txtNome.Text;
+				curso.cargaHoraria = txtCargaHoraria.Text;
+				curso.descricao = rtbDescricao.Text;
+				curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
+
+				CursoDAO cursoDAO = new CursoDAO();
+				cursoDAO.cadastrarCurso(curso);
+
+				limparCampos();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao cadastrar curso: " + ex.Message);
+			}
+
+		}
+		public void limparCampos()
+		{
+			txtNome.Clear();
+			txtCargaHoraria.Clear();
+			rtbDescricao.Clear();
+			mtbValidade.Clear();
+		}
+	}
 }

@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\EpiControl\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.dao\\cursodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\cursodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastrarCurso.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarCurso.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarCurso.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarCurso.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarCurso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T20:46:50.017Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CursoDAO.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwBcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T20:45:24.365Z",
+              "EditorCaption": ""
             }
           ]
         }
