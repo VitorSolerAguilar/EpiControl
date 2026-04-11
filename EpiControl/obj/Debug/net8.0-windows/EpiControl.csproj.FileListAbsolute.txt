@@ -29,7 +29,6 @@ D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_6
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 D:\EpiControl\EpiControl\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.csproj.AssemblyReference.cache
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarCurso.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarEmprestimo.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmCadastrarEpi.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarEstoqueEpi.resources
@@ -67,3 +66,4 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.Co
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.EditarCurso.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.EditarFuncionarioCurso.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarCurso.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarTreinamento.resources

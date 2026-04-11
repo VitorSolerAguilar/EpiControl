@@ -27,8 +27,7 @@ namespace EpiControl.epicontrol.dao
             MySqlTransaction transaction = conexao.BeginTransaction();
             try
             {
-                string sqlCurso = @"INSERT INTO tb_curso(nome, carga_horaria, descricao, validade_meses) 
-                                    VALUES (@nome, @carga_horaria, @descricao, @validade_meses)";
+                string sqlCurso = @"INSERT INTO tb_curso(nome, carga_horaria, descricao, validade_meses) VALUES (@nome, @carga_horaria, @descricao, @validade_meses)";
 
                 MySqlCommand cmdCurso = new MySqlCommand(sqlCurso, conexao, transaction);
                 cmdCurso.Parameters.AddWithValue("@nome", curso.nome);
@@ -39,8 +38,8 @@ namespace EpiControl.epicontrol.dao
                 cmdCurso.ExecuteNonQuery();
 
                 transaction.Commit();
-            }
-            catch (Exception ex)
+			}
+			catch (Exception ex)
             {
                 transaction.Rollback();
                 MessageBox.Show("Erro ao cadastrar curso: " + ex.Message);

@@ -121,7 +121,7 @@ namespace EpiControl
 		}
 		private void btnCadastrarTreinamentos_Click(object sender, EventArgs e)
 		{
-			frmCadastrarCurso cadastrarCurso = new frmCadastrarCurso();
+			frmCadastrarTreinamento cadastrarCurso = new frmCadastrarTreinamento();
 
 			cadastrarCurso.FormClosed += (s, args) => this.Show();
 			this.Hide();
