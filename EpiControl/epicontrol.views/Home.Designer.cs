@@ -59,8 +59,12 @@
 			btnEstoque = new Button();
 			btnCadastrarEstoque = new Button();
 			btnConsultarEstoque = new Button();
+			btnMovimentacao = new Button();
+			flpTreinamentos = new FlowLayoutPanel();
+			btnTreinamentos = new Button();
+			btnCadastrarTreinamentos = new Button();
+			btnConsultarTreinamentos = new Button();
 			btnSair = new Button();
-			button5 = new Button();
 			pictureBox2 = new PictureBox();
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
@@ -68,7 +72,7 @@
 			transicaoMenuNorma = new System.Windows.Forms.Timer(components);
 			transicaoMenuEmprestimo = new System.Windows.Forms.Timer(components);
 			transicaoMenuEstoque = new System.Windows.Forms.Timer(components);
-			btnMovimentacao = new Button();
+			transicaoMenuTreinamentos = new System.Windows.Forms.Timer(components);
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -78,6 +82,7 @@
 			flpNormaRegulamentadora.SuspendLayout();
 			flpEmprestimo.SuspendLayout();
 			flpEstoque.SuspendLayout();
+			flpTreinamentos.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
 			SuspendLayout();
 			// 
@@ -133,11 +138,12 @@
 			flowLayoutPanel1.Controls.Add(flpNormaRegulamentadora);
 			flowLayoutPanel1.Controls.Add(flpEmprestimo);
 			flowLayoutPanel1.Controls.Add(flpEstoque);
+			flowLayoutPanel1.Controls.Add(flpTreinamentos);
 			flowLayoutPanel1.Controls.Add(btnSair);
 			flowLayoutPanel1.Dock = DockStyle.Left;
 			flowLayoutPanel1.Location = new Point(0, 46);
 			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(292, 598);
+			flowLayoutPanel1.Size = new Size(221, 598);
 			flowLayoutPanel1.TabIndex = 3;
 			// 
 			// flpContainer
@@ -447,6 +453,7 @@
 			flpEstoque.Controls.Add(btnEstoque);
 			flpEstoque.Controls.Add(btnCadastrarEstoque);
 			flpEstoque.Controls.Add(btnConsultarEstoque);
+			flpEstoque.Controls.Add(btnMovimentacao);
 			flpEstoque.Location = new Point(0, 277);
 			flpEstoque.Margin = new Padding(0, 2, 0, 0);
 			flpEstoque.Name = "flpEstoque";
@@ -501,6 +508,82 @@
 			btnConsultarEstoque.UseVisualStyleBackColor = false;
 			btnConsultarEstoque.Click += btnConsultarEstoque_Click;
 			// 
+			// btnMovimentacao
+			// 
+			btnMovimentacao.BackColor = Color.FromArgb(0, 45, 71);
+			btnMovimentacao.FlatAppearance.BorderSize = 0;
+			btnMovimentacao.FlatStyle = FlatStyle.Flat;
+			btnMovimentacao.Image = (Image)resources.GetObject("btnMovimentacao.Image");
+			btnMovimentacao.ImageAlign = ContentAlignment.MiddleLeft;
+			btnMovimentacao.Location = new Point(0, 156);
+			btnMovimentacao.Margin = new Padding(0);
+			btnMovimentacao.Name = "btnMovimentacao";
+			btnMovimentacao.Size = new Size(220, 51);
+			btnMovimentacao.TabIndex = 7;
+			btnMovimentacao.Text = "Movimentação";
+			btnMovimentacao.UseVisualStyleBackColor = false;
+			btnMovimentacao.Click += btnMovimentacao_Click;
+			// 
+			// flpTreinamentos
+			// 
+			flpTreinamentos.BackColor = Color.FromArgb(0, 45, 71);
+			flpTreinamentos.Controls.Add(btnTreinamentos);
+			flpTreinamentos.Controls.Add(btnCadastrarTreinamentos);
+			flpTreinamentos.Controls.Add(btnConsultarTreinamentos);
+			flpTreinamentos.Location = new Point(0, 333);
+			flpTreinamentos.Margin = new Padding(0, 2, 0, 0);
+			flpTreinamentos.Name = "flpTreinamentos";
+			flpTreinamentos.Size = new Size(264, 54);
+			flpTreinamentos.TabIndex = 11;
+			// 
+			// btnTreinamentos
+			// 
+			btnTreinamentos.BackColor = Color.FromArgb(74, 146, 247);
+			btnTreinamentos.FlatAppearance.BorderSize = 0;
+			btnTreinamentos.FlatStyle = FlatStyle.Flat;
+			btnTreinamentos.Image = (Image)resources.GetObject("btnTreinamentos.Image");
+			btnTreinamentos.ImageAlign = ContentAlignment.MiddleLeft;
+			btnTreinamentos.Location = new Point(0, 0);
+			btnTreinamentos.Margin = new Padding(0);
+			btnTreinamentos.Name = "btnTreinamentos";
+			btnTreinamentos.Size = new Size(220, 54);
+			btnTreinamentos.TabIndex = 2;
+			btnTreinamentos.Text = "Treinamentos";
+			btnTreinamentos.UseVisualStyleBackColor = false;
+			btnTreinamentos.Click += btnTreinamentos_Click;
+			// 
+			// btnCadastrarTreinamentos
+			// 
+			btnCadastrarTreinamentos.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarTreinamentos.FlatAppearance.BorderSize = 0;
+			btnCadastrarTreinamentos.FlatStyle = FlatStyle.Flat;
+			btnCadastrarTreinamentos.Image = (Image)resources.GetObject("btnCadastrarTreinamentos.Image");
+			btnCadastrarTreinamentos.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarTreinamentos.Location = new Point(0, 54);
+			btnCadastrarTreinamentos.Margin = new Padding(0);
+			btnCadastrarTreinamentos.Name = "btnCadastrarTreinamentos";
+			btnCadastrarTreinamentos.Size = new Size(220, 51);
+			btnCadastrarTreinamentos.TabIndex = 6;
+			btnCadastrarTreinamentos.Text = "Cadastrar";
+			btnCadastrarTreinamentos.UseVisualStyleBackColor = false;
+			btnCadastrarTreinamentos.Click += btnCadastrarTreinamentos_Click;
+			// 
+			// btnConsultarTreinamentos
+			// 
+			btnConsultarTreinamentos.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarTreinamentos.FlatAppearance.BorderSize = 0;
+			btnConsultarTreinamentos.FlatStyle = FlatStyle.Flat;
+			btnConsultarTreinamentos.Image = (Image)resources.GetObject("btnConsultarTreinamentos.Image");
+			btnConsultarTreinamentos.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarTreinamentos.Location = new Point(0, 105);
+			btnConsultarTreinamentos.Margin = new Padding(0);
+			btnConsultarTreinamentos.Name = "btnConsultarTreinamentos";
+			btnConsultarTreinamentos.Size = new Size(220, 51);
+			btnConsultarTreinamentos.TabIndex = 6;
+			btnConsultarTreinamentos.Text = "Consultar";
+			btnConsultarTreinamentos.UseVisualStyleBackColor = false;
+			btnConsultarTreinamentos.Click += btnConsultarTreinamentos_Click;
+			// 
 			// btnSair
 			// 
 			btnSair.BackColor = Color.FromArgb(74, 146, 247);
@@ -508,7 +591,7 @@
 			btnSair.FlatStyle = FlatStyle.Flat;
 			btnSair.Image = (Image)resources.GetObject("btnSair.Image");
 			btnSair.ImageAlign = ContentAlignment.MiddleLeft;
-			btnSair.Location = new Point(0, 333);
+			btnSair.Location = new Point(0, 389);
 			btnSair.Margin = new Padding(0, 2, 0, 0);
 			btnSair.Name = "btnSair";
 			btnSair.Size = new Size(220, 54);
@@ -517,24 +600,10 @@
 			btnSair.UseVisualStyleBackColor = false;
 			btnSair.Click += btnSair_Click;
 			// 
-			// button5
-			// 
-			button5.BackColor = Color.FromArgb(74, 146, 247);
-			button5.FlatAppearance.BorderSize = 0;
-			button5.FlatStyle = FlatStyle.Flat;
-			button5.Image = (Image)resources.GetObject("button5.Image");
-			button5.ImageAlign = ContentAlignment.MiddleLeft;
-			button5.Location = new Point(1051, 299);
-			button5.Name = "button5";
-			button5.Size = new Size(220, 54);
-			button5.TabIndex = 2;
-			button5.Text = "Treinamentos";
-			button5.UseVisualStyleBackColor = false;
-			// 
 			// pictureBox2
 			// 
 			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-			pictureBox2.Location = new Point(465, 52);
+			pictureBox2.Location = new Point(424, 52);
 			pictureBox2.Name = "pictureBox2";
 			pictureBox2.Size = new Size(603, 580);
 			pictureBox2.TabIndex = 4;
@@ -570,21 +639,10 @@
 			transicaoMenuEstoque.Interval = 1;
 			transicaoMenuEstoque.Tick += transicaoMenuEstoque_Tick;
 			// 
-			// btnMovimentacao
+			// transicaoMenuTreinamentos
 			// 
-			btnMovimentacao.BackColor = Color.FromArgb(0, 45, 71);
-			btnMovimentacao.FlatAppearance.BorderSize = 0;
-			btnMovimentacao.FlatStyle = FlatStyle.Flat;
-			btnMovimentacao.Image = (Image)resources.GetObject("btnMovimentacao.Image");
-			btnMovimentacao.ImageAlign = ContentAlignment.MiddleLeft;
-			btnMovimentacao.Location = new Point(531, 297);
-			btnMovimentacao.Margin = new Padding(0);
-			btnMovimentacao.Name = "btnMovimentacao";
-			btnMovimentacao.Size = new Size(220, 51);
-			btnMovimentacao.TabIndex = 7;
-			btnMovimentacao.Text = "Movimentação";
-			btnMovimentacao.UseVisualStyleBackColor = false;
-			btnMovimentacao.Click += btnMovimentacao_Click;
+			transicaoMenuTreinamentos.Interval = 1;
+			transicaoMenuTreinamentos.Tick += transicaoMenuTreinamentos_Tick;
 			// 
 			// frmHome
 			// 
@@ -592,8 +650,6 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(254, 253, 249);
 			ClientSize = new Size(1283, 644);
-			Controls.Add(btnMovimentacao);
-			Controls.Add(button5);
 			Controls.Add(pictureBox2);
 			Controls.Add(flowLayoutPanel1);
 			Controls.Add(panel1);
@@ -613,6 +669,7 @@
 			flpNormaRegulamentadora.ResumeLayout(false);
 			flpEmprestimo.ResumeLayout(false);
 			flpEstoque.ResumeLayout(false);
+			flpTreinamentos.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
 			ResumeLayout(false);
 		}
@@ -627,7 +684,7 @@
 		private Button btnCadastroFornecedor;
 		private Button btnEstoque;
 		private Button btnFuncionario;
-		private Button button5;
+		private Button btnTreinamentos;
 		private Button btnEmprestimo;
 		private Button btnNormasRegulamentadoras;
 		private PictureBox pictureBox2;
@@ -658,5 +715,9 @@
 		private Button btnConsultarEstoque;
 		private System.Windows.Forms.Timer transicaoMenuEstoque;
 		private Button btnMovimentacao;
+		private System.Windows.Forms.Timer transicaoMenuTreinamentos;
+		private FlowLayoutPanel flpTreinamentos;
+		private Button btnCadastrarTreinamentos;
+		private Button btnConsultarTreinamentos;
 	}
 }

@@ -119,6 +119,22 @@ namespace EpiControl
 			this.Hide();
 			cadastrarMovimentacaoEstoque.Show();
 		}
+		private void btnCadastrarTreinamentos_Click(object sender, EventArgs e)
+		{
+			frmCadastrarCurso cadastrarCurso = new frmCadastrarCurso();
+
+			cadastrarCurso.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarCurso.Show();
+		}
+		private void btnConsultarTreinamentos_Click(object sender, EventArgs e)
+		{
+			frmConsultarCurso consultarCurso = new frmConsultarCurso();
+
+			consultarCurso.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultarCurso.Show();
+		}
 
 
 		bool menuExpand = false;
@@ -137,8 +153,8 @@ namespace EpiControl
 			}
 			else
 			{
-				flpContainer.Height -= 10;
-				if (flpContainer.Height <= 51)
+				flpContainer.Height -= 13;
+				if (flpContainer.Height <= 52)
 				{
 					trasicaoMenuFuncionario.Stop();
 					menuExpand = false;
@@ -183,7 +199,7 @@ namespace EpiControl
 			}
 			else
 			{
-				flpContainerEpi.Height -= 10;
+				flpContainerEpi.Height -= 13;
 				if (flpContainerEpi.Height <= 51)
 				{
 					transicaoMenuEpi.Stop();
@@ -206,7 +222,7 @@ namespace EpiControl
 			}
 			else
 			{
-				flpNormaRegulamentadora.Height -= 10;
+				flpNormaRegulamentadora.Height -= 13;
 				if (flpNormaRegulamentadora.Height <= 51)
 				{
 					transicaoMenuNorma.Stop();
@@ -229,7 +245,7 @@ namespace EpiControl
 			}
 			else
 			{
-				flpEmprestimo.Height -= 10;
+				flpEmprestimo.Height -= 13;
 				if (flpEmprestimo.Height <= 51)
 				{
 					transicaoMenuEmprestimo.Stop();
@@ -244,7 +260,7 @@ namespace EpiControl
 			{
 				flpEstoque.Height += 1;
 
-				if (flpEstoque.Height >= 153)
+				if (flpEstoque.Height >= 210)
 				{
 					transicaoMenuEstoque.Stop();
 					menuExpand = true;
@@ -257,6 +273,29 @@ namespace EpiControl
 				if (flpEstoque.Height <= 51)
 				{
 					transicaoMenuEstoque.Stop();
+					menuExpand = false;
+				}
+			}
+		}
+		private void transicaoMenuTreinamentos_Tick(object sender, EventArgs e)
+		{
+			if (menuExpand == false)
+			{
+				flpTreinamentos.Height += 1;
+
+				if (flpTreinamentos.Height >= 153)
+				{
+					transicaoMenuTreinamentos.Stop();
+					menuExpand = true;
+
+				}
+			}
+			else
+			{
+				flpTreinamentos.Height -= 13;
+				if (flpTreinamentos.Height <= 51)
+				{
+					transicaoMenuTreinamentos.Stop();
 					menuExpand = false;
 				}
 			}
@@ -287,6 +326,9 @@ namespace EpiControl
 		{
 			transicaoMenuEstoque.Start();
 		}
-
+		private void btnTreinamentos_Click(object sender, EventArgs e)
+		{
+			transicaoMenuTreinamentos.Start();
+		}
 	}
 }

@@ -25,7 +25,6 @@ namespace EpiControl.epicontrol.views
 			{
 				Curso curso = new Curso();
 
-<<<<<<< HEAD
 				curso.nome = txtNome.Text;
 				curso.cargaHoraria = txtCargaHoraria.Text;
 				curso.descricao = rtbDescricao.Text;
@@ -49,14 +48,10 @@ namespace EpiControl.epicontrol.views
 			rtbDescricao.Clear();
 			mtbValidade.Clear();
 		}
-	}
-=======
-        }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-    }
->>>>>>> 86d21b56990a58794fbdcc6195eccea2369abbd0
+		private void btnVoltar_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+	}
 }

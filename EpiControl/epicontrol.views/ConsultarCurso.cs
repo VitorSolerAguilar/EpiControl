@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class ConsultarCurso : Form
+    public partial class frmConsultarCurso : Form
     {
-        public ConsultarCurso()
+        public frmConsultarCurso()
         {
             InitializeComponent();
         }
