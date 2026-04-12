@@ -37,7 +37,7 @@ namespace EpiControl.epicontrol.views
 
 			int idContato = Convert.ToInt32(dgvFuncionario.Rows[e.RowIndex].Cells["id_contato"].Value);
 
-			frmEditarFuncionario frm = new frmEditarFuncionario(idFuncionario, idEndereco, idContato);
+			frmEditarFuncionarioCurso frm = new frmEditarFuncionarioCurso(idFuncionario, idEndereco, idContato);
 			frm.Show();
 		}
 

@@ -36,9 +36,6 @@
 			pictureBox1 = new PictureBox();
 			flowLayoutPanel1 = new FlowLayoutPanel();
 			flpContainer = new FlowLayoutPanel();
-			btnFuncionario = new Button();
-			btnCadastrarFrm = new Button();
-			btnConsultarFrm = new Button();
 			flpContainerFornecedor = new FlowLayoutPanel();
 			btnCadastroFornecedor = new Button();
 			btnCadastrarFornecedor = new Button();
@@ -65,6 +62,9 @@
 			btnCadastrarTreinamentos = new Button();
 			btnConsultarTreinamentos = new Button();
 			btnSair = new Button();
+			btnFuncionario = new Button();
+			btnCadastrarFrm = new Button();
+			btnConsultarFrm = new Button();
 			pictureBox2 = new PictureBox();
 			trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
 			transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
@@ -73,6 +73,8 @@
 			transicaoMenuEmprestimo = new System.Windows.Forms.Timer(components);
 			transicaoMenuEstoque = new System.Windows.Forms.Timer(components);
 			transicaoMenuTreinamentos = new System.Windows.Forms.Timer(components);
+			btnFuncionarioCurso = new Button();
+			btnConsultarFuncionarioCurso = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			flowLayoutPanel1.SuspendLayout();
@@ -153,59 +155,13 @@
 			flpContainer.Controls.Add(btnFuncionario);
 			flpContainer.Controls.Add(btnCadastrarFrm);
 			flpContainer.Controls.Add(btnConsultarFrm);
+			flpContainer.Controls.Add(btnFuncionarioCurso);
+			flpContainer.Controls.Add(btnConsultarFuncionarioCurso);
 			flpContainer.Location = new Point(0, 0);
 			flpContainer.Margin = new Padding(0);
 			flpContainer.Name = "flpContainer";
 			flpContainer.Size = new Size(265, 51);
 			flpContainer.TabIndex = 5;
-			// 
-			// btnFuncionario
-			// 
-			btnFuncionario.BackColor = Color.FromArgb(74, 146, 247);
-			btnFuncionario.FlatAppearance.BorderSize = 0;
-			btnFuncionario.FlatStyle = FlatStyle.Flat;
-			btnFuncionario.Image = (Image)resources.GetObject("btnFuncionario.Image");
-			btnFuncionario.ImageAlign = ContentAlignment.MiddleLeft;
-			btnFuncionario.Location = new Point(0, 0);
-			btnFuncionario.Margin = new Padding(0);
-			btnFuncionario.Name = "btnFuncionario";
-			btnFuncionario.Size = new Size(220, 51);
-			btnFuncionario.TabIndex = 2;
-			btnFuncionario.Text = "Funcionario";
-			btnFuncionario.UseVisualStyleBackColor = false;
-			btnFuncionario.Click += btnFuncionario_Click;
-			// 
-			// btnCadastrarFrm
-			// 
-			btnCadastrarFrm.BackColor = Color.FromArgb(0, 45, 71);
-			btnCadastrarFrm.FlatAppearance.BorderSize = 0;
-			btnCadastrarFrm.FlatStyle = FlatStyle.Flat;
-			btnCadastrarFrm.Image = (Image)resources.GetObject("btnCadastrarFrm.Image");
-			btnCadastrarFrm.ImageAlign = ContentAlignment.MiddleLeft;
-			btnCadastrarFrm.Location = new Point(0, 51);
-			btnCadastrarFrm.Margin = new Padding(0);
-			btnCadastrarFrm.Name = "btnCadastrarFrm";
-			btnCadastrarFrm.Size = new Size(220, 51);
-			btnCadastrarFrm.TabIndex = 4;
-			btnCadastrarFrm.Text = "Cadastrar";
-			btnCadastrarFrm.UseVisualStyleBackColor = false;
-			btnCadastrarFrm.Click += btnCadastrarFrm_Click;
-			// 
-			// btnConsultarFrm
-			// 
-			btnConsultarFrm.BackColor = Color.FromArgb(0, 45, 71);
-			btnConsultarFrm.FlatAppearance.BorderSize = 0;
-			btnConsultarFrm.FlatStyle = FlatStyle.Flat;
-			btnConsultarFrm.Image = (Image)resources.GetObject("btnConsultarFrm.Image");
-			btnConsultarFrm.ImageAlign = ContentAlignment.MiddleLeft;
-			btnConsultarFrm.Location = new Point(0, 102);
-			btnConsultarFrm.Margin = new Padding(0);
-			btnConsultarFrm.Name = "btnConsultarFrm";
-			btnConsultarFrm.Size = new Size(220, 51);
-			btnConsultarFrm.TabIndex = 5;
-			btnConsultarFrm.Text = "Consultar";
-			btnConsultarFrm.UseVisualStyleBackColor = false;
-			btnConsultarFrm.Click += btnConsultarFrm_Click;
 			// 
 			// flpContainerFornecedor
 			// 
@@ -600,6 +556,54 @@
 			btnSair.UseVisualStyleBackColor = false;
 			btnSair.Click += btnSair_Click;
 			// 
+			// btnFuncionario
+			// 
+			btnFuncionario.BackColor = Color.FromArgb(74, 146, 247);
+			btnFuncionario.FlatAppearance.BorderSize = 0;
+			btnFuncionario.FlatStyle = FlatStyle.Flat;
+			btnFuncionario.Image = (Image)resources.GetObject("btnFuncionario.Image");
+			btnFuncionario.ImageAlign = ContentAlignment.MiddleLeft;
+			btnFuncionario.Location = new Point(0, 0);
+			btnFuncionario.Margin = new Padding(0);
+			btnFuncionario.Name = "btnFuncionario";
+			btnFuncionario.Size = new Size(220, 51);
+			btnFuncionario.TabIndex = 2;
+			btnFuncionario.Text = "Funcionario";
+			btnFuncionario.UseVisualStyleBackColor = false;
+			btnFuncionario.Click += btnFuncionario_Click;
+			// 
+			// btnCadastrarFrm
+			// 
+			btnCadastrarFrm.BackColor = Color.FromArgb(0, 45, 71);
+			btnCadastrarFrm.FlatAppearance.BorderSize = 0;
+			btnCadastrarFrm.FlatStyle = FlatStyle.Flat;
+			btnCadastrarFrm.Image = (Image)resources.GetObject("btnCadastrarFrm.Image");
+			btnCadastrarFrm.ImageAlign = ContentAlignment.MiddleLeft;
+			btnCadastrarFrm.Location = new Point(0, 51);
+			btnCadastrarFrm.Margin = new Padding(0);
+			btnCadastrarFrm.Name = "btnCadastrarFrm";
+			btnCadastrarFrm.Size = new Size(220, 51);
+			btnCadastrarFrm.TabIndex = 4;
+			btnCadastrarFrm.Text = "Cadastrar";
+			btnCadastrarFrm.UseVisualStyleBackColor = false;
+			btnCadastrarFrm.Click += btnCadastrarFrm_Click;
+			// 
+			// btnConsultarFrm
+			// 
+			btnConsultarFrm.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarFrm.FlatAppearance.BorderSize = 0;
+			btnConsultarFrm.FlatStyle = FlatStyle.Flat;
+			btnConsultarFrm.Image = (Image)resources.GetObject("btnConsultarFrm.Image");
+			btnConsultarFrm.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarFrm.Location = new Point(0, 102);
+			btnConsultarFrm.Margin = new Padding(0);
+			btnConsultarFrm.Name = "btnConsultarFrm";
+			btnConsultarFrm.Size = new Size(220, 51);
+			btnConsultarFrm.TabIndex = 5;
+			btnConsultarFrm.Text = "Consultar Funcionario ";
+			btnConsultarFrm.UseVisualStyleBackColor = false;
+			btnConsultarFrm.Click += btnConsultarFrm_Click;
+			// 
 			// pictureBox2
 			// 
 			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -643,6 +647,38 @@
 			// 
 			transicaoMenuTreinamentos.Interval = 1;
 			transicaoMenuTreinamentos.Tick += transicaoMenuTreinamentos_Tick;
+			// 
+			// btnFuncionarioCurso
+			// 
+			btnFuncionarioCurso.BackColor = Color.FromArgb(0, 45, 71);
+			btnFuncionarioCurso.FlatAppearance.BorderSize = 0;
+			btnFuncionarioCurso.FlatStyle = FlatStyle.Flat;
+			btnFuncionarioCurso.Image = (Image)resources.GetObject("btnFuncionarioCurso.Image");
+			btnFuncionarioCurso.ImageAlign = ContentAlignment.MiddleLeft;
+			btnFuncionarioCurso.Location = new Point(0, 153);
+			btnFuncionarioCurso.Margin = new Padding(0);
+			btnFuncionarioCurso.Name = "btnFuncionarioCurso";
+			btnFuncionarioCurso.Size = new Size(220, 51);
+			btnFuncionarioCurso.TabIndex = 6;
+			btnFuncionarioCurso.Text = "Cadastrar Cursos";
+			btnFuncionarioCurso.UseVisualStyleBackColor = false;
+			btnFuncionarioCurso.Click += btnFuncionarioCurso_Click;
+			// 
+			// btnConsultarFuncionarioCurso
+			// 
+			btnConsultarFuncionarioCurso.BackColor = Color.FromArgb(0, 45, 71);
+			btnConsultarFuncionarioCurso.FlatAppearance.BorderSize = 0;
+			btnConsultarFuncionarioCurso.FlatStyle = FlatStyle.Flat;
+			btnConsultarFuncionarioCurso.Image = (Image)resources.GetObject("btnConsultarFuncionarioCurso.Image");
+			btnConsultarFuncionarioCurso.ImageAlign = ContentAlignment.MiddleLeft;
+			btnConsultarFuncionarioCurso.Location = new Point(0, 204);
+			btnConsultarFuncionarioCurso.Margin = new Padding(0);
+			btnConsultarFuncionarioCurso.Name = "btnConsultarFuncionarioCurso";
+			btnConsultarFuncionarioCurso.Size = new Size(220, 51);
+			btnConsultarFuncionarioCurso.TabIndex = 7;
+			btnConsultarFuncionarioCurso.Text = "Consultar Cursos";
+			btnConsultarFuncionarioCurso.UseVisualStyleBackColor = false;
+			btnConsultarFuncionarioCurso.Click += btnConsultarFuncionarioCurso_Click;
 			// 
 			// frmHome
 			// 
@@ -719,5 +755,7 @@
 		private FlowLayoutPanel flpTreinamentos;
 		private Button btnCadastrarTreinamentos;
 		private Button btnConsultarTreinamentos;
+		private Button btnFuncionarioCurso;
+		private Button btnConsultarFuncionarioCurso;
 	}
 }

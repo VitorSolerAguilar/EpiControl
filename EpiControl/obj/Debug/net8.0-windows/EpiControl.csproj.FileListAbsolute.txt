@@ -62,8 +62,8 @@ D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.pdb
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.genruntimeconfig.cache
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\ref\EpiControl.dll
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarMovimentacaoEstoque.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.ConsultarFuncionarioCurso.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.EditarCurso.resources
-D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.EditarFuncionarioCurso.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarCurso.resources
 D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmCadastrarTreinamento.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarCurso.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFuncionarioCurso.resources
+D:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarFuncionarioCurso.resources

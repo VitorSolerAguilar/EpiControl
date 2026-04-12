@@ -29,12 +29,12 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarCurso));
-			maskedTextBox1 = new MaskedTextBox();
+			mtbValidade = new MaskedTextBox();
 			btnVoltar = new Button();
 			label6 = new Label();
-			richTextBox1 = new RichTextBox();
+			rtbDescricao = new RichTextBox();
 			label5 = new Label();
-			textBox1 = new TextBox();
+			txtCargaHoraria = new TextBox();
 			label4 = new Label();
 			panel1 = new Panel();
 			label2 = new Label();
@@ -48,14 +48,14 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
-			// maskedTextBox1
+			// mtbValidade
 			// 
-			maskedTextBox1.Location = new Point(151, 295);
-			maskedTextBox1.Mask = "00/00/0000";
-			maskedTextBox1.Name = "maskedTextBox1";
-			maskedTextBox1.Size = new Size(100, 23);
-			maskedTextBox1.TabIndex = 83;
-			maskedTextBox1.ValidatingType = typeof(DateTime);
+			mtbValidade.Location = new Point(151, 295);
+			mtbValidade.Mask = "00/00/0000";
+			mtbValidade.Name = "mtbValidade";
+			mtbValidade.Size = new Size(100, 23);
+			mtbValidade.TabIndex = 83;
+			mtbValidade.ValidatingType = typeof(DateTime);
 			// 
 			// btnVoltar
 			// 
@@ -66,6 +66,7 @@
 			btnVoltar.TabIndex = 81;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
+			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// label6
 			// 
@@ -76,13 +77,13 @@
 			label6.TabIndex = 80;
 			label6.Text = "Validade:";
 			// 
-			// richTextBox1
+			// rtbDescricao
 			// 
-			richTextBox1.Location = new Point(151, 171);
-			richTextBox1.Name = "richTextBox1";
-			richTextBox1.Size = new Size(293, 97);
-			richTextBox1.TabIndex = 79;
-			richTextBox1.Text = "";
+			rtbDescricao.Location = new Point(151, 171);
+			rtbDescricao.Name = "rtbDescricao";
+			rtbDescricao.Size = new Size(293, 97);
+			rtbDescricao.TabIndex = 79;
+			rtbDescricao.Text = "";
 			// 
 			// label5
 			// 
@@ -93,12 +94,12 @@
 			label5.TabIndex = 78;
 			label5.Text = "Descrição:";
 			// 
-			// textBox1
+			// txtCargaHoraria
 			// 
-			textBox1.Location = new Point(151, 112);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(107, 23);
-			textBox1.TabIndex = 77;
+			txtCargaHoraria.Location = new Point(151, 112);
+			txtCargaHoraria.Name = "txtCargaHoraria";
+			txtCargaHoraria.Size = new Size(107, 23);
+			txtCargaHoraria.TabIndex = 77;
 			// 
 			// label4
 			// 
@@ -180,6 +181,7 @@
 			btnExcluir.TabIndex = 97;
 			btnExcluir.Text = "Excluir";
 			btnExcluir.UseVisualStyleBackColor = false;
+			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// btnEditar
 			// 
@@ -193,6 +195,7 @@
 			btnEditar.TabIndex = 98;
 			btnEditar.Text = "Editar";
 			btnEditar.UseVisualStyleBackColor = false;
+			btnEditar.Click += btnEditar_Click;
 			// 
 			// frmEditarCurso
 			// 
@@ -201,12 +204,12 @@
 			ClientSize = new Size(549, 431);
 			Controls.Add(btnEditar);
 			Controls.Add(btnExcluir);
-			Controls.Add(maskedTextBox1);
+			Controls.Add(mtbValidade);
 			Controls.Add(btnVoltar);
 			Controls.Add(label6);
-			Controls.Add(richTextBox1);
+			Controls.Add(rtbDescricao);
 			Controls.Add(label5);
-			Controls.Add(textBox1);
+			Controls.Add(txtCargaHoraria);
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(txtNome);
@@ -224,12 +227,12 @@
 
 		#endregion
 
-		private MaskedTextBox maskedTextBox1;
+		private MaskedTextBox mtbValidade;
         private Button btnVoltar;
         private Label label6;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbDescricao;
         private Label label5;
-        private TextBox textBox1;
+        private TextBox txtCargaHoraria;
         private Label label4;
         private Panel panel1;
         private Label label2;

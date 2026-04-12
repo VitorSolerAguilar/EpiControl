@@ -31,15 +31,15 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarCurso));
 			label = new Label();
 			btnConsultar = new Button();
-			txtConsultaNome = new TextBox();
+			txtConsultaNomeTreinamento = new TextBox();
 			panel1 = new Panel();
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			dgvFuncionario = new DataGridView();
+			dgvTreinamento = new DataGridView();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)dgvFuncionario).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dgvTreinamento).BeginInit();
 			SuspendLayout();
 			// 
 			// label
@@ -59,13 +59,14 @@
 			btnConsultar.TabIndex = 14;
 			btnConsultar.Text = "Consultar";
 			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
 			// 
-			// txtConsultaNome
+			// txtConsultaNomeTreinamento
 			// 
-			txtConsultaNome.Location = new Point(298, 80);
-			txtConsultaNome.Name = "txtConsultaNome";
-			txtConsultaNome.Size = new Size(226, 23);
-			txtConsultaNome.TabIndex = 13;
+			txtConsultaNomeTreinamento.Location = new Point(298, 80);
+			txtConsultaNomeTreinamento.Name = "txtConsultaNomeTreinamento";
+			txtConsultaNomeTreinamento.Size = new Size(226, 23);
+			txtConsultaNomeTreinamento.TabIndex = 13;
 			// 
 			// panel1
 			// 
@@ -110,13 +111,14 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
-			// dgvFuncionario
+			// dgvTreinamento
 			// 
-			dgvFuncionario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dgvFuncionario.Location = new Point(12, 109);
-			dgvFuncionario.Name = "dgvFuncionario";
-			dgvFuncionario.Size = new Size(776, 335);
-			dgvFuncionario.TabIndex = 11;
+			dgvTreinamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dgvTreinamento.Location = new Point(12, 109);
+			dgvTreinamento.Name = "dgvTreinamento";
+			dgvTreinamento.Size = new Size(776, 335);
+			dgvTreinamento.TabIndex = 11;
+			dgvTreinamento.CellClick += dgvTreinamento_CellClick;
 			// 
 			// frmConsultarCurso
 			// 
@@ -125,16 +127,18 @@
 			ClientSize = new Size(800, 450);
 			Controls.Add(label);
 			Controls.Add(btnConsultar);
-			Controls.Add(txtConsultaNome);
+			Controls.Add(txtConsultaNomeTreinamento);
 			Controls.Add(panel1);
-			Controls.Add(dgvFuncionario);
+			Controls.Add(dgvTreinamento);
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarCurso";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "ConsultarCurso";
+			Text = "EPICONTROL";
+			Load += frmConsultarCurso_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			((System.ComponentModel.ISupportInitialize)dgvFuncionario).EndInit();
+			((System.ComponentModel.ISupportInitialize)dgvTreinamento).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -143,11 +147,11 @@
 
 		private Label label;
         private Button btnConsultar;
-        private TextBox txtConsultaNome;
+        private TextBox txtConsultaNomeTreinamento;
         private Panel panel1;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private DataGridView dgvFuncionario;
+        private DataGridView dgvTreinamento;
     }
 }

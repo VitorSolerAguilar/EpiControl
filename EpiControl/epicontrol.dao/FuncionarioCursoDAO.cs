@@ -28,19 +28,14 @@ namespace EpiControl.epicontrol.dao
             MySqlTransaction transaction = conexao.BeginTransaction();
             try
             {
-                string sql = @"INSERT INTO tb_funcionario_curso 
-                               (id, inicio, conclusao, validade_meses, fk_funcionario, fk_curso)
-                               VALUES 
-                               (@id, @inicio, @conclusao, @validade_meses, @fk_funcionario, @fk_curso)";
+                string sql = @"INSERT INTO tb_funcionario_curso (data_inicio, data_conclusao, fk_funcionario, fk_curso) VALUES (@data_inicio, @data_conclusao, @fk_funcionario, @fk_curso)";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao, transaction);
 
-                cmd.Parameters.AddWithValue("@id", funcionarioCurso.id);
-                cmd.Parameters.AddWithValue("@inicio", funcionarioCurso.inicio);
-                cmd.Parameters.AddWithValue("@conclusao", funcionarioCurso.conclusao);
-                cmd.Parameters.AddWithValue("@validade_meses", funcionarioCurso.validadeMeses);
-                cmd.Parameters.AddWithValue("@fk_funcionario", funcionarioCurso.fk_funcionario);
-                cmd.Parameters.AddWithValue("@fk_curso", funcionarioCurso.fk_curso);
+                cmd.Parameters.AddWithValue("@data_inicio", funcionarioCurso.inicio);
+                cmd.Parameters.AddWithValue("@data_conclusao", funcionarioCurso.conclusao);
+                cmd.Parameters.AddWithValue("@fk_funcionario", funcionarioCurso.funcionarioId);
+                cmd.Parameters.AddWithValue("@fk_curso", funcionarioCurso.cursoId);
 
                 cmd.ExecuteNonQuery();
                 transaction.Commit();
@@ -107,10 +102,7 @@ namespace EpiControl.epicontrol.dao
             try
             {
                 DataTable tabela = new DataTable();
-                string sql = @"SELECT id_funcionario_curso, inicio, conclusao, 
-                                      validade_meses, fk_funcionario, fk_curso 
-                               FROM tb_funcionario_curso 
-                               WHERE id_funcionario_curso = @id";
+                string sql = @"SELECT id_funcionario_curso, data_inicio, data_conclusao, fk_funcionario, fk_curso FROM tb_funcionario_curso WHERE id_funcionario_curso = @id";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
                 cmd.Parameters.AddWithValue("@id", idFuncionarioCurso);
@@ -136,26 +128,18 @@ namespace EpiControl.epicontrol.dao
             MySqlTransaction transaction = conexao.BeginTransaction();
             try
             {
-                string sql = @"UPDATE tb_funcionario_curso 
-                               SET 
-                                   inicio = @inicio,
-                                   conclusao = @conclusao,
-                                   validade_meses = @validade_meses,
-                                   fk_funcionario = @fk_funcionario,
-                                   fk_curso = @fk_curso
-                               WHERE id_funcionario_curso = @id";
+				string sql = @" UPDATE tb_funcionario_curso SET data_inicio    = @data_inicio, data_conclusao = @data_conclusao, fk_funcionario = @fk_funcionario, fk_curso       = @fk_curso WHERE id_funcionario_curso = @id";
 
-                MySqlCommand cmd = new MySqlCommand(sql, conexao, transaction);
+				MySqlCommand cmd = new MySqlCommand(sql, conexao, transaction);
 
-                cmd.Parameters.AddWithValue("@id_funcionario", funcionarioCurso.id);
-                cmd.Parameters.AddWithValue("@data_inicio", funcionarioCurso.inicio);
-                cmd.Parameters.AddWithValue("@data_conclusao", funcionarioCurso.conclusao);
-                cmd.Parameters.AddWithValue("@data_validade", funcionarioCurso.validadeMeses);
-                cmd.Parameters.AddWithValue("@fk_funcionario", funcionarioCurso.fk_funcionario);
-                cmd.Parameters.AddWithValue("@fk_curso", funcionarioCurso.fk_curso);
-                
+				cmd.Parameters.AddWithValue("@id", funcionarioCurso.id);
+				cmd.Parameters.AddWithValue("@data_inicio", funcionarioCurso.inicio);
+				cmd.Parameters.AddWithValue("@data_conclusao", funcionarioCurso.conclusao);
+				cmd.Parameters.AddWithValue("@fk_funcionario", funcionarioCurso.funcionarioId);
+				cmd.Parameters.AddWithValue("@fk_curso", funcionarioCurso.cursoId);
 
-                cmd.ExecuteNonQuery();
+
+				cmd.ExecuteNonQuery();
                 transaction.Commit();
             }
             catch (Exception ex)

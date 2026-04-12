@@ -9,10 +9,11 @@ namespace EpiControl.epicontrol.model
     public class FuncionarioCurso
     {
         public int id { get; set; }
-        public string inicio { get; set; }
-        public string conclusao { get; set; }
-        public int validadeMeses { get; set; }
-        public int fk_funcionario { get; set; }
-        public int fk_curso { get; set; }
+        public DateTime inicio { get; set; }
+        public DateTime conclusao { get; set; }
+
+        //FK
+		public int funcionarioId { get; set; }
+        public int cursoId { get; set; }
     }
 }

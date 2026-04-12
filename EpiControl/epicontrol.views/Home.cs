@@ -135,6 +135,22 @@ namespace EpiControl
 			this.Hide();
 			consultarCurso.Show();
 		}
+		private void btnFuncionarioCurso_Click(object sender, EventArgs e)
+		{
+			frmCadastrarFuncionarioCurso cadastrarFuncionarioCurso = new frmCadastrarFuncionarioCurso();
+
+			cadastrarFuncionarioCurso.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			cadastrarFuncionarioCurso.Show();
+		}
+		private void btnConsultarFuncionarioCurso_Click(object sender, EventArgs e)
+		{
+			frmConsultarFuncionarioCurso consultarFuncionarioCurso = new frmConsultarFuncionarioCurso();
+
+			consultarFuncionarioCurso.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			consultarFuncionarioCurso.Show();
+		}
 
 
 		bool menuExpand = false;
@@ -144,7 +160,7 @@ namespace EpiControl
 			{
 				flpContainer.Height += 1;
 
-				if (flpContainer.Height >= 153)
+				if (flpContainer.Height >= 261)
 				{
 					trasicaoMenuFuncionario.Stop();
 					menuExpand = true;
@@ -153,7 +169,7 @@ namespace EpiControl
 			}
 			else
 			{
-				flpContainer.Height -= 13;
+				flpContainer.Height -= 14;
 				if (flpContainer.Height <= 52)
 				{
 					trasicaoMenuFuncionario.Stop();
@@ -269,8 +285,8 @@ namespace EpiControl
 			}
 			else
 			{
-				flpEstoque.Height -= 10;
-				if (flpEstoque.Height <= 51)
+				flpEstoque.Height -= 13;
+				if (flpEstoque.Height <= 52)
 				{
 					transicaoMenuEstoque.Stop();
 					menuExpand = false;
@@ -330,5 +346,7 @@ namespace EpiControl
 		{
 			transicaoMenuTreinamentos.Start();
 		}
+
+		
 	}
 }

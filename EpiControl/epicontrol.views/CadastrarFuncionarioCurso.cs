@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EpiControl.epicontrol.dao;
+using EpiControl.epicontrol.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +12,58 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-    public partial class frmCadastrarFuncionarioCurso : Form
-    {
-        public frmCadastrarFuncionarioCurso()
-        {
-            InitializeComponent();
-        }
+	public partial class frmCadastrarFuncionarioCurso : Form
+	{
+		public frmCadastrarFuncionarioCurso()
+		{
+			InitializeComponent();
+		}
+		private void frmCadastrarFuncionarioCurso_Load(object sender, EventArgs e)
+		{
+			FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+			CursoDAO cursoDAO = new CursoDAO();
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+			cbxFuncionario.DataSource = funcionarioDAO.listarNomesFuncionarios();
+			cbxFuncionario.DisplayMember = "nome";
+			cbxFuncionario.ValueMember = "id";
 
-        }
+			cbxCurso.DataSource = cursoDAO.listarCursos();
+			cbxCurso.DisplayMember = "nome";
+			cbxCurso.ValueMember = "id_curso";
+		}
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		private void btnVoltar_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 
-        }
-    }
+		private void btnSalvar_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				FuncionarioCurso funcionarioCurso = new FuncionarioCurso();
+
+				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
+				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
+				funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
+				funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
+
+				FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
+				funcionarioCursoDAO.cadastrarFuncionarioCurso(funcionarioCurso);
+
+				limparCampos();
+
+				MessageBox.Show("Associacao de funcionario ao curso realizada!");
+			}
+			catch (Exception ex) {
+				MessageBox.Show("Erro ao associar funcionario ao curso: " + ex);
+			}
+		}
+
+		private void limparCampos()
+		{
+			mtbConclusao.Clear();
+			mtbInicio.Clear();
+		}
+	}
 }
