@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.views\\consultarfuncionariocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarfuncionariocurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|d:\\epicontrol\\epicontrol\\epicontrol.conexao\\connectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.conexao\\connectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\appsettings.json",
+              "RelativeDocumentMoniker": "EpiControl\\appsettings.json",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\appsettings.json",
+              "RelativeToolTip": "EpiControl\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-17T02:01:04.741Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConsultarFuncionarioCurso.cs [Projeto]",
-              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFuncionarioCurso.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarFuncionarioCurso.cs",
-              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFuncionarioCurso.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarFuncionarioCurso.cs [Projeto]",
+              "DocumentIndex": 1,
+              "Title": "ConnectionFactory.cs",
+              "DocumentMoniker": "D:\\EpiControl\\EpiControl\\epicontrol.conexao\\ConnectionFactory.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.conexao\\ConnectionFactory.cs",
+              "ToolTip": "D:\\EpiControl\\EpiControl\\epicontrol.conexao\\ConnectionFactory.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.conexao\\ConnectionFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T22:38:39.04Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-04-17T02:00:56.881Z",
+              "EditorCaption": ""
             }
           ]
         }
