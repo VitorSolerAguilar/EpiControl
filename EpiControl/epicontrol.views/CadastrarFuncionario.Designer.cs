@@ -81,7 +81,6 @@
 			label31 = new Label();
 			label32 = new Label();
 			rtbComplemento = new RichTextBox();
-			btnSalvarFuncionario = new Button();
 			btnConsultarCep = new Button();
 			lblBairro = new Label();
 			txtLogradouro = new TextBox();
@@ -93,6 +92,7 @@
 			mtbCep = new MaskedTextBox();
 			mtbTelefone = new MaskedTextBox();
 			txtUf = new TextBox();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -190,7 +190,7 @@
 			// 
 			label24.AutoSize = true;
 			label24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			label24.Location = new Point(303, 59);
+			label24.Location = new Point(282, 60);
 			label24.Name = "label24";
 			label24.Size = new Size(125, 21);
 			label24.TabIndex = 160;
@@ -199,9 +199,9 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(421, 935);
+			btnVoltar.Location = new Point(446, 929);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 158;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
@@ -563,20 +563,6 @@
 			rtbComplemento.TabIndex = 173;
 			rtbComplemento.Text = "";
 			// 
-			// btnSalvarFuncionario
-			// 
-			btnSalvarFuncionario.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvarFuncionario.FlatAppearance.BorderSize = 0;
-			btnSalvarFuncionario.FlatStyle = FlatStyle.Flat;
-			btnSalvarFuncionario.ForeColor = Color.White;
-			btnSalvarFuncionario.Location = new Point(502, 935);
-			btnSalvarFuncionario.Name = "btnSalvarFuncionario";
-			btnSalvarFuncionario.Size = new Size(75, 40);
-			btnSalvarFuncionario.TabIndex = 221;
-			btnSalvarFuncionario.Text = " Salvar";
-			btnSalvarFuncionario.UseVisualStyleBackColor = false;
-			btnSalvarFuncionario.Click += btnSalvarFuncionario_Click;
-			// 
 			// btnConsultarCep
 			// 
 			btnConsultarCep.Location = new Point(363, 615);
@@ -671,11 +657,25 @@
 			txtUf.Size = new Size(74, 23);
 			txtUf.TabIndex = 232;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(524, 929);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 233;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 981);
+			Controls.Add(btnSalvar);
 			Controls.Add(txtUf);
 			Controls.Add(mtbTelefone);
 			Controls.Add(mtbCep);
@@ -687,7 +687,6 @@
 			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
 			Controls.Add(btnConsultarCep);
-			Controls.Add(btnSalvarFuncionario);
 			Controls.Add(rtbComplemento);
 			Controls.Add(label32);
 			Controls.Add(label31);
@@ -803,7 +802,6 @@
 		private Label label31;
 		private Label label32;
 		private RichTextBox rtbComplemento;
-		private Button btnSalvarFuncionario;
 		private Button btnConsultarCep;
 		private Label lblBairro;
 		private TextBox txtLogradouro;

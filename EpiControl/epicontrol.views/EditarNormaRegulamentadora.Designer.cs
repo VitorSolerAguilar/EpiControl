@@ -33,8 +33,6 @@
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
-			btnVoltar = new Button();
-			btnEditar = new Button();
 			txtLinkMte = new TextBox();
 			label7 = new Label();
 			label6 = new Label();
@@ -43,9 +41,11 @@
 			txtTitulo = new TextBox();
 			label4 = new Label();
 			label3 = new Label();
-			btnExcluir = new Button();
 			mtbDataVigencia = new MaskedTextBox();
 			txtNumeroNr = new TextBox();
+			btnEditar = new Button();
+			btnExcluir = new Button();
+			btnVoltar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -59,7 +59,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(626, 46);
+			panel1.Size = new Size(573, 46);
 			panel1.TabIndex = 6;
 			// 
 			// label2
@@ -92,31 +92,6 @@
 			pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
-			// 
-			// btnVoltar
-			// 
-			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(359, 415);
-			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
-			btnVoltar.TabIndex = 33;
-			btnVoltar.Text = "Voltar";
-			btnVoltar.UseVisualStyleBackColor = false;
-			btnVoltar.Click += btnVoltar_Click;
-			// 
-			// btnEditar
-			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(440, 415);
-			btnEditar.Name = "btnEditar";
-			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 32;
-			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
 			// 
 			// txtLinkMte
 			// 
@@ -174,7 +149,7 @@
 			label4.Name = "label4";
 			label4.Size = new Size(42, 15);
 			label4.TabIndex = 23;
-			label4.Text = "Titulo*";
+			label4.Text = "Título*";
 			// 
 			// label3
 			// 
@@ -184,20 +159,6 @@
 			label3.Size = new Size(91, 15);
 			label3.TabIndex = 22;
 			label3.Text = "Numero da NR*";
-			// 
-			// btnExcluir
-			// 
-			btnExcluir.BackColor = Color.Red;
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(521, 415);
-			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 34;
-			btnExcluir.Text = "Excluir";
-			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// mtbDataVigencia
 			// 
@@ -215,16 +176,51 @@
 			txtNumeroNr.Size = new Size(84, 23);
 			txtNumeroNr.TabIndex = 36;
 			// 
+			// btnEditar
+			// 
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(383, 413);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 103;
+			btnEditar.Text = "Editar";
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnExcluir
+			// 
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(463, 413);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 102;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
+			btnExcluir.UseVisualStyleBackColor = false;
+			// 
+			// btnVoltar
+			// 
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(305, 413);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 101;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			// 
 			// frmEditarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(626, 498);
-			Controls.Add(txtNumeroNr);
-			Controls.Add(mtbDataVigencia);
+			ClientSize = new Size(573, 465);
+			Controls.Add(btnEditar);
 			Controls.Add(btnExcluir);
 			Controls.Add(btnVoltar);
-			Controls.Add(btnEditar);
+			Controls.Add(txtNumeroNr);
+			Controls.Add(mtbDataVigencia);
 			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
@@ -251,8 +247,6 @@
 		private Label label2;
 		private Label label1;
 		private PictureBox pictureBox1;
-		private Button btnVoltar;
-		private Button btnEditar;
 		private TextBox txtLinkMte;
 		private Label label7;
 		private Label label6;
@@ -261,8 +255,10 @@
 		private TextBox txtTitulo;
 		private Label label4;
 		private Label label3;
-		private Button btnExcluir;
 		private MaskedTextBox mtbDataVigencia;
 		private TextBox txtNumeroNr;
+		private Button btnEditar;
+		private Button btnExcluir;
+		private Button btnVoltar;
 	}
 }

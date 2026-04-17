@@ -45,8 +45,6 @@
 			label26 = new Label();
 			label25 = new Label();
 			label24 = new Label();
-			btnEditar = new Button();
-			btnVoltar = new Button();
 			txtPisPasep = new TextBox();
 			label23 = new Label();
 			txtUf = new TextBox();
@@ -82,7 +80,6 @@
 			label4 = new Label();
 			txtNome = new TextBox();
 			label3 = new Label();
-			btnExcluir = new Button();
 			mtbDataNascimento = new MaskedTextBox();
 			cbxEstadoCivil = new ComboBox();
 			mtbCpf = new MaskedTextBox();
@@ -94,6 +91,9 @@
 			rdbMasculino = new RadioButton();
 			rdbFeminino = new RadioButton();
 			rdbOutros = new RadioButton();
+			btnEditar = new Button();
+			btnExcluir = new Button();
+			btnVoltar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -248,31 +248,6 @@
 			label24.Size = new Size(125, 21);
 			label24.TabIndex = 221;
 			label24.Text = "Dados Principais";
-			// 
-			// btnEditar
-			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(451, 945);
-			btnEditar.Name = "btnEditar";
-			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 220;
-			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
-			// 
-			// btnVoltar
-			// 
-			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(370, 945);
-			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
-			btnVoltar.TabIndex = 219;
-			btnVoltar.Text = "Voltar";
-			btnVoltar.UseVisualStyleBackColor = false;
-			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// txtPisPasep
 			// 
@@ -567,20 +542,6 @@
 			label3.TabIndex = 174;
 			label3.Text = "Nome:";
 			// 
-			// btnExcluir
-			// 
-			btnExcluir.BackColor = Color.Red;
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(532, 945);
-			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 236;
-			btnExcluir.Text = "Excluir";
-			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
-			// 
 			// mtbDataNascimento
 			// 
 			mtbDataNascimento.Location = new Point(186, 121);
@@ -685,11 +646,49 @@
 			rdbOutros.Text = "Outros";
 			rdbOutros.UseVisualStyleBackColor = true;
 			// 
+			// btnEditar
+			// 
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(426, 937);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 250;
+			btnEditar.Text = "Editar";
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnExcluir
+			// 
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(506, 937);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 249;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
+			btnExcluir.UseVisualStyleBackColor = false;
+			// 
+			// btnVoltar
+			// 
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(348, 937);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 248;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			// 
 			// frmEditarFuncionario
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(619, 989);
+			Controls.Add(btnEditar);
+			Controls.Add(btnExcluir);
+			Controls.Add(btnVoltar);
 			Controls.Add(rdbOutros);
 			Controls.Add(rdbFeminino);
 			Controls.Add(rdbMasculino);
@@ -701,7 +700,6 @@
 			Controls.Add(mtbRg);
 			Controls.Add(cbxEstadoCivil);
 			Controls.Add(mtbDataNascimento);
-			Controls.Add(btnExcluir);
 			Controls.Add(rtbComplemento);
 			Controls.Add(label32);
 			Controls.Add(label31);
@@ -714,8 +712,6 @@
 			Controls.Add(label26);
 			Controls.Add(label25);
 			Controls.Add(label24);
-			Controls.Add(btnEditar);
-			Controls.Add(btnVoltar);
 			Controls.Add(txtPisPasep);
 			Controls.Add(label23);
 			Controls.Add(txtUf);
@@ -780,8 +776,6 @@
 		private Label label26;
 		private Label label25;
 		private Label label24;
-		private Button btnEditar;
-		private Button btnVoltar;
 		private TextBox txtPisPasep;
 		private Label label23;
 		private TextBox txtUf;
@@ -817,7 +811,6 @@
 		private Label label4;
 		private TextBox txtNome;
 		private Label label3;
-		private Button btnExcluir;
 		private MaskedTextBox mtbDataNascimento;
 		private ComboBox cbxEstadoCivil;
 		private MaskedTextBox mtbCpf;
@@ -829,5 +822,8 @@
 		private RadioButton rdbMasculino;
 		private RadioButton rdbFeminino;
 		private RadioButton rdbOutros;
+		private Button btnEditar;
+		private Button btnExcluir;
+		private Button btnVoltar;
 	}
 }

@@ -55,7 +55,8 @@ namespace EpiControl.epicontrol.views
 
 				MessageBox.Show("Associacao de funcionario ao curso realizada!");
 			}
-			catch (Exception ex) {
+			catch (Exception ex)
+			{
 				MessageBox.Show("Erro ao associar funcionario ao curso: " + ex);
 			}
 		}

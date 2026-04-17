@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarEmprestimo));
-			btnSalvar = new Button();
 			rtbObservacoes = new RichTextBox();
 			mtbDataEmprestimo = new MaskedTextBox();
 			label9 = new Label();
@@ -45,24 +44,11 @@
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
+			btnSalvar = new Button();
 			((System.ComponentModel.ISupportInitialize)nudQuantidade).BeginInit();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
-			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(481, 417);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 235;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
 			// 
 			// rtbObservacoes
 			// 
@@ -93,9 +79,9 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(400, 417);
+			btnVoltar.Location = new Point(406, 417);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 231;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
@@ -202,6 +188,19 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(484, 417);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 235;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarEmprestimo
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -234,8 +233,6 @@
 		}
 
 		#endregion
-
-		private Button btnSalvar;
 		private RichTextBox rtbObservacoes;
 		private MaskedTextBox mtbDataEmprestimo;
 		private Label label9;
@@ -251,5 +248,6 @@
 		private Label label2;
 		private Label label1;
 		private PictureBox pictureBox1;
+		private Button btnSalvar;
 	}
 }

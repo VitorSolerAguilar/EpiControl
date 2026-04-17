@@ -43,8 +43,8 @@
 			rtbLocalizacao = new RichTextBox();
 			txtEstoqueMinimo = new TextBox();
 			cbxEpi = new ComboBox();
-			btnSalvar = new Button();
 			btnVoltar = new Button();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -163,36 +163,35 @@
 			cbxEpi.Size = new Size(248, 23);
 			cbxEpi.TabIndex = 233;
 			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(366, 398);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 237;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
-			// 
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(285, 398);
+			btnVoltar.Location = new Point(291, 373);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 236;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(369, 373);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 237;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarEstoqueEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(479, 450);
+			ClientSize = new Size(479, 431);
 			Controls.Add(btnSalvar);
 			Controls.Add(btnVoltar);
 			Controls.Add(cbxEpi);
@@ -231,7 +230,7 @@
 		private RichTextBox rtbLocalizacao;
 		private TextBox txtEstoqueMinimo;
 		private ComboBox cbxEpi;
-		private Button btnSalvar;
 		private Button btnVoltar;
+		private Button btnSalvar;
 	}
 }

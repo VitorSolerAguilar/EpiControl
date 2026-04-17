@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\EpiControl\\EpiControl\\EpiControl.csproj": {}
+    "D:\\EpiControl\\EpiControl\\EpiControl.csproj": {}
   },
   "projects": {
-    "C:\\EpiControl\\EpiControl\\EpiControl.csproj": {
+    "D:\\EpiControl\\EpiControl\\EpiControl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
+        "projectUniqueName": "D:\\EpiControl\\EpiControl\\EpiControl.csproj",
         "projectName": "EpiControl",
-        "projectPath": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
-        "packagesPath": "C:\\Users\\cursi\\.nuget\\packages\\",
-        "outputPath": "C:\\EpiControl\\EpiControl\\obj\\",
+        "projectPath": "D:\\EpiControl\\EpiControl\\EpiControl.csproj",
+        "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+        "outputPath": "D:\\EpiControl\\EpiControl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Arquivos de Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cursi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +84,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

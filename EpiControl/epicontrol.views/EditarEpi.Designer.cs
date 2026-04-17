@@ -42,8 +42,6 @@
 			label11 = new Label();
 			txtMarca = new TextBox();
 			label10 = new Label();
-			btnEditar = new Button();
-			btnVoltar = new Button();
 			txtCor = new TextBox();
 			label9 = new Label();
 			txtTamanho = new TextBox();
@@ -58,7 +56,9 @@
 			label4 = new Label();
 			txtNome = new TextBox();
 			label3 = new Label();
+			btnEditar = new Button();
 			btnExcluir = new Button();
+			btnVoltar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -183,31 +183,6 @@
 			label10.TabIndex = 96;
 			label10.Text = "Marca:";
 			// 
-			// btnEditar
-			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(316, 556);
-			btnEditar.Name = "btnEditar";
-			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 95;
-			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
-			// 
-			// btnVoltar
-			// 
-			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(235, 556);
-			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
-			btnVoltar.TabIndex = 94;
-			btnVoltar.Text = "Voltar";
-			btnVoltar.UseVisualStyleBackColor = false;
-			btnVoltar.Click += btnVoltar_Click;
-			// 
 			// txtCor
 			// 
 			txtCor.Location = new Point(151, 289);
@@ -328,26 +303,49 @@
 			label3.TabIndex = 80;
 			label3.Text = "Nome:";
 			// 
+			// btnEditar
+			// 
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(310, 556);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 107;
+			btnEditar.Text = "Editar";
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
 			// btnExcluir
 			// 
-			btnExcluir.BackColor = Color.FromArgb(239, 43, 65);
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(397, 556);
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(390, 556);
 			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 105;
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 106;
 			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
 			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
+			// 
+			// btnVoltar
+			// 
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(232, 556);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 105;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
 			// 
 			// frmEditarEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(484, 608);
+			Controls.Add(btnEditar);
 			Controls.Add(btnExcluir);
+			Controls.Add(btnVoltar);
 			Controls.Add(mtbValidadeCa);
 			Controls.Add(cbxFornecedor);
 			Controls.Add(cbxCategoria);
@@ -357,8 +355,6 @@
 			Controls.Add(label11);
 			Controls.Add(txtMarca);
 			Controls.Add(label10);
-			Controls.Add(btnEditar);
-			Controls.Add(btnVoltar);
 			Controls.Add(txtCor);
 			Controls.Add(label9);
 			Controls.Add(txtTamanho);
@@ -377,7 +373,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditarEpi";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "EditarEpi";
+			Text = "EPICONTROL";
 			Load += frmEditarEpi_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
@@ -400,8 +396,6 @@
 		private Label label11;
 		private TextBox txtMarca;
 		private Label label10;
-		private Button btnEditar;
-		private Button btnVoltar;
 		private TextBox txtCor;
 		private Label label9;
 		private TextBox txtTamanho;
@@ -416,6 +410,8 @@
 		private Label label4;
 		private TextBox txtNome;
 		private Label label3;
+		private Button btnEditar;
 		private Button btnExcluir;
+		private Button btnVoltar;
 	}
 }

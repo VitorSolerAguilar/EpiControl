@@ -97,7 +97,7 @@
 			label2.Name = "label2";
 			label2.Size = new Size(331, 37);
 			label2.TabIndex = 3;
-			label2.Text = "CONSULTAR EMPRESTIMO";
+			label2.Text = "CONSULTAR EMPRÉSTIMO";
 			// 
 			// label1
 			// 
@@ -132,7 +132,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarEmprestimo";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "ConsultarEmprestimo";
+			Text = "EPICONTROL";
 			Load += frmConsultarEmprestimo_Load;
 			((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
 			panel1.ResumeLayout(false);

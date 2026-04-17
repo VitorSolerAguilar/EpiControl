@@ -43,9 +43,9 @@
 			txtEstoqueMinimo = new TextBox();
 			rtbLocalizacao = new RichTextBox();
 			txtQuantidade = new TextBox();
+			btnEditar = new Button();
 			btnExcluir = new Button();
 			btnVoltar = new Button();
-			btnEditar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -109,7 +109,7 @@
 			label5.Name = "label5";
 			label5.Size = new Size(100, 15);
 			label5.TabIndex = 241;
-			label5.Text = "Estoque Minimo: ";
+			label5.Text = "Estoque Mínimo: ";
 			// 
 			// label7
 			// 
@@ -164,53 +164,49 @@
 			txtQuantidade.Size = new Size(102, 23);
 			txtQuantidade.TabIndex = 243;
 			// 
+			// btnEditar
+			// 
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(286, 380);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 249;
+			btnEditar.Text = "Editar";
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
 			// btnExcluir
 			// 
-			btnExcluir.BackColor = Color.Red;
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
 			btnExcluir.Location = new Point(366, 380);
 			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 249;
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 248;
 			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
 			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(204, 380);
+			btnVoltar.Location = new Point(208, 380);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
-			btnVoltar.TabIndex = 248;
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 247;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
-			btnVoltar.Click += btnVoltar_Click;
-			// 
-			// btnEditar
-			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(285, 380);
-			btnEditar.Name = "btnEditar";
-			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 247;
-			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
 			// 
 			// frmEditarEstoqueEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(479, 432);
+			Controls.Add(btnEditar);
 			Controls.Add(btnExcluir);
 			Controls.Add(btnVoltar);
-			Controls.Add(btnEditar);
 			Controls.Add(label6);
 			Controls.Add(label5);
 			Controls.Add(label7);
@@ -247,8 +243,8 @@
 		private TextBox txtEstoqueMinimo;
 		private RichTextBox rtbLocalizacao;
 		private TextBox txtQuantidade;
+		private Button btnEditar;
 		private Button btnExcluir;
 		private Button btnVoltar;
-		private Button btnEditar;
 	}
 }

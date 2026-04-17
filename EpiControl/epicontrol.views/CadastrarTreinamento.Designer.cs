@@ -41,8 +41,8 @@
 			txtCargaHoraria = new TextBox();
 			rtbDescricao = new RichTextBox();
 			mtbValidade = new MaskedTextBox();
-			btnSalvar = new Button();
 			btnVoltar = new Button();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -106,7 +106,7 @@
 			label5.Name = "label5";
 			label5.Size = new Size(84, 15);
 			label5.TabIndex = 30;
-			label5.Text = "Carga horaria: ";
+			label5.Text = "Carga horária: ";
 			// 
 			// label6
 			// 
@@ -157,30 +157,29 @@
 			mtbValidade.TabIndex = 36;
 			mtbValidade.ValidatingType = typeof(DateTime);
 			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(367, 354);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 96;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
-			// 
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(276, 354);
+			btnVoltar.Location = new Point(327, 354);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 95;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
+			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(405, 354);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 103;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
 			// 
 			// frmCadastrarTreinamento
 			// 
@@ -224,7 +223,7 @@
 		private TextBox txtCargaHoraria;
 		private RichTextBox rtbDescricao;
 		private MaskedTextBox mtbValidade;
-		private Button btnSalvar;
 		private Button btnVoltar;
+		private Button btnSalvar;
 	}
 }

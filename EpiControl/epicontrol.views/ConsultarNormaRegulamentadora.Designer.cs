@@ -133,7 +133,7 @@
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmConsultarNormaRegulamentadora";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "ConsultarNormaRegulamentadora";
+			Text = "EPICONTROL";
 			Load += frmConsultarNormaRegulamentadora_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();

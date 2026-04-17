@@ -42,13 +42,10 @@
 			label2 = new Label();
 			txtNome = new TextBox();
 			label1 = new Label();
-			btn_voltar = new Button();
-			btnEditar = new Button();
 			panel1 = new Panel();
 			label17 = new Label();
 			label18 = new Label();
 			pictureBox1 = new PictureBox();
-			btnExcluir = new Button();
 			mtbCelular = new MaskedTextBox();
 			mtbTelefone = new MaskedTextBox();
 			mtbCnpj = new MaskedTextBox();
@@ -70,6 +67,9 @@
 			txtNumero = new TextBox();
 			label10 = new Label();
 			label11 = new Label();
+			btnEditar = new Button();
+			btnExcluir = new Button();
+			btnVoltar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -186,31 +186,6 @@
 			label1.TabIndex = 65;
 			label1.Text = "Nome*";
 			// 
-			// btn_voltar
-			// 
-			btn_voltar.BackColor = Color.Transparent;
-			btn_voltar.Location = new Point(285, 692);
-			btn_voltar.Name = "btn_voltar";
-			btn_voltar.Size = new Size(75, 40);
-			btn_voltar.TabIndex = 64;
-			btn_voltar.Text = "Voltar";
-			btn_voltar.UseVisualStyleBackColor = false;
-			btn_voltar.Click += btn_voltar_Click;
-			// 
-			// btnEditar
-			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(366, 692);
-			btnEditar.Name = "btnEditar";
-			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 63;
-			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
-			// 
 			// panel1
 			// 
 			panel1.BackColor = Color.White;
@@ -253,20 +228,6 @@
 			pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
-			// 
-			// btnExcluir
-			// 
-			btnExcluir.BackColor = Color.FromArgb(239, 43, 65);
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(447, 692);
-			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 96;
-			btnExcluir.Text = "Excluir";
-			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// mtbCelular
 			// 
@@ -443,11 +404,49 @@
 			label11.TabIndex = 250;
 			label11.Text = "CEP:";
 			// 
+			// btnEditar
+			// 
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(359, 692);
+			btnEditar.Name = "btnEditar";
+			btnEditar.Size = new Size(75, 40);
+			btnEditar.TabIndex = 270;
+			btnEditar.Text = "Editar";
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnExcluir
+			// 
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(439, 692);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 269;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
+			btnExcluir.UseVisualStyleBackColor = false;
+			// 
+			// btnVoltar
+			// 
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(281, 692);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 268;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
+			// 
 			// frmEditarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(534, 744);
+			Controls.Add(btnEditar);
+			Controls.Add(btnExcluir);
+			Controls.Add(btnVoltar);
 			Controls.Add(mtbCep);
 			Controls.Add(lblBairro);
 			Controls.Add(txtLogradouro);
@@ -469,7 +468,6 @@
 			Controls.Add(mtbCelular);
 			Controls.Add(mtbTelefone);
 			Controls.Add(mtbCnpj);
-			Controls.Add(btnExcluir);
 			Controls.Add(panel1);
 			Controls.Add(txtEmailCorporativo);
 			Controls.Add(label9);
@@ -484,8 +482,6 @@
 			Controls.Add(label2);
 			Controls.Add(txtNome);
 			Controls.Add(label1);
-			Controls.Add(btn_voltar);
-			Controls.Add(btnEditar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmEditarFornecedor";
 			StartPosition = FormStartPosition.CenterScreen;
@@ -512,13 +508,10 @@
 		private Label label2;
 		private TextBox txtNome;
 		private Label label1;
-		private Button btn_voltar;
-		private Button btnEditar;
 		private Panel panel1;
 		private Label label17;
 		private Label label18;
 		private PictureBox pictureBox1;
-		private Button btnExcluir;
 		private MaskedTextBox mtbCelular;
 		private MaskedTextBox mtbTelefone;
 		private MaskedTextBox mtbCnpj;
@@ -540,5 +533,8 @@
 		private TextBox txtNumero;
 		private Label label10;
 		private Label label11;
+		private Button btnEditar;
+		private Button btnExcluir;
+		private Button btnVoltar;
 	}
 }

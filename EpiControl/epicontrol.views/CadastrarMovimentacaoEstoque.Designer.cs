@@ -45,8 +45,8 @@
 			label4 = new Label();
 			cbxTipoMovimentacao = new ComboBox();
 			label7 = new Label();
-			btnSalvar = new Button();
 			btnVoltar = new Button();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -60,7 +60,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(599, 46);
+			panel1.Size = new Size(595, 46);
 			panel1.TabIndex = 80;
 			// 
 			// label5
@@ -101,7 +101,7 @@
 			label1.Name = "label1";
 			label1.Size = new Size(73, 15);
 			label1.TabIndex = 81;
-			label1.Text = "Funcionario:";
+			label1.Text = "Funcionário:";
 			// 
 			// txtQuantidade
 			// 
@@ -159,7 +159,7 @@
 			label3.Name = "label3";
 			label3.Size = new Size(117, 15);
 			label3.TabIndex = 88;
-			label3.Text = "Data de emprestimo:";
+			label3.Text = "Data de empréstimo:";
 			// 
 			// mtbDataEmprestimo
 			// 
@@ -194,38 +194,37 @@
 			label7.Name = "label7";
 			label7.Size = new Size(132, 15);
 			label7.TabIndex = 91;
-			label7.Text = "Tipo de movimentacao:";
-			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(426, 456);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 94;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
+			label7.Text = "Tipo de movimentação:";
 			// 
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(335, 456);
+			btnVoltar.Location = new Point(351, 456);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 93;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(429, 456);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 104;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarMovimentacaoEstoque
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(599, 513);
+			ClientSize = new Size(595, 513);
 			Controls.Add(btnSalvar);
 			Controls.Add(btnVoltar);
 			Controls.Add(cbxTipoMovimentacao);
@@ -271,7 +270,7 @@
 		private Label label4;
 		private ComboBox cbxTipoMovimentacao;
 		private Label label7;
-		private Button btnSalvar;
 		private Button btnVoltar;
+		private Button btnSalvar;
 	}
 }

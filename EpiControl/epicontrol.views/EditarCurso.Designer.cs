@@ -60,9 +60,9 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(280, 376);
+			btnVoltar.Location = new Point(279, 376);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 81;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
@@ -171,31 +171,28 @@
 			// 
 			// btnExcluir
 			// 
-			btnExcluir.BackColor = Color.FromArgb(239, 43, 65);
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(442, 376);
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(437, 376);
 			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 97;
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 99;
 			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
 			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
 			// 
 			// btnEditar
 			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(361, 376);
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(357, 376);
 			btnEditar.Name = "btnEditar";
 			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 98;
+			btnEditar.TabIndex = 100;
 			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
 			// 
 			// frmEditarCurso
 			// 
@@ -240,7 +237,7 @@
         private PictureBox pictureBox1;
         private TextBox txtNome;
         private Label label3;
-        private Button btnExcluir;
-        private Button btnEditar;
-    }
+		private Button btnExcluir;
+		private Button btnEditar;
+	}
 }

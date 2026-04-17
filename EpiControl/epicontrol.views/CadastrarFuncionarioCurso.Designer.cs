@@ -38,11 +38,11 @@
 			mtbInicio = new MaskedTextBox();
 			mtbConclusao = new MaskedTextBox();
 			btnVoltar = new Button();
-			btnSalvar = new Button();
 			panel1 = new Panel();
 			label5 = new Label();
 			label6 = new Label();
 			pictureBox1 = new PictureBox();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -63,7 +63,7 @@
 			label1.Name = "label1";
 			label1.Size = new Size(39, 15);
 			label1.TabIndex = 57;
-			label1.Text = "Inicio:";
+			label1.Text = "Início:";
 			// 
 			// label2
 			// 
@@ -120,27 +120,13 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(300, 253);
+			btnVoltar.Location = new Point(322, 266);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 77;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
-			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(391, 253);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 78;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
 			// 
 			// panel1
 			// 
@@ -163,7 +149,7 @@
 			label5.Name = "label5";
 			label5.Size = new Size(439, 37);
 			label5.TabIndex = 3;
-			label5.Text = "CADASTRAR FUNCIONARIO CURSO";
+			label5.Text = "CADASTRAR FUNCIONÁRIO CURSO";
 			// 
 			// label6
 			// 
@@ -185,13 +171,26 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(400, 266);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 104;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarFuncionarioCurso
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(509, 318);
-			Controls.Add(panel1);
 			Controls.Add(btnSalvar);
+			Controls.Add(panel1);
 			Controls.Add(btnVoltar);
 			Controls.Add(mtbConclusao);
 			Controls.Add(mtbInicio);
@@ -224,10 +223,10 @@
         private MaskedTextBox mtbInicio;
         private MaskedTextBox mtbConclusao;
         private Button btnVoltar;
-        private Button btnSalvar;
         private Panel panel1;
         private Label label5;
         private Label label6;
         private PictureBox pictureBox1;
-    }
+		private Button btnSalvar;
+	}
 }

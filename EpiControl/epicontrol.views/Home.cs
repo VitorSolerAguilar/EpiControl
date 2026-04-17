@@ -6,6 +6,8 @@ namespace EpiControl
 {
 	public partial class frmHome : Form
 	{
+		private const int STEP_EXPAND = 20;
+
 		public frmHome()
 		{
 			InitializeComponent();
@@ -158,7 +160,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpContainer.Height += 1;
+				flpContainer.Height += STEP_EXPAND;
 
 				if (flpContainer.Height >= 261)
 				{
@@ -181,7 +183,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpContainerFornecedor.Height += 1;
+				flpContainerFornecedor.Height += STEP_EXPAND;
 
 				if (flpContainerFornecedor.Height >= 153)
 				{
@@ -204,7 +206,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpContainerEpi.Height += 1;
+				flpContainerEpi.Height += STEP_EXPAND;
 
 				if (flpContainerEpi.Height >= 153)
 				{
@@ -227,7 +229,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpNormaRegulamentadora.Height += 1;
+				flpNormaRegulamentadora.Height += STEP_EXPAND;
 
 				if (flpNormaRegulamentadora.Height >= 153)
 				{
@@ -250,7 +252,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpEmprestimo.Height += 1;
+				flpEmprestimo.Height += STEP_EXPAND;
 
 				if (flpEmprestimo.Height >= 153)
 				{
@@ -274,7 +276,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpEstoque.Height += 1;
+				flpEstoque.Height += STEP_EXPAND;
 
 				if (flpEstoque.Height >= 210)
 				{
@@ -297,7 +299,7 @@ namespace EpiControl
 		{
 			if (menuExpand == false)
 			{
-				flpTreinamentos.Height += 1;
+				flpTreinamentos.Height += STEP_EXPAND;
 
 				if (flpTreinamentos.Height >= 153)
 				{

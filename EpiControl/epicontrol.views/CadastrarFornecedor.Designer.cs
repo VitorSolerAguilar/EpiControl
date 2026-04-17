@@ -30,7 +30,6 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarFornecedor));
 			btnVoltar = new Button();
-			btnSalvar = new Button();
 			label1 = new Label();
 			txtNome = new TextBox();
 			label2 = new Label();
@@ -69,6 +68,7 @@
 			mtbTelefone = new MaskedTextBox();
 			mtbCelular = new MaskedTextBox();
 			mtbCep = new MaskedTextBox();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -83,20 +83,6 @@
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
-			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(479, 649);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 32;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
 			// 
 			// label1
 			// 
@@ -429,11 +415,25 @@
 			mtbCep.Size = new Size(144, 23);
 			mtbCep.TabIndex = 246;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(482, 649);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 247;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarFornecedor
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(588, 701);
+			Controls.Add(btnSalvar);
 			Controls.Add(mtbCep);
 			Controls.Add(mtbCelular);
 			Controls.Add(mtbTelefone);
@@ -470,7 +470,6 @@
 			Controls.Add(txtNome);
 			Controls.Add(label1);
 			Controls.Add(btnVoltar);
-			Controls.Add(btnSalvar);
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			Name = "frmCadastrarFornecedor";
 			StartPosition = FormStartPosition.CenterScreen;
@@ -485,7 +484,6 @@
 		#endregion
 
 		private Button btnVoltar;
-		private Button btnSalvar;
 		private Label label1;
 		private TextBox txtNome;
 		private Label label2;
@@ -524,5 +522,6 @@
 		private MaskedTextBox mtbTelefone;
 		private MaskedTextBox mtbCelular;
 		private MaskedTextBox mtbCep;
+		private Button btnSalvar;
 	}
 }

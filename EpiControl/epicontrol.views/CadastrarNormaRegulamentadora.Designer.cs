@@ -41,10 +41,10 @@
 			label6 = new Label();
 			label7 = new Label();
 			txtLinkMte = new TextBox();
-			btnSalvar = new Button();
 			btnVoltar = new Button();
 			mtbDataVigencia = new MaskedTextBox();
 			txtNumeroNr = new TextBox();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -58,7 +58,7 @@
 			panel1.Dock = DockStyle.Top;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(578, 46);
+			panel1.Size = new Size(550, 46);
 			panel1.TabIndex = 5;
 			// 
 			// label2
@@ -99,7 +99,7 @@
 			label3.Name = "label3";
 			label3.Size = new Size(91, 15);
 			label3.TabIndex = 8;
-			label3.Text = "Numero da NR*";
+			label3.Text = "Número da NR*";
 			// 
 			// txtTitulo
 			// 
@@ -115,7 +115,7 @@
 			label4.Name = "label4";
 			label4.Size = new Size(42, 15);
 			label4.TabIndex = 10;
-			label4.Text = "Titulo*";
+			label4.Text = "Título*";
 			// 
 			// label5
 			// 
@@ -159,26 +159,12 @@
 			txtLinkMte.Size = new Size(349, 23);
 			txtLinkMte.TabIndex = 18;
 			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(461, 416);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 20;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
-			// 
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(360, 416);
+			btnVoltar.Location = new Point(386, 385);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 21;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
@@ -200,15 +186,28 @@
 			txtNumeroNr.Size = new Size(84, 23);
 			txtNumeroNr.TabIndex = 23;
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(464, 385);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 104;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarNormaRegulamentadora
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(578, 478);
+			ClientSize = new Size(550, 437);
+			Controls.Add(btnSalvar);
 			Controls.Add(txtNumeroNr);
 			Controls.Add(mtbDataVigencia);
 			Controls.Add(btnVoltar);
-			Controls.Add(btnSalvar);
 			Controls.Add(txtLinkMte);
 			Controls.Add(label7);
 			Controls.Add(label6);
@@ -242,9 +241,9 @@
 		private Label label6;
 		private Label label7;
 		private TextBox txtLinkMte;
-		private Button btnSalvar;
 		private Button btnVoltar;
 		private MaskedTextBox mtbDataVigencia;
 		private TextBox txtNumeroNr;
+		private Button btnSalvar;
 	}
 }

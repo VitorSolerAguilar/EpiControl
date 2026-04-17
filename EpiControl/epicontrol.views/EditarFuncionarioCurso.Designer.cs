@@ -33,7 +33,6 @@
 			label5 = new Label();
 			label6 = new Label();
 			pictureBox1 = new PictureBox();
-			btnVoltar = new Button();
 			mtbConclusao = new MaskedTextBox();
 			mtbInicio = new MaskedTextBox();
 			cbxCurso = new ComboBox();
@@ -42,8 +41,9 @@
 			label2 = new Label();
 			label1 = new Label();
 			label3 = new Label();
-			btnExcluir = new Button();
 			btnEditar = new Button();
+			btnExcluir = new Button();
+			btnVoltar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -69,7 +69,7 @@
 			label5.Name = "label5";
 			label5.Size = new Size(378, 37);
 			label5.TabIndex = 3;
-			label5.Text = "EDITAR FUNCIONARIO CURSO";
+			label5.Text = "EDITAR FUNCIONÁRIO CURSO";
 			// 
 			// label6
 			// 
@@ -90,17 +90,6 @@
 			pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
-			// 
-			// btnVoltar
-			// 
-			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(173, 280);
-			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
-			btnVoltar.TabIndex = 88;
-			btnVoltar.Text = "Voltar";
-			btnVoltar.UseVisualStyleBackColor = false;
-			btnVoltar.Click += btnVoltar_Click;
 			// 
 			// mtbConclusao
 			// 
@@ -172,33 +161,40 @@
 			label3.TabIndex = 80;
 			label3.Text = "Curso:";
 			// 
-			// btnExcluir
-			// 
-			btnExcluir.BackColor = Color.FromArgb(239, 43, 65);
-			btnExcluir.FlatAppearance.BorderSize = 0;
-			btnExcluir.FlatStyle = FlatStyle.Flat;
-			btnExcluir.ForeColor = Color.White;
-			btnExcluir.Location = new Point(360, 280);
-			btnExcluir.Name = "btnExcluir";
-			btnExcluir.Size = new Size(75, 40);
-			btnExcluir.TabIndex = 98;
-			btnExcluir.Text = "Excluir";
-			btnExcluir.UseVisualStyleBackColor = false;
-			btnExcluir.Click += btnExcluir_Click;
-			// 
 			// btnEditar
 			// 
-			btnEditar.BackColor = Color.FromArgb(17, 138, 254);
-			btnEditar.FlatAppearance.BorderSize = 0;
-			btnEditar.FlatStyle = FlatStyle.Flat;
-			btnEditar.ForeColor = Color.White;
-			btnEditar.Location = new Point(265, 280);
+			btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+			btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnEditar.Location = new Point(283, 284);
 			btnEditar.Name = "btnEditar";
 			btnEditar.Size = new Size(75, 40);
-			btnEditar.TabIndex = 99;
+			btnEditar.TabIndex = 103;
 			btnEditar.Text = "Editar";
-			btnEditar.UseVisualStyleBackColor = false;
-			btnEditar.Click += btnEditar_Click;
+			btnEditar.TextAlign = ContentAlignment.MiddleRight;
+			btnEditar.UseVisualStyleBackColor = true;
+			// 
+			// btnExcluir
+			// 
+			btnExcluir.BackColor = Color.Transparent;
+			btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
+			btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
+			btnExcluir.Location = new Point(363, 284);
+			btnExcluir.Name = "btnExcluir";
+			btnExcluir.Size = new Size(72, 40);
+			btnExcluir.TabIndex = 102;
+			btnExcluir.Text = "Excluir";
+			btnExcluir.TextAlign = ContentAlignment.MiddleRight;
+			btnExcluir.UseVisualStyleBackColor = false;
+			// 
+			// btnVoltar
+			// 
+			btnVoltar.BackColor = Color.Transparent;
+			btnVoltar.Location = new Point(205, 284);
+			btnVoltar.Name = "btnVoltar";
+			btnVoltar.Size = new Size(72, 40);
+			btnVoltar.TabIndex = 101;
+			btnVoltar.Text = "Voltar";
+			btnVoltar.UseVisualStyleBackColor = false;
 			// 
 			// frmEditarFuncionarioCurso
 			// 
@@ -207,8 +203,8 @@
 			ClientSize = new Size(458, 336);
 			Controls.Add(btnEditar);
 			Controls.Add(btnExcluir);
-			Controls.Add(panel1);
 			Controls.Add(btnVoltar);
+			Controls.Add(panel1);
 			Controls.Add(mtbConclusao);
 			Controls.Add(mtbInicio);
 			Controls.Add(cbxCurso);
@@ -235,7 +231,6 @@
         private Label label5;
         private Label label6;
         private PictureBox pictureBox1;
-        private Button btnVoltar;
         private MaskedTextBox mtbConclusao;
         private MaskedTextBox mtbInicio;
         private ComboBox cbxCurso;
@@ -244,7 +239,8 @@
         private Label label2;
         private Label label1;
         private Label label3;
-        private Button btnExcluir;
-        private Button btnEditar;
-    }
+		private Button btnEditar;
+		private Button btnExcluir;
+		private Button btnVoltar;
+	}
 }

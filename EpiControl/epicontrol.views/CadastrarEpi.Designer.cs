@@ -48,7 +48,6 @@
 			label9 = new Label();
 			txtCor = new TextBox();
 			btnVoltar = new Button();
-			btnSalvar = new Button();
 			txtMarca = new TextBox();
 			label10 = new Label();
 			label11 = new Label();
@@ -58,6 +57,7 @@
 			cbxCategoria = new ComboBox();
 			cbxFornecedor = new ComboBox();
 			mtbValidadeCa = new MaskedTextBox();
+			btnSalvar = new Button();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -228,27 +228,13 @@
 			// btnVoltar
 			// 
 			btnVoltar.BackColor = Color.Transparent;
-			btnVoltar.Location = new Point(274, 553);
+			btnVoltar.Location = new Point(281, 553);
 			btnVoltar.Name = "btnVoltar";
-			btnVoltar.Size = new Size(75, 40);
+			btnVoltar.Size = new Size(72, 40);
 			btnVoltar.TabIndex = 69;
 			btnVoltar.Text = "Voltar";
 			btnVoltar.UseVisualStyleBackColor = false;
 			btnVoltar.Click += btnVoltar_Click;
-			// 
-			// btnSalvar
-			// 
-			btnSalvar.BackColor = Color.FromArgb(17, 138, 254);
-			btnSalvar.FlatAppearance.BorderSize = 0;
-			btnSalvar.FlatStyle = FlatStyle.Flat;
-			btnSalvar.ForeColor = Color.White;
-			btnSalvar.Location = new Point(355, 553);
-			btnSalvar.Name = "btnSalvar";
-			btnSalvar.Size = new Size(75, 40);
-			btnSalvar.TabIndex = 70;
-			btnSalvar.Text = " Salvar";
-			btnSalvar.UseVisualStyleBackColor = false;
-			btnSalvar.Click += btnSalvar_Click;
 			// 
 			// txtMarca
 			// 
@@ -327,11 +313,25 @@
 			mtbValidadeCa.TabIndex = 79;
 			mtbValidadeCa.ValidatingType = typeof(DateTime);
 			// 
+			// btnSalvar
+			// 
+			btnSalvar.BackColor = Color.Transparent;
+			btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+			btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+			btnSalvar.Location = new Point(359, 553);
+			btnSalvar.Name = "btnSalvar";
+			btnSalvar.Size = new Size(72, 40);
+			btnSalvar.TabIndex = 105;
+			btnSalvar.Text = "Salvar";
+			btnSalvar.TextAlign = ContentAlignment.MiddleRight;
+			btnSalvar.UseVisualStyleBackColor = false;
+			// 
 			// frmCadastrarEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(484, 608);
+			Controls.Add(btnSalvar);
 			Controls.Add(mtbValidadeCa);
 			Controls.Add(cbxFornecedor);
 			Controls.Add(cbxCategoria);
@@ -341,7 +341,6 @@
 			Controls.Add(label11);
 			Controls.Add(txtMarca);
 			Controls.Add(label10);
-			Controls.Add(btnSalvar);
 			Controls.Add(btnVoltar);
 			Controls.Add(txtCor);
 			Controls.Add(label9);
@@ -391,7 +390,6 @@
         private Label label9;
         private TextBox txtCor;
         private Button btnVoltar;
-        private Button btnSalvar;
 		private TextBox txtMarca;
 		private Label label10;
 		private Label label11;
@@ -401,5 +399,6 @@
 		private ComboBox cbxCategoria;
 		private ComboBox cbxFornecedor;
 		private MaskedTextBox mtbValidadeCa;
+		private Button btnSalvar;
 	}
 }
