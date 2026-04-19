@@ -33,5 +33,11 @@ namespace EpiControl.epicontrol.views
 
 			dgvEmprestimo.DataSource = dao.listarEmprestimo();
 		}
+
+		private void btnConsultar_Click(object sender, EventArgs e)
+		{
+			EmprestimoDAO dao = new EmprestimoDAO();
+			dgvEmprestimo.DataSource = dao.buscarEmprestimo(txtConsultaEmprestimo.Text);
+		}
 	}
 }

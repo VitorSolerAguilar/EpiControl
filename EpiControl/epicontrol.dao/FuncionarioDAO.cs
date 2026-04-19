@@ -257,7 +257,7 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable buscarFuncionarioNome(string nomeFuncionario)
+		public DataTable buscarFuncionario(string termoBusca)
 		{
 			try
 			{
@@ -269,14 +269,14 @@ namespace EpiControl.epicontrol.dao
 					"f.cpf, " +
 					"f.cargo, " +
 					"f.status, " +
-					"" +
-					"c.id_contato AS id_contato," +
+
+					"c.id_contato AS id_contato, " +
 					"c.telefone, " +
 					"c.celular, " +
 					"c.email, " +
 					"c.email_corporativo, " +
-					"" +
-					"e.id_endereco AS id_endereco," +
+
+					"e.id_endereco AS id_endereco, " +
 					"e.cep, " +
 					"e.rua, " +
 					"e.numero, " +
@@ -287,11 +287,24 @@ namespace EpiControl.epicontrol.dao
 					"FROM tb_funcionario f " +
 					"LEFT JOIN tb_contato c ON c.fk_funcionario = f.id_funcionario " +
 					"LEFT JOIN tb_endereco e ON e.fk_funcionario = f.id_funcionario " +
-					"WHERE f.nome LIKE @nome;";
+					"WHERE f.nome LIKE @termo " +
+					"   OR f.cpf LIKE @termo " +
+					"   OR f.cargo LIKE @termo " +
+					"   OR f.status LIKE @termo " +
+					"   OR c.telefone LIKE @termo " +
+					"   OR c.celular LIKE @termo " +
+					"   OR c.email LIKE @termo " +
+					"   OR c.email_corporativo LIKE @termo " +
+					"   OR e.cep LIKE @termo " +
+					"   OR e.rua LIKE @termo " +
+					"   OR e.numero LIKE @termo " +
+					"   OR e.complemento LIKE @termo " +
+					"   OR e.logradouro LIKE @termo " +
+					"   OR e.cidade LIKE @termo " +
+					"   OR e.uf LIKE @termo;";
 
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@nome", "%" + nomeFuncionario + "%");
-
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
 				conexao.Open();
 

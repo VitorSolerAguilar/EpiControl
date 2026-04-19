@@ -691,7 +691,9 @@
 			Controls.Add(panel1);
 			Font = new Font("Segoe UI", 9F);
 			ForeColor = Color.White;
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmHome";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

@@ -34,6 +34,9 @@
 			label2 = new Label();
 			label1 = new Label();
 			pictureBox1 = new PictureBox();
+			label = new Label();
+			btnConsultar = new Button();
+			txtConsultaEstoque = new TextBox();
 			((System.ComponentModel.ISupportInitialize)dgvEstoque).BeginInit();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -41,9 +44,11 @@
 			// 
 			// dgvEstoque
 			// 
+			dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dgvEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dgvEstoque.Location = new Point(12, 56);
+			dgvEstoque.Location = new Point(12, 104);
 			dgvEstoque.Name = "dgvEstoque";
+			dgvEstoque.ReadOnly = true;
 			dgvEstoque.Size = new Size(776, 374);
 			dgvEstoque.TabIndex = 27;
 			dgvEstoque.CellClick += dgvEstoque_CellClick;
@@ -91,14 +96,45 @@
 			pictureBox1.TabIndex = 1;
 			pictureBox1.TabStop = false;
 			// 
+			// label
+			// 
+			label.AutoSize = true;
+			label.Location = new Point(207, 78);
+			label.Name = "label";
+			label.Size = new Size(56, 15);
+			label.TabIndex = 30;
+			label.Text = "Pesquisa:";
+			// 
+			// btnConsultar
+			// 
+			btnConsultar.Location = new Point(514, 74);
+			btnConsultar.Name = "btnConsultar";
+			btnConsultar.Size = new Size(75, 24);
+			btnConsultar.TabIndex = 29;
+			btnConsultar.Text = "Consultar";
+			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
+			// 
+			// txtConsultaEstoque
+			// 
+			txtConsultaEstoque.Location = new Point(282, 75);
+			txtConsultaEstoque.Name = "txtConsultaEstoque";
+			txtConsultaEstoque.Size = new Size(226, 23);
+			txtConsultaEstoque.TabIndex = 28;
+			// 
 			// frmConsultaEstoqueEpi
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 446);
+			ClientSize = new Size(800, 490);
+			Controls.Add(label);
+			Controls.Add(btnConsultar);
+			Controls.Add(txtConsultaEstoque);
 			Controls.Add(dgvEstoque);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultaEstoqueEpi";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
@@ -108,6 +144,7 @@
 			panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
@@ -116,5 +153,8 @@
 		private Label label2;
 		private Label label1;
 		private PictureBox pictureBox1;
+		private Label label;
+		private Button btnConsultar;
+		private TextBox txtConsultaEstoque;
 	}
 }

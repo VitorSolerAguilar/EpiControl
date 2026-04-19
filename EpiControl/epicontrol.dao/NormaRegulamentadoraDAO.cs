@@ -167,16 +167,16 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable buscarNormaNome(string nomeNorma)
+		public DataTable buscarNorma(string termoBusca)
 		{
 			try
 			{
 				DataTable tabelaNorma = new DataTable();
 
-				string sql = @"SELECT id_norma_regulamentadora, codigo_nr, titulo, descricao, link_mte, data_vigencia FROM tb_norma_regulamentadora WHERE titulo LIKE @titulo";
+				string sql = @"SELECT id_norma_regulamentadora, codigo_nr, titulo, descricao, link_mte, data_vigencia FROM tb_norma_regulamentadora WHERE codigo_nr LIKE @termo OR titulo    LIKE @termo OR descricao LIKE @termo OR link_mte  LIKE @termo";
 
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@titulo", "%" + nomeNorma + "%");
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
 				conexao.Open();
 

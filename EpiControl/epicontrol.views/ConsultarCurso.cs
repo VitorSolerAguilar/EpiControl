@@ -27,7 +27,7 @@ namespace EpiControl.epicontrol.views
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			dgvTreinamento.DataSource = cursoDAO.buscarCursoPorNome(txtConsultaNomeTreinamento.Text);
+			dgvTreinamento.DataSource = cursoDAO.buscarCurso(txtConsultaNomeTreinamento.Text);
 		}
 
 		private void dgvTreinamento_CellClick(object sender, DataGridViewCellEventArgs e)

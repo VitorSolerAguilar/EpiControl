@@ -29,7 +29,7 @@ namespace EpiControl.epicontrol.views
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
 			NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
-			dgvNormaRegulamentadora.DataSource = dao.buscarNormaNome(txtConsultaNorma.Text);
+			dgvNormaRegulamentadora.DataSource = dao.buscarNorma(txtConsultaNorma.Text);
 		}
 
 		private void dgvNormaRegulamentadora_CellClick(object sender, DataGridViewCellEventArgs e)

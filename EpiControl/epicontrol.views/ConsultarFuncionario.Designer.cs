@@ -47,6 +47,7 @@
 			dgvFuncionario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvFuncionario.Location = new Point(12, 103);
 			dgvFuncionario.Name = "dgvFuncionario";
+			dgvFuncionario.ReadOnly = true;
 			dgvFuncionario.Size = new Size(776, 335);
 			dgvFuncionario.TabIndex = 0;
 			dgvFuncionario.CellClick += dgvFuncionario_CellClick;
@@ -116,9 +117,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(223, 77);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 10;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// frmConsultarFuncionario
 			// 
@@ -130,7 +131,9 @@
 			Controls.Add(txtConsultaNome);
 			Controls.Add(panel1);
 			Controls.Add(dgvFuncionario);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarFuncionario";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

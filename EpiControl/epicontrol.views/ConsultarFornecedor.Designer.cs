@@ -47,9 +47,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(224, 85);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 14;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// btnConsultar
 			// 
@@ -73,6 +73,7 @@
 			dgvFornecedor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvFornecedor.Location = new Point(13, 111);
 			dgvFornecedor.Name = "dgvFornecedor";
+			dgvFornecedor.ReadOnly = true;
 			dgvFornecedor.Size = new Size(776, 335);
 			dgvFornecedor.TabIndex = 11;
 			dgvFornecedor.CellClick += dgvFornecedor_CellClick;
@@ -130,7 +131,9 @@
 			Controls.Add(btnConsultar);
 			Controls.Add(txtConsultaNome);
 			Controls.Add(dgvFornecedor);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarFornecedor";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

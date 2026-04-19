@@ -164,34 +164,34 @@ namespace EpiControl.epicontrol.dao
             }
         }
 
-        public DataTable buscarCursoPorNome(string nomeCurso)
-        {
-            try
-            {
-                DataTable tabelaCurso = new DataTable();
+		public DataTable buscarCurso(string termoBusca)
+		{
+			try
+			{
+				DataTable tabelaCurso = new DataTable();
 
-                string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses FROM tb_curso WHERE nome LIKE @nome";
+				string sql = @"SELECT id_curso, nome, carga_horaria, descricao, validade_meses FROM tb_curso WHERE nome LIKE @termo OR descricao LIKE @termo OR CAST(carga_horaria AS CHAR) LIKE @termo OR CAST(validade_meses AS CHAR) LIKE @termo";
 
-                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                executacmd.Parameters.AddWithValue("@nome", "%" + nomeCurso + "%");
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
-                conexao.Open();
+				conexao.Open();
 
-                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-                da.Fill(tabelaCurso);
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaCurso);
 
-                return tabelaCurso;
-            }
-            catch (Exception ex)
-            {
-                 MessageBox.Show("Erro ao buscar curso por nome: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                    conexao.Close();
-            }
-        }
-    }
+				return tabelaCurso;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao buscar curso: " + ex.Message);
+				return null;
+			}
+			finally
+			{
+				conexao.Close();
+			}
+		}
+	}
 }
 

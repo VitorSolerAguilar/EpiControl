@@ -213,7 +213,9 @@
 			Controls.Add(label2);
 			Controls.Add(label1);
 			Controls.Add(label3);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmEditarFuncionarioCurso";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

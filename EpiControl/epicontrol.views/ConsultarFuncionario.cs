@@ -44,7 +44,7 @@ namespace EpiControl.epicontrol.views
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
 			FuncionarioDAO dao = new FuncionarioDAO();
-			dgvFuncionario.DataSource = dao.buscarFuncionarioNome(txtConsultaNome.Text);
+			dgvFuncionario.DataSource = dao.buscarFuncionario(txtConsultaNome.Text);
 		}
 	}
 }

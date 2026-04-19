@@ -470,7 +470,9 @@
 			Controls.Add(txtNome);
 			Controls.Add(label1);
 			Controls.Add(btnVoltar);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmCadastrarFornecedor";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

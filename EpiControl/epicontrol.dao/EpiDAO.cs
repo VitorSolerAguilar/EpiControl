@@ -151,16 +151,16 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable buscarEpiNome(string nomeEpi)
+		public DataTable buscarEpi(string termoBusca)
 		{
 			try
 			{
 				DataTable tabelaEpi = new DataTable();
 
-				string sql = "SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @nome";
+				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @termo OR e.codigo_interno LIKE @termo OR e.ca LIKE @termo OR e.marca LIKE @termo OR e.categoria LIKE @termo OR e.tamanho LIKE @termo OR f.nome LIKE @termo OR e.status LIKE @termo";
 
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@nome", "%" + nomeEpi + "%");
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
 				conexao.Open();
 

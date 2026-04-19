@@ -30,7 +30,7 @@ namespace EpiControl.epicontrol.views
 		{
 			FornecedorDAO dao = new FornecedorDAO();
 
-			dgvFornecedor.DataSource = dao.buscarFornecedorNome(txtConsultaNome.Text);
+			dgvFornecedor.DataSource = dao.buscarFornecedor(txtConsultaNome.Text);
 		}
 
 		private void dgvFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)

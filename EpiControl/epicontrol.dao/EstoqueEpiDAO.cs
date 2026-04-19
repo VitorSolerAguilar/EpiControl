@@ -200,5 +200,34 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
+
+		public DataTable buscarEstoque(string termoBusca)
+		{
+			try
+			{
+				DataTable tabelaEstoque = new DataTable();
+
+				string sql = "SELECT " + "  es.id_estoque, " + "  es.quantidade, " + "  es.localizacao, " + "  es.estoque_minimo, " + "  es.fk_epi AS id_epi, " + "  epi.nome AS epi, " + "  epi.codigo_interno, " + "  epi.ca " + "FROM tb_estoque_epi es " + "LEFT JOIN tb_epi epi ON epi.id_epi = es.fk_epi " + "WHERE " + "      epi.nome LIKE @termo " + "   OR epi.codigo_interno LIKE @termo " + "   OR epi.ca LIKE @termo " + "   OR es.localizacao LIKE @termo " + "   OR CAST(es.id_estoque AS CHAR) LIKE @termo " + "   OR CAST(es.quantidade AS CHAR) LIKE @termo " + "   OR CAST(es.estoque_minimo AS CHAR) LIKE @termo " + "   OR CAST(es.fk_epi AS CHAR) LIKE @termo";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaEstoque);
+
+				return tabelaEstoque;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
 	}
 }

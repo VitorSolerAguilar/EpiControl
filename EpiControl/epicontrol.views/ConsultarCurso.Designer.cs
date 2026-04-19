@@ -47,9 +47,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(223, 83);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 15;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// btnConsultar
 			// 
@@ -113,9 +113,11 @@
 			// 
 			// dgvTreinamento
 			// 
+			dgvTreinamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dgvTreinamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvTreinamento.Location = new Point(12, 109);
 			dgvTreinamento.Name = "dgvTreinamento";
+			dgvTreinamento.ReadOnly = true;
 			dgvTreinamento.Size = new Size(776, 335);
 			dgvTreinamento.TabIndex = 11;
 			dgvTreinamento.CellClick += dgvTreinamento_CellClick;
@@ -130,7 +132,9 @@
 			Controls.Add(txtConsultaNomeTreinamento);
 			Controls.Add(panel1);
 			Controls.Add(dgvTreinamento);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarCurso";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

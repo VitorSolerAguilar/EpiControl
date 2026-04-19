@@ -80,5 +80,35 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
+
+
+		public DataTable buscarEmprestimo(string termoBusca)
+		{
+			try
+			{
+				DataTable tabelaEmprestimo = new DataTable();
+
+				string sql = "SELECT " + "  e.id_emprestimo, " + "  e.quantidade, " + "  e.data_entrega, " + "  e.fk_funcionario AS id_funcionario, " + "  e.fk_epi AS id_epi, " + "  f.nome AS funcionario, " + "  epi.nome AS epi, " + "  epi.codigo_interno, " + "  epi.ca " + "FROM tb_emprestimo e " + "LEFT JOIN tb_funcionario f ON f.id_funcionario = e.fk_funcionario " + "LEFT JOIN tb_epi epi ON epi.id_epi = e.fk_epi " + "WHERE " + "      f.nome LIKE @termo " + "   OR epi.nome LIKE @termo " + "   OR epi.codigo_interno LIKE @termo " + "   OR epi.ca LIKE @termo " + "   OR CAST(e.id_emprestimo AS CHAR) LIKE @termo " + "   OR CAST(e.quantidade AS CHAR) LIKE @termo ";
+
+				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
+
+				conexao.Open();
+
+				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+				da.Fill(tabelaEmprestimo);
+
+				return tabelaEmprestimo;
+			}
+			catch
+			{
+				return null;
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+		}
 	}
 }

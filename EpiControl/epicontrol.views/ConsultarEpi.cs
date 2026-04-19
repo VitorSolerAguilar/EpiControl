@@ -31,7 +31,7 @@ namespace EpiControl.epicontrol.views
 		{
 			EpiDAO dao = new EpiDAO();
 
-			dgvEmprestimo.DataSource = dao.buscarEpiNome(txtConsultaNome.Text);
+			dgvEmprestimo.DataSource = dao.buscarEpi(txtConsultaEpi.Text);
 		}
 
 		private void dgvEpi_CellClick(object sender, DataGridViewCellEventArgs e)

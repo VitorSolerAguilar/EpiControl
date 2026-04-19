@@ -35,7 +35,7 @@
 			pictureBox1 = new PictureBox();
 			label = new Label();
 			btnConsultar = new Button();
-			txtConsultaNome = new TextBox();
+			txtConsultaEpi = new TextBox();
 			dgvEmprestimo = new DataGridView();
 			panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -90,9 +90,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(223, 77);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 20;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// btnConsultar
 			// 
@@ -104,18 +104,19 @@
 			btnConsultar.UseVisualStyleBackColor = true;
 			btnConsultar.Click += btnConsultar_Click;
 			// 
-			// txtConsultaNome
+			// txtConsultaEpi
 			// 
-			txtConsultaNome.Location = new Point(298, 74);
-			txtConsultaNome.Name = "txtConsultaNome";
-			txtConsultaNome.Size = new Size(226, 23);
-			txtConsultaNome.TabIndex = 18;
+			txtConsultaEpi.Location = new Point(298, 74);
+			txtConsultaEpi.Name = "txtConsultaEpi";
+			txtConsultaEpi.Size = new Size(226, 23);
+			txtConsultaEpi.TabIndex = 18;
 			// 
 			// dgvEmprestimo
 			// 
 			dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvEmprestimo.Location = new Point(12, 103);
 			dgvEmprestimo.Name = "dgvEmprestimo";
+			dgvEmprestimo.ReadOnly = true;
 			dgvEmprestimo.Size = new Size(776, 335);
 			dgvEmprestimo.TabIndex = 17;
 			dgvEmprestimo.CellClick += dgvEpi_CellClick;
@@ -127,10 +128,12 @@
 			ClientSize = new Size(800, 450);
 			Controls.Add(label);
 			Controls.Add(btnConsultar);
-			Controls.Add(txtConsultaNome);
+			Controls.Add(txtConsultaEpi);
 			Controls.Add(dgvEmprestimo);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarEpi";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
@@ -151,7 +154,7 @@
 		private PictureBox pictureBox1;
 		private Label label;
 		private Button btnConsultar;
-		private TextBox txtConsultaNome;
+		private TextBox txtConsultaEpi;
 		private DataGridView dgvEmprestimo;
 	}
 }

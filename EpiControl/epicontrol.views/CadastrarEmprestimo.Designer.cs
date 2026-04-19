@@ -219,10 +219,12 @@
 			Controls.Add(cbxFuncionario);
 			Controls.Add(label3);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmCadastrarEmprestimo";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "CadastrarEmprestimo";
+			Text = "EPICONTROL";
 			Load += CadastrarEmprestimo_Load;
 			((System.ComponentModel.ISupportInitialize)nudQuantidade).EndInit();
 			panel1.ResumeLayout(false);

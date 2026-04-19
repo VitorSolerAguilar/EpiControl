@@ -84,9 +84,11 @@
 			// 
 			// dgvFuncionarioCurso
 			// 
+			dgvFuncionarioCurso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dgvFuncionarioCurso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvFuncionarioCurso.Location = new Point(12, 84);
 			dgvFuncionarioCurso.Name = "dgvFuncionarioCurso";
+			dgvFuncionarioCurso.ReadOnly = true;
 			dgvFuncionarioCurso.Size = new Size(776, 360);
 			dgvFuncionarioCurso.TabIndex = 11;
 			dgvFuncionarioCurso.CellClick += dgvFuncionarioCurso_CellClick;
@@ -98,7 +100,9 @@
 			ClientSize = new Size(800, 450);
 			Controls.Add(panel1);
 			Controls.Add(dgvFuncionarioCurso);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarFuncionarioCurso";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

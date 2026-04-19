@@ -482,7 +482,9 @@
 			Controls.Add(label2);
 			Controls.Add(txtNome);
 			Controls.Add(label1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmEditarFornecedor";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

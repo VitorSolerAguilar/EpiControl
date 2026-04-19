@@ -37,5 +37,10 @@ namespace EpiControl.epicontrol.views
 			frm.Show();
 		}
 
+		private void btnConsultar_Click(object sender, EventArgs e)
+		{
+			EstoqueEpiDAO dao = new EstoqueEpiDAO();
+			dgvEstoque.DataSource = dao.buscarEstoque(txtConsultaEstoque.Text);
+		}
 	}
 }

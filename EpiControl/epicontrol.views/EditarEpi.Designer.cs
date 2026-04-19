@@ -370,7 +370,9 @@
 			Controls.Add(txtNome);
 			Controls.Add(label3);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmEditarEpi";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

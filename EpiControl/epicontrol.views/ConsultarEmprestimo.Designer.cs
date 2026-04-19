@@ -47,9 +47,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(223, 83);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 25;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// btnConsultar
 			// 
@@ -59,6 +59,7 @@
 			btnConsultar.TabIndex = 24;
 			btnConsultar.Text = "Consultar";
 			btnConsultar.UseVisualStyleBackColor = true;
+			btnConsultar.Click += btnConsultar_Click;
 			// 
 			// txtConsultaEmprestimo
 			// 
@@ -69,9 +70,11 @@
 			// 
 			// dgvEmprestimo
 			// 
+			dgvEmprestimo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvEmprestimo.Location = new Point(12, 109);
 			dgvEmprestimo.Name = "dgvEmprestimo";
+			dgvEmprestimo.ReadOnly = true;
 			dgvEmprestimo.Size = new Size(776, 335);
 			dgvEmprestimo.TabIndex = 22;
 			dgvEmprestimo.CellClick += dgvEmprestimo_CellClick;
@@ -129,7 +132,9 @@
 			Controls.Add(txtConsultaEmprestimo);
 			Controls.Add(dgvEmprestimo);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarEmprestimo";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

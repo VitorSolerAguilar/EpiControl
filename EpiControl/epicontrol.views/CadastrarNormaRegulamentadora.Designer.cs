@@ -217,7 +217,9 @@
 			Controls.Add(label4);
 			Controls.Add(panel1);
 			Controls.Add(label3);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmCadastrarNormaRegulamentadora";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

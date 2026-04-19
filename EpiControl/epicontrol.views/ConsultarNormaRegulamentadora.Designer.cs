@@ -47,9 +47,9 @@
 			label.AutoSize = true;
 			label.Location = new Point(223, 83);
 			label.Name = "label";
-			label.Size = new Size(43, 15);
+			label.Size = new Size(56, 15);
 			label.TabIndex = 15;
-			label.Text = "Nome:";
+			label.Text = "Pesquisa:";
 			// 
 			// btnConsultar
 			// 
@@ -113,9 +113,11 @@
 			// 
 			// dgvNormaRegulamentadora
 			// 
+			dgvNormaRegulamentadora.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dgvNormaRegulamentadora.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvNormaRegulamentadora.Location = new Point(12, 109);
 			dgvNormaRegulamentadora.Name = "dgvNormaRegulamentadora";
+			dgvNormaRegulamentadora.ReadOnly = true;
 			dgvNormaRegulamentadora.Size = new Size(776, 335);
 			dgvNormaRegulamentadora.TabIndex = 11;
 			dgvNormaRegulamentadora.CellClick += dgvNormaRegulamentadora_CellClick;
@@ -130,7 +132,9 @@
 			Controls.Add(txtConsultaNorma);
 			Controls.Add(panel1);
 			Controls.Add(dgvNormaRegulamentadora);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmConsultarNormaRegulamentadora";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";

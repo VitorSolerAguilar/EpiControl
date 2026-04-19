@@ -259,40 +259,16 @@ namespace EpiControl.epicontrol.dao
 			return lista;
 		}
 
-		public DataTable buscarFornecedorNome(string nomeFornecedor)
+		public DataTable buscarFornecedor(string termoBusca)
 		{
 			try
 			{
 				DataTable tabelaFornecedor = new DataTable();
 
-				string sql = "SELECT " +
-					"f.id_fornecedor, " +
-					"f.nome, " +
-					"f.cnpj, " +
-					"f.observacoes, " +
-
-					"c.id_contato AS id_contato, " +
-					"c.telefone, " +
-					"c.celular, " +
-					"c.email, " +
-					"c.email_corporativo, " +
-
-					"e.id_endereco AS id_endereco, " +
-					"e.cep, " +
-					"e.rua, " +
-					"e.numero, " +
-					"e.complemento, " +
-					"e.logradouro, " +
-					"e.cidade, " +
-					"e.uf " +
-
-					"FROM tb_fornecedor f " +
-					"LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor " +
-					"LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor " +
-					"WHERE f.nome LIKE @nome";
+				string sql = "SELECT " + "f.id_fornecedor, " + "f.nome, " + "f.cnpj, " + "f.observacoes, " + "c.id_contato AS id_contato, " + "c.telefone, " + "c.celular, " + "c.email, " + "c.email_corporativo, " + "e.id_endereco AS id_endereco, " + "e.cep, " + "e.rua, " + "e.numero, " + "e.complemento, " + "e.logradouro, " + "e.cidade, " + "e.uf " + "FROM tb_fornecedor f " + "LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor " + "LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor " + "WHERE f.nome LIKE @termo " + "   OR f.cnpj LIKE @termo " + "   OR f.observacoes LIKE @termo " + "   OR c.telefone LIKE @termo " + "   OR c.celular LIKE @termo " + "   OR c.email LIKE @termo " + "   OR c.email_corporativo LIKE @termo " + "   OR e.cep LIKE @termo " + "   OR e.rua LIKE @termo " + "   OR e.numero LIKE @termo " + "   OR e.complemento LIKE @termo " + "   OR e.logradouro LIKE @termo " + "   OR e.cidade LIKE @termo " + "   OR e.uf LIKE @termo";
 
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@nome", "%" + nomeFornecedor + "%");
+				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
 				conexao.Open();
 

@@ -216,7 +216,9 @@
 			Controls.Add(rtbLocalizacao);
 			Controls.Add(txtQuantidade);
 			Controls.Add(panel1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Icon = (Icon)resources.GetObject("$this.Icon");
+			MaximizeBox = false;
 			Name = "frmEditarEstoqueEpi";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "EPICONTROL";
