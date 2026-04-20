@@ -153,6 +153,14 @@ namespace EpiControl
 			this.Hide();
 			consultarFuncionarioCurso.Show();
 		}
+		private void btnGerarFichaEpi_Click(object sender, EventArgs e)
+		{
+			frmGerarFichaEpi gerarFichaEpi = new frmGerarFichaEpi();
+
+			gerarFichaEpi.FormClosed += (s, args) => this.Show();
+			this.Hide();
+			gerarFichaEpi.Show();
+		}
 
 
 		bool menuExpand = false;
@@ -208,7 +216,7 @@ namespace EpiControl
 			{
 				flpContainerEpi.Height += STEP_EXPAND;
 
-				if (flpContainerEpi.Height >= 153)
+				if (flpContainerEpi.Height >= 200)
 				{
 					transicaoMenuEpi.Stop();
 					menuExpand = true;
@@ -349,6 +357,5 @@ namespace EpiControl
 			transicaoMenuTreinamentos.Start();
 		}
 
-		
 	}
 }

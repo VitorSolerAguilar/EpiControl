@@ -74,6 +74,9 @@
     <Compile Update="epicontrol.views\EditarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="epicontrol.views\GerarFichaEpi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="epicontrol.views\Home.cs">
       <SubType>Form</SubType>
     </Compile>

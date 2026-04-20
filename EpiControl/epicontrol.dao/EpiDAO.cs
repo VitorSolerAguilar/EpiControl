@@ -1,4 +1,5 @@
 ﻿using EpiControl.epicontrol.conexao;
+using EpiControl.epicontrol.dto;
 using EpiControl.epicontrol.model;
 using MySql.Data.MySqlClient;
 using System;
@@ -229,6 +230,74 @@ namespace EpiControl.epicontrol.dao
 			{
 				conexao.Close();
 			}
+		}
+
+		public (Funcionario funcionario, List<dto.FichaEpiDTO> itens) ObterFichaEpiFuncionario(int idFuncionario)
+		{
+			Funcionario funcionario = null;
+			List<dto.FichaEpiDTO> itens = new List<dto.FichaEpiDTO>();
+
+			try
+			{
+				string sql = @"SELECT f.id_funcionario, f.nome, f.data_nascimento, f.estado_civil, f.nacionalidade, f.genero, f.nome_mae, f.nome_pai, f.pis, f.rg, f.cpf, f.matricula, f.cargo, f.status, emp.id_emprestimo, emp.data_entrega, emp.quantidade, epi.id_epi, epi.nome AS descricao_epi, epi.ca AS ca, epi.codigo_interno AS codigo_interno FROM tb_funcionario f INNER JOIN tb_emprestimo emp ON emp.fk_funcionario = f.id_funcionario INNER JOIN tb_epi epi ON epi.id_epi = emp.fk_epi WHERE f.id_funcionario = @idFuncionario ORDER BY emp.data_entrega;";
+
+				MySqlCommand cmd = new MySqlCommand(sql, conexao);
+				cmd.Parameters.AddWithValue("@idFuncionario", idFuncionario);
+
+				conexao.Open();
+
+				using (var reader = cmd.ExecuteReader())
+				{
+					while (reader.Read())
+					{
+						if (funcionario == null)
+						{
+							funcionario = new Funcionario
+							{
+								id = reader.GetInt32("id_funcionario"),
+								nome = reader.GetString("nome"),
+								dataNascimento = reader.GetDateTime("data_nascimento"),
+								estadoCivil = reader["estado_civil"] != DBNull.Value ? reader["estado_civil"].ToString() : null,
+								nacionalidade = reader["nacionalidade"] != DBNull.Value ? reader["nacionalidade"].ToString() : null,
+								genero = reader["genero"] != DBNull.Value ? reader["genero"].ToString() : null,
+								nomeMae = reader["nome_mae"] != DBNull.Value ? reader["nome_mae"].ToString() : null,
+								nomePai = reader["nome_pai"] != DBNull.Value ? reader["nome_pai"].ToString() : null,
+								pisPasep = reader["pis"] != DBNull.Value ? reader["pis"].ToString() : null,
+								rg = reader["rg"] != DBNull.Value ? reader["rg"].ToString() : null,
+								cpf = reader["cpf"] != DBNull.Value ? reader["cpf"].ToString() : null,
+								matricula = reader["matricula"] != DBNull.Value ? reader["matricula"].ToString() : null,
+								cargo = reader["cargo"] != DBNull.Value ? reader["cargo"].ToString() : null,
+								status = reader["status"] != DBNull.Value ? reader["status"].ToString() : null
+							};
+						}
+
+						var item = new dto.FichaEpiDTO
+						{
+							idEmprestimo = reader.GetInt32("id_emprestimo"),
+							idFuncionario = reader.GetInt32("id_funcionario"),
+							idEpi = reader.GetInt32("id_epi"),
+							descricaoEpi = reader.GetString("descricao_epi"),
+							ca = reader["ca"] != DBNull.Value ? reader["ca"].ToString() : "",
+							codigoInterno = reader["codigo_interno"] != DBNull.Value ? reader["codigo_interno"].ToString() : "",
+							dataEntrega = reader.GetDateTime("data_entrega"),
+							quantidade = reader.GetInt32("quantidade")
+						};
+
+						itens.Add(item);
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Erro ao obter ficha de EPI: " + ex.Message);
+			}
+			finally
+			{
+				if (conexao.State == ConnectionState.Open)
+					conexao.Close();
+			}
+
+			return (funcionario, itens);
 		}
 	}
 }
