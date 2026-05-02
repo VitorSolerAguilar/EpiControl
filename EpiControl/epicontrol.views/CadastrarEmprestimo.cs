@@ -12,55 +12,60 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-	public partial class frmCadastrarEmprestimo : Form
-	{
-		public frmCadastrarEmprestimo()
-		{
-			InitializeComponent();
-		}
+    public partial class frmCadastrarEmprestimo : Form
+    {
+        public frmCadastrarEmprestimo()
+        {
+            InitializeComponent();
+        }
 
-		private void CadastrarEmprestimo_Load(object sender, EventArgs e)
-		{
-			FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-			EpiDAO epiDAO = new EpiDAO();
+        private void CadastrarEmprestimo_Load(object sender, EventArgs e)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            EpiDAO epiDAO = new EpiDAO();
 
-			cbxEpi.DataSource = epiDAO.listarNomesEpi();
-			cbxEpi.DisplayMember = "nome";
-			cbxEpi.ValueMember = "id";
+            cbxEpi.DataSource = epiDAO.listarNomesEpi();
+            cbxEpi.DisplayMember = "nome";
+            cbxEpi.ValueMember = "id";
 
-			cbxFuncionario.DataSource = funcionarioDAO.listarNomesFuncionarios();
-			cbxFuncionario.DisplayMember = "nome";
-			cbxFuncionario.ValueMember = "id";
-		}
+            cbxFuncionario.DataSource = funcionarioDAO.listarNomesFuncionarios();
+            cbxFuncionario.DisplayMember = "nome";
+            cbxFuncionario.ValueMember = "id";
+        }
 
-		private void btnSalvar_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				Emprestimo emprestimo = new Emprestimo();
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Emprestimo emprestimo = new Emprestimo();
 
-				emprestimo.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
-				emprestimo.epiId = Convert.ToInt32(cbxEpi.SelectedValue);
+                emprestimo.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
+                emprestimo.epiId = Convert.ToInt32(cbxEpi.SelectedValue);
 
-				emprestimo.dataEntrega = Convert.ToDateTime(mtbDataEmprestimo.Text);
-				emprestimo.quantidade = (int)nudQuantidade.Value;
-				emprestimo.observacoes = rtbObservacoes.Text;
+                emprestimo.dataEntrega = Convert.ToDateTime(mtbDataEmprestimo.Text);
+                emprestimo.quantidade = (int)nudQuantidade.Value;
+                emprestimo.observacoes = rtbObservacoes.Text;
 
-				EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
-				emprestimoDAO.cadastrarEmprestimo(emprestimo);
+                EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
+                emprestimoDAO.cadastrarEmprestimo(emprestimo);
 
-				limparCampos();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Erro ao cadastrar emprestimo: " + ex);
-			}
-		}
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar emprestimo: " + ex);
+            }
+        }
 
-		public void limparCampos()
-		{
-			mtbDataEmprestimo.Clear();
-			rtbObservacoes.Clear();
-		}
-	}
+        public void limparCampos()
+        {
+            mtbDataEmprestimo.Clear();
+            rtbObservacoes.Clear();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
 }
