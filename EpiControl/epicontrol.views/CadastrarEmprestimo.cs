@@ -62,6 +62,5 @@ namespace EpiControl.epicontrol.views
 			mtbDataEmprestimo.Clear();
 			rtbObservacoes.Clear();
 		}
-
 	}
 }
