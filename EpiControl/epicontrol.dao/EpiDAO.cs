@@ -299,5 +299,70 @@ namespace EpiControl.epicontrol.dao
 
 			return (funcionario, itens);
 		}
-	}
+
+        public List<RelatorioEpiDTO> ListarUsoEpi(DateTime? dataInicio = null, DateTime? dataFim = null)
+        {
+            var lista = new List<RelatorioEpiDTO>();
+
+            try
+            {
+                string sql = @" SELECT e.id_epi, e.nome AS nome_epi, e.codigo_interno, e.ca, IFNULL(SUM(emp.quantidade), 0) AS total_quantidade, COUNT(emp.id_emprestimo) AS total_emprestimos, MIN(emp.data_entrega) AS primeira_entrega, MAX(emp.data_entrega) AS ultima_entrega FROM tb_emprestimo emp INNER JOIN tb_epi e ON e.id_epi = emp.fk_epi WHERE 1 = 1 ";
+
+                if (dataInicio.HasValue)
+                {
+                    sql += " AND emp.data_entrega >= @dataInicio";
+                }
+                if (dataFim.HasValue)
+                {
+                    sql += " AND emp.data_entrega <= @dataFim";
+                }
+
+                sql += @"
+                    GROUP BY e.id_epi, e.nome, e.codigo_interno, e.ca ORDER BY total_quantidade DESC;
+                ";
+
+                using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
+                {
+                    if (dataInicio.HasValue)
+                        cmd.Parameters.AddWithValue("@dataInicio", dataInicio.Value.Date);
+
+                    if (dataFim.HasValue)
+                        cmd.Parameters.AddWithValue("@dataFim", dataFim.Value.Date);
+
+                    conexao.Open();
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var dto = new RelatorioEpiDTO
+                            {
+                                idEpi = reader.GetInt32("id_epi"),
+                                nomeEpi = reader.GetString("nome_epi"),
+                                codigoInterno = reader["codigo_interno"] != DBNull.Value ? reader["codigo_interno"].ToString() : "",
+                                ca = reader["ca"] != DBNull.Value ? reader["ca"].ToString() : "",
+                                totalQuantidade = reader["total_quantidade"] != DBNull.Value ? Convert.ToInt32(reader["total_quantidade"]) : 0,
+                                totalEmprestimos = reader["total_emprestimos"] != DBNull.Value ? Convert.ToInt32(reader["total_emprestimos"]) : 0,
+                                primeiraEntrega = reader["primeira_entrega"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["primeira_entrega"]) : null,
+                                ultimaEntrega = reader["ultima_entrega"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["ultima_entrega"]) : null
+                            };
+
+                            lista.Add(dto);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao gerar relatório de uso de EPI: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+
+            return lista;
+        }
+    }
 }

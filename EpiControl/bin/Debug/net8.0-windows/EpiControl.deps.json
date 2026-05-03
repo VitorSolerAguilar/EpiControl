@@ -12,6 +12,7 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "10.0.1",
           "Microsoft.Extensions.Configuration.Json": "10.0.1",
           "MySql.Data": "9.5.0",
+          "WinForms.DataVisualization": "1.10.0",
           "itext7": "9.6.0",
           "itext7.bouncy-castle-adapter": "9.6.0"
         },
@@ -395,6 +396,18 @@
           }
         }
       },
+      "WinForms.DataVisualization/1.10.0": {
+        "runtime": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
+          }
+        }
+      },
       "ZstdSharp.Port/0.8.6": {
         "runtime": {
           "lib/net8.0/ZstdSharp.dll": {
@@ -613,6 +626,13 @@
       "sha512": "sha512-zy8ey7I16G9neZ6uzxrnYwS7pidElzN8XarsBjGu7lE2m7afTKMEe18KbY3ZSmh/z/bR40oxjd6hlUcmOEaMHw==",
       "path": "system.text.json/10.0.2",
       "hashPath": "system.text.json.10.0.2.nupkg.sha512"
+    },
+    "WinForms.DataVisualization/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
+      "path": "winforms.datavisualization/1.10.0",
+      "hashPath": "winforms.datavisualization.1.10.0.nupkg.sha512"
     },
     "ZstdSharp.Port/0.8.6": {
       "type": "package",

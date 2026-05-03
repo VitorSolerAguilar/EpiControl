@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fJPL3cG1Wn8=",
+  "dgSpecHash": "Fi5Kz32w2lE=",
   "success": true,
   "projectFilePath": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
   "expectedPackageFiles": [
@@ -99,6 +99,7 @@
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\zstdsharp.port\\0.8.6\\zstdsharp.port.0.8.6.nupkg.sha512"
   ],
   "logs": []
