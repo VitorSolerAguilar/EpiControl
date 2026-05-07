@@ -360,7 +360,7 @@
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(507, 490);
+            txtNumero.Location = new Point(507, 478);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(47, 23);
             txtNumero.TabIndex = 228;
@@ -368,7 +368,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(477, 493);
+            label10.Location = new Point(477, 481);
             label10.Name = "label10";
             label10.Size = new Size(24, 15);
             label10.TabIndex = 227;

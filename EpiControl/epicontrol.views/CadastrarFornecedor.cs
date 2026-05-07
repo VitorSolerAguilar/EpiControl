@@ -74,6 +74,8 @@ namespace EpiControl.Views
                 dao.cadastrarFornecedor(fornecedor, endereco, contato);
 
                 MessageBox.Show("Fornecedor cadastrado com sucesso!");
+
+                limparCampos();
             }
             catch (Exception ex)
             {
@@ -84,6 +86,24 @@ namespace EpiControl.Views
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void limparCampos()
+        {
+            txtNome.Clear();
+            mtbCnpj.Clear();
+            rtbObservacao.Clear();
+            mtbTelefone.Clear();
+            txtEmailCorporativo.Clear();
+            txtEmailPessoal.Clear();
+            mtbCelular.Clear();
+            mtbCep.Clear();
+            txtCidade.Clear();
+            txtUf.Clear();
+            txtRua.Clear();
+            txtNumero.Clear();
+            txtLogradouro.Clear();
+            rtbComplemento.Clear();
         }
     }
 }

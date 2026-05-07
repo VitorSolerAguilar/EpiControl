@@ -39,7 +39,9 @@ namespace EpiControl.views
 				NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
 				dao.cadastrarNormaRegulamentadora(normaRegulamentadora);
 
-				limparCampos();
+                MessageBox.Show("Norma regulamentadora cadastrada com sucesso!");
+
+                limparCampos();
 			}catch(Exception ex)
 			{
 				MessageBox.Show("Erro ao cadastrar nr: " + ex.Message);

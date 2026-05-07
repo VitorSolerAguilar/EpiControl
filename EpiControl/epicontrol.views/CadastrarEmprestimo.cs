@@ -49,6 +49,8 @@ namespace EpiControl.epicontrol.views
                 EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
                 emprestimoDAO.cadastrarEmprestimo(emprestimo);
 
+                MessageBox.Show("Emprestimo cadastrado com sucesso!");
+
                 limparCampos();
             }
             catch (Exception ex)

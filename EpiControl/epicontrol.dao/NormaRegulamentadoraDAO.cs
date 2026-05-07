@@ -44,7 +44,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar norma: " + ex.Message);
+				MessageBox.Show("Erro ao cadastrar norma: " + ex.Message);
 			}
 			finally
 			{
@@ -70,7 +70,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao excluir norma: " + ex.Message);
+				MessageBox.Show("Erro ao excluir norma: " + ex.Message);
 			}
 			finally
 			{

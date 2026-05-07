@@ -72,7 +72,7 @@ namespace EpiControl.epicontrol.dao
 			}catch(Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar fornecedor: " + ex.Message);
+				MessageBox.Show("Erro ao cadastrar fornecedor: " + ex.Message);
 			}
 			finally
 			{

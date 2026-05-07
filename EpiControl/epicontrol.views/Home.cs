@@ -279,8 +279,8 @@ namespace EpiControl
             }
             else
             {
-                flpEmprestimo.Height -= 13;
-                if (flpEmprestimo.Height <= 51)
+                flpEmprestimo.Height -= 10;
+                if (flpEmprestimo.Height <= 54)
                 {
                     transicaoMenuEmprestimo.Stop();
                     menuExpand = false;
@@ -294,7 +294,7 @@ namespace EpiControl
             {
                 flpEstoque.Height += STEP_EXPAND;
 
-                if (flpEstoque.Height >= 210)
+                if (flpEstoque.Height >= 249)
                 {
                     transicaoMenuEstoque.Stop();
                     menuExpand = true;

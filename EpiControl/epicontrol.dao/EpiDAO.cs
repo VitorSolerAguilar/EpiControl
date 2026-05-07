@@ -51,7 +51,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar epi: " + ex.Message);
+				MessageBox.Show("Erro ao cadastrar epi: " + ex.Message);
 			}
 			finally
 			{

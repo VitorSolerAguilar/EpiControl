@@ -22,7 +22,7 @@ namespace EpiControl.epicontrol.dao
 		{
 			conexao.Open();
 			MySqlTransaction transaction = conexao.BeginTransaction();
-
+				
 			try
 			{
 				string sql = @"INSERT INTO tb_movimentacao_estoque (tipo_movimentacao, quantidade, data_movimentacao, observacao, fk_estoque, fk_funcionario) VALUES (@tipo_movimentacao, @quantidade, @data_movimentacao, @observacao, @fk_estoque, @fk_funcionario)";
@@ -43,7 +43,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar movimentação de estoque: " + ex.Message);
+				MessageBox.Show("Erro ao cadastrar movimentação de estoque: " + ex.Message);
 			}
 			finally
 			{

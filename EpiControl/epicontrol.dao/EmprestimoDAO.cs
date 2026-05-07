@@ -19,40 +19,61 @@ namespace EpiControl.epicontrol.dao
 			this.conexao = new ConnectionFactory().getconnetion();
 		}
 
-		public void cadastrarEmprestimo(Emprestimo emprestimo)
-		{
-			conexao.Open();
-			MySqlTransaction transaction = conexao.BeginTransaction();
+        public void cadastrarEmprestimo(Emprestimo emprestimo)
+        {
+            conexao.Open();
+            MySqlTransaction transaction = conexao.BeginTransaction();
 
-			try
-			{
-				string sqlEmprestimo = @"INSERT INTO tb_emprestimo (quantidade, data_entrega, observacoes, fk_funcionario, fk_epi)
-				VALUES (@quantidade, @dataEntrega, @observacoes, @fk_funcionario, @fk_epi)";
+            try
+            {
+                string sqlVerifica = @"SELECT quantidade FROM tb_estoque_epi WHERE fk_epi = @fk_epi";
 
-				MySqlCommand cmdEmprestimo = new MySqlCommand(sqlEmprestimo, conexao, transaction);
+                MySqlCommand cmdVerifica = new MySqlCommand(sqlVerifica, conexao, transaction);
+                cmdVerifica.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
 
-				cmdEmprestimo.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
-				cmdEmprestimo.Parameters.AddWithValue("@dataEntrega", emprestimo.dataEntrega);
-				cmdEmprestimo.Parameters.AddWithValue("@observacoes", emprestimo.observacoes);
-				cmdEmprestimo.Parameters.AddWithValue("@fk_funcionario", emprestimo.funcionarioId);
-				cmdEmprestimo.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
+                object resultado = cmdVerifica.ExecuteScalar();
 
-				cmdEmprestimo.ExecuteNonQuery();
+                if (resultado == null)
+                    MessageBox.Show("Nenhum estoque cadastrado para este EPI.");
 
-				transaction.Commit();
-			}
-			catch (Exception ex)
-			{
-				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar empréstimo de EPI: " + ex.Message);
-			}
-			finally
-			{
-				conexao.Close();
-			}
-		}
+                int quantidadeAtual = Convert.ToInt32(resultado);
 
-		public DataTable listarEmprestimo()
+                if (quantidadeAtual < emprestimo.quantidade)
+                    MessageBox.Show($"Estoque insuficiente. Disponível: {quantidadeAtual}, " + $"Solicitado: {emprestimo.quantidade}.");
+
+                string sqlEmprestimo = @" INSERT INTO tb_emprestimo (quantidade, data_entrega, observacoes, fk_funcionario, fk_epi) VALUES (@quantidade, @dataEntrega, @observacoes, @fk_funcionario, @fk_epi)";
+
+                MySqlCommand cmdEmprestimo = new MySqlCommand(sqlEmprestimo, conexao, transaction);
+                cmdEmprestimo.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
+                cmdEmprestimo.Parameters.AddWithValue("@dataEntrega", emprestimo.dataEntrega);
+                cmdEmprestimo.Parameters.AddWithValue("@observacoes", emprestimo.observacoes);
+                cmdEmprestimo.Parameters.AddWithValue("@fk_funcionario", emprestimo.funcionarioId);
+                cmdEmprestimo.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
+
+                cmdEmprestimo.ExecuteNonQuery();
+
+                string sqlEstoque = @"UPDATE tb_estoque_epi SET quantidade = quantidade - @quantidade WHERE fk_epi = @fk_epi";
+
+                MySqlCommand cmdEstoque = new MySqlCommand(sqlEstoque, conexao, transaction);
+                cmdEstoque.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
+                cmdEstoque.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
+
+                cmdEstoque.ExecuteNonQuery();
+
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                MessageBox.Show("Erro ao cadastrar empréstimo de EPI: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public DataTable listarEmprestimo()
 		{
 			try
 			{
@@ -80,7 +101,6 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
-
 
 		public DataTable buscarEmprestimo(string termoBusca)
 		{

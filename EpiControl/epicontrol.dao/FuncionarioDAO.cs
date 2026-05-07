@@ -85,7 +85,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao cadastrar funcionario: " + ex.Message);
+				MessageBox.Show("Erro ao cadastrar funcionario: " + ex.Message);
 			}
 			finally
 			{
@@ -123,7 +123,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				throw new Exception("Erro ao excluir funcionario: " + ex.Message);
+				MessageBox.Show("Erro ao excluir funcionario: " + ex.Message);
 			}
 			finally
 			{
