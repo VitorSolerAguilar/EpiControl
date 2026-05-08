@@ -108,11 +108,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(57, 111);
+            label3.Location = new Point(53, 107);
             label3.Name = "label3";
-            label3.Size = new Size(73, 15);
+            label3.Size = new Size(78, 15);
             label3.TabIndex = 8;
-            label3.Text = "Funcionário:";
+            label3.Text = "Funcionário *";
             // 
             // btnVoltar
             // 

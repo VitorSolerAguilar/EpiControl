@@ -89,9 +89,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(62, 118);
             label1.Name = "label1";
-            label1.Size = new Size(45, 15);
+            label1.Size = new Size(48, 15);
             label1.TabIndex = 34;
-            label1.Text = "Nome*";
+            label1.Text = "Nome *";
             // 
             // txtNome
             // 
@@ -105,18 +105,18 @@
             label2.AutoSize = true;
             label2.Location = new Point(62, 89);
             label2.Name = "label2";
-            label2.Size = new Size(39, 15);
+            label2.Size = new Size(42, 15);
             label2.TabIndex = 36;
-            label2.Text = "CNPJ*";
+            label2.Text = "CNPJ *";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(62, 157);
             label3.Name = "label3";
-            label3.Size = new Size(79, 15);
+            label3.Size = new Size(74, 15);
             label3.TabIndex = 38;
-            label3.Text = "Observações*";
+            label3.Text = "Observações";
             // 
             // rtbObservacao
             // 
@@ -151,18 +151,18 @@
             label6.AutoSize = true;
             label6.Location = new Point(62, 265);
             label6.Name = "label6";
-            label6.Size = new Size(56, 15);
+            label6.Size = new Size(59, 15);
             label6.TabIndex = 42;
-            label6.Text = "Telefone*";
+            label6.Text = "Telefone *";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(62, 294);
             label7.Name = "label7";
-            label7.Size = new Size(49, 15);
+            label7.Size = new Size(44, 15);
             label7.TabIndex = 44;
-            label7.Text = "Celular*";
+            label7.Text = "Celular";
             // 
             // txtEmailPessoal
             // 
@@ -246,9 +246,9 @@
             lblBairro.AutoSize = true;
             lblBairro.Location = new Point(62, 514);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(72, 15);
+            lblBairro.Size = new Size(69, 15);
             lblBairro.TabIndex = 242;
-            lblBairro.Text = "Logradouro:";
+            lblBairro.Text = "Logradouro";
             // 
             // txtLogradouro
             // 
@@ -280,18 +280,18 @@
             label32.AutoSize = true;
             label32.Location = new Point(62, 547);
             label32.Name = "label32";
-            label32.Size = new Size(87, 15);
+            label32.Size = new Size(84, 15);
             label32.TabIndex = 238;
-            label32.Text = "Complemento:";
+            label32.Text = "Complemento";
             // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Location = new Point(394, 509);
             label31.Name = "label31";
-            label31.Size = new Size(33, 15);
+            label31.Size = new Size(30, 15);
             label31.TabIndex = 237;
-            label31.Text = "Tipo:";
+            label31.Text = "Tipo";
             // 
             // cbxTipo
             // 
@@ -314,9 +314,9 @@
             label27.AutoSize = true;
             label27.Location = new Point(61, 456);
             label27.Name = "label27";
-            label27.Size = new Size(47, 15);
+            label27.Size = new Size(44, 15);
             label27.TabIndex = 234;
-            label27.Text = "Cidade:";
+            label27.Text = "Cidade";
             // 
             // label26
             // 
@@ -340,9 +340,9 @@
             label21.AutoSize = true;
             label21.Location = new Point(338, 451);
             label21.Name = "label21";
-            label21.Size = new Size(24, 15);
+            label21.Size = new Size(21, 15);
             label21.TabIndex = 231;
-            label21.Text = "UF:";
+            label21.Text = "UF";
             // 
             // label20
             // 
@@ -373,18 +373,18 @@
             label10.AutoSize = true;
             label10.Location = new Point(477, 481);
             label10.Name = "label10";
-            label10.Size = new Size(24, 15);
+            label10.Size = new Size(21, 15);
             label10.TabIndex = 227;
-            label10.Text = "N°:";
+            label10.Text = "N°";
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Location = new Point(61, 427);
             label11.Name = "label11";
-            label11.Size = new Size(31, 15);
+            label11.Size = new Size(28, 15);
             label11.TabIndex = 225;
-            label11.Text = "CEP:";
+            label11.Text = "CEP";
             // 
             // mtbCnpj
             // 

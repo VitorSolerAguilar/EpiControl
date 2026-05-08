@@ -105,9 +105,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(56, 284);
             label7.Name = "label7";
-            label7.Size = new Size(105, 15);
+            label7.Size = new Size(108, 15);
             label7.TabIndex = 29;
-            label7.Text = "Link Oficial (MTE)*";
+            label7.Text = "Link Oficial (MTE) *";
             // 
             // label6
             // 
@@ -131,9 +131,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(56, 197);
             label5.Name = "label5";
-            label5.Size = new Size(63, 15);
+            label5.Size = new Size(66, 15);
             label5.TabIndex = 25;
-            label5.Text = "Descrição*";
+            label5.Text = "Descrição *";
             // 
             // txtTitulo
             // 
@@ -147,18 +147,18 @@
             label4.AutoSize = true;
             label4.Location = new Point(56, 142);
             label4.Name = "label4";
-            label4.Size = new Size(42, 15);
+            label4.Size = new Size(45, 15);
             label4.TabIndex = 23;
-            label4.Text = "Título*";
+            label4.Text = "Título *";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(56, 100);
             label3.Name = "label3";
-            label3.Size = new Size(91, 15);
+            label3.Size = new Size(94, 15);
             label3.TabIndex = 22;
-            label3.Text = "Numero da NR*";
+            label3.Text = "Numero da NR *";
             // 
             // mtbDataVigencia
             // 

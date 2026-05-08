@@ -107,27 +107,27 @@
             label8.AutoSize = true;
             label8.Location = new Point(59, 169);
             label8.Name = "label8";
-            label8.Size = new Size(28, 15);
+            label8.Size = new Size(31, 15);
             label8.TabIndex = 228;
-            label8.Text = "EPI*";
+            label8.Text = "EPI *";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(59, 127);
             label6.Name = "label6";
-            label6.Size = new Size(120, 15);
+            label6.Size = new Size(123, 15);
             label6.TabIndex = 227;
-            label6.Text = "Data do Empréstimo*";
+            label6.Text = "Data do Empréstimo *";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(59, 210);
             label4.Name = "label4";
-            label4.Size = new Size(74, 15);
+            label4.Size = new Size(77, 15);
             label4.TabIndex = 226;
-            label4.Text = "Quantidade*";
+            label4.Text = "Quantidade *";
             // 
             // cbxFuncionario
             // 
@@ -142,9 +142,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(59, 76);
             label3.Name = "label3";
-            label3.Size = new Size(128, 15);
+            label3.Size = new Size(131, 15);
             label3.TabIndex = 224;
-            label3.Text = "Nome do Funcionario*";
+            label3.Text = "Nome do Funcionario *";
             // 
             // panel1
             // 

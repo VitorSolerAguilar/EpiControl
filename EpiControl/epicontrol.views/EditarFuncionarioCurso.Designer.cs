@@ -130,36 +130,36 @@
             label4.AutoSize = true;
             label4.Location = new Point(61, 81);
             label4.Name = "label4";
-            label4.Size = new Size(73, 15);
+            label4.Size = new Size(78, 15);
             label4.TabIndex = 83;
-            label4.Text = "Funcionário:";
+            label4.Text = "Funcionário *";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(61, 222);
             label2.Name = "label2";
-            label2.Size = new Size(66, 15);
+            label2.Size = new Size(63, 15);
             label2.TabIndex = 82;
-            label2.Text = "Conclusão:";
+            label2.Text = "Conclusão";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(63, 173);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(44, 15);
             label1.TabIndex = 81;
-            label1.Text = "Inicio:";
+            label1.Text = "Inicio *";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(61, 126);
             label3.Name = "label3";
-            label3.Size = new Size(41, 15);
+            label3.Size = new Size(46, 15);
             label3.TabIndex = 80;
-            label3.Text = "Curso:";
+            label3.Text = "Curso *";
             // 
             // btnEditar
             // 

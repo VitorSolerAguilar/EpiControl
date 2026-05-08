@@ -73,9 +73,9 @@
             label6.AutoSize = true;
             label6.Location = new Point(59, 298);
             label6.Name = "label6";
-            label6.Size = new Size(54, 15);
+            label6.Size = new Size(51, 15);
             label6.TabIndex = 80;
-            label6.Text = "Validade:";
+            label6.Text = "Validade";
             // 
             // rtbDescricao
             // 
@@ -90,9 +90,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(59, 211);
             label5.Name = "label5";
-            label5.Size = new Size(61, 15);
+            label5.Size = new Size(58, 15);
             label5.TabIndex = 78;
-            label5.Text = "Descrição:";
+            label5.Text = "Descrição";
             // 
             // txtCargaHoraria
             // 
@@ -104,11 +104,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(59, 115);
+            label4.Location = new Point(57, 115);
             label4.Name = "label4";
-            label4.Size = new Size(83, 15);
+            label4.Size = new Size(80, 15);
             label4.TabIndex = 76;
-            label4.Text = "Carga Horária:";
+            label4.Text = "Carga Horária";
             // 
             // panel1
             // 
@@ -165,9 +165,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(59, 76);
             label3.Name = "label3";
-            label3.Size = new Size(43, 15);
+            label3.Size = new Size(40, 15);
             label3.TabIndex = 73;
-            label3.Text = "Nome:";
+            label3.Text = "Nome";
             // 
             // btnExcluir
             // 

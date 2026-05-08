@@ -166,9 +166,9 @@
             label27.AutoSize = true;
             label27.Location = new Point(57, 531);
             label27.Name = "label27";
-            label27.Size = new Size(47, 15);
+            label27.Size = new Size(44, 15);
             label27.TabIndex = 163;
-            label27.Text = "Cidade:";
+            label27.Text = "Cidade";
             // 
             // label26
             // 
@@ -224,27 +224,27 @@
             label23.AutoSize = true;
             label23.Location = new Point(54, 320);
             label23.Name = "label23";
-            label23.Size = new Size(64, 15);
+            label23.Size = new Size(61, 15);
             label23.TabIndex = 156;
-            label23.Text = "PIS/PASEP:";
+            label23.Text = "PIS/PASEP";
             // 
             // label21
             // 
             label21.AutoSize = true;
             label21.Location = new Point(334, 526);
             label21.Name = "label21";
-            label21.Size = new Size(24, 15);
+            label21.Size = new Size(21, 15);
             label21.TabIndex = 152;
-            label21.Text = "UF:";
+            label21.Text = "UF";
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Location = new Point(57, 559);
             label20.Name = "label20";
-            label20.Size = new Size(30, 15);
+            label20.Size = new Size(27, 15);
             label20.TabIndex = 150;
-            label20.Text = "Rua:";
+            label20.Text = "Rua";
             // 
             // txtRua
             // 
@@ -266,18 +266,18 @@
             label18.AutoSize = true;
             label18.Location = new Point(473, 555);
             label18.Name = "label18";
-            label18.Size = new Size(24, 15);
+            label18.Size = new Size(21, 15);
             label18.TabIndex = 146;
-            label18.Text = "N°:";
+            label18.Text = "N°";
             // 
             // label17
             // 
             label17.AutoSize = true;
             label17.Location = new Point(57, 502);
             label17.Name = "label17";
-            label17.Size = new Size(31, 15);
+            label17.Size = new Size(36, 15);
             label17.TabIndex = 144;
-            label17.Text = "CEP:";
+            label17.Text = "CEP *";
             // 
             // txtEmailCorporativo
             // 
@@ -292,9 +292,9 @@
             label16.AutoSize = true;
             label16.Location = new Point(657, 193);
             label16.Name = "label16";
-            label16.Size = new Size(103, 15);
+            label16.Size = new Size(100, 15);
             label16.TabIndex = 142;
-            label16.Text = "Email corporativo:";
+            label16.Text = "Email corporativo";
             // 
             // txtEmailPessoal
             // 
@@ -309,27 +309,27 @@
             label15.AutoSize = true;
             label15.Location = new Point(657, 169);
             label15.Name = "label15";
-            label15.Size = new Size(81, 15);
+            label15.Size = new Size(78, 15);
             label15.TabIndex = 140;
-            label15.Text = "Email pessoal:";
+            label15.Text = "Email pessoal";
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Location = new Point(656, 137);
             label14.Name = "label14";
-            label14.Size = new Size(47, 15);
+            label14.Size = new Size(44, 15);
             label14.TabIndex = 138;
-            label14.Text = "Celular:";
+            label14.Text = "Celular";
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Location = new Point(656, 106);
             label13.Name = "label13";
-            label13.Size = new Size(54, 15);
+            label13.Size = new Size(51, 15);
             label13.TabIndex = 136;
-            label13.Text = "Telefone:";
+            label13.Text = "Telefone";
             // 
             // txtNomePai
             // 
@@ -344,9 +344,9 @@
             label12.AutoSize = true;
             label12.Location = new Point(55, 287);
             label12.Name = "label12";
-            label12.Size = new Size(79, 15);
+            label12.Size = new Size(76, 15);
             label12.TabIndex = 134;
-            label12.Text = "Nome do pai:";
+            label12.Text = "Nome do pai";
             // 
             // txtNomeMae
             // 
@@ -361,9 +361,9 @@
             label11.AutoSize = true;
             label11.Location = new Point(55, 253);
             label11.Name = "label11";
-            label11.Size = new Size(85, 15);
+            label11.Size = new Size(90, 15);
             label11.TabIndex = 132;
-            label11.Text = "Nome da mãe:";
+            label11.Text = "Nome da mãe *";
             // 
             // txtNacionalidade
             // 
@@ -378,18 +378,18 @@
             label10.AutoSize = true;
             label10.Location = new Point(55, 190);
             label10.Name = "label10";
-            label10.Size = new Size(86, 15);
+            label10.Size = new Size(83, 15);
             label10.TabIndex = 130;
-            label10.Text = "Nacionalidade:";
+            label10.Text = "Nacionalidade";
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Location = new Point(55, 161);
             label9.Name = "label9";
-            label9.Size = new Size(71, 15);
+            label9.Size = new Size(68, 15);
             label9.TabIndex = 128;
-            label9.Text = "Estado Civil:";
+            label9.Text = "Estado Civil";
             // 
             // rdbOutro
             // 
@@ -429,18 +429,18 @@
             label8.AutoSize = true;
             label8.Location = new Point(55, 220);
             label8.Name = "label8";
-            label8.Size = new Size(48, 15);
+            label8.Size = new Size(45, 15);
             label8.TabIndex = 124;
-            label8.Text = "Gênero:";
+            label8.Text = "Gênero";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(55, 132);
             label7.Name = "label7";
-            label7.Size = new Size(117, 15);
+            label7.Size = new Size(122, 15);
             label7.TabIndex = 122;
-            label7.Text = "Data de Nascimento:";
+            label7.Text = "Data de Nascimento *";
             // 
             // rdbInativo
             // 
@@ -469,9 +469,9 @@
             label6.AutoSize = true;
             label6.Location = new Point(657, 584);
             label6.Name = "label6";
-            label6.Size = new Size(42, 15);
+            label6.Size = new Size(47, 15);
             label6.TabIndex = 119;
-            label6.Text = "Status:";
+            label6.Text = "Status *";
             // 
             // txtCargo
             // 
@@ -486,9 +486,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(656, 548);
             label5.Name = "label5";
-            label5.Size = new Size(42, 15);
+            label5.Size = new Size(47, 15);
             label5.TabIndex = 117;
-            label5.Text = "Cargo:";
+            label5.Text = "Cargo *";
             // 
             // txtMatricula
             // 
@@ -503,9 +503,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(656, 519);
             label4.Name = "label4";
-            label4.Size = new Size(60, 15);
+            label4.Size = new Size(65, 15);
             label4.TabIndex = 115;
-            label4.Text = "Matrícula:";
+            label4.Text = "Matrícula *";
             // 
             // txtNome
             // 
@@ -519,27 +519,27 @@
             label3.AutoSize = true;
             label3.Location = new Point(55, 98);
             label3.Name = "label3";
-            label3.Size = new Size(43, 15);
+            label3.Size = new Size(48, 15);
             label3.TabIndex = 113;
-            label3.Text = "Nome:";
+            label3.Text = "Nome *";
             // 
             // label29
             // 
             label29.AutoSize = true;
             label29.Location = new Point(55, 349);
             label29.Name = "label29";
-            label29.Size = new Size(25, 15);
+            label29.Size = new Size(22, 15);
             label29.TabIndex = 166;
-            label29.Text = "RG:";
+            label29.Text = "RG";
             // 
             // label30
             // 
             label30.AutoSize = true;
             label30.Location = new Point(54, 378);
             label30.Name = "label30";
-            label30.Size = new Size(31, 15);
+            label30.Size = new Size(36, 15);
             label30.TabIndex = 168;
-            label30.Text = "CPF:";
+            label30.Text = "CPF *";
             // 
             // cbxTipo
             // 
@@ -555,18 +555,18 @@
             label31.AutoSize = true;
             label31.Location = new Point(390, 584);
             label31.Name = "label31";
-            label31.Size = new Size(33, 15);
+            label31.Size = new Size(30, 15);
             label31.TabIndex = 171;
-            label31.Text = "Tipo:";
+            label31.Text = "Tipo";
             // 
             // label32
             // 
             label32.AutoSize = true;
             label32.Location = new Point(58, 622);
             label32.Name = "label32";
-            label32.Size = new Size(87, 15);
+            label32.Size = new Size(84, 15);
             label32.TabIndex = 172;
-            label32.Text = "Complemento:";
+            label32.Text = "Complemento";
             // 
             // rtbComplemento
             // 
@@ -591,9 +591,9 @@
             lblBairro.AutoSize = true;
             lblBairro.Location = new Point(58, 589);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(72, 15);
+            lblBairro.Size = new Size(69, 15);
             lblBairro.TabIndex = 224;
-            lblBairro.Text = "Logradouro:";
+            lblBairro.Text = "Logradouro";
             // 
             // txtLogradouro
             // 

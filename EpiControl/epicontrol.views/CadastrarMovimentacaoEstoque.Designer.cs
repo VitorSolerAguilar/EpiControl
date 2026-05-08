@@ -99,9 +99,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(57, 89);
             label1.Name = "label1";
-            label1.Size = new Size(73, 15);
+            label1.Size = new Size(78, 15);
             label1.TabIndex = 81;
-            label1.Text = "Funcionário:";
+            label1.Text = "Funcionário *";
             // 
             // txtQuantidade
             // 
@@ -131,9 +131,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(57, 133);
             label2.Name = "label2";
-            label2.Size = new Size(32, 15);
+            label2.Size = new Size(37, 15);
             label2.TabIndex = 85;
-            label2.Text = "E.P.I:";
+            label2.Text = "E.P.I *";
             // 
             // cbxEpi
             // 
@@ -148,18 +148,18 @@
             label8.AutoSize = true;
             label8.Location = new Point(57, 221);
             label8.Name = "label8";
-            label8.Size = new Size(72, 15);
+            label8.Size = new Size(77, 15);
             label8.TabIndex = 87;
-            label8.Text = "Quantidade:";
+            label8.Text = "Quantidade *";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(57, 263);
             label3.Name = "label3";
-            label3.Size = new Size(117, 15);
+            label3.Size = new Size(122, 15);
             label3.TabIndex = 88;
-            label3.Text = "Data de empréstimo:";
+            label3.Text = "Data de empréstimo *";
             // 
             // mtbDataEmprestimo
             // 
@@ -192,9 +192,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(57, 178);
             label7.Name = "label7";
-            label7.Size = new Size(132, 15);
+            label7.Size = new Size(137, 15);
             label7.TabIndex = 91;
-            label7.Text = "Tipo de movimentação:";
+            label7.Text = "Tipo de movimentação *";
             // 
             // btnVoltar
             // 

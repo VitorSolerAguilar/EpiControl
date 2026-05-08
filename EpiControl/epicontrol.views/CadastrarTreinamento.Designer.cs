@@ -95,18 +95,18 @@
             label4.AutoSize = true;
             label4.Location = new Point(57, 85);
             label4.Name = "label4";
-            label4.Size = new Size(114, 15);
+            label4.Size = new Size(116, 15);
             label4.TabIndex = 29;
-            label4.Text = "Nome treinamento: ";
+            label4.Text = "Nome treinamento *";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(57, 130);
             label5.Name = "label5";
-            label5.Size = new Size(84, 15);
+            label5.Size = new Size(86, 15);
             label5.TabIndex = 30;
-            label5.Text = "Carga horária: ";
+            label5.Text = "Carga horária *";
             // 
             // label6
             // 
@@ -122,9 +122,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(57, 176);
             label7.Name = "label7";
-            label7.Size = new Size(57, 15);
+            label7.Size = new Size(59, 15);
             label7.TabIndex = 32;
-            label7.Text = "Validade: ";
+            label7.Text = "Validade *";
             // 
             // txtNome
             // 

@@ -65,20 +65,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(306, 82);
+            label1.Location = new Point(301, 81);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(71, 15);
             label1.TabIndex = 2;
-            label1.Text = "Data início:";
+            label1.Text = "Data início *";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(306, 113);
+            label2.Location = new Point(301, 113);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
+            label2.Size = new Size(60, 15);
             label2.TabIndex = 3;
-            label2.Text = "Data fim:";
+            label2.Text = "Data fim *";
             // 
             // btnBuscar
             // 

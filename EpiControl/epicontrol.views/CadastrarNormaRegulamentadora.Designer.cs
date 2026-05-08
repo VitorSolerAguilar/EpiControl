@@ -97,9 +97,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(57, 101);
             label3.Name = "label3";
-            label3.Size = new Size(91, 15);
+            label3.Size = new Size(94, 15);
             label3.TabIndex = 8;
-            label3.Text = "Número da NR*";
+            label3.Text = "Número da NR *";
             // 
             // txtTitulo
             // 
@@ -113,18 +113,18 @@
             label4.AutoSize = true;
             label4.Location = new Point(57, 143);
             label4.Name = "label4";
-            label4.Size = new Size(42, 15);
+            label4.Size = new Size(45, 15);
             label4.TabIndex = 10;
-            label4.Text = "Título*";
+            label4.Text = "Título *";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(57, 198);
             label5.Name = "label5";
-            label5.Size = new Size(63, 15);
+            label5.Size = new Size(66, 15);
             label5.TabIndex = 13;
-            label5.Text = "Descrição*";
+            label5.Text = "Descrição *";
             // 
             // rtbDescricao
             // 
@@ -139,18 +139,18 @@
             label6.AutoSize = true;
             label6.Location = new Point(57, 343);
             label6.Name = "label6";
-            label6.Size = new Size(98, 15);
+            label6.Size = new Size(106, 15);
             label6.TabIndex = 16;
-            label6.Text = "Data de Vigência ";
+            label6.Text = "Data de Vigência  *";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(57, 285);
             label7.Name = "label7";
-            label7.Size = new Size(105, 15);
+            label7.Size = new Size(108, 15);
             label7.TabIndex = 17;
-            label7.Text = "Link Oficial (MTE)*";
+            label7.Text = "Link Oficial (MTE) *";
             // 
             // txtLinkMte
             // 

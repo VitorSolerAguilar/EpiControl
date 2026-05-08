@@ -97,36 +97,36 @@
             label3.AutoSize = true;
             label3.Location = new Point(57, 136);
             label3.Name = "label3";
-            label3.Size = new Size(75, 15);
+            label3.Size = new Size(77, 15);
             label3.TabIndex = 225;
-            label3.Text = "Quantidade: ";
+            label3.Text = "Quantidade *";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(57, 238);
             label4.Name = "label4";
-            label4.Size = new Size(74, 15);
+            label4.Size = new Size(68, 15);
             label4.TabIndex = 226;
-            label4.Text = "Localização: ";
+            label4.Text = "Localização";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(57, 188);
             label5.Name = "label5";
-            label5.Size = new Size(100, 15);
+            label5.Size = new Size(94, 15);
             label5.TabIndex = 227;
-            label5.Text = "Estoque Minimo: ";
+            label5.Text = "Estoque Minimo";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(57, 95);
             label6.Name = "label6";
-            label6.Size = new Size(35, 15);
+            label6.Size = new Size(31, 15);
             label6.TabIndex = 228;
-            label6.Text = "Epi: : ";
+            label6.Text = "Epi *";
             // 
             // contextMenuStrip1
             // 

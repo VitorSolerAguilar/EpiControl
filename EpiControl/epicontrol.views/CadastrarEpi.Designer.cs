@@ -110,9 +110,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(57, 76);
             label3.Name = "label3";
-            label3.Size = new Size(43, 15);
+            label3.Size = new Size(48, 15);
             label3.TabIndex = 54;
-            label3.Text = "Nome:";
+            label3.Text = "Nome *";
             // 
             // txtNome
             // 
@@ -126,9 +126,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(57, 113);
             label4.Name = "label4";
-            label4.Size = new Size(90, 15);
+            label4.Size = new Size(87, 15);
             label4.TabIndex = 56;
-            label4.Text = "Código Interno:";
+            label4.Text = "Código Interno";
             // 
             // txtCodigoInterno
             // 
@@ -142,9 +142,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(57, 329);
             label5.Name = "label5";
-            label5.Size = new Size(42, 15);
+            label5.Size = new Size(47, 15);
             label5.TabIndex = 58;
-            label5.Text = "Status:";
+            label5.Text = "Status *";
             // 
             // rdbAtivo
             // 
@@ -173,9 +173,9 @@
             label6.AutoSize = true;
             label6.Location = new Point(57, 148);
             label6.Name = "label6";
-            label6.Size = new Size(26, 15);
+            label6.Size = new Size(31, 15);
             label6.TabIndex = 61;
-            label6.Text = "CA:";
+            label6.Text = "CA *";
             // 
             // txtCa
             // 
@@ -190,18 +190,18 @@
             label7.AutoSize = true;
             label7.Location = new Point(57, 222);
             label7.Name = "label7";
-            label7.Size = new Size(90, 15);
+            label7.Size = new Size(95, 15);
             label7.TabIndex = 63;
-            label7.Text = "Validade do CA:";
+            label7.Text = "Validade do CA *";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Location = new Point(57, 184);
             label8.Name = "label8";
-            label8.Size = new Size(59, 15);
+            label8.Size = new Size(64, 15);
             label8.TabIndex = 65;
-            label8.Text = "Tamanho:";
+            label8.Text = "Tamanho *";
             // 
             // txtTamanho
             // 
@@ -215,9 +215,9 @@
             label9.AutoSize = true;
             label9.Location = new Point(57, 297);
             label9.Name = "label9";
-            label9.Size = new Size(29, 15);
+            label9.Size = new Size(26, 15);
             label9.TabIndex = 67;
-            label9.Text = "Cor:";
+            label9.Text = "Cor";
             // 
             // txtCor
             // 
@@ -249,18 +249,18 @@
             label10.AutoSize = true;
             label10.Location = new Point(57, 257);
             label10.Name = "label10";
-            label10.Size = new Size(43, 15);
+            label10.Size = new Size(40, 15);
             label10.TabIndex = 71;
-            label10.Text = "Marca:";
+            label10.Text = "Marca";
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Location = new Point(57, 444);
             label11.Name = "label11";
-            label11.Size = new Size(61, 15);
+            label11.Size = new Size(58, 15);
             label11.TabIndex = 73;
-            label11.Text = "Descrição:";
+            label11.Text = "Descrição";
             // 
             // rtbDescricao
             // 
@@ -275,18 +275,18 @@
             label12.AutoSize = true;
             label12.Location = new Point(57, 365);
             label12.Name = "label12";
-            label12.Size = new Size(61, 15);
+            label12.Size = new Size(58, 15);
             label12.TabIndex = 75;
-            label12.Text = "Categoria:";
+            label12.Text = "Categoria";
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Location = new Point(57, 404);
             label13.Name = "label13";
-            label13.Size = new Size(67, 15);
+            label13.Size = new Size(75, 15);
             label13.TabIndex = 76;
-            label13.Text = "Fornecedor";
+            label13.Text = "Fornecedor *";
             // 
             // cbxCategoria
             // 

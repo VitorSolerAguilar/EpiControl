@@ -122,9 +122,9 @@
             label6.AutoSize = true;
             label6.Location = new Point(50, 265);
             label6.Name = "label6";
-            label6.Size = new Size(56, 15);
+            label6.Size = new Size(59, 15);
             label6.TabIndex = 73;
-            label6.Text = "Telefone*";
+            label6.Text = "Telefone *";
             // 
             // label5
             // 
@@ -168,9 +168,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(50, 127);
             label2.Name = "label2";
-            label2.Size = new Size(39, 15);
+            label2.Size = new Size(42, 15);
             label2.TabIndex = 67;
-            label2.Text = "CNPJ*";
+            label2.Text = "CNPJ *";
             // 
             // txtNome
             // 
@@ -184,9 +184,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(50, 98);
             label1.Name = "label1";
-            label1.Size = new Size(45, 15);
+            label1.Size = new Size(48, 15);
             label1.TabIndex = 65;
-            label1.Text = "Nome*";
+            label1.Text = "Nome *";
             // 
             // panel1
             // 
@@ -258,7 +258,7 @@
             // 
             // mtbCep
             // 
-            mtbCep.Location = new Point(159, 423);
+            mtbCep.Location = new Point(160, 423);
             mtbCep.Mask = "00000-000";
             mtbCep.Name = "mtbCep";
             mtbCep.Size = new Size(144, 23);
@@ -267,22 +267,22 @@
             // lblBairro
             // 
             lblBairro.AutoSize = true;
-            lblBairro.Location = new Point(33, 519);
+            lblBairro.Location = new Point(57, 519);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(72, 15);
+            lblBairro.Size = new Size(69, 15);
             lblBairro.TabIndex = 266;
-            lblBairro.Text = "Logradouro:";
+            lblBairro.Text = "Logradouro";
             // 
             // txtLogradouro
             // 
-            txtLogradouro.Location = new Point(158, 511);
+            txtLogradouro.Location = new Point(159, 511);
             txtLogradouro.Name = "txtLogradouro";
             txtLogradouro.Size = new Size(200, 23);
             txtLogradouro.TabIndex = 265;
             // 
             // btnConsultarCep
             // 
-            btnConsultarCep.Location = new Point(338, 423);
+            btnConsultarCep.Location = new Point(339, 423);
             btnConsultarCep.Name = "btnConsultarCep";
             btnConsultarCep.Size = new Size(75, 23);
             btnConsultarCep.TabIndex = 264;
@@ -291,7 +291,7 @@
             // 
             // rtbComplemento
             // 
-            rtbComplemento.Location = new Point(159, 540);
+            rtbComplemento.Location = new Point(160, 540);
             rtbComplemento.Name = "rtbComplemento";
             rtbComplemento.Size = new Size(366, 80);
             rtbComplemento.TabIndex = 263;
@@ -300,33 +300,33 @@
             // label32
             // 
             label32.AutoSize = true;
-            label32.Location = new Point(33, 552);
+            label32.Location = new Point(57, 552);
             label32.Name = "label32";
-            label32.Size = new Size(87, 15);
+            label32.Size = new Size(84, 15);
             label32.TabIndex = 262;
-            label32.Text = "Complemento:";
+            label32.Text = "Complemento";
             // 
             // label31
             // 
             label31.AutoSize = true;
-            label31.Location = new Point(365, 514);
+            label31.Location = new Point(366, 514);
             label31.Name = "label31";
-            label31.Size = new Size(33, 15);
+            label31.Size = new Size(30, 15);
             label31.TabIndex = 261;
-            label31.Text = "Tipo:";
+            label31.Text = "Tipo";
             // 
             // cbxTipo
             // 
             cbxTipo.FormattingEnabled = true;
             cbxTipo.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
-            cbxTipo.Location = new Point(404, 511);
+            cbxTipo.Location = new Point(405, 511);
             cbxTipo.Name = "cbxTipo";
             cbxTipo.Size = new Size(121, 23);
             cbxTipo.TabIndex = 260;
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(159, 453);
+            txtCidade.Location = new Point(160, 453);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(144, 23);
             txtCidade.TabIndex = 259;
@@ -334,11 +334,11 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(32, 461);
+            label27.Location = new Point(56, 461);
             label27.Name = "label27";
-            label27.Size = new Size(47, 15);
+            label27.Size = new Size(44, 15);
             label27.TabIndex = 258;
-            label27.Text = "Cidade:";
+            label27.Text = "Cidade";
             // 
             // label26
             // 
@@ -352,7 +352,7 @@
             // 
             // txtUf
             // 
-            txtUf.Location = new Point(339, 453);
+            txtUf.Location = new Point(340, 453);
             txtUf.Name = "txtUf";
             txtUf.Size = new Size(74, 23);
             txtUf.TabIndex = 256;
@@ -360,31 +360,31 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(309, 456);
+            label21.Location = new Point(310, 456);
             label21.Name = "label21";
-            label21.Size = new Size(24, 15);
+            label21.Size = new Size(21, 15);
             label21.TabIndex = 255;
-            label21.Text = "UF:";
+            label21.Text = "UF";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(32, 489);
+            label20.Location = new Point(56, 489);
             label20.Name = "label20";
-            label20.Size = new Size(30, 15);
+            label20.Size = new Size(27, 15);
             label20.TabIndex = 254;
-            label20.Text = "Rua:";
+            label20.Text = "Rua";
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(159, 482);
+            txtRua.Location = new Point(160, 482);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(283, 23);
             txtRua.TabIndex = 253;
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(478, 482);
+            txtNumero.Location = new Point(479, 482);
             txtNumero.MaxLength = 10;
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(47, 23);
@@ -393,20 +393,20 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(448, 485);
+            label10.Location = new Point(449, 485);
             label10.Name = "label10";
-            label10.Size = new Size(24, 15);
+            label10.Size = new Size(21, 15);
             label10.TabIndex = 251;
-            label10.Text = "N°:";
+            label10.Text = "N°";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(32, 432);
+            label11.Location = new Point(56, 432);
             label11.Name = "label11";
-            label11.Size = new Size(31, 15);
+            label11.Size = new Size(28, 15);
             label11.TabIndex = 250;
-            label11.Text = "CEP:";
+            label11.Text = "CEP";
             // 
             // btnEditar
             // 

@@ -69,9 +69,8 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(57, 4);
             label2.Name = "label2";
-            label2.Size = new Size(145, 37);
+            label2.Size = new Size(0, 37);
             label2.TabIndex = 3;
-            label2.Text = "EDITAR EPI";
             // 
             // label1
             // 
@@ -79,9 +78,9 @@
             label1.Font = new Font("Segoe UI", 15F);
             label1.Location = new Point(57, 9);
             label1.Name = "label1";
-            label1.Size = new Size(130, 28);
+            label1.Size = new Size(195, 28);
             label1.TabIndex = 2;
-            label1.Text = "EPI CONTROL";
+            label1.Text = "EDITAR ESTOQUE EPI";
             // 
             // pictureBox1
             // 
@@ -98,36 +97,36 @@
             label6.AutoSize = true;
             label6.Location = new Point(57, 84);
             label6.Name = "label6";
-            label6.Size = new Size(35, 15);
+            label6.Size = new Size(31, 15);
             label6.TabIndex = 242;
-            label6.Text = "Epi: : ";
+            label6.Text = "Epi *";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(57, 177);
             label5.Name = "label5";
-            label5.Size = new Size(100, 15);
+            label5.Size = new Size(94, 15);
             label5.TabIndex = 241;
-            label5.Text = "Estoque Mínimo: ";
+            label5.Text = "Estoque Mínimo";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(57, 227);
             label7.Name = "label7";
-            label7.Size = new Size(74, 15);
+            label7.Size = new Size(68, 15);
             label7.TabIndex = 240;
-            label7.Text = "Localização: ";
+            label7.Text = "Localização";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Location = new Point(57, 125);
             label8.Name = "label8";
-            label8.Size = new Size(75, 15);
+            label8.Size = new Size(77, 15);
             label8.TabIndex = 239;
-            label8.Text = "Quantidade: ";
+            label8.Text = "Quantidade *";
             // 
             // contextMenuStrip1
             // 
