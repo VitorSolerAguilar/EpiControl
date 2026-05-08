@@ -41,6 +41,7 @@ namespace EpiControl.Views
 				epi.validadeCa = Convert.ToDateTime(mtbValidadeCa.Text);
 				epi.marca = txtMarca.Text;
 				epi.cor = txtCor.Text;
+				epi.valorUnitario = Convert.ToDecimal(txtValorUnitario.Text);
 
 				if (rdbAtivo.Checked)
 					epi.status = "Ativo";
@@ -73,6 +74,7 @@ namespace EpiControl.Views
 			txtMarca.Clear();
 			txtCor.Clear();
 			rtbDescricao.Clear();
+			txtValorUnitario.Clear();
 		}
 		private void btnVoltar_Click(object sender, EventArgs e)
 		{

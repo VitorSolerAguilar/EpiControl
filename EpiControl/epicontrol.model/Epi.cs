@@ -20,8 +20,9 @@ namespace EpiControl.epicontrol.model
 		public string categoria { get; set; }
 		public string tamanho { get; set; }
 		public string cor { get; set; }
+        public decimal valorUnitario { get; set; }
 
-		//FK
-		public int fornecedorId { get; set; }
+        //FK
+        public int fornecedorId { get; set; }
 	}
 }

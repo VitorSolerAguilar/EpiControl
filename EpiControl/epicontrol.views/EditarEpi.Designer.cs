@@ -59,6 +59,8 @@
             btnEditar = new Button();
             btnExcluir = new Button();
             btnVoltar = new Button();
+            txtValorUnitario = new TextBox();
+            label14 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -152,7 +154,7 @@
             // 
             // rtbDescricao
             // 
-            rtbDescricao.Location = new Point(150, 439);
+            rtbDescricao.Location = new Point(150, 478);
             rtbDescricao.Name = "rtbDescricao";
             rtbDescricao.Size = new Size(278, 82);
             rtbDescricao.TabIndex = 99;
@@ -161,7 +163,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(55, 439);
+            label11.Location = new Point(55, 478);
             label11.Name = "label11";
             label11.Size = new Size(58, 15);
             label11.TabIndex = 98;
@@ -308,7 +310,7 @@
             // 
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(310, 556);
+            btnEditar.Location = new Point(310, 578);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 40);
             btnEditar.TabIndex = 107;
@@ -322,7 +324,7 @@
             btnExcluir.BackColor = Color.Transparent;
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
             btnExcluir.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExcluir.Location = new Point(390, 556);
+            btnExcluir.Location = new Point(390, 578);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(72, 40);
             btnExcluir.TabIndex = 106;
@@ -334,7 +336,7 @@
             // btnVoltar
             // 
             btnVoltar.BackColor = Color.Transparent;
-            btnVoltar.Location = new Point(232, 556);
+            btnVoltar.Location = new Point(232, 578);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(72, 40);
             btnVoltar.TabIndex = 105;
@@ -342,11 +344,29 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // txtValorUnitario
+            // 
+            txtValorUnitario.Location = new Point(151, 433);
+            txtValorUnitario.Name = "txtValorUnitario";
+            txtValorUnitario.Size = new Size(132, 23);
+            txtValorUnitario.TabIndex = 109;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(55, 436);
+            label14.Name = "label14";
+            label14.Size = new Size(89, 15);
+            label14.TabIndex = 108;
+            label14.Text = "Preço unitário *";
+            // 
             // frmEditarEpi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 608);
+            ClientSize = new Size(484, 630);
+            Controls.Add(txtValorUnitario);
+            Controls.Add(label14);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
             Controls.Add(btnVoltar);
@@ -419,5 +439,7 @@
 		private Button btnEditar;
 		private Button btnExcluir;
 		private Button btnVoltar;
-	}
+        private TextBox txtValorUnitario;
+        private Label label14;
+    }
 }

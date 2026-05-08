@@ -28,8 +28,8 @@ namespace EpiControl.epicontrol.dao
 
 			try
 			{
-				string sqlEpi = @"INSERT INTO tb_epi (nome, codigo_interno, ca, validade_ca, status, marca, descricao, categoria, tamanho, cor, fk_fornecedor) " +
-					"VALUES(@nome, @codigo_interno, @ca, @validadeCa, @status, @marca, @descricao, @categoria, @tamanho, @cor, @fk_fornecedor)";
+				string sqlEpi = @"INSERT INTO tb_epi (nome, codigo_interno, ca, validade_ca, status, marca, descricao, categoria, tamanho, cor, valor_unitario, fk_fornecedor) " +
+					"VALUES(@nome, @codigo_interno, @ca, @validadeCa, @status, @marca, @descricao, @categoria, @tamanho, @cor, @valor_unitario, @fk_fornecedor)";
 
 				MySqlCommand cmdEpi = new MySqlCommand(sqlEpi, conexao, transaction);
 
@@ -43,7 +43,8 @@ namespace EpiControl.epicontrol.dao
 				cmdEpi.Parameters.AddWithValue("@categoria", epi.categoria);
 				cmdEpi.Parameters.AddWithValue("@tamanho", epi.tamanho);
 				cmdEpi.Parameters.AddWithValue("@cor", epi.cor);
-				cmdEpi.Parameters.AddWithValue("@fk_fornecedor", epi.fornecedorId);
+                cmdEpi.Parameters.AddWithValue("@valor_unitario", epi.valorUnitario);
+                cmdEpi.Parameters.AddWithValue("@fk_fornecedor", epi.fornecedorId);
 
 				cmdEpi.ExecuteNonQuery();
 				transaction.Commit();
@@ -65,7 +66,7 @@ namespace EpiControl.epicontrol.dao
 			{
 				DataTable tabelaEpi = new DataTable();
 
-				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor;";
+				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor;";
 
 				MySqlCommand cmd = new MySqlCommand(sql, conexao);
 				conexao.Open();
@@ -86,102 +87,102 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public void editarEpi(Epi epi)
-		{
-			conexao.Open();
-			MySqlTransaction transaction = conexao.BeginTransaction();
+        public void editarEpi(Epi epi)
+        {
+            conexao.Open();
+            MySqlTransaction transaction = conexao.BeginTransaction();
 
-			try
-			{
-				string sqlEpi = @"UPDATE tb_epi SET nome = @nome, codigo_interno = @codigo_interno, ca = @ca, tamanho = @tamanho, validade_ca = @validade_ca, marca = @marca, cor = @cor, status = @status, categoria = @categoria, descricao = @descricao, fk_fornecedor = @fk_fornecedor WHERE id_epi = @id_epi";
+            try
+            {
+                string sqlEpi = @"UPDATE tb_epi SET nome = @nome, codigo_interno = @codigo_interno, ca = @ca, tamanho = @tamanho, validade_ca = @validade_ca, marca = @marca, cor = @cor, status = @status, categoria = @categoria, descricao = @descricao, fk_fornecedor = @fk_fornecedor, valor_unitario = @valor_unitario WHERE id_epi = @id_epi";
 
-				MySqlCommand cmdEpi = new MySqlCommand(sqlEpi, conexao, transaction);
-				cmdEpi.Parameters.AddWithValue("@nome", epi.nome);
-				cmdEpi.Parameters.AddWithValue("@codigo_interno", epi.codigoInterno);
-				cmdEpi.Parameters.AddWithValue("@ca", epi.ca);
-				cmdEpi.Parameters.AddWithValue("@tamanho", epi.tamanho);
-				cmdEpi.Parameters.AddWithValue("@validade_ca", epi.validadeCa);
-				cmdEpi.Parameters.AddWithValue("@marca", epi.marca);
-				cmdEpi.Parameters.AddWithValue("@cor", epi.cor);
-				cmdEpi.Parameters.AddWithValue("@status", epi.status);
-				cmdEpi.Parameters.AddWithValue("@categoria", epi.categoria);
-				cmdEpi.Parameters.AddWithValue("@descricao", epi.descricao);
-				cmdEpi.Parameters.AddWithValue("@fk_fornecedor", epi.fornecedorId);
-				cmdEpi.Parameters.AddWithValue("@id_epi", epi.id);
+                MySqlCommand cmdEpi = new MySqlCommand(sqlEpi, conexao, transaction);
+                cmdEpi.Parameters.AddWithValue("@nome", epi.nome);
+                cmdEpi.Parameters.AddWithValue("@codigo_interno", epi.codigoInterno);
+                cmdEpi.Parameters.AddWithValue("@ca", epi.ca);
+                cmdEpi.Parameters.AddWithValue("@tamanho", epi.tamanho);
+                cmdEpi.Parameters.AddWithValue("@validade_ca", epi.validadeCa);
+                cmdEpi.Parameters.AddWithValue("@marca", epi.marca);
+                cmdEpi.Parameters.AddWithValue("@cor", epi.cor);
+                cmdEpi.Parameters.AddWithValue("@status", epi.status);
+                cmdEpi.Parameters.AddWithValue("@categoria", epi.categoria);
+                cmdEpi.Parameters.AddWithValue("@descricao", epi.descricao);
+                cmdEpi.Parameters.AddWithValue("@fk_fornecedor", epi.fornecedorId);
+                cmdEpi.Parameters.AddWithValue("@valor_unitario", epi.valorUnitario);
+                cmdEpi.Parameters.AddWithValue("@id_epi", epi.id);
 
-				cmdEpi.ExecuteNonQuery();
+                cmdEpi.ExecuteNonQuery();
 
-				transaction.Commit();
+                transaction.Commit();
+            }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
-			}
-			catch
-			{
-				transaction.Rollback();
-				throw;
-			}
-			finally
-			{
-				conexao.Close();
-			}
-		}
+        public DataTable buscarEpiId(int idEpi)
+        {
+            try
+            {
+                DataTable tabelaEpi = new DataTable();
 
-		public DataTable buscarEpiId(int idEpi)
-		{
-			try
-			{
-				DataTable tabelaEpi = new DataTable();
+                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.tamanho, e.fk_fornecedor, e.valor_unitario, f.nome AS nome_fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.id_epi = @id_epi";
 
-				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.tamanho, e.fk_fornecedor, f.nome AS nome_fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.id_epi = @id_epi";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@id_epi", idEpi);
 
-				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@id_epi", idEpi);
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaEpi);
 
-				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-				da.Fill(tabelaEpi);
+                return tabelaEpi;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar epi: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
 
-				return tabelaEpi;
-			}
-			catch (Exception ex)
-			{
-				throw new Exception("Erro ao buscar epi: " + ex.Message);
-			}
-			finally
-			{
-				if (conexao.State == ConnectionState.Open)
-					conexao.Close();
-			}
-		}
+        public DataTable buscarEpi(string termoBusca)
+        {
+            try
+            {
+                DataTable tabelaEpi = new DataTable();
 
-		public DataTable buscarEpi(string termoBusca)
-		{
-			try
-			{
-				DataTable tabelaEpi = new DataTable();
+                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @termo OR e.codigo_interno LIKE @termo OR e.ca LIKE @termo OR e.marca LIKE @termo OR e.categoria LIKE @termo OR e.tamanho LIKE @termo OR f.nome LIKE @termo OR e.status LIKE @termo";
 
-				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @termo OR e.codigo_interno LIKE @termo OR e.ca LIKE @termo OR e.marca LIKE @termo OR e.categoria LIKE @termo OR e.tamanho LIKE @termo OR f.nome LIKE @termo OR e.status LIKE @termo";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
-				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
+                conexao.Open();
 
-				conexao.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaEpi);
 
-				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-				da.Fill(tabelaEpi);
+                return tabelaEpi;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
 
-				return tabelaEpi;
-			}
-			catch
-			{
-				return null;
-			}
-			finally
-			{
-				if (conexao.State == ConnectionState.Open)
-					conexao.Close();
-			}
-		}
-
-		public List<Epi> listarNomesEpi()
+        public List<Epi> listarNomesEpi()
 		{
 			List<Epi> lista = new List<Epi>();
 

@@ -48,6 +48,7 @@ namespace EpiControl.Views
 				mtbValidadeCa.Text = row["validade_ca"].ToString();
 				txtMarca.Text = row["marca"].ToString();
 				txtCor.Text = row["nome"].ToString();
+				txtValorUnitario.Text = row["valor_unitario"].ToString();
 
 				string status = row["status"].ToString();
 
@@ -86,6 +87,7 @@ namespace EpiControl.Views
 				epi.cor = txtCor.Text;
 				epi.categoria = cbxCategoria.Text;
 				epi.descricao = rtbDescricao.Text;
+				epi.valorUnitario = Convert.ToDecimal(txtValorUnitario.Text);
 
 				if (rdbAtivo.Checked)
 					epi.status = "Ativo";

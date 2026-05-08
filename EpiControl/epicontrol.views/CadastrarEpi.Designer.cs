@@ -58,6 +58,8 @@
             cbxFornecedor = new ComboBox();
             mtbValidadeCa = new MaskedTextBox();
             btnSalvar = new Button();
+            txtValorUnitario = new TextBox();
+            label14 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -229,7 +231,7 @@
             // btnVoltar
             // 
             btnVoltar.BackColor = Color.Transparent;
-            btnVoltar.Location = new Point(281, 553);
+            btnVoltar.Location = new Point(280, 576);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(72, 40);
             btnVoltar.TabIndex = 69;
@@ -256,7 +258,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(57, 444);
+            label11.Location = new Point(57, 474);
             label11.Name = "label11";
             label11.Size = new Size(58, 15);
             label11.TabIndex = 73;
@@ -264,7 +266,7 @@
             // 
             // rtbDescricao
             // 
-            rtbDescricao.Location = new Point(152, 444);
+            rtbDescricao.Location = new Point(152, 474);
             rtbDescricao.Name = "rtbDescricao";
             rtbDescricao.Size = new Size(278, 82);
             rtbDescricao.TabIndex = 74;
@@ -319,7 +321,7 @@
             btnSalvar.BackColor = Color.Transparent;
             btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
             btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSalvar.Location = new Point(359, 553);
+            btnSalvar.Location = new Point(358, 576);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(72, 40);
             btnSalvar.TabIndex = 105;
@@ -328,11 +330,29 @@
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // txtValorUnitario
+            // 
+            txtValorUnitario.Location = new Point(153, 434);
+            txtValorUnitario.Name = "txtValorUnitario";
+            txtValorUnitario.Size = new Size(132, 23);
+            txtValorUnitario.TabIndex = 107;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(57, 437);
+            label14.Name = "label14";
+            label14.Size = new Size(89, 15);
+            label14.TabIndex = 106;
+            label14.Text = "Preço unitário *";
+            // 
             // frmCadastrarEpi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 608);
+            ClientSize = new Size(484, 630);
+            Controls.Add(txtValorUnitario);
+            Controls.Add(label14);
             Controls.Add(btnSalvar);
             Controls.Add(mtbValidadeCa);
             Controls.Add(cbxFornecedor);
@@ -404,5 +424,7 @@
 		private ComboBox cbxFornecedor;
 		private MaskedTextBox mtbValidadeCa;
 		private Button btnSalvar;
-	}
+        private TextBox txtValorUnitario;
+        private Label label14;
+    }
 }
