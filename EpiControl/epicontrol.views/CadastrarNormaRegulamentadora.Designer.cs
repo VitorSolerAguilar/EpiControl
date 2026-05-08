@@ -183,7 +183,7 @@
             // 
             txtNumeroNr.Location = new Point(187, 93);
             txtNumeroNr.Name = "txtNumeroNr";
-            txtNumeroNr.Size = new Size(84, 23);
+            txtNumeroNr.Size = new Size(53, 23);
             txtNumeroNr.TabIndex = 23;
             // 
             // btnSalvar

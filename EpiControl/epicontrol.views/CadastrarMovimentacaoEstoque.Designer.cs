@@ -107,7 +107,7 @@
             // 
             txtQuantidade.Location = new Point(213, 218);
             txtQuantidade.Name = "txtQuantidade";
-            txtQuantidade.Size = new Size(134, 23);
+            txtQuantidade.Size = new Size(64, 23);
             txtQuantidade.TabIndex = 82;
             // 
             // rtbObservacao

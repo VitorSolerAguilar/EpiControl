@@ -224,7 +224,7 @@ namespace EpiControl
             {
                 flpContainerEpi.Height += STEP_EXPAND;
 
-                if (flpContainerEpi.Height >= 252)
+                if (flpContainerEpi.Height >= 200)
                 {
                     transicaoMenuEpi.Stop();
                     menuExpand = true;

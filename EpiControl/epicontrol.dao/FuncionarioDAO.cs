@@ -45,7 +45,6 @@ namespace EpiControl.epicontrol.dao
 				cmdFuncionario.Parameters.AddWithValue("@matricula", funcionario.matricula);
 				cmdFuncionario.Parameters.AddWithValue("@cargo", funcionario.cargo);
 				cmdFuncionario.Parameters.AddWithValue("@status", funcionario.status);
-
 				cmdFuncionario.ExecuteNonQuery();
 
 				int idFuncionario = (int)cmdFuncionario.LastInsertedId;

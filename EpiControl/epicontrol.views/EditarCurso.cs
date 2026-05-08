@@ -12,82 +12,82 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-	public partial class frmEditarCurso : Form
-	{
+    public partial class frmEditarCurso : Form
+    {
 
-		private int _idCurso;
-		public frmEditarCurso(int idCurso)
-		{
-			InitializeComponent();
-			_idCurso = idCurso;
-			carregarCurso();
+        private int _idCurso;
+        public frmEditarCurso(int idCurso)
+        {
+            InitializeComponent();
+            _idCurso = idCurso;
+            carregarCurso();
 
-		}
-		CursoDAO dao = new CursoDAO();
+        }
+        CursoDAO dao = new CursoDAO();
 
-		public void carregarCurso()
-		{
-			try
-			{
-				DataTable dt = dao.buscarCursoPorId(_idCurso);
+        public void carregarCurso()
+        {
+            try
+            {
+                DataTable dt = dao.buscarCursoPorId(_idCurso);
 
-				DataRow row = dt.Rows[0];
+                DataRow row = dt.Rows[0];
 
-				txtNome.Text = row["nome"].ToString();
-				txtCargaHoraria.Text = row["carga_horaria"].ToString();
-				rtbDescricao.Text = row["descricao"].ToString();
-				mtbValidade.Text = row["validade_meses"].ToString();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Erro ao carregar treinamento: " + ex);
+                txtNome.Text = row["nome"].ToString();
+                txtCargaHoraria.Text = row["carga_horaria"].ToString();
+                rtbDescricao.Text = row["descricao"].ToString();
+                mtbValidade.Text = row["validade_meses"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar treinamento: " + ex);
 
-			}
-		}
+            }
+        }
 
-		private void btnVoltar_Click(object sender, EventArgs e)
-		{
-			Close();
-		}
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
-		private void btnExcluir_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				CursoDAO dao = new CursoDAO();
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CursoDAO dao = new CursoDAO();
 
-				dao.excluirCurso(_idCurso);
+                dao.excluirCurso(_idCurso);
 
-				MessageBox.Show("Curso excluido");
-				Close();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Erro ao excluir curso: " + ex.Message);
-			}
-		}
+                MessageBox.Show("Curso excluido");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir curso: " + ex.Message);
+            }
+        }
 
-		private void btnEditar_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				Curso curso = new Curso();
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Curso curso = new Curso();
 
-				curso.id = _idCurso;
-				curso.nome = txtNome.Text;
-				curso.cargaHoraria = txtCargaHoraria.Text;
-				curso.descricao = rtbDescricao.Text;
-				curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
+                curso.id = _idCurso;
+                curso.nome = txtNome.Text;
+                curso.cargaHoraria = txtCargaHoraria.Text;
+                curso.descricao = rtbDescricao.Text;
+                curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
 
-				dao.editarCurso(curso);
+                dao.editarCurso(curso);
 
-				MessageBox.Show("Curso atualizado com sucesso!");
-				Close();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show("Erro ao editar curso: " + ex);
-			}
-		}
-	}
+                MessageBox.Show("Curso atualizado com sucesso!");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao editar curso: " + ex);
+            }
+        }
+    }
 }

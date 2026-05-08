@@ -63,6 +63,7 @@ namespace EpiControl.Views
 
                 rdbMasculino.Checked = genero == "Masculino";
                 rdbFeminino.Checked = genero == "Feminino";
+                rdbOutro.Checked = genero == "Outro";
 
                 rdbAtivo.Checked = status == "Ativo";
                 rdbInativo.Checked = status == "Inativo";
@@ -192,5 +193,7 @@ namespace EpiControl.Views
                 MessageBox.Show("Erro ao consultar cep: " + ex.Message);
             }
         }
+
+        
     }
 }

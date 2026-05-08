@@ -180,6 +180,7 @@
             // txtCa
             // 
             txtCa.Location = new Point(153, 140);
+            txtCa.MaxLength = 5;
             txtCa.Name = "txtCa";
             txtCa.Size = new Size(132, 23);
             txtCa.TabIndex = 62;

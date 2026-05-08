@@ -93,8 +93,12 @@
             mtbTelefone = new MaskedTextBox();
             txtUf = new TextBox();
             btnSalvar = new Button();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -210,6 +214,7 @@
             // txtPisPasep
             // 
             txtPisPasep.Location = new Point(181, 312);
+            txtPisPasep.MaxLength = 11;
             txtPisPasep.Name = "txtPisPasep";
             txtPisPasep.Size = new Size(147, 23);
             txtPisPasep.TabIndex = 157;
@@ -251,8 +256,9 @@
             // txtNumero
             // 
             txtNumero.Location = new Point(503, 552);
+            txtNumero.MaxLength = 10;
             txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(74, 23);
+            txtNumero.Size = new Size(55, 23);
             txtNumero.TabIndex = 147;
             // 
             // label18
@@ -276,6 +282,7 @@
             // txtEmailCorporativo
             // 
             txtEmailCorporativo.Location = new Point(784, 193);
+            txtEmailCorporativo.MaxLength = 255;
             txtEmailCorporativo.Name = "txtEmailCorporativo";
             txtEmailCorporativo.Size = new Size(223, 23);
             txtEmailCorporativo.TabIndex = 143;
@@ -292,6 +299,7 @@
             // txtEmailPessoal
             // 
             txtEmailPessoal.Location = new Point(784, 161);
+            txtEmailPessoal.MaxLength = 255;
             txtEmailPessoal.Name = "txtEmailPessoal";
             txtEmailPessoal.Size = new Size(223, 23);
             txtEmailPessoal.TabIndex = 141;
@@ -326,6 +334,7 @@
             // txtNomePai
             // 
             txtNomePai.Location = new Point(182, 279);
+            txtNomePai.MaxLength = 255;
             txtNomePai.Name = "txtNomePai";
             txtNomePai.Size = new Size(283, 23);
             txtNomePai.TabIndex = 135;
@@ -342,6 +351,7 @@
             // txtNomeMae
             // 
             txtNomeMae.Location = new Point(182, 250);
+            txtNomeMae.MaxLength = 255;
             txtNomeMae.Name = "txtNomeMae";
             txtNomeMae.Size = new Size(283, 23);
             txtNomeMae.TabIndex = 133;
@@ -358,6 +368,7 @@
             // txtNacionalidade
             // 
             txtNacionalidade.Location = new Point(182, 182);
+            txtNacionalidade.MaxLength = 30;
             txtNacionalidade.Name = "txtNacionalidade";
             txtNacionalidade.Size = new Size(137, 23);
             txtNacionalidade.TabIndex = 131;
@@ -383,7 +394,7 @@
             // rdbOutro
             // 
             rdbOutro.AutoSize = true;
-            rdbOutro.Location = new Point(349, 218);
+            rdbOutro.Location = new Point(170, 11);
             rdbOutro.Name = "rdbOutro";
             rdbOutro.Size = new Size(56, 19);
             rdbOutro.TabIndex = 127;
@@ -394,7 +405,7 @@
             // rdbFeminino
             // 
             rdbFeminino.AutoSize = true;
-            rdbFeminino.Location = new Point(268, 218);
+            rdbFeminino.Location = new Point(89, 11);
             rdbFeminino.Name = "rdbFeminino";
             rdbFeminino.Size = new Size(75, 19);
             rdbFeminino.TabIndex = 126;
@@ -405,7 +416,7 @@
             // rdbMasculino
             // 
             rdbMasculino.AutoSize = true;
-            rdbMasculino.Location = new Point(182, 218);
+            rdbMasculino.Location = new Point(3, 11);
             rdbMasculino.Name = "rdbMasculino";
             rdbMasculino.Size = new Size(80, 19);
             rdbMasculino.TabIndex = 125;
@@ -434,7 +445,7 @@
             // rdbInativo
             // 
             rdbInativo.AutoSize = true;
-            rdbInativo.Location = new Point(841, 582);
+            rdbInativo.Location = new Point(59, 16);
             rdbInativo.Name = "rdbInativo";
             rdbInativo.Size = new Size(61, 19);
             rdbInativo.TabIndex = 121;
@@ -445,7 +456,7 @@
             // rdbAtivo
             // 
             rdbAtivo.AutoSize = true;
-            rdbAtivo.Location = new Point(782, 582);
+            rdbAtivo.Location = new Point(0, 16);
             rdbAtivo.Name = "rdbAtivo";
             rdbAtivo.Size = new Size(53, 19);
             rdbAtivo.TabIndex = 120;
@@ -465,6 +476,7 @@
             // txtCargo
             // 
             txtCargo.Location = new Point(784, 540);
+            txtCargo.MaxLength = 255;
             txtCargo.Name = "txtCargo";
             txtCargo.Size = new Size(174, 23);
             txtCargo.TabIndex = 118;
@@ -481,6 +493,7 @@
             // txtMatricula
             // 
             txtMatricula.Location = new Point(784, 511);
+            txtMatricula.MaxLength = 10;
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(173, 23);
             txtMatricula.TabIndex = 116;
@@ -671,11 +684,34 @@
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvarFuncionario_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbOutro);
+            groupBox1.Controls.Add(rdbMasculino);
+            groupBox1.Controls.Add(rdbFeminino);
+            groupBox1.Location = new Point(181, 207);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(251, 34);
+            groupBox1.TabIndex = 234;
+            groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(rdbInativo);
+            groupBox2.Controls.Add(rdbAtivo);
+            groupBox2.Location = new Point(784, 563);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(118, 41);
+            groupBox2.TabIndex = 235;
+            groupBox2.TabStop = false;
+            // 
             // frmCadastrarFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1054, 704);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(btnSalvar);
             Controls.Add(txtUf);
             Controls.Add(mtbTelefone);
@@ -722,13 +758,8 @@
             Controls.Add(txtNacionalidade);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(rdbOutro);
-            Controls.Add(rdbFeminino);
-            Controls.Add(rdbMasculino);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(rdbInativo);
-            Controls.Add(rdbAtivo);
             Controls.Add(label6);
             Controls.Add(txtCargo);
             Controls.Add(label5);
@@ -746,6 +777,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -816,5 +851,7 @@
 		private MaskedTextBox mtbCep;
 		private MaskedTextBox mtbTelefone;
 		private TextBox txtUf;
-	}
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+    }
 }

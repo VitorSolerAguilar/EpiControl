@@ -87,7 +87,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(62, 98);
+            label1.Location = new Point(62, 118);
             label1.Name = "label1";
             label1.Size = new Size(45, 15);
             label1.TabIndex = 34;
@@ -95,7 +95,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(187, 91);
+            txtNome.Location = new Point(187, 111);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(231, 23);
             txtNome.TabIndex = 35;
@@ -103,7 +103,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(62, 127);
+            label2.Location = new Point(62, 89);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 36;
@@ -112,7 +112,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(62, 166);
+            label3.Location = new Point(62, 157);
             label3.Name = "label3";
             label3.Size = new Size(79, 15);
             label3.TabIndex = 38;
@@ -120,7 +120,7 @@
             // 
             // rtbObservacao
             // 
-            rtbObservacao.Location = new Point(187, 149);
+            rtbObservacao.Location = new Point(187, 140);
             rtbObservacao.Name = "rtbObservacao";
             rtbObservacao.Size = new Size(231, 58);
             rtbObservacao.TabIndex = 39;
@@ -167,6 +167,7 @@
             // txtEmailPessoal
             // 
             txtEmailPessoal.Location = new Point(187, 320);
+            txtEmailPessoal.MaxLength = 255;
             txtEmailPessoal.Name = "txtEmailPessoal";
             txtEmailPessoal.Size = new Size(231, 23);
             txtEmailPessoal.TabIndex = 47;
@@ -183,6 +184,7 @@
             // txtEmailCorporativo
             // 
             txtEmailCorporativo.Location = new Point(187, 349);
+            txtEmailCorporativo.MaxLength = 255;
             txtEmailCorporativo.Name = "txtEmailCorporativo";
             txtEmailCorporativo.Size = new Size(231, 23);
             txtEmailCorporativo.TabIndex = 49;
@@ -361,6 +363,7 @@
             // txtNumero
             // 
             txtNumero.Location = new Point(507, 478);
+            txtNumero.MaxLength = 10;
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(47, 23);
             txtNumero.TabIndex = 228;
@@ -385,7 +388,7 @@
             // 
             // mtbCnpj
             // 
-            mtbCnpj.Location = new Point(187, 120);
+            mtbCnpj.Location = new Point(187, 82);
             mtbCnpj.Mask = "00.000.000/0000-00";
             mtbCnpj.Name = "mtbCnpj";
             mtbCnpj.Size = new Size(192, 23);
@@ -526,5 +529,5 @@
 		private MaskedTextBox mtbCelular;
 		private MaskedTextBox mtbCep;
 		private Button btnSalvar;
-	}
+    }
 }

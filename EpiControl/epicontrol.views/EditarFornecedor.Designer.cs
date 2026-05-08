@@ -77,6 +77,7 @@
             // txtEmailCorporativo
             // 
             txtEmailCorporativo.Location = new Point(158, 349);
+            txtEmailCorporativo.MaxLength = 255;
             txtEmailCorporativo.Name = "txtEmailCorporativo";
             txtEmailCorporativo.Size = new Size(231, 23);
             txtEmailCorporativo.TabIndex = 80;
@@ -93,6 +94,7 @@
             // txtEmailPessoal
             // 
             txtEmailPessoal.Location = new Point(158, 320);
+            txtEmailPessoal.MaxLength = 255;
             txtEmailPessoal.Name = "txtEmailPessoal";
             txtEmailPessoal.Size = new Size(231, 23);
             txtEmailPessoal.TabIndex = 78;
@@ -250,6 +252,7 @@
             mtbCnpj.Location = new Point(158, 119);
             mtbCnpj.Mask = "00.000.000/0000-00";
             mtbCnpj.Name = "mtbCnpj";
+            mtbCnpj.ReadOnly = true;
             mtbCnpj.Size = new Size(192, 23);
             mtbCnpj.TabIndex = 247;
             // 
@@ -382,6 +385,7 @@
             // txtNumero
             // 
             txtNumero.Location = new Point(478, 482);
+            txtNumero.MaxLength = 10;
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(47, 23);
             txtNumero.TabIndex = 252;

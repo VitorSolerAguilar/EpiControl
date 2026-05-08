@@ -77,13 +77,8 @@
             txtNacionalidade = new TextBox();
             label10 = new Label();
             label9 = new Label();
-            rdbOutro = new RadioButton();
-            rdbFeminino = new RadioButton();
-            rdbMasculino = new RadioButton();
             label8 = new Label();
             label7 = new Label();
-            rdbInativo = new RadioButton();
-            rdbAtivo = new RadioButton();
             label6 = new Label();
             txtCargo = new TextBox();
             label5 = new Label();
@@ -94,8 +89,17 @@
             btnEditar = new Button();
             btnExcluir = new Button();
             btnVoltar = new Button();
+            groupBox1 = new GroupBox();
+            rdbOutro = new RadioButton();
+            rdbMasculino = new RadioButton();
+            rdbFeminino = new RadioButton();
+            groupBox2 = new GroupBox();
+            rdbInativo = new RadioButton();
+            rdbAtivo = new RadioButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -158,7 +162,7 @@
             // 
             // mtbCep
             // 
-            mtbCep.Location = new Point(179, 493);
+            mtbCep.Location = new Point(178, 494);
             mtbCep.Mask = "00000-000";
             mtbCep.Name = "mtbCep";
             mtbCep.Size = new Size(147, 23);
@@ -175,7 +179,7 @@
             // 
             // mtbDataNascimento
             // 
-            mtbDataNascimento.Location = new Point(180, 124);
+            mtbDataNascimento.Location = new Point(178, 124);
             mtbDataNascimento.Mask = "00/00/0000";
             mtbDataNascimento.Name = "mtbDataNascimento";
             mtbDataNascimento.Size = new Size(147, 23);
@@ -187,6 +191,7 @@
             mtbCpf.Location = new Point(178, 370);
             mtbCpf.Mask = "000.000.000-00";
             mtbCpf.Name = "mtbCpf";
+            mtbCpf.ReadOnly = true;
             mtbCpf.Size = new Size(147, 23);
             mtbCpf.TabIndex = 285;
             mtbCpf.ValidatingType = typeof(DateTime);
@@ -220,7 +225,7 @@
             // 
             // txtLogradouro
             // 
-            txtLogradouro.Location = new Point(180, 581);
+            txtLogradouro.Location = new Point(178, 581);
             txtLogradouro.Name = "txtLogradouro";
             txtLogradouro.Size = new Size(200, 23);
             txtLogradouro.TabIndex = 281;
@@ -236,7 +241,7 @@
             // 
             // rtbComplemento
             // 
-            rtbComplemento.Location = new Point(181, 610);
+            rtbComplemento.Location = new Point(178, 610);
             rtbComplemento.Name = "rtbComplemento";
             rtbComplemento.Size = new Size(366, 80);
             rtbComplemento.TabIndex = 279;
@@ -299,7 +304,7 @@
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(181, 523);
+            txtCidade.Location = new Point(178, 522);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(144, 23);
             txtCidade.TabIndex = 272;
@@ -346,6 +351,7 @@
             // txtPisPasep
             // 
             txtPisPasep.Location = new Point(178, 312);
+            txtPisPasep.MaxLength = 11;
             txtPisPasep.Name = "txtPisPasep";
             txtPisPasep.Size = new Size(147, 23);
             txtPisPasep.TabIndex = 267;
@@ -379,7 +385,7 @@
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(181, 552);
+            txtRua.Location = new Point(178, 552);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(283, 23);
             txtRua.TabIndex = 263;
@@ -387,8 +393,9 @@
             // txtNumero
             // 
             txtNumero.Location = new Point(500, 552);
+            txtNumero.MaxLength = 10;
             txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(74, 23);
+            txtNumero.Size = new Size(55, 23);
             txtNumero.TabIndex = 262;
             // 
             // label18
@@ -428,6 +435,7 @@
             // txtEmailPessoal
             // 
             txtEmailPessoal.Location = new Point(781, 161);
+            txtEmailPessoal.MaxLength = 255;
             txtEmailPessoal.Name = "txtEmailPessoal";
             txtEmailPessoal.Size = new Size(223, 23);
             txtEmailPessoal.TabIndex = 257;
@@ -462,6 +470,7 @@
             // txtNomePai
             // 
             txtNomePai.Location = new Point(179, 279);
+            txtNomePai.MaxLength = 255;
             txtNomePai.Name = "txtNomePai";
             txtNomePai.Size = new Size(283, 23);
             txtNomePai.TabIndex = 253;
@@ -478,6 +487,7 @@
             // txtNomeMae
             // 
             txtNomeMae.Location = new Point(179, 250);
+            txtNomeMae.MaxLength = 255;
             txtNomeMae.Name = "txtNomeMae";
             txtNomeMae.Size = new Size(283, 23);
             txtNomeMae.TabIndex = 251;
@@ -493,7 +503,7 @@
             // 
             // txtNacionalidade
             // 
-            txtNacionalidade.Location = new Point(179, 182);
+            txtNacionalidade.Location = new Point(178, 182);
             txtNacionalidade.Name = "txtNacionalidade";
             txtNacionalidade.Size = new Size(137, 23);
             txtNacionalidade.TabIndex = 249;
@@ -516,39 +526,6 @@
             label9.TabIndex = 247;
             label9.Text = "Estado Civil:";
             // 
-            // rdbOutro
-            // 
-            rdbOutro.AutoSize = true;
-            rdbOutro.Location = new Point(346, 218);
-            rdbOutro.Name = "rdbOutro";
-            rdbOutro.Size = new Size(56, 19);
-            rdbOutro.TabIndex = 246;
-            rdbOutro.TabStop = true;
-            rdbOutro.Text = "Outro";
-            rdbOutro.UseVisualStyleBackColor = true;
-            // 
-            // rdbFeminino
-            // 
-            rdbFeminino.AutoSize = true;
-            rdbFeminino.Location = new Point(265, 218);
-            rdbFeminino.Name = "rdbFeminino";
-            rdbFeminino.Size = new Size(75, 19);
-            rdbFeminino.TabIndex = 245;
-            rdbFeminino.TabStop = true;
-            rdbFeminino.Text = "Feminino";
-            rdbFeminino.UseVisualStyleBackColor = true;
-            // 
-            // rdbMasculino
-            // 
-            rdbMasculino.AutoSize = true;
-            rdbMasculino.Location = new Point(179, 218);
-            rdbMasculino.Name = "rdbMasculino";
-            rdbMasculino.Size = new Size(80, 19);
-            rdbMasculino.TabIndex = 244;
-            rdbMasculino.TabStop = true;
-            rdbMasculino.Text = "Masculino";
-            rdbMasculino.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -566,28 +543,6 @@
             label7.Size = new Size(117, 15);
             label7.TabIndex = 242;
             label7.Text = "Data de Nascimento:";
-            // 
-            // rdbInativo
-            // 
-            rdbInativo.AutoSize = true;
-            rdbInativo.Location = new Point(838, 582);
-            rdbInativo.Name = "rdbInativo";
-            rdbInativo.Size = new Size(61, 19);
-            rdbInativo.TabIndex = 241;
-            rdbInativo.TabStop = true;
-            rdbInativo.Text = "Inativo";
-            rdbInativo.UseVisualStyleBackColor = true;
-            // 
-            // rdbAtivo
-            // 
-            rdbAtivo.AutoSize = true;
-            rdbAtivo.Location = new Point(779, 582);
-            rdbAtivo.Name = "rdbAtivo";
-            rdbAtivo.Size = new Size(53, 19);
-            rdbAtivo.TabIndex = 240;
-            rdbAtivo.TabStop = true;
-            rdbAtivo.Text = "Ativo";
-            rdbAtivo.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -632,7 +587,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(180, 95);
+            txtNome.Location = new Point(178, 95);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(325, 23);
             txtNome.TabIndex = 234;
@@ -684,11 +639,89 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbOutro);
+            groupBox1.Controls.Add(rdbMasculino);
+            groupBox1.Controls.Add(rdbFeminino);
+            groupBox1.Location = new Point(178, 206);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(251, 34);
+            groupBox1.TabIndex = 294;
+            groupBox1.TabStop = false;
+            // 
+            // rdbOutro
+            // 
+            rdbOutro.AutoSize = true;
+            rdbOutro.Location = new Point(170, 11);
+            rdbOutro.Name = "rdbOutro";
+            rdbOutro.Size = new Size(56, 19);
+            rdbOutro.TabIndex = 127;
+            rdbOutro.TabStop = true;
+            rdbOutro.Text = "Outro";
+            rdbOutro.UseVisualStyleBackColor = true;
+            // 
+            // rdbMasculino
+            // 
+            rdbMasculino.AutoSize = true;
+            rdbMasculino.Location = new Point(3, 11);
+            rdbMasculino.Name = "rdbMasculino";
+            rdbMasculino.Size = new Size(80, 19);
+            rdbMasculino.TabIndex = 125;
+            rdbMasculino.TabStop = true;
+            rdbMasculino.Text = "Masculino";
+            rdbMasculino.UseVisualStyleBackColor = true;
+            // 
+            // rdbFeminino
+            // 
+            rdbFeminino.AutoSize = true;
+            rdbFeminino.Location = new Point(89, 11);
+            rdbFeminino.Name = "rdbFeminino";
+            rdbFeminino.Size = new Size(75, 19);
+            rdbFeminino.TabIndex = 126;
+            rdbFeminino.TabStop = true;
+            rdbFeminino.Text = "Feminino";
+            rdbFeminino.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(rdbInativo);
+            groupBox2.Controls.Add(rdbAtivo);
+            groupBox2.Location = new Point(781, 564);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(118, 41);
+            groupBox2.TabIndex = 295;
+            groupBox2.TabStop = false;
+            // 
+            // rdbInativo
+            // 
+            rdbInativo.AutoSize = true;
+            rdbInativo.Location = new Point(59, 16);
+            rdbInativo.Name = "rdbInativo";
+            rdbInativo.Size = new Size(61, 19);
+            rdbInativo.TabIndex = 121;
+            rdbInativo.TabStop = true;
+            rdbInativo.Text = "Inativo";
+            rdbInativo.UseVisualStyleBackColor = true;
+            // 
+            // rdbAtivo
+            // 
+            rdbAtivo.AutoSize = true;
+            rdbAtivo.Location = new Point(0, 16);
+            rdbAtivo.Name = "rdbAtivo";
+            rdbAtivo.Size = new Size(53, 19);
+            rdbAtivo.TabIndex = 120;
+            rdbAtivo.TabStop = true;
+            rdbAtivo.Text = "Ativo";
+            rdbAtivo.UseVisualStyleBackColor = true;
+            // 
             // frmEditarFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1054, 704);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
             Controls.Add(btnVoltar);
@@ -736,13 +769,8 @@
             Controls.Add(txtNacionalidade);
             Controls.Add(label10);
             Controls.Add(label9);
-            Controls.Add(rdbOutro);
-            Controls.Add(rdbFeminino);
-            Controls.Add(rdbMasculino);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(rdbInativo);
-            Controls.Add(rdbAtivo);
             Controls.Add(label6);
             Controls.Add(txtCargo);
             Controls.Add(label5);
@@ -760,6 +788,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -813,13 +845,8 @@
         private TextBox txtNacionalidade;
         private Label label10;
         private Label label9;
-        private RadioButton rdbOutro;
-        private RadioButton rdbFeminino;
-        private RadioButton rdbMasculino;
         private Label label8;
         private Label label7;
-        private RadioButton rdbInativo;
-        private RadioButton rdbAtivo;
         private Label label6;
         private TextBox txtCargo;
         private Label label5;
@@ -830,5 +857,12 @@
         private Button btnEditar;
         private Button btnExcluir;
         private Button btnVoltar;
+        private GroupBox groupBox1;
+        private RadioButton rdbOutro;
+        private RadioButton rdbMasculino;
+        private RadioButton rdbFeminino;
+        private GroupBox groupBox2;
+        private RadioButton rdbInativo;
+        private RadioButton rdbAtivo;
     }
 }
