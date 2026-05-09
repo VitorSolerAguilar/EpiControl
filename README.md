@@ -36,6 +36,9 @@ Projeto sempre deve respeita a seguinte nomeclatura: "epicontrol.camada":
         📁 epicontrol.dao
         📁 epicontrol.model
         📁 epicontrol.views
+        📁 epicontrol.dto
+        📁 epicontrol.service
+        📁 epicontrol.resources
 ```
 
 ## 🧠 Padrão para Variáveis
