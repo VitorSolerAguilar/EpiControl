@@ -83,7 +83,21 @@ namespace EpiControl.Views
 		{
 			try
 			{
-				Fornecedor fornecedor = new Fornecedor();
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo NOME obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(mtbTelefone.Text))
+                {
+                    MessageBox.Show("Campo TELEFONE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbTelefone.Focus();
+                    return;
+                }
+
+                Fornecedor fornecedor = new Fornecedor();
 				fornecedor.nome = txtNome.Text;
 				fornecedor.cnpj = mtbCnpj.Text;
 				fornecedor.observacoes = rtbObservacoes.Text;

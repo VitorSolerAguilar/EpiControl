@@ -81,6 +81,20 @@ namespace EpiControl.epicontrol.views
         {
             try
             {
+                if (cbxEpi.SelectedValue == null || cbxEpi.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo EPI obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxEpi.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtQuantidade.Text))
+                {
+                    MessageBox.Show("Campo QUANTIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtQuantidade.Focus();
+                    return;
+                }
+
                 EstoqueEpi estoque = new EstoqueEpi();
 
                 estoque.id = _idEstoqueEpi;

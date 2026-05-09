@@ -53,7 +53,7 @@
     <Compile Update="epicontrol.views\ConsultarNormaRegulamentadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="epicontrol.views\EditarCurso.cs">
+    <Compile Update="epicontrol.views\EditarTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="epicontrol.views\EditarEpi.cs">

@@ -27,17 +27,48 @@ namespace EpiControl.Views
 		{
 			try
 			{
-				NormaRegulamentadora norma = new NormaRegulamentadora();
+                if (string.IsNullOrWhiteSpace(txtNumeroNr.Text))
+                {
+                    MessageBox.Show("Campo NÚMERO DA NR obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumeroNr.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtTitulo.Text))
+                {
+                    MessageBox.Show("Campo TÍTULO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtTitulo.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(rtbDescricao.Text))
+                {
+                    MessageBox.Show("Campo DESCRIÇÃO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    rtbDescricao.Focus();
+                    return;
+                }
+
+                NormaRegulamentadora norma = new NormaRegulamentadora();
 
 				norma.id = _idNorma;
 				norma.codigoNr = txtNumeroNr.Text; 
 				norma.titulo = txtTitulo.Text;
 				norma.descricao = rtbDescricao.Text;
 				norma.linkMte = txtLinkMte.Text;
-				norma.dataVigencia = DateTime.Parse(mtbDataVigencia.Text);
+
+                if (mtbDataVigencia.Text.Length < 10 || mtbDataVigencia.Text.Contains("_"))
+                {
+                    MessageBox.Show("Campo DATA DE VIGÊNCIA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataVigencia.Focus();
+                    return;
+                }
+                else
+                {
+                    norma.dataVigencia = Convert.ToDateTime(mtbDataVigencia.Text);
+                }
 
 
-				NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
+                NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
 				dao.editarNormaRegulamentadora(norma);
 
 				MessageBox.Show("Norma Regulamentadora atualizada!");

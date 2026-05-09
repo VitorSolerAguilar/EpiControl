@@ -115,7 +115,6 @@ C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.fr
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFuncionario.resources
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarFuncionarioCurso.resources
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmConsultarNormaRegulamentadora.resources
-C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarCurso.resources
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarEpi.resources
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarEstoqueEpi.resources
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.Views.frmEditarFornecedor.resources
@@ -181,3 +180,4 @@ C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.fr
 C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.fmrGerarRelatorioEpi.resources
 C:\EpiControl\EpiControl\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\EpiControl\EpiControl\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmEditarTreinamento.resources

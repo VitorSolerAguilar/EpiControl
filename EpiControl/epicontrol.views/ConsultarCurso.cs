@@ -49,7 +49,7 @@ namespace EpiControl.epicontrol.views
 
 			int idCurso = Convert.ToInt32(dgvCurso.Rows[e.RowIndex].Cells["id_curso"].Value);
 
-			frmEditarCurso frm = new frmEditarCurso(idCurso);
+			frmEditarTreinamento frm = new frmEditarTreinamento(idCurso);
 			frm.Show();
 		}
 	}

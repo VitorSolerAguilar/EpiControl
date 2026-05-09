@@ -78,7 +78,7 @@ namespace EpiControl.Views
 
                 rtbComplemento.Text = row["complemento"].ToString();
 
-                cbxTipoEndereco.Text = row["tipo"].ToString();
+                cbxTipo.Text = row["tipo"].ToString();
                 cbxEstadoCivil.Text = row["estado_civil"].ToString();
             }
             catch (Exception ex)
@@ -113,10 +113,102 @@ namespace EpiControl.Views
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo Nome obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtNomeMae.Text))
+                {
+                    MessageBox.Show("Campo NOME DA MÃE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNomeMae.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(mtbCep.Text))
+                {
+                    MessageBox.Show("Campo CEP obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbCep.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCidade.Text))
+                {
+                    MessageBox.Show("Campo CIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCidade.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtUf.Text))
+                {
+                    MessageBox.Show("Campo UF obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUf.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtRua.Text))
+                {
+                    MessageBox.Show("Campo RUA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtRua.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNumero.Text))
+                {
+                    MessageBox.Show("Campo Nº obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumero.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtLogradouro.Text))
+                {
+                    MessageBox.Show("Campo LOGRADOURO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtLogradouro.Focus();
+                    return;
+                }
+                if (cbxTipo.SelectedIndex == -1 || string.IsNullOrWhiteSpace(cbxTipo.Text))
+                {
+                    MessageBox.Show("Campo Tipo obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxTipo.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtMatricula.Text))
+                {
+                    MessageBox.Show("Campo MATRÍCULA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtMatricula.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCargo.Text))
+                {
+                    MessageBox.Show("Campo CARGO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCargo.Focus();
+                    return;
+                }
+
+                if (!rdbAtivo.Checked && !rdbInativo.Checked)
+                {
+                    MessageBox.Show("Campo STATUS obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 Funcionario funcionario = new Funcionario();
                 funcionario.id = _idFuncionario;
                 funcionario.nome = txtNome.Text.Trim();
-                funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
+
+                if (mtbDataNascimento.Text.Length < 10 || mtbDataNascimento.Text.Contains("_"))
+                {
+                    MessageBox.Show("Campo DATA DE NASCIMENTO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataNascimento.Focus();
+                    return;
+                }
+                else
+                {
+                    funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
+                }
+
                 funcionario.estadoCivil = cbxEstadoCivil.Text;
                 funcionario.nacionalidade = txtNacionalidade.Text.Trim();
 
@@ -150,7 +242,7 @@ namespace EpiControl.Views
                 endereco.rua = txtRua.Text.Trim();
                 endereco.numero = txtNumero.Text.Trim();
                 endereco.logradouro = txtLogradouro.Text.Trim();
-                endereco.tipo = cbxTipoEndereco.Text;
+                endereco.tipo = cbxTipo.Text;
                 endereco.complemento = rtbComplemento.Text.Trim();
 
                 Contato contato = new Contato();

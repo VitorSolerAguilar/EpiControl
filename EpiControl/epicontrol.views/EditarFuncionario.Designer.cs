@@ -47,7 +47,7 @@
             rtbComplemento = new RichTextBox();
             label32 = new Label();
             label31 = new Label();
-            cbxTipoEndereco = new ComboBox();
+            cbxTipo = new ComboBox();
             label30 = new Label();
             label29 = new Label();
             label28 = new Label();
@@ -265,14 +265,14 @@
             label31.TabIndex = 277;
             label31.Text = "Tipo";
             // 
-            // cbxTipoEndereco
+            // cbxTipo
             // 
-            cbxTipoEndereco.FormattingEnabled = true;
-            cbxTipoEndereco.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
-            cbxTipoEndereco.Location = new Point(426, 581);
-            cbxTipoEndereco.Name = "cbxTipoEndereco";
-            cbxTipoEndereco.Size = new Size(121, 23);
-            cbxTipoEndereco.TabIndex = 276;
+            cbxTipo.FormattingEnabled = true;
+            cbxTipo.Items.AddRange(new object[] { "Casa", "Apartamento", "Kitnet", "Studio", "Sobrado", "Condomínio", "Chácara", "Sítio" });
+            cbxTipo.Location = new Point(426, 581);
+            cbxTipo.Name = "cbxTipo";
+            cbxTipo.Size = new Size(121, 23);
+            cbxTipo.TabIndex = 276;
             // 
             // label30
             // 
@@ -739,7 +739,7 @@
             Controls.Add(rtbComplemento);
             Controls.Add(label32);
             Controls.Add(label31);
-            Controls.Add(cbxTipoEndereco);
+            Controls.Add(cbxTipo);
             Controls.Add(label30);
             Controls.Add(label29);
             Controls.Add(label28);
@@ -815,7 +815,7 @@
         private RichTextBox rtbComplemento;
         private Label label32;
         private Label label31;
-        private ComboBox cbxTipoEndereco;
+        private ComboBox cbxTipo;
         private Label label30;
         private Label label29;
         private Label label28;

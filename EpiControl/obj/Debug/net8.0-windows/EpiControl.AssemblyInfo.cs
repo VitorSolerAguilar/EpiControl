@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EpiControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a44ffc2f6c966371f8d8cd8bfc635850ab08481")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bafb5e75fc31252ba69563020e3da93541455c2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EpiControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EpiControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
