@@ -10,7 +10,7 @@ namespace EpiControl.epicontrol.model
     {
         public int id { get; set; }
         public DateTime inicio { get; set; }
-        public DateTime conclusao { get; set; }
+        public DateTime? conclusao { get; set; }
 
         //FK
 		public int funcionarioId { get; set; }

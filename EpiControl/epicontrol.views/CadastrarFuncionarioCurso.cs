@@ -45,10 +45,18 @@ namespace EpiControl.epicontrol.views
 
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
-				funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
 				funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
 
-				FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
+				if (mtbConclusao.Text.Length < 10 || mtbConclusao.Text.Contains("_"))
+				{
+                    funcionarioCurso.conclusao = null;
+                }
+				else
+				{
+                    funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
+                }
+
+                FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
 				funcionarioCursoDAO.cadastrarFuncionarioCurso(funcionarioCurso);
 
 				limparCampos();

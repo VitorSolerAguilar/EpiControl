@@ -24,7 +24,13 @@ namespace EpiControl.epicontrol.views
 		{
 			FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
 			dgvFuncionarioCurso.DataSource = funcionarioCursoDAO.listarFuncionarioCursos();
-		}
+
+            dgvFuncionarioCurso.Columns["id_funcionario_curso"].HeaderText = "ID";
+            dgvFuncionarioCurso.Columns["data_inicio"].HeaderText = "Data Início";
+            dgvFuncionarioCurso.Columns["data_conclusao"].HeaderText = "Data Conclusão";
+            dgvFuncionarioCurso.Columns["fk_funcionario"].HeaderText = "Funcionário";
+            dgvFuncionarioCurso.Columns["fk_curso"].HeaderText = "Curso";
+        }
 
 		private void dgvFuncionarioCurso_CellClick(object sender, DataGridViewCellEventArgs e)
 		{

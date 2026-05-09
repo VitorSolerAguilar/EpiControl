@@ -35,14 +35,14 @@
             label4 = new Label();
             cbxFuncionario = new ComboBox();
             cbxCurso = new ComboBox();
-            mtbInicio = new MaskedTextBox();
-            mtbConclusao = new MaskedTextBox();
             btnVoltar = new Button();
             panel1 = new Panel();
             label5 = new Label();
             label6 = new Label();
             pictureBox1 = new PictureBox();
             btnSalvar = new Button();
+            mtbInicio = new MaskedTextBox();
+            mtbConclusao = new MaskedTextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -98,24 +98,6 @@
             cbxCurso.Name = "cbxCurso";
             cbxCurso.Size = new Size(186, 23);
             cbxCurso.TabIndex = 62;
-            // 
-            // mtbInicio
-            // 
-            mtbInicio.Location = new Point(158, 153);
-            mtbInicio.Mask = "00/00/0000";
-            mtbInicio.Name = "mtbInicio";
-            mtbInicio.Size = new Size(98, 23);
-            mtbInicio.TabIndex = 74;
-            mtbInicio.ValidatingType = typeof(DateTime);
-            // 
-            // mtbConclusao
-            // 
-            mtbConclusao.Location = new Point(158, 202);
-            mtbConclusao.Mask = "00/00/0000";
-            mtbConclusao.Name = "mtbConclusao";
-            mtbConclusao.Size = new Size(98, 23);
-            mtbConclusao.TabIndex = 75;
-            mtbConclusao.ValidatingType = typeof(DateTime);
             // 
             // btnVoltar
             // 
@@ -185,16 +167,34 @@
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // mtbInicio
+            // 
+            mtbInicio.Location = new Point(158, 153);
+            mtbInicio.Mask = "00/00/0000";
+            mtbInicio.Name = "mtbInicio";
+            mtbInicio.Size = new Size(147, 23);
+            mtbInicio.TabIndex = 229;
+            mtbInicio.ValidatingType = typeof(DateTime);
+            // 
+            // mtbConclusao
+            // 
+            mtbConclusao.Location = new Point(158, 197);
+            mtbConclusao.Mask = "00/00/0000";
+            mtbConclusao.Name = "mtbConclusao";
+            mtbConclusao.Size = new Size(147, 23);
+            mtbConclusao.TabIndex = 230;
+            mtbConclusao.ValidatingType = typeof(DateTime);
+            // 
             // frmCadastrarFuncionarioCurso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(509, 318);
+            Controls.Add(mtbConclusao);
+            Controls.Add(mtbInicio);
             Controls.Add(btnSalvar);
             Controls.Add(panel1);
             Controls.Add(btnVoltar);
-            Controls.Add(mtbConclusao);
-            Controls.Add(mtbInicio);
             Controls.Add(cbxCurso);
             Controls.Add(cbxFuncionario);
             Controls.Add(label4);
@@ -223,13 +223,13 @@
         private Label label4;
         private ComboBox cbxFuncionario;
         private ComboBox cbxCurso;
-        private MaskedTextBox mtbInicio;
-        private MaskedTextBox mtbConclusao;
         private Button btnVoltar;
         private Panel panel1;
         private Label label5;
         private Label label6;
         private PictureBox pictureBox1;
 		private Button btnSalvar;
-	}
+        private MaskedTextBox mtbInicio;
+        private MaskedTextBox mtbConclusao;
+    }
 }

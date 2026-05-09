@@ -25,9 +25,10 @@ namespace EpiControl.epicontrol.views
 			EstoqueEpiDAO dao = new EstoqueEpiDAO();
 
 			dgvEstoque.DataSource = dao.listarEstoqueEpi();
-		}
+            dgvEstoque.Refresh();
+        }
 
-		private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 

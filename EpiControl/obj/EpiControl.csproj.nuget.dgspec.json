@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[9.5.0, )"
             },
+            "System.Threading.Timer": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "WinForms.DataVisualization": {
               "target": "Package",
               "version": "[1.10.0, )"

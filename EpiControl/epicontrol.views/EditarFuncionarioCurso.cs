@@ -89,10 +89,18 @@ namespace EpiControl.epicontrol.views
 				funcionarioCurso.id = _idFuncionarioCurso;
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
-				funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
 				funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
 
-				FuncionarioCursoDAO dao = new FuncionarioCursoDAO();
+                if (mtbConclusao.Text.Length < 10 || mtbConclusao.Text.Contains("_"))
+                {
+                    funcionarioCurso.conclusao = null;
+                }
+                else
+                {
+                    funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
+                }
+
+                FuncionarioCursoDAO dao = new FuncionarioCursoDAO();
 				dao.editarFuncionarioCurso(funcionarioCurso);
 
 				MessageBox.Show("Funcionario curso atualizado com sucesso!");

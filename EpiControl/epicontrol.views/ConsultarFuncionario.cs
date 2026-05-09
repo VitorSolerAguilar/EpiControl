@@ -15,19 +15,20 @@ namespace EpiControl.epicontrol.views
 {
 	public partial class frmConsultarFuncionario : Form
 	{
-		public frmConsultarFuncionario()
+
+        public frmConsultarFuncionario()
 		{
 			InitializeComponent();
-		}
+        }
 
 		private void ConsultarFuncionario_Load(object sender, EventArgs e)
 		{
 			FuncionarioDAO dao = new FuncionarioDAO();
 
 			dgvFuncionario.DataSource = dao.listarFuncionarios();
-		}
+        }
 
-		private void dgvFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 
