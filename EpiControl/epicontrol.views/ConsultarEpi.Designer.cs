@@ -36,10 +36,10 @@
             label = new Label();
             btnConsultar = new Button();
             txtConsultaEpi = new TextBox();
-            dgvEmprestimo = new DataGridView();
+            dgvEpi = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEpi).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -111,16 +111,16 @@
             txtConsultaEpi.Size = new Size(226, 23);
             txtConsultaEpi.TabIndex = 18;
             // 
-            // dgvEmprestimo
+            // dgvEpi
             // 
-            dgvEmprestimo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmprestimo.Location = new Point(12, 103);
-            dgvEmprestimo.Name = "dgvEmprestimo";
-            dgvEmprestimo.ReadOnly = true;
-            dgvEmprestimo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvEmprestimo.Size = new Size(776, 335);
-            dgvEmprestimo.TabIndex = 17;
-            dgvEmprestimo.CellClick += dgvEpi_CellClick;
+            dgvEpi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEpi.Location = new Point(12, 103);
+            dgvEpi.Name = "dgvEpi";
+            dgvEpi.ReadOnly = true;
+            dgvEpi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEpi.Size = new Size(776, 335);
+            dgvEpi.TabIndex = 17;
+            dgvEpi.CellClick += dgvEpi_CellClick;
             // 
             // frmConsultarEpi
             // 
@@ -130,7 +130,7 @@
             Controls.Add(label);
             Controls.Add(btnConsultar);
             Controls.Add(txtConsultaEpi);
-            Controls.Add(dgvEmprestimo);
+            Controls.Add(dgvEpi);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -142,7 +142,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvEmprestimo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEpi).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,6 +156,6 @@
 		private Label label;
 		private Button btnConsultar;
 		private TextBox txtConsultaEpi;
-		private DataGridView dgvEmprestimo;
+		private DataGridView dgvEpi;
 	}
 }

@@ -138,7 +138,7 @@
             Name = "frmConsultarFuncionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EPICONTROL";
-            Load += ConsultarFuncionario_Load;
+            Load += frmConsultarFuncionario_Load;
             ((System.ComponentModel.ISupportInitialize)dgvFuncionario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

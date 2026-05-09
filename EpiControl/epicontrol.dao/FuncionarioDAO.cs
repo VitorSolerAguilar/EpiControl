@@ -151,7 +151,6 @@ namespace EpiControl.epicontrol.dao
 					"f.cpf, " +
 					"f.cargo, " +
 					"f.genero," +
-					"f.status, " +
 					"" +
 					"c.id_contato," +
 					"c.telefone, " +

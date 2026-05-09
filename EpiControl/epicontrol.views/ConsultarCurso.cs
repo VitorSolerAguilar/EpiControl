@@ -22,19 +22,32 @@ namespace EpiControl.epicontrol.views
 
 		private void frmConsultarCurso_Load(object sender, EventArgs e)
 		{
-			dgvTreinamento.DataSource = cursoDAO.listarCursos();
-		}
+			dgvCurso.DataSource = cursoDAO.listarCursos();
+
+            if (dgvCurso.Columns.Count == 0) return;
+
+            if (dgvCurso.Columns.Contains("id_curso"))
+                dgvCurso.Columns["id_curso"].HeaderText = "ID";
+            if (dgvCurso.Columns.Contains("nome"))
+                dgvCurso.Columns["nome"].HeaderText = "Nome";
+            if (dgvCurso.Columns.Contains("carga_horaria"))
+                dgvCurso.Columns["carga_horaria"].HeaderText = "Carga Horária";
+            if (dgvCurso.Columns.Contains("descricao"))
+                dgvCurso.Columns["descricao"].HeaderText = "Descrição";
+            if (dgvCurso.Columns.Contains("validade_meses"))
+                dgvCurso.Columns["validade_meses"].HeaderText = "Validade";
+        }
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			dgvTreinamento.DataSource = cursoDAO.buscarCurso(txtConsultaNomeTreinamento.Text);
+			dgvCurso.DataSource = cursoDAO.buscarCurso(txtConsultaNomeTreinamento.Text);
 		}
 
-		private void dgvTreinamento_CellClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvCurso_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0) return;
 
-			int idCurso = Convert.ToInt32(dgvTreinamento.Rows[e.RowIndex].Cells["id_curso"].Value);
+			int idCurso = Convert.ToInt32(dgvCurso.Rows[e.RowIndex].Cells["id_curso"].Value);
 
 			frmEditarCurso frm = new frmEditarCurso(idCurso);
 			frm.Show();

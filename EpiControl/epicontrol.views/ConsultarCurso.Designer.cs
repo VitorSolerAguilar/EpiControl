@@ -36,10 +36,10 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            dgvTreinamento = new DataGridView();
+            dgvCurso = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvTreinamento).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCurso).BeginInit();
             SuspendLayout();
             // 
             // label
@@ -111,17 +111,17 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // dgvTreinamento
+            // dgvCurso
             // 
-            dgvTreinamento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTreinamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTreinamento.Location = new Point(12, 109);
-            dgvTreinamento.Name = "dgvTreinamento";
-            dgvTreinamento.ReadOnly = true;
-            dgvTreinamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTreinamento.Size = new Size(776, 335);
-            dgvTreinamento.TabIndex = 11;
-            dgvTreinamento.CellClick += dgvTreinamento_CellClick;
+            dgvCurso.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCurso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCurso.Location = new Point(12, 109);
+            dgvCurso.Name = "dgvCurso";
+            dgvCurso.ReadOnly = true;
+            dgvCurso.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCurso.Size = new Size(776, 335);
+            dgvCurso.TabIndex = 11;
+            dgvCurso.CellClick += dgvCurso_CellClick;
             // 
             // frmConsultarCurso
             // 
@@ -132,7 +132,7 @@
             Controls.Add(btnConsultar);
             Controls.Add(txtConsultaNomeTreinamento);
             Controls.Add(panel1);
-            Controls.Add(dgvTreinamento);
+            Controls.Add(dgvCurso);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -143,7 +143,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvTreinamento).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCurso).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,6 +157,6 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private DataGridView dgvTreinamento;
+        private DataGridView dgvCurso;
     }
 }
