@@ -68,7 +68,7 @@ namespace EpiControl.epicontrol.views
 			try
 			{
 				FuncionarioCursoDAO dao = new FuncionarioCursoDAO();
-				dao.excluirFuncionarioCurso(_idCurso);
+				dao.excluirFuncionarioCurso(_idFuncionarioCurso);
 
 				MessageBox.Show("Registro excluído com sucesso!");
 
