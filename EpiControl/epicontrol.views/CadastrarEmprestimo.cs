@@ -37,12 +37,43 @@ namespace EpiControl.epicontrol.views
         {
             try
             {
+                if (cbxFuncionario.SelectedValue == null || cbxFuncionario.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo FUNCIONÁRIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxFuncionario.Focus();
+                    return;
+                }
+
+                if (cbxEpi.SelectedValue == null || cbxEpi.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo EPI obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxEpi.Focus();
+                    return;
+                }
+
+                if (nudQuantidade.Value <= 0)
+                {
+                    MessageBox.Show("Campo QUANTIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    nudQuantidade.Focus();
+                    return;
+                }
+
                 Emprestimo emprestimo = new Emprestimo();
 
                 emprestimo.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
                 emprestimo.epiId = Convert.ToInt32(cbxEpi.SelectedValue);
 
-                emprestimo.dataEntrega = Convert.ToDateTime(mtbDataEmprestimo.Text);
+                if (mtbDataEmprestimo.Text.Length < 10 || mtbDataEmprestimo.Text.Contains("_"))
+                {
+                    MessageBox.Show("Campo DATA EMRPRESTIMO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataEmprestimo.Focus();
+                    return;
+                }
+                else
+                {
+                    emprestimo.dataEntrega = Convert.ToDateTime(mtbDataEmprestimo.Text);
+                }
+
                 emprestimo.quantidade = (int)nudQuantidade.Value;
                 emprestimo.observacoes = rtbObservacoes.Text;
 

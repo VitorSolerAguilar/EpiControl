@@ -32,13 +32,65 @@ namespace EpiControl.Views
 		{
 			try
 			{
-				Epi epi = new Epi();
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo NOME obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCa.Text))
+                {
+                    MessageBox.Show("Campo CA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCa.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtTamanho.Text))
+                {
+                    MessageBox.Show("Campo TAMANHO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtTamanho.Focus();
+                    return;
+                }
+
+                if (cbxFornecedor.SelectedValue == null || cbxFornecedor.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo FORNECEDOR obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxFornecedor.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtValorUnitario.Text))
+                {
+                    MessageBox.Show("Campo PREÇO UNITÁRIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtValorUnitario.Focus();
+                    return;
+                }
+
+                if (!rdbAtivo.Checked && !rdbInativo.Checked)
+                {
+                    MessageBox.Show("Campo STATUS obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Epi epi = new Epi();
 
 				epi.nome = txtNome.Text;
 				epi.codigoInterno = txtCodigoInterno.Text;
 				epi.ca = txtCa.Text;
 				epi.tamanho = txtTamanho.Text;
-				epi.validadeCa = Convert.ToDateTime(mtbValidadeCa.Text);
+
+				if (mtbValidadeCa.Text.Length < 10 || mtbValidadeCa.Text.Contains("_"))
+				{
+                    MessageBox.Show("Campo VALIDADE DO CA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbValidadeCa.Focus();
+                    return;
+                }
+				else
+                {
+                    epi.validadeCa = Convert.ToDateTime(mtbValidadeCa.Text);
+                }
+
 				epi.marca = txtMarca.Text;
 				epi.cor = txtCor.Text;
 				epi.valorUnitario = Convert.ToDecimal(txtValorUnitario.Text);

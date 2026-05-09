@@ -45,12 +45,26 @@ namespace EpiControl.Views
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo NOME obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(mtbTelefone.Text))
+                {
+                    MessageBox.Show("Campo TELEFONE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbTelefone.Focus();
+                    return;
+                }
+
                 mtbCnpj.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 string cnpj = mtbCnpj.Text;
 
                 if (!ValidarCnpj(cnpj))
                 {
-                    MessageBox.Show("CNPJ inválido!");
+                    MessageBox.Show("Campo CNPJ obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     mtbCnpj.Focus();
                     return;
                 }

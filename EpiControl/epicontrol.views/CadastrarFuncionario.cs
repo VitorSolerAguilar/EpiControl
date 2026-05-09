@@ -25,12 +25,93 @@ namespace EpiControl.epicontrol.views
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo Nome obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtNomeMae.Text))
+                {
+                    MessageBox.Show("Campo NOME DA MÃE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNomeMae.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(mtbCep.Text))
+                {
+                    MessageBox.Show("Campo CEP obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbCep.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCidade.Text))
+                {
+                    MessageBox.Show("Campo CIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCidade.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtUf.Text))
+                {
+                    MessageBox.Show("Campo UF obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUf.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtRua.Text))
+                {
+                    MessageBox.Show("Campo RUA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtRua.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNumero.Text))
+                {
+                    MessageBox.Show("Campo Nº obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumero.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtLogradouro.Text))
+                {
+                    MessageBox.Show("Campo LOGRADOURO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtLogradouro.Focus();
+                    return;
+                }
+                if (cbxTipo.SelectedIndex == -1 || string.IsNullOrWhiteSpace(cbxTipo.Text))
+                {
+                    MessageBox.Show("Campo Tipo obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxTipo.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtMatricula.Text))
+                {
+                    MessageBox.Show("Campo MATRÍCULA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtMatricula.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCargo.Text))
+                {
+                    MessageBox.Show("Campo CARGO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCargo.Focus();
+                    return;
+                }
+
+                if (!rdbAtivo.Checked && !rdbInativo.Checked)
+                {
+                    MessageBox.Show("Campo STATUS obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 mtbCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 string cpf = mtbCpf.Text;
 
                 if (!ValidarCpf(cpf))
                 {
-                    MessageBox.Show("CPF inválido.");
+                    MessageBox.Show("CPF invalido!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     mtbCpf.Focus();
                     return;
                 }
@@ -38,7 +119,19 @@ namespace EpiControl.epicontrol.views
                 Funcionario funcionario = new Funcionario();
 
                 funcionario.nome = txtNome.Text;
-                funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
+
+                if (mtbDataNascimento.Text.Length < 10 || mtbDataNascimento.Text.Contains("_"))
+                {
+                    MessageBox.Show("Campo DATA DE NASCIMENTO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataNascimento.Focus();
+                    return;
+                }
+                else
+                {                   
+                    funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
+                }
+
+
                 funcionario.estadoCivil = cbxEstadoCivil.Text;
                 funcionario.nacionalidade = txtNacionalidade.Text;
                 funcionario.nomeMae = txtNomeMae.Text;

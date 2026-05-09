@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\consultarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarcurso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarnormaregulamentadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\consultarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultarfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,48 +21,33 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultarFuncionario.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFuncionario.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarFuncionario.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarFuncionario.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarFuncionario.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwFcAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T23:54:54.371Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConsultarCurso.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarCurso.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarCurso.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarCurso.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarCurso.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T00:32:47.033Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConsultarNormaRegulamentadora.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultarNormaRegulamentadora.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCUAAABSAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CadastrarTreinamento.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAUwCQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T00:30:23.193Z",
+              "WhenOpened": "2026-05-09T16:25:58.955Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastrarTreinamento.cs [Projeto]",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs [Projeto]*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs [Projeto]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:25:35.668Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         },

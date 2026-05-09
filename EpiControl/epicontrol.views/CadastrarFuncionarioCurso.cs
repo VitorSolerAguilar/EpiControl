@@ -41,14 +41,37 @@ namespace EpiControl.epicontrol.views
 		{
 			try
 			{
-				FuncionarioCurso funcionarioCurso = new FuncionarioCurso();
+                if (cbxFuncionario.SelectedValue == null || cbxFuncionario.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo FUNCIONÁRIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxFuncionario.Focus();
+                    return;
+                }
+
+                if (cbxCurso.SelectedValue == null || cbxCurso.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo CURSO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxCurso.Focus();
+                    return;
+                }
+
+                FuncionarioCurso funcionarioCurso = new FuncionarioCurso();
 
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
-				funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
+
+				if (mtbInicio.Text.Length < 10 || mtbInicio.Text.Contains("_"))
+				{
+                    MessageBox.Show("Campo INÍCIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+				{
+                    funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
+                }
 
 				if (mtbConclusao.Text.Length < 10 || mtbConclusao.Text.Contains("_"))
 				{
+                    MessageBox.Show("Campo INÍCIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     funcionarioCurso.conclusao = null;
                 }
 				else

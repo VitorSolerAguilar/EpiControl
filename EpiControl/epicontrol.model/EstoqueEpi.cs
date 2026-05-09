@@ -11,7 +11,7 @@ namespace EpiControl.epicontrol.model
 		public int id { get; set; }
 		public int quantidade { get; set; }
 		public string localizacao { get; set; }
-		public int estoqueMinimo { get; set; }
+		public int? estoqueMinimo { get; set; }
 
 		//FK	
 		public int epiId { get; set; }

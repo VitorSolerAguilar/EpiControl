@@ -148,9 +148,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(57, 285);
             label7.Name = "label7";
-            label7.Size = new Size(108, 15);
+            label7.Size = new Size(103, 15);
             label7.TabIndex = 17;
-            label7.Text = "Link Oficial (MTE) *";
+            label7.Text = "Link Oficial (MTE) ";
             // 
             // txtLinkMte
             // 

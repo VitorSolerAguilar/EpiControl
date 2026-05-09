@@ -37,11 +37,55 @@ namespace EpiControl.epicontrol.views
 		{
 			try
 			{
-				MovimentacaoEstoque movimentacao = new MovimentacaoEstoque();
+                if (cbxFuncionario.SelectedValue == null || cbxFuncionario.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo FUNCIONARIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxFuncionario.Focus();
+                    return;
+                }
+
+                if (cbxEpi.SelectedValue == null || cbxEpi.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Campo EPI obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxEpi.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(cbxTipoMovimentacao.Text))
+                {
+                    MessageBox.Show("Campo TIPO DE MOVIMENTAÇÃO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxTipoMovimentacao.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtQuantidade.Text))
+                {
+                    MessageBox.Show("Campo QUANTIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtQuantidade.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(mtbDataEmprestimo.Text) || mtbDataEmprestimo.Text.Contains("_"))
+                {
+                    
+                }
+
+                MovimentacaoEstoque movimentacao = new MovimentacaoEstoque();
 
 				movimentacao.tipoMovimentacao = cbxTipoMovimentacao.Text;
 				movimentacao.quantidade = Convert.ToInt32(txtQuantidade.Text);
-				movimentacao.dataMovimentacao = Convert.ToDateTime(mtbDataEmprestimo.Text);
+
+				if (mtbDataEmprestimo.Text.Length < 10 || mtbDataEmprestimo.Text.Contains("_"))
+				{
+                    MessageBox.Show("Campo DATA DE EMPRÉSTIMO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataEmprestimo.Focus();
+                    return;
+				}
+				else
+				{
+                    movimentacao.dataMovimentacao = Convert.ToDateTime(mtbDataEmprestimo.Text);
+                }
+
 				movimentacao.observacao = rtbObservacao.Text;
 				movimentacao.estoqueId = Convert.ToInt32(cbxEpi.SelectedValue);
 				movimentacao.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);

@@ -166,9 +166,9 @@
             label27.AutoSize = true;
             label27.Location = new Point(57, 531);
             label27.Name = "label27";
-            label27.Size = new Size(44, 15);
+            label27.Size = new Size(52, 15);
             label27.TabIndex = 163;
-            label27.Text = "Cidade";
+            label27.Text = "Cidade *";
             // 
             // label26
             // 
@@ -233,18 +233,18 @@
             label21.AutoSize = true;
             label21.Location = new Point(334, 526);
             label21.Name = "label21";
-            label21.Size = new Size(21, 15);
+            label21.Size = new Size(29, 15);
             label21.TabIndex = 152;
-            label21.Text = "UF";
+            label21.Text = "UF *";
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Location = new Point(57, 559);
             label20.Name = "label20";
-            label20.Size = new Size(27, 15);
+            label20.Size = new Size(35, 15);
             label20.TabIndex = 150;
-            label20.Text = "Rua";
+            label20.Text = "Rua *";
             // 
             // txtRua
             // 
@@ -266,9 +266,9 @@
             label18.AutoSize = true;
             label18.Location = new Point(473, 555);
             label18.Name = "label18";
-            label18.Size = new Size(21, 15);
+            label18.Size = new Size(29, 15);
             label18.TabIndex = 146;
-            label18.Text = "N°";
+            label18.Text = "N° *";
             // 
             // label17
             // 
@@ -555,9 +555,9 @@
             label31.AutoSize = true;
             label31.Location = new Point(390, 584);
             label31.Name = "label31";
-            label31.Size = new Size(30, 15);
+            label31.Size = new Size(38, 15);
             label31.TabIndex = 171;
-            label31.Text = "Tipo";
+            label31.Text = "Tipo *";
             // 
             // label32
             // 
@@ -591,9 +591,9 @@
             lblBairro.AutoSize = true;
             lblBairro.Location = new Point(58, 589);
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(69, 15);
+            lblBairro.Size = new Size(77, 15);
             lblBairro.TabIndex = 224;
-            lblBairro.Text = "Logradouro";
+            lblBairro.Text = "Logradouro *";
             // 
             // txtLogradouro
             // 
@@ -606,7 +606,7 @@
             // 
             cbxEstadoCivil.FormattingEnabled = true;
             cbxEstadoCivil.Items.AddRange(new object[] { "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)", "Separado(a)", "União estável" });
-            cbxEstadoCivil.Location = new Point(181, 153);
+            cbxEstadoCivil.Location = new Point(183, 153);
             cbxEstadoCivil.Name = "cbxEstadoCivil";
             cbxEstadoCivil.Size = new Size(137, 23);
             cbxEstadoCivil.TabIndex = 225;

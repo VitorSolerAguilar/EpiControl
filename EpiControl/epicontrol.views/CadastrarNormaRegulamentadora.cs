@@ -28,15 +28,46 @@ namespace EpiControl.views
 		{
 			try
 			{
-				NormaRegulamentadora normaRegulamentadora = new NormaRegulamentadora();
+                if (string.IsNullOrWhiteSpace(txtNumeroNr.Text))
+                {
+                    MessageBox.Show("Campo NÚMERO DA NR obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNumeroNr.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtTitulo.Text))
+                {
+                    MessageBox.Show("Campo TÍTULO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtTitulo.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(rtbDescricao.Text))
+                {
+                    MessageBox.Show("Campo DESCRIÇÃO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    rtbDescricao.Focus();
+                    return;
+                }
+
+                NormaRegulamentadora normaRegulamentadora = new NormaRegulamentadora();
 
 				normaRegulamentadora.codigoNr = txtNumeroNr.Text;
 				normaRegulamentadora.titulo = txtTitulo.Text;
 				normaRegulamentadora.descricao = rtbDescricao.Text;
 				normaRegulamentadora.linkMte = txtLinkMte.Text;
-				normaRegulamentadora.dataVigencia = Convert.ToDateTime(mtbDataVigencia.Text);
 
-				NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
+				if (mtbDataVigencia.Text.Length < 10 || mtbDataVigencia.Text.Contains("_"))
+				{
+                    MessageBox.Show("Campo DATA DE VIGÊNCIA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataVigencia.Focus();
+                    return;
+                }
+				else
+				{
+                    normaRegulamentadora.dataVigencia = Convert.ToDateTime(mtbDataVigencia.Text);
+                }
+
+                NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
 				dao.cadastrarNormaRegulamentadora(normaRegulamentadora);
 
                 MessageBox.Show("Norma regulamentadora cadastrada com sucesso!");

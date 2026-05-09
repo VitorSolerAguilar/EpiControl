@@ -22,14 +22,38 @@ namespace EpiControl.epicontrol.views
 		{
 			try
 			{
-				Curso curso = new Curso();
+                if (string.IsNullOrWhiteSpace(txtNome.Text))
+                {
+                    MessageBox.Show("Campo NOME TREINAMENTO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNome.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtCargaHoraria.Text))
+                {
+                    MessageBox.Show("Campo CARGA HORÁRIA obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCargaHoraria.Focus();
+                    return;
+                }
+
+                Curso curso = new Curso();
 
 				curso.nome = txtNome.Text;
 				curso.cargaHoraria = txtCargaHoraria.Text;
 				curso.descricao = rtbDescricao.Text;
-				curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
 
-				CursoDAO cursoDAO = new CursoDAO();
+				if (mtbValidade.Text.Length < 10 || mtbValidade.Text.Contains("_"))
+				{
+                    MessageBox.Show("Campo VALIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbValidade.Focus();
+                    return;
+                }
+				else
+                {
+                    curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
+                }
+
+                CursoDAO cursoDAO = new CursoDAO();
 				cursoDAO.cadastrarCurso(curso);
 				MessageBox.Show("Treinamento cadastrado!");
 
