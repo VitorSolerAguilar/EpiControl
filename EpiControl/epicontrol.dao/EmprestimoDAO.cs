@@ -21,27 +21,37 @@ namespace EpiControl.epicontrol.dao
 
         public void cadastrarEmprestimo(Emprestimo emprestimo)
         {
-            conexao.Open();
-            MySqlTransaction transaction = conexao.BeginTransaction();
-
             try
             {
-                string sqlVerifica = @"SELECT quantidade FROM tb_estoque_epi WHERE fk_epi = @fk_epi";
+                conexao.Open();
+                MySqlTransaction transaction = conexao.BeginTransaction();
+
+                string sqlVerifica = @"SELECT SUM(quantidade) as quantidade_total FROM tb_estoque_epi WHERE fk_epi = @fk_epi";
 
                 MySqlCommand cmdVerifica = new MySqlCommand(sqlVerifica, conexao, transaction);
                 cmdVerifica.Parameters.AddWithValue("@fk_epi", emprestimo.epiId);
 
                 object resultado = cmdVerifica.ExecuteScalar();
 
-                if (resultado == null)
+                if (resultado == null || resultado is DBNull)
+                {
+                    transaction.Rollback();
+                    conexao.Close();
                     MessageBox.Show("Nenhum estoque cadastrado para este EPI.");
+                    return;
+                }
 
                 int quantidadeAtual = Convert.ToInt32(resultado);
 
                 if (quantidadeAtual < emprestimo.quantidade)
-                    MessageBox.Show($"Estoque insuficiente. Disponível: {quantidadeAtual}, " + $"Solicitado: {emprestimo.quantidade}.");
+                {
+                    transaction.Rollback();
+                    conexao.Close();
+                    MessageBox.Show($"Estoque insuficiente. Disponível: {quantidadeAtual}, Solicitado: {emprestimo.quantidade}.");
+                    return;
+                }
 
-                string sqlEmprestimo = @" INSERT INTO tb_emprestimo (quantidade, data_entrega, observacoes, fk_funcionario, fk_epi) VALUES (@quantidade, @dataEntrega, @observacoes, @fk_funcionario, @fk_epi)";
+                string sqlEmprestimo = @"INSERT INTO tb_emprestimo (quantidade, data_entrega, observacoes, fk_funcionario, fk_epi) VALUES (@quantidade, @dataEntrega, @observacoes, @fk_funcionario, @fk_epi)";
 
                 MySqlCommand cmdEmprestimo = new MySqlCommand(sqlEmprestimo, conexao, transaction);
                 cmdEmprestimo.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
@@ -52,7 +62,7 @@ namespace EpiControl.epicontrol.dao
 
                 cmdEmprestimo.ExecuteNonQuery();
 
-                string sqlEstoque = @"UPDATE tb_estoque_epi SET quantidade = quantidade - @quantidade WHERE fk_epi = @fk_epi";
+                string sqlEstoque = @"UPDATE tb_estoque_epi SET quantidade = quantidade - @quantidade WHERE fk_epi = @fk_epi LIMIT 1";
 
                 MySqlCommand cmdEstoque = new MySqlCommand(sqlEstoque, conexao, transaction);
                 cmdEstoque.Parameters.AddWithValue("@quantidade", emprestimo.quantidade);
@@ -64,12 +74,12 @@ namespace EpiControl.epicontrol.dao
             }
             catch (Exception ex)
             {
-                transaction.Rollback();
                 MessageBox.Show("Erro ao cadastrar empréstimo de EPI: " + ex.Message);
             }
             finally
             {
-                conexao.Close();
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
             }
         }
 
