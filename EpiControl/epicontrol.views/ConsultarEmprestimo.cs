@@ -19,18 +19,19 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void dgvEmprestimo_CellClick(object sender, DataGridViewCellEventArgs e)
+        EmprestimoDAO emprestimoDAO = new EmprestimoDAO();
+
+        private void dgvEmprestimo_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 
 			if (e.RowIndex < 0) return;
 
 			int idEmprestimo = Convert.ToInt32(dgvEmprestimo.Rows[e.RowIndex].Cells["id_emprestimo"].Value);
-		}
+        }
 
 		private void frmConsultarEmprestimo_Load(object sender, EventArgs e)
-		{
-			EmprestimoDAO dao = new EmprestimoDAO();
-			dgvEmprestimo.DataSource = dao.listarEmprestimo();
+		{			
+			dgvEmprestimo.DataSource = emprestimoDAO.listarEmprestimo();
 
             if (dgvEmprestimo.Columns.Count == 0) return;
 
@@ -62,8 +63,7 @@ namespace EpiControl.epicontrol.views
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			EmprestimoDAO dao = new EmprestimoDAO();
-			dgvEmprestimo.DataSource = dao.buscarEmprestimo(txtConsultaEmprestimo.Text);
-		}
-	}
+			dgvEmprestimo.DataSource = emprestimoDAO.buscarEmprestimo(txtConsultaEmprestimo.Text);
+		}  
+    }
 }

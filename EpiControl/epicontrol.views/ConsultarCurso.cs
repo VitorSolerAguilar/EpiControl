@@ -18,6 +18,7 @@ namespace EpiControl.epicontrol.views
 		{
 			InitializeComponent();
 		}
+
 		CursoDAO cursoDAO = new CursoDAO();
 
 		private void frmConsultarCurso_Load(object sender, EventArgs e)
@@ -50,7 +51,14 @@ namespace EpiControl.epicontrol.views
 			int idCurso = Convert.ToInt32(dgvCurso.Rows[e.RowIndex].Cells["id_curso"].Value);
 
 			frmEditarTreinamento frm = new frmEditarTreinamento(idCurso);
-			frm.Show();
-		}
-	}
+            frm.ShowDialog();
+
+            AtualizarGrid();
+        }
+
+        private void AtualizarGrid()
+        {
+            dgvCurso.DataSource = cursoDAO.listarCursos();
+        }
+    }
 }

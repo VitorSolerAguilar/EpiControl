@@ -20,9 +20,10 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void frmConsultarFuncionarioCurso_Load(object sender, EventArgs e)
+        FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
+
+        private void frmConsultarFuncionarioCurso_Load(object sender, EventArgs e)
 		{
-			FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
 			dgvFuncionarioCurso.DataSource = funcionarioCursoDAO.listarFuncionarioCursos();
 
             dgvFuncionarioCurso.Columns["id_funcionario_curso"].HeaderText = "ID";
@@ -41,8 +42,14 @@ namespace EpiControl.epicontrol.views
 			int idFuncionario = Convert.ToInt32(dgvFuncionarioCurso.Rows[e.RowIndex].Cells["fk_funcionario"].Value);
 
 			frmEditarFuncionarioCurso frm = new frmEditarFuncionarioCurso(idFuncionarioCurso, idCurso, idFuncionario);
-			frm.Show();
-		}
+            frm.ShowDialog();
 
-	}
+            AtualizarGrid();
+        }
+
+        private void AtualizarGrid()
+        {
+            dgvFuncionarioCurso.DataSource = funcionarioCursoDAO.listarFuncionarioCursos();
+        }
+    }
 }

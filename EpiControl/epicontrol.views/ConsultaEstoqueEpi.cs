@@ -20,10 +20,11 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void frmConsultaEstoqueEpi_Load(object sender, EventArgs e)
+        EstoqueEpiDAO estoqueEpiDAO = new EstoqueEpiDAO();
+
+        private void frmConsultaEstoqueEpi_Load(object sender, EventArgs e)
 		{
-			EstoqueEpiDAO dao = new EstoqueEpiDAO();
-			dgvEstoque.DataSource = dao.listarEstoqueEpi();
+			dgvEstoque.DataSource = estoqueEpiDAO.listarEstoqueEpi();
 
             if (dgvEstoque.Columns.Count == 0) return;
 
@@ -56,13 +57,19 @@ namespace EpiControl.epicontrol.views
 			int idEstoque = Convert.ToInt32(dgvEstoque.Rows[e.RowIndex].Cells["id_estoque"].Value);
 
 			frmEditarEstoqueEpi frm = new frmEditarEstoqueEpi(idEstoque);
-			frm.Show();
-		}
+            frm.ShowDialog();
+
+            AtualizarGrid();
+        }
 
 		private void btnConsultar_Click(object sender, EventArgs e)
-		{
-			EstoqueEpiDAO dao = new EstoqueEpiDAO();
-			dgvEstoque.DataSource = dao.buscarEstoque(txtConsultaEstoque.Text);
+		{			
+			dgvEstoque.DataSource = estoqueEpiDAO.buscarEstoque(txtConsultaEstoque.Text);
 		}
-	}
+
+        private void AtualizarGrid()
+        {
+            dgvEstoque.DataSource = estoqueEpiDAO.listarEstoqueEpi();
+        }
+    }
 }

@@ -19,10 +19,11 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void frmConsultarFornecedor_Load(object sender, EventArgs e)
+        FornecedorDAO fornecedorDAO = new FornecedorDAO();
+
+        private void frmConsultarFornecedor_Load(object sender, EventArgs e)
 		{
-			FornecedorDAO dao = new FornecedorDAO();
-			dgvFornecedor.DataSource = dao.listarFornecedor();
+			dgvFornecedor.DataSource = fornecedorDAO.listarFornecedor();
 
             if(dgvFornecedor.Columns.Count == 0) return;
 
@@ -66,9 +67,7 @@ namespace EpiControl.epicontrol.views
 		
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			FornecedorDAO dao = new FornecedorDAO();
-
-			dgvFornecedor.DataSource = dao.buscarFornecedor(txtConsultaNome.Text);
+			dgvFornecedor.DataSource = fornecedorDAO.buscarFornecedor(txtConsultaNome.Text);
 		}
 
 		private void dgvFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,7 +81,13 @@ namespace EpiControl.epicontrol.views
 			int idContato = Convert.ToInt32(dgvFornecedor.Rows[e.RowIndex].Cells["id_contato"].Value);
 
 			frmEditarFornecedor frm = new frmEditarFornecedor(idFornecedor, idEndereco, idContato);
-			frm.Show();
-		}
-	}
+            frm.ShowDialog();
+
+            AtualizarGrid();
+        }
+        private void AtualizarGrid()
+        {
+            dgvFornecedor.DataSource = fornecedorDAO.listarFornecedor();
+        }
+    }
 }

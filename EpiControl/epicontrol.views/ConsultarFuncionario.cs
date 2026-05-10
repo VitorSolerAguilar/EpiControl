@@ -21,10 +21,11 @@ namespace EpiControl.epicontrol.views
             InitializeComponent();
         }
 
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
         private void frmConsultarFuncionario_Load(object sender, EventArgs e)
         {
-            FuncionarioDAO dao = new FuncionarioDAO();
-            dgvFuncionario.DataSource = dao.listarFuncionarios();
+            dgvFuncionario.DataSource = funcionarioDAO.listarFuncionarios();
 
             if (dgvFuncionario.Columns.Count == 0) return;
 
@@ -100,14 +101,19 @@ namespace EpiControl.epicontrol.views
             int idContato = Convert.ToInt32(dgvFuncionario.Rows[e.RowIndex].Cells["id_contato"].Value);
 
             frmEditarFuncionario frm = new frmEditarFuncionario(idFuncionario, idEndereco, idContato);
-            frm.Show();
+            frm.ShowDialog();
+
+            AtualizarGrid();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            FuncionarioDAO dao = new FuncionarioDAO();
-            dgvFuncionario.DataSource = dao.buscarFuncionario(txtConsultaNome.Text);
+            dgvFuncionario.DataSource = funcionarioDAO.buscarFuncionario(txtConsultaNome.Text);
         }
 
+        private void AtualizarGrid()
+        {
+            dgvFuncionario.DataSource = funcionarioDAO.listarFuncionarios();
+        }
     }
 }

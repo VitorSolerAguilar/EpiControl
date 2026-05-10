@@ -19,10 +19,11 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void frmConsultarNormaRegulamentadora_Load(object sender, EventArgs e)
+        NormaRegulamentadoraDAO normaRegulamentadoraDAO = new NormaRegulamentadoraDAO();
+
+        private void frmConsultarNormaRegulamentadora_Load(object sender, EventArgs e)
 		{
-			NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
-			dgvNormaRegulamentadora.DataSource = dao.listarNormaRegulamentadora();
+			dgvNormaRegulamentadora.DataSource = normaRegulamentadoraDAO.listarNormaRegulamentadora();
 
             if (dgvNormaRegulamentadora.Columns.Count == 0) return;
 
@@ -42,8 +43,7 @@ namespace EpiControl.epicontrol.views
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
-			dgvNormaRegulamentadora.DataSource = dao.buscarNorma(txtConsultaNorma.Text);
+			dgvNormaRegulamentadora.DataSource = normaRegulamentadoraDAO.buscarNorma(txtConsultaNorma.Text);
 		}
 
 		private void dgvNormaRegulamentadora_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -53,7 +53,14 @@ namespace EpiControl.epicontrol.views
 			int idNorma = Convert.ToInt32(dgvNormaRegulamentadora.Rows[e.RowIndex].Cells["id_norma_regulamentadora"].Value);
 
 			frmEditarNormaRegulamentadora frm = new frmEditarNormaRegulamentadora(idNorma);
-			frm.Show();
-		}
-	}
+            frm.ShowDialog();
+
+            AtualizarGrid();
+        }
+
+        private void AtualizarGrid()
+        {
+            dgvNormaRegulamentadora.DataSource = normaRegulamentadoraDAO.listarNormaRegulamentadora();
+        }
+    }
 }

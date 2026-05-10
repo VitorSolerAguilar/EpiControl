@@ -20,10 +20,11 @@ namespace EpiControl.epicontrol.views
 			InitializeComponent();
 		}
 
-		private void frmConsultarEpi_Load(object sender, EventArgs e)
+        EpiDAO epiDAO = new EpiDAO();
+
+        private void frmConsultarEpi_Load(object sender, EventArgs e)
 		{
-			EpiDAO dao = new EpiDAO();
-			dgvEpi.DataSource = dao.listarEpi();
+			dgvEpi.DataSource = epiDAO.listarEpi();
 
             if (dgvEpi.Columns.Count == 0) return;
 
@@ -61,9 +62,7 @@ namespace EpiControl.epicontrol.views
 
 		private void btnConsultar_Click(object sender, EventArgs e)
 		{
-			EpiDAO dao = new EpiDAO();
-
-			dgvEpi.DataSource = dao.buscarEpi(txtConsultaEpi.Text);
+			dgvEpi.DataSource = epiDAO.buscarEpi(txtConsultaEpi.Text);
 		}
 
 		private void dgvEpi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -74,7 +73,14 @@ namespace EpiControl.epicontrol.views
 			int idFornecedor = Convert.ToInt32(dgvEpi.Rows[e.RowIndex].Cells["id_fornecedor"].Value);
 
 			frmEditarEpi frm = new frmEditarEpi(idEpi, idFornecedor);
-			frm.Show();
-		}
-	}
+            frm.ShowDialog();
+
+            AtualizarGrid();
+        }
+
+        private void AtualizarGrid()
+        {
+            dgvEpi.DataSource = epiDAO.listarEpi();
+        }
+    }
 }

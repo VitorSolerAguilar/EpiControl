@@ -178,8 +178,6 @@ namespace EpiControl.epicontrol.dao
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 				conexao.Open();
 
-				executacmd.ExecuteNonQuery();
-
 				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
 				da.Fill(tabelaFuncionario);
 
@@ -190,7 +188,12 @@ namespace EpiControl.epicontrol.dao
 			{
 				return null;
 			}
-		}
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
 
 		public DataTable buscarFuncionarioId(int idFuncionario)
 		{
