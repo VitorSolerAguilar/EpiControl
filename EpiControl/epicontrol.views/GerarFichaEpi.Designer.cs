@@ -44,7 +44,7 @@
             // cbxFuncionario
             // 
             cbxFuncionario.FormattingEnabled = true;
-            cbxFuncionario.Location = new Point(136, 103);
+            cbxFuncionario.Location = new Point(136, 87);
             cbxFuncionario.Name = "cbxFuncionario";
             cbxFuncionario.Size = new Size(330, 23);
             cbxFuncionario.TabIndex = 0;
@@ -108,7 +108,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(53, 107);
+            label3.Location = new Point(53, 91);
             label3.Name = "label3";
             label3.Size = new Size(78, 15);
             label3.TabIndex = 8;

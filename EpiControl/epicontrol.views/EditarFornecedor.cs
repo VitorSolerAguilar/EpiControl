@@ -22,7 +22,7 @@ namespace EpiControl.Views
 			_idFornecedor = idFornecedor;
 			_idEndereco = idEndereco;
 			_idContato = idContato;
-			carregarFornecedor();
+            carregarFornecedor();
 		}
 
 		public void carregarFornecedor()
@@ -98,7 +98,8 @@ namespace EpiControl.Views
                 }
 
                 Fornecedor fornecedor = new Fornecedor();
-				fornecedor.nome = txtNome.Text;
+                fornecedor.id = _idFornecedor;
+                fornecedor.nome = txtNome.Text;
 				fornecedor.cnpj = mtbCnpj.Text;
 				fornecedor.observacoes = rtbObservacoes.Text;
 

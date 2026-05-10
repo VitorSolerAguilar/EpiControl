@@ -114,13 +114,12 @@ namespace EpiControl.epicontrol.dao
 			{
 				DataTable tabelaFornecedor = new DataTable();
 
-				string sql = @"SELECT f.id_fornecedor, f.nome, f.cnpj, f.observacoes, c.id_contato, c.telefone, c.celular, c.email, c.email_corporativo, e.id_endereco, e.cep, e.rua, e.numero, e.complemento,
-				e.logradouro, e.cidade, e.tipo, e.uf FROM tb_fornecedor f LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor ORDER BY f.nome;";
+                string sql = @"SELECT f.id_fornecedor, f.nome, f.cnpj, f.observacoes, c.id_contato, c.telefone, c.celular, c.email, c.email_corporativo, e.id_endereco, e.cep, e.rua, e.numero, e.complemento, e.logradouro, e.cidade, e.tipo, e.uf FROM tb_fornecedor f LEFT JOIN tb_contato c ON c.fk_fornecedor = f.id_fornecedor LEFT JOIN tb_endereco e ON e.fk_fornecedor = f.id_fornecedor WHERE f.id_fornecedor = @id";
 
-				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@id", idFornecedor);
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@id", idFornecedor);
 
-				conexao.Open();
+                conexao.Open();
 
 				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
 				da.Fill(tabelaFornecedor);
