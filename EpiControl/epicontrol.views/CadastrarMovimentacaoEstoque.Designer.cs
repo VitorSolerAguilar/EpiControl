@@ -157,9 +157,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(57, 263);
             label3.Name = "label3";
-            label3.Size = new Size(122, 15);
+            label3.Size = new Size(104, 15);
             label3.TabIndex = 88;
-            label3.Text = "Data de empréstimo *";
+            label3.Text = "Data de operação*";
             // 
             // mtbDataEmprestimo
             // 
@@ -181,7 +181,7 @@
             // cbxTipoMovimentacao
             // 
             cbxTipoMovimentacao.FormattingEnabled = true;
-            cbxTipoMovimentacao.Items.AddRange(new object[] { "Entrada de Compra", "Entrada de Devolução", "Saida Emprestimo", "Saida Descarte", "Ajuste Positivo", "Ajuste Negativo" });
+            cbxTipoMovimentacao.Items.AddRange(new object[] { "Entrada de Compra", "Entrada de Devolução", "Saida Descarte", "Ajuste Positivo", "Ajuste Negativo" });
             cbxTipoMovimentacao.Location = new Point(213, 175);
             cbxTipoMovimentacao.Name = "cbxTipoMovimentacao";
             cbxTipoMovimentacao.Size = new Size(260, 23);

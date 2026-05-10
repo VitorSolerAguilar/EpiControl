@@ -65,11 +65,6 @@ namespace EpiControl.epicontrol.views
                     return;
                 }
 
-                if (string.IsNullOrWhiteSpace(mtbDataEmprestimo.Text) || mtbDataEmprestimo.Text.Contains("_"))
-                {
-                    
-                }
-
                 MovimentacaoEstoque movimentacao = new MovimentacaoEstoque();
 
 				movimentacao.tipoMovimentacao = cbxTipoMovimentacao.Text;

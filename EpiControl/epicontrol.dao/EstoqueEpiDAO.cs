@@ -293,7 +293,7 @@ namespace EpiControl.epicontrol.dao
         {
             List<Epi> lista = new List<Epi>();
 
-            string sql = @"SELECT e.id_epi, e.nome FROM tb_epi e INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi ORDER BY e.nome";
+            string sql = @"SELECT ee.id_estoque AS id, e.nome FROM tb_epi e INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi ORDER BY e.nome";
 
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
@@ -306,7 +306,7 @@ namespace EpiControl.epicontrol.dao
                 {
                     lista.Add(new Epi
                     {
-                        id = reader.GetInt32("id_epi"),
+                        id = reader.GetInt32("id"),
                         nome = reader.GetString("nome")
                     });
                 }
