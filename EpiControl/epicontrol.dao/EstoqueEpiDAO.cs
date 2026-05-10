@@ -83,9 +83,9 @@ namespace EpiControl.epicontrol.dao
 		{
 			List<Epi> lista = new List<Epi>();
 
-			string sql = "SELECT id_epi, nome FROM tb_epi ORDER BY nome";
+            string sql = @"SELECT id_epi, nome FROM tb_epi WHERE id_epi NOT IN (SELECT fk_epi FROM tb_estoque_epi) ORDER BY nome";
 
-			MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
 			try
 			{
@@ -229,5 +229,99 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
-	}
+
+        public bool epiJaCadastrado(int epiId)
+        {
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM tb_estoque_epi WHERE fk_epi = @fk_epi";
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@fk_epi", epiId);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar EPI: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+
+        public List<Epi> listarNomesEpiParaEdicao(int epiIdAtual)
+        {
+            List<Epi> lista = new List<Epi>();
+
+            string sql = @"SELECT id_epi, nome FROM tb_epi WHERE id_epi NOT IN (SELECT fk_epi FROM tb_estoque_epi) OR id_epi = @epiIdAtual ORDER BY nome";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@epiIdAtual", epiIdAtual);
+
+            try
+            {
+                conexao.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lista.Add(new Epi
+                    {
+                        id = reader.GetInt32("id_epi"),
+                        nome = reader.GetString("nome")
+                    });
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar nomes dos EPIs: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+
+        public List<Epi> listarNomesEpiComEstoque()
+        {
+            List<Epi> lista = new List<Epi>();
+
+            string sql = @"SELECT e.id_epi, e.nome FROM tb_epi e INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi ORDER BY e.nome";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+            try
+            {
+                conexao.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    lista.Add(new Epi
+                    {
+                        id = reader.GetInt32("id_epi"),
+                        nome = reader.GetString("nome")
+                    });
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar EPIs com estoque: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+    }
 }

@@ -160,6 +160,7 @@
             // 
             txtQuantidade.Location = new Point(163, 122);
             txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.ReadOnly = true;
             txtQuantidade.Size = new Size(102, 23);
             txtQuantidade.TabIndex = 243;
             // 

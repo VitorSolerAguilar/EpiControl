@@ -51,6 +51,17 @@ namespace EpiControl.epicontrol.views
                     return;
                 }
 
+                int epiSelecionado = Convert.ToInt32(cbxEpi.SelectedValue);
+
+                EstoqueEpiDAO estoqueEpiDAO = new EstoqueEpiDAO();
+
+                if (estoqueEpiDAO.epiJaCadastrado(epiSelecionado))
+                {
+                    MessageBox.Show("Este EPI já possui um estoque cadastrado. Use a opção de edição para alterar a quantidade.", "EPI duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxEpi.Focus();
+                    return;
+                }
+
                 EstoqueEpi estoqueEpi = new EstoqueEpi();
 
                 estoqueEpi.epiId = Convert.ToInt32(cbxEpi.SelectedValue);
@@ -58,7 +69,6 @@ namespace EpiControl.epicontrol.views
                 estoqueEpi.estoqueMinimo = string.IsNullOrWhiteSpace(txtEstoqueMinimo.Text) ? 0 : Convert.ToInt32(txtEstoqueMinimo.Text);
                 estoqueEpi.localizacao = rtbLocalizacao.Text;
 
-                EstoqueEpiDAO estoqueEpiDAO = new EstoqueEpiDAO();
                 estoqueEpiDAO.cadastrarEstoqueEpi(estoqueEpi);
 
                 MessageBox.Show("Estoque cadastrado com sucesso!");

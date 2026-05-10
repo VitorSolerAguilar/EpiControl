@@ -38,14 +38,19 @@ namespace EpiControl.epicontrol.views
             {
                 EstoqueEpiDAO dao = new EstoqueEpiDAO();
                 DataTable dt = dao.buscarEstoqueEpiId(_idEstoqueEpi);
-
                 DataRow row = dt.Rows[0];
+
+                int epiIdAtual = Convert.ToInt32(row["id_epi"]);
+
+                cbxEpi.DataSource = dao.listarNomesEpiParaEdicao(epiIdAtual);
+                cbxEpi.DisplayMember = "nome";
+                cbxEpi.ValueMember = "id";
+                cbxEpi.SelectedValue = epiIdAtual;
+                cbxEpi.Enabled = false;
 
                 txtQuantidade.Text = row["quantidade"].ToString();
                 rtbLocalizacao.Text = row["localizacao"].ToString();
                 txtEstoqueMinimo.Text = row["estoque_minimo"].ToString();
-
-                cbxEpi.SelectedValue = Convert.ToInt32(row["id_epi"]);
 
             }
             catch (Exception ex)

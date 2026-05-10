@@ -68,7 +68,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 20F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(57, 4);
+            label5.Location = new Point(56, 4);
             label5.Name = "label5";
             label5.Size = new Size(537, 37);
             label5.TabIndex = 3;
@@ -181,7 +181,7 @@
             // cbxTipoMovimentacao
             // 
             cbxTipoMovimentacao.FormattingEnabled = true;
-            cbxTipoMovimentacao.Items.AddRange(new object[] { "Entrada de Compra", "Entrada de Devolução", "Saida Emprestimo", "Saida Descarte", "Ajuste Positivo", "Ajuste Negativo", "Transferencia" });
+            cbxTipoMovimentacao.Items.AddRange(new object[] { "Entrada de Compra", "Entrada de Devolução", "Saida Emprestimo", "Saida Descarte", "Ajuste Positivo", "Ajuste Negativo" });
             cbxTipoMovimentacao.Location = new Point(213, 175);
             cbxTipoMovimentacao.Name = "cbxTipoMovimentacao";
             cbxTipoMovimentacao.Size = new Size(260, 23);

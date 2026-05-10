@@ -27,8 +27,8 @@ namespace EpiControl.epicontrol.views
 			cbxFuncionario.ValueMember = "id";
 
 			EstoqueEpiDAO estoqueDAO = new EstoqueEpiDAO();
-			cbxEpi.DataSource = estoqueDAO.listarNomesEpi();
-			cbxEpi.DisplayMember = "nome";
+			cbxEpi.DataSource = estoqueDAO.listarNomesEpiComEstoque();
+            cbxEpi.DisplayMember = "nome";
 			cbxEpi.ValueMember = "id";
 
 		}
