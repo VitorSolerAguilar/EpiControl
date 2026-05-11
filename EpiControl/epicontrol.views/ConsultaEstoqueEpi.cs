@@ -28,8 +28,8 @@ namespace EpiControl.epicontrol.views
 
             if (dgvEstoque.Columns.Contains("id_estoque"))
                 dgvEstoque.Columns["id_estoque"].HeaderText = "ID";
-            if (dgvEstoque.Columns.Contains("nome_epi"))
-                dgvEstoque.Columns["nome_epi"].HeaderText = "Epi";
+            if (dgvEstoque.Columns.Contains("nome"))
+                dgvEstoque.Columns["nome"].HeaderText = "Nome";
             if (dgvEstoque.Columns.Contains("epi"))
                 dgvEstoque.Columns["epi"].HeaderText = "Epi";
             if (dgvEstoque.Columns.Contains("quantidade"))
@@ -38,10 +38,8 @@ namespace EpiControl.epicontrol.views
                 dgvEstoque.Columns["estoque_minimo"].HeaderText = "Estoque Mínimo";
             if (dgvEstoque.Columns.Contains("localizacao"))
                 dgvEstoque.Columns["localizacao"].HeaderText = "Localização";
-            if (dgvEstoque.Columns.Contains("id_epi"))
-                dgvEstoque.Columns["id_epi"].HeaderText = "Epi Id";
-            if (dgvEstoque.Columns.Contains("fk_epi"))
-                dgvEstoque.Columns["fk_epi"].HeaderText = "Epi Fk";
+            if (dgvEstoque.Columns.Contains("nome_epi"))
+                dgvEstoque.Columns["nome_epi"].HeaderText = "Epi Id";
         }
 
         private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)

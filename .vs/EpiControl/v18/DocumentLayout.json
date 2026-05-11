@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\EpiControl\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.dao\\movimentacaoestoquedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\movimentacaoestoquedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -22,49 +9,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovimentacaoEstoqueDAO.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\MovimentacaoEstoqueDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\MovimentacaoEstoqueDAO.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\MovimentacaoEstoqueDAO.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\MovimentacaoEstoqueDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T23:10:47.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CadastrarMovimentacaoEstoque.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowEEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T23:02:16.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CadastrarMovimentacaoEstoque.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T23:02:03.987Z",
-              "EditorCaption": " [Projeto]"
             }
           ]
         },

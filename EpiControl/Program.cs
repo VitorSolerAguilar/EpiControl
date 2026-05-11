@@ -1,3 +1,4 @@
+using EpiControl.epicontrol.dao;
 using EpiControl.epicontrol.views;
 using EpiControl.views;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +18,7 @@ namespace EpiControl
 			.Build();
 
 			ApplicationConfiguration.Initialize();
-            Application.Run(new frmHome());
+            Application.Run(new frmOrcamentoEpi());
         }
     }
 }

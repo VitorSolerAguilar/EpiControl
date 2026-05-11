@@ -56,7 +56,7 @@ namespace EpiControl.epicontrol.dao
 			{
 				DataTable tabelaEstoque = new DataTable();
 
-				string sql = @"SELECT ee.id_estoque, ee.quantidade, ee.localizacao, ee.estoque_minimo, e.id_epi, e.nome AS nome_epi FROM tb_estoque_epi ee INNER JOIN tb_epi e ON ee.fk_epi = e.id_epi
+				string sql = @"SELECT ee.id_estoque, e.nome, ee.quantidade, ee.localizacao, ee.estoque_minimo, e.id_epi AS nome_epi FROM tb_estoque_epi ee INNER JOIN tb_epi e ON ee.fk_epi = e.id_epi
                        ORDER BY e.nome;";
 
 				MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -316,6 +316,45 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 throw new Exception("Erro ao listar EPIs com estoque: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+
+        public DataTable listarEpisMaisUtilizadosComPreco()
+        {
+            try
+            {
+                DataTable tabela = new DataTable();
+
+                string sql = @"SELECT 
+                           e.id_epi,
+                           e.nome,
+                           e.valor_unitario,
+                           SUM(m.quantidade) AS total_saidas
+                       FROM tb_epi e
+                       INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi
+                       INNER JOIN tb_movimentacao_estoque m ON m.fk_estoque = ee.id_estoque
+                       WHERE m.tipo_movimentacao IN ('Saida Emprestimo', 'Saida Descarte')
+                         AND e.valor_unitario > 0
+                       GROUP BY e.id_epi, e.nome, e.valor_unitario
+                       ORDER BY total_saidas DESC
+                       LIMIT 10";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+
+                conexao.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar EPIs mais utilizados: " + ex.Message);
             }
             finally
             {
