@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\gerarrelatorioepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\gerarrelatorioepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.dao\\estoqueepidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\estoqueepidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\consultaestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultaestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\consultaestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\consultaestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\editarestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|C:\\EpiControl\\epicontrol\\epicontrol.views\\editarestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarestoqueepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\gerarorcamentoepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\gerarorcamentoepi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,64 +27,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GerarRelatorioEpi.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\GerarRelatorioEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\GerarRelatorioEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\GerarRelatorioEpi.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\GerarRelatorioEpi.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAUwAsAAAAfAAAAAAAAAA==",
+              "Title": "EstoqueEpiDAO.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "ViewState": "AgIAACMBAAAAAAAAAAA4wE8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:21:32.52Z",
+              "WhenOpened": "2026-05-21T03:34:34.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConsultaEstoqueEpi.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Title": "GerarOrcamentoEpi.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\GerarOrcamentoEpi.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\GerarOrcamentoEpi.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\GerarOrcamentoEpi.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\GerarOrcamentoEpi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:15:49.784Z",
+              "WhenOpened": "2026-05-21T03:24:47.821Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultaEstoqueEpi.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\ConsultaEstoqueEpi.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:15:47.629Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditarEstoqueEpi.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAqwIEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:06:42.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditarEstoqueEpi.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarEstoqueEpi.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T03:06:41.141Z"
             }
           ]
         },

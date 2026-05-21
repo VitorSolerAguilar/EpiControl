@@ -330,19 +330,7 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabela = new DataTable();
 
-                string sql = @"SELECT 
-                           e.id_epi,
-                           e.nome,
-                           e.valor_unitario,
-                           SUM(m.quantidade) AS total_saidas
-                       FROM tb_epi e
-                       INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi
-                       INNER JOIN tb_movimentacao_estoque m ON m.fk_estoque = ee.id_estoque
-                       WHERE m.tipo_movimentacao IN ('Saida Emprestimo', 'Saida Descarte')
-                         AND e.valor_unitario > 0
-                       GROUP BY e.id_epi, e.nome, e.valor_unitario
-                       ORDER BY total_saidas DESC
-                       LIMIT 10";
+                string sql = @" SELECT e.id_epi, e.nome, e.valor_unitario, ( IFNULL(( SELECT SUM(emp.quantidade) FROM tb_emprestimo emp WHERE emp.fk_epi = e.id_epi ), 0) + IFNULL(( SELECT SUM(m.quantidade) FROM tb_movimentacao_estoque m INNER JOIN tb_estoque_epi ee ON ee.id_estoque = m.fk_estoque WHERE ee.fk_epi = e.id_epi AND m.tipo_movimentacao IN ('Saida Emprestimo', 'Saida Descarte') ), 0) ) AS total_saidas FROM tb_epi e WHERE e.valor_unitario > 0 HAVING total_saidas > 0 ORDER BY total_saidas DESC LIMIT 10";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
 

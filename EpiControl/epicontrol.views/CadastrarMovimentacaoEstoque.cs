@@ -72,7 +72,7 @@ namespace EpiControl.epicontrol.views
 
 				if (mtbDataEmprestimo.Text.Length < 10 || mtbDataEmprestimo.Text.Contains("_"))
 				{
-                    MessageBox.Show("Campo DATA DE EMPRÉSTIMO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Campo DATA DA OPERAÇÃO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     mtbDataEmprestimo.Focus();
                     return;
 				}
