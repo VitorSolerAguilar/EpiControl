@@ -29,8 +29,11 @@ namespace EpiControl.epicontrol.views
             dgvFuncionarioCurso.Columns["id_funcionario_curso"].HeaderText = "ID";
             dgvFuncionarioCurso.Columns["data_inicio"].HeaderText = "Data Início";
             dgvFuncionarioCurso.Columns["data_conclusao"].HeaderText = "Data Conclusão";
-            dgvFuncionarioCurso.Columns["fk_funcionario"].HeaderText = "Funcionário";
-            dgvFuncionarioCurso.Columns["fk_curso"].HeaderText = "Curso";
+            dgvFuncionarioCurso.Columns["nome_funcionario"].HeaderText = "Funcionário";
+            dgvFuncionarioCurso.Columns["nome_curso"].HeaderText = "Curso";
+
+            dgvFuncionarioCurso.Columns["fk_funcionario"].Visible = false;
+            dgvFuncionarioCurso.Columns["fk_curso"].Visible = false;
         }
 
 		private void dgvFuncionarioCurso_CellClick(object sender, DataGridViewCellEventArgs e)

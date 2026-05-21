@@ -79,7 +79,8 @@ namespace EpiControl.epicontrol.dao
             try
             {
                 DataTable tabela = new DataTable();
-                string sql = @"SELECT * FROM tb_funcionario_curso";
+                string sql = @" SELECT fc.id_funcionario_curso, fc.data_inicio, fc.data_conclusao, fc.fk_funcionario, fc.fk_curso, f.nome AS nome_funcionario, c.nome AS nome_curso FROM tb_funcionario_curso fc INNER JOIN tb_funcionario f ON f.id_funcionario = fc.fk_funcionario INNER JOIN tb_curso c ON c.id_curso = fc.fk_curso";
+
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
                 conexao.Open();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);

@@ -18,7 +18,7 @@ namespace EpiControl
 			.Build();
 
 			ApplicationConfiguration.Initialize();
-            Application.Run(new frmOrcamentoEpi());
+            Application.Run(new frmHome());
         }
     }
 }

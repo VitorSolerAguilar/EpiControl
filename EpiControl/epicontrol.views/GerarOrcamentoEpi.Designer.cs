@@ -37,6 +37,7 @@
             label3 = new Label();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvResultado).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -73,7 +74,7 @@
             // lblSaldo
             // 
             lblSaldo.AutoSize = true;
-            lblSaldo.Location = new Point(428, 63);
+            lblSaldo.Location = new Point(381, 63);
             lblSaldo.Name = "lblSaldo";
             lblSaldo.Size = new Size(0, 15);
             lblSaldo.TabIndex = 3;
@@ -97,9 +98,9 @@
             label3.ForeColor = Color.Black;
             label3.Location = new Point(57, 4);
             label3.Name = "label3";
-            label3.Size = new Size(324, 37);
+            label3.Size = new Size(350, 37);
             label3.TabIndex = 3;
-            label3.Text = "GERAR RELATÓRIO DE EPI";
+            label3.Text = "GERAR ORÇAMENTO DE EPI";
             // 
             // label4
             // 
@@ -121,11 +122,21 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(236, 104);
+            label1.Name = "label1";
+            label1.Size = new Size(77, 15);
+            label1.TabIndex = 10;
+            label1.Text = "Valor em R$ *";
+            // 
             // frmOrcamentoEpi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(878, 472);
+            Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(lblSaldo);
             Controls.Add(dgvResultado);
@@ -154,5 +165,6 @@
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
+        private Label label1;
     }
 }

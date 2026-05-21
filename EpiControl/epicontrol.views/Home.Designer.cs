@@ -50,7 +50,6 @@
             btnCadastrarEpi = new Button();
             btnConsultarEpi = new Button();
             btnGerarFichaEpi = new Button();
-            btnGerarRelatorioEpi = new Button();
             flpNormaRegulamentadora = new FlowLayoutPanel();
             btnNormasRegulamentadoras = new Button();
             btnCadastrarNormaRegulamentadora = new Button();
@@ -60,15 +59,16 @@
             btnCadastrarEmprestimo = new Button();
             btnConsultarEmprestimo = new Button();
             flpEstoque = new FlowLayoutPanel();
-            btnEstoque = new Button();
-            btnCadastrarEstoque = new Button();
-            btnConsultarEstoque = new Button();
             btnMovimentacao = new Button();
+            btnGerarRelatorioEpi = new Button();
             flpTreinamentos = new FlowLayoutPanel();
             btnTreinamentos = new Button();
             btnCadastrarTreinamentos = new Button();
             btnConsultarTreinamentos = new Button();
             btnSair = new Button();
+            btnEstoque = new Button();
+            btnCadastrarEstoque = new Button();
+            btnConsultarEstoque = new Button();
             pictureBox2 = new PictureBox();
             trasicaoMenuFuncionario = new System.Windows.Forms.Timer(components);
             transicaoMenuFornecedor = new System.Windows.Forms.Timer(components);
@@ -77,6 +77,7 @@
             transicaoMenuEmprestimo = new System.Windows.Forms.Timer(components);
             transicaoMenuEstoque = new System.Windows.Forms.Timer(components);
             transicaoMenuTreinamentos = new System.Windows.Forms.Timer(components);
+            btnOrcamento = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
@@ -382,22 +383,6 @@
             btnGerarFichaEpi.UseVisualStyleBackColor = false;
             btnGerarFichaEpi.Click += btnGerarFichaEpi_Click;
             // 
-            // btnGerarRelatorioEpi
-            // 
-            btnGerarRelatorioEpi.BackColor = Color.FromArgb(0, 45, 71);
-            btnGerarRelatorioEpi.FlatAppearance.BorderSize = 0;
-            btnGerarRelatorioEpi.FlatStyle = FlatStyle.Flat;
-            btnGerarRelatorioEpi.Image = (Image)resources.GetObject("btnGerarRelatorioEpi.Image");
-            btnGerarRelatorioEpi.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGerarRelatorioEpi.Location = new Point(0, 207);
-            btnGerarRelatorioEpi.Margin = new Padding(0);
-            btnGerarRelatorioEpi.Name = "btnGerarRelatorioEpi";
-            btnGerarRelatorioEpi.Size = new Size(220, 51);
-            btnGerarRelatorioEpi.TabIndex = 8;
-            btnGerarRelatorioEpi.Text = "Gerar Relatório de Epi";
-            btnGerarRelatorioEpi.UseVisualStyleBackColor = false;
-            btnGerarRelatorioEpi.Click += btnGerarRelatorioEpi_Click;
-            // 
             // flpNormaRegulamentadora
             // 
             flpNormaRegulamentadora.BackColor = Color.FromArgb(0, 45, 71);
@@ -524,6 +509,7 @@
             flpEstoque.Controls.Add(btnEstoque);
             flpEstoque.Controls.Add(btnCadastrarEstoque);
             flpEstoque.Controls.Add(btnConsultarEstoque);
+            flpEstoque.Controls.Add(btnOrcamento);
             flpEstoque.Controls.Add(btnMovimentacao);
             flpEstoque.Controls.Add(btnGerarRelatorioEpi);
             flpEstoque.Location = new Point(0, 277);
@@ -532,54 +518,6 @@
             flpEstoque.Size = new Size(264, 54);
             flpEstoque.TabIndex = 10;
             // 
-            // btnEstoque
-            // 
-            btnEstoque.BackColor = Color.FromArgb(74, 146, 247);
-            btnEstoque.FlatAppearance.BorderSize = 0;
-            btnEstoque.FlatStyle = FlatStyle.Flat;
-            btnEstoque.Image = (Image)resources.GetObject("btnEstoque.Image");
-            btnEstoque.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEstoque.Location = new Point(0, 0);
-            btnEstoque.Margin = new Padding(0);
-            btnEstoque.Name = "btnEstoque";
-            btnEstoque.Size = new Size(220, 54);
-            btnEstoque.TabIndex = 2;
-            btnEstoque.Text = "Estoque";
-            btnEstoque.UseVisualStyleBackColor = false;
-            btnEstoque.Click += btnEstoque_Click;
-            // 
-            // btnCadastrarEstoque
-            // 
-            btnCadastrarEstoque.BackColor = Color.FromArgb(0, 45, 71);
-            btnCadastrarEstoque.FlatAppearance.BorderSize = 0;
-            btnCadastrarEstoque.FlatStyle = FlatStyle.Flat;
-            btnCadastrarEstoque.Image = (Image)resources.GetObject("btnCadastrarEstoque.Image");
-            btnCadastrarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCadastrarEstoque.Location = new Point(0, 54);
-            btnCadastrarEstoque.Margin = new Padding(0);
-            btnCadastrarEstoque.Name = "btnCadastrarEstoque";
-            btnCadastrarEstoque.Size = new Size(220, 51);
-            btnCadastrarEstoque.TabIndex = 6;
-            btnCadastrarEstoque.Text = "Cadastrar";
-            btnCadastrarEstoque.UseVisualStyleBackColor = false;
-            btnCadastrarEstoque.Click += btnCadastrarEstoque_Click;
-            // 
-            // btnConsultarEstoque
-            // 
-            btnConsultarEstoque.BackColor = Color.FromArgb(0, 45, 71);
-            btnConsultarEstoque.FlatAppearance.BorderSize = 0;
-            btnConsultarEstoque.FlatStyle = FlatStyle.Flat;
-            btnConsultarEstoque.Image = (Image)resources.GetObject("btnConsultarEstoque.Image");
-            btnConsultarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
-            btnConsultarEstoque.Location = new Point(0, 105);
-            btnConsultarEstoque.Margin = new Padding(0);
-            btnConsultarEstoque.Name = "btnConsultarEstoque";
-            btnConsultarEstoque.Size = new Size(220, 51);
-            btnConsultarEstoque.TabIndex = 6;
-            btnConsultarEstoque.Text = "Consultar";
-            btnConsultarEstoque.UseVisualStyleBackColor = false;
-            btnConsultarEstoque.Click += btnConsultarEstoque_Click;
-            // 
             // btnMovimentacao
             // 
             btnMovimentacao.BackColor = Color.FromArgb(0, 45, 71);
@@ -587,7 +525,7 @@
             btnMovimentacao.FlatStyle = FlatStyle.Flat;
             btnMovimentacao.Image = (Image)resources.GetObject("btnMovimentacao.Image");
             btnMovimentacao.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMovimentacao.Location = new Point(0, 156);
+            btnMovimentacao.Location = new Point(0, 207);
             btnMovimentacao.Margin = new Padding(0);
             btnMovimentacao.Name = "btnMovimentacao";
             btnMovimentacao.Size = new Size(220, 51);
@@ -595,6 +533,22 @@
             btnMovimentacao.Text = "Movimentação";
             btnMovimentacao.UseVisualStyleBackColor = false;
             btnMovimentacao.Click += btnMovimentacao_Click;
+            // 
+            // btnGerarRelatorioEpi
+            // 
+            btnGerarRelatorioEpi.BackColor = Color.FromArgb(0, 45, 71);
+            btnGerarRelatorioEpi.FlatAppearance.BorderSize = 0;
+            btnGerarRelatorioEpi.FlatStyle = FlatStyle.Flat;
+            btnGerarRelatorioEpi.Image = (Image)resources.GetObject("btnGerarRelatorioEpi.Image");
+            btnGerarRelatorioEpi.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGerarRelatorioEpi.Location = new Point(0, 258);
+            btnGerarRelatorioEpi.Margin = new Padding(0);
+            btnGerarRelatorioEpi.Name = "btnGerarRelatorioEpi";
+            btnGerarRelatorioEpi.Size = new Size(220, 51);
+            btnGerarRelatorioEpi.TabIndex = 8;
+            btnGerarRelatorioEpi.Text = "Gerar relatório de e.p.i";
+            btnGerarRelatorioEpi.UseVisualStyleBackColor = false;
+            btnGerarRelatorioEpi.Click += btnGerarRelatorioEpi_Click;
             // 
             // flpTreinamentos
             // 
@@ -672,6 +626,54 @@
             btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
+            // btnEstoque
+            // 
+            btnEstoque.BackColor = Color.FromArgb(74, 146, 247);
+            btnEstoque.FlatAppearance.BorderSize = 0;
+            btnEstoque.FlatStyle = FlatStyle.Flat;
+            btnEstoque.Image = (Image)resources.GetObject("btnEstoque.Image");
+            btnEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEstoque.Location = new Point(0, 0);
+            btnEstoque.Margin = new Padding(0);
+            btnEstoque.Name = "btnEstoque";
+            btnEstoque.Size = new Size(220, 54);
+            btnEstoque.TabIndex = 2;
+            btnEstoque.Text = "Estoque";
+            btnEstoque.UseVisualStyleBackColor = false;
+            btnEstoque.Click += btnEstoque_Click;
+            // 
+            // btnCadastrarEstoque
+            // 
+            btnCadastrarEstoque.BackColor = Color.FromArgb(0, 45, 71);
+            btnCadastrarEstoque.FlatAppearance.BorderSize = 0;
+            btnCadastrarEstoque.FlatStyle = FlatStyle.Flat;
+            btnCadastrarEstoque.Image = (Image)resources.GetObject("btnCadastrarEstoque.Image");
+            btnCadastrarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCadastrarEstoque.Location = new Point(0, 54);
+            btnCadastrarEstoque.Margin = new Padding(0);
+            btnCadastrarEstoque.Name = "btnCadastrarEstoque";
+            btnCadastrarEstoque.Size = new Size(220, 51);
+            btnCadastrarEstoque.TabIndex = 6;
+            btnCadastrarEstoque.Text = "Cadastrar";
+            btnCadastrarEstoque.UseVisualStyleBackColor = false;
+            btnCadastrarEstoque.Click += btnCadastrarEstoque_Click;
+            // 
+            // btnConsultarEstoque
+            // 
+            btnConsultarEstoque.BackColor = Color.FromArgb(0, 45, 71);
+            btnConsultarEstoque.FlatAppearance.BorderSize = 0;
+            btnConsultarEstoque.FlatStyle = FlatStyle.Flat;
+            btnConsultarEstoque.Image = (Image)resources.GetObject("btnConsultarEstoque.Image");
+            btnConsultarEstoque.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultarEstoque.Location = new Point(0, 105);
+            btnConsultarEstoque.Margin = new Padding(0);
+            btnConsultarEstoque.Name = "btnConsultarEstoque";
+            btnConsultarEstoque.Size = new Size(220, 51);
+            btnConsultarEstoque.TabIndex = 6;
+            btnConsultarEstoque.Text = "Consultar";
+            btnConsultarEstoque.UseVisualStyleBackColor = false;
+            btnConsultarEstoque.Click += btnConsultarEstoque_Click;
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -715,6 +717,22 @@
             // 
             transicaoMenuTreinamentos.Interval = 1;
             transicaoMenuTreinamentos.Tick += transicaoMenuTreinamentos_Tick;
+            // 
+            // btnOrcamento
+            // 
+            btnOrcamento.BackColor = Color.FromArgb(0, 45, 71);
+            btnOrcamento.FlatAppearance.BorderSize = 0;
+            btnOrcamento.FlatStyle = FlatStyle.Flat;
+            btnOrcamento.Image = (Image)resources.GetObject("btnOrcamento.Image");
+            btnOrcamento.ImageAlign = ContentAlignment.MiddleLeft;
+            btnOrcamento.Location = new Point(0, 156);
+            btnOrcamento.Margin = new Padding(0);
+            btnOrcamento.Name = "btnOrcamento";
+            btnOrcamento.Size = new Size(220, 51);
+            btnOrcamento.TabIndex = 9;
+            btnOrcamento.Text = "Orçamento";
+            btnOrcamento.UseVisualStyleBackColor = false;
+            btnOrcamento.Click += btnOrcamento_Click;
             // 
             // frmHome
             // 
@@ -797,5 +815,6 @@
 		private Button btnConsultarFuncionarioCurso;
 		private Button btnGerarFichaEpi;
         private Button btnGerarRelatorioEpi;
+        private Button btnOrcamento;
     }
 }

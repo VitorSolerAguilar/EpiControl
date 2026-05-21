@@ -288,6 +288,7 @@
             btnConsultarCep.TabIndex = 264;
             btnConsultarCep.Text = "Consultar";
             btnConsultarCep.UseVisualStyleBackColor = true;
+            btnConsultarCep.Click += btnConsultarCep_Click;
             // 
             // rtbComplemento
             // 
@@ -495,7 +496,6 @@
             Name = "frmEditarFornecedor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EPICONTROL";
-            Load += frmEditarFornecedor_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

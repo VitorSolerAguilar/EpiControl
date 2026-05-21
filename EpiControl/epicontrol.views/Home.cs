@@ -1,3 +1,4 @@
+using EpiControl.epicontrol.dao;
 using EpiControl.epicontrol.views;
 using EpiControl.views;
 using EpiControl.Views;
@@ -169,6 +170,14 @@ namespace EpiControl
             this.Hide();
             gerarRelatorioEpi.Show();
         }
+        private void btnOrcamento_Click(object sender, EventArgs e)
+        {
+            frmOrcamentoEpi orcamentoEpi = new frmOrcamentoEpi();
+
+            orcamentoEpi.FormClosed += (s, args) => this.Show();
+            this.Hide();
+            orcamentoEpi.Show();
+        }
 
 
         bool menuExpand = false;
@@ -234,7 +243,7 @@ namespace EpiControl
             else
             {
                 flpContainerEpi.Height -= 13;
-                if (flpContainerEpi.Height <= 51)
+                if (flpContainerEpi.Height <= 57)
                 {
                     transicaoMenuEpi.Stop();
                     menuExpand = false;
@@ -247,7 +256,7 @@ namespace EpiControl
             {
                 flpNormaRegulamentadora.Height += STEP_EXPAND;
 
-                if (flpNormaRegulamentadora.Height >= 153)
+                if (flpNormaRegulamentadora.Height >=153)
                 {
                     transicaoMenuNorma.Stop();
                     menuExpand = true;
@@ -257,7 +266,7 @@ namespace EpiControl
             else
             {
                 flpNormaRegulamentadora.Height -= 13;
-                if (flpNormaRegulamentadora.Height <= 51)
+                if (flpNormaRegulamentadora.Height <= 57)
                 {
                     transicaoMenuNorma.Stop();
                     menuExpand = false;
@@ -294,7 +303,7 @@ namespace EpiControl
             {
                 flpEstoque.Height += STEP_EXPAND;
 
-                if (flpEstoque.Height >= 249)
+                if (flpEstoque.Height >= 300)
                 {
                     transicaoMenuEstoque.Stop();
                     menuExpand = true;
@@ -363,6 +372,6 @@ namespace EpiControl
         private void btnTreinamentos_Click(object sender, EventArgs e)
         {
             transicaoMenuTreinamentos.Start();
-        }        
+        }
     }
 }

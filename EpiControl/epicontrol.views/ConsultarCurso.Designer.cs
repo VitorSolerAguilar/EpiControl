@@ -87,9 +87,10 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(57, 4);
             label2.Name = "label2";
-            label2.Size = new Size(255, 37);
+            label2.Size = new Size(348, 37);
             label2.TabIndex = 3;
-            label2.Text = "CONSULTAR CURSO";
+            label2.Text = "CONSULTAR TREINAMENTO";
+            label2.TextAlign = ContentAlignment.BottomRight;
             // 
             // label1
             // 
