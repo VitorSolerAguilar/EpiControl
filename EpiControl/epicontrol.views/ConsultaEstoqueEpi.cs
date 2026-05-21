@@ -13,19 +13,23 @@ using System.Windows.Forms;
 
 namespace EpiControl.epicontrol.views
 {
-	public partial class frmConsultaEstoqueEpi : Form
-	{
-		public frmConsultaEstoqueEpi()
-		{
-			InitializeComponent();
-		}
+    public partial class frmConsultaEstoqueEpi : Form
+    {
+        public frmConsultaEstoqueEpi()
+        {
+            InitializeComponent();
+        }
 
         EstoqueEpiDAO estoqueEpiDAO = new EstoqueEpiDAO();
 
         private void frmConsultaEstoqueEpi_Load(object sender, EventArgs e)
-		{
-			dgvEstoque.DataSource = estoqueEpiDAO.listarEstoqueEpi();
+        {
+            dgvEstoque.DataSource = estoqueEpiDAO.listarEstoqueEpi();
+            RenomearColunas();
+        }
 
+        private void RenomearColunas()
+        {
             if (dgvEstoque.Columns.Contains("id_estoque"))
                 dgvEstoque.Columns["id_estoque"].HeaderText = "ID";
             if (dgvEstoque.Columns.Contains("nome"))
@@ -40,28 +44,36 @@ namespace EpiControl.epicontrol.views
                 dgvEstoque.Columns["localizacao"].HeaderText = "Localização";
             if (dgvEstoque.Columns.Contains("nome_epi"))
                 dgvEstoque.Columns["nome_epi"].HeaderText = "Epi Id";
+            if (dgvEstoque.Columns.Contains("id_epi"))
+                dgvEstoque.Columns["id_epi"].HeaderText = "ID Epi";
+            if (dgvEstoque.Columns.Contains("codigo_interno"))
+                dgvEstoque.Columns["codigo_interno"].HeaderText = "Código Interno";
+            if (dgvEstoque.Columns.Contains("ca"))
+                dgvEstoque.Columns["ca"].HeaderText = "CA";
         }
 
         private void dgvEstoque_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-			if (e.RowIndex < 0) return;
+        {
+            if (e.RowIndex < 0) return;
 
-			int idEstoque = Convert.ToInt32(dgvEstoque.Rows[e.RowIndex].Cells["id_estoque"].Value);
+            int idEstoque = Convert.ToInt32(dgvEstoque.Rows[e.RowIndex].Cells["id_estoque"].Value);
 
-			frmEditarEstoqueEpi frm = new frmEditarEstoqueEpi(idEstoque);
+            frmEditarEstoqueEpi frm = new frmEditarEstoqueEpi(idEstoque);
             frm.ShowDialog();
 
             AtualizarGrid();
         }
 
-		private void btnConsultar_Click(object sender, EventArgs e)
-		{			
-			dgvEstoque.DataSource = estoqueEpiDAO.buscarEstoque(txtConsultaEstoque.Text);
-		}
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            dgvEstoque.DataSource = estoqueEpiDAO.buscarEstoque(txtConsultaEstoque.Text);
+            RenomearColunas();
+        }
 
         private void AtualizarGrid()
         {
             dgvEstoque.DataSource = estoqueEpiDAO.listarEstoqueEpi();
+            RenomearColunas();
         }
     }
 }

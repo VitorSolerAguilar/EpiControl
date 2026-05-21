@@ -15,21 +15,16 @@ namespace EpiControl.epicontrol.views
     public partial class frmEditarEstoqueEpi : Form
     {
         private int _idEstoqueEpi;
+
         public frmEditarEstoqueEpi(int idEstoque)
         {
             InitializeComponent();
-
             _idEstoqueEpi = idEstoque;
-            carregarEstoque();
         }
 
         private void frmEditarEstoqueEpi_Load(object sender, EventArgs e)
         {
-            EstoqueEpiDAO estoqueEpiDAO = new EstoqueEpiDAO();
-
-            cbxEpi.DataSource = estoqueEpiDAO.listarNomesEpi();
-            cbxEpi.DisplayMember = "nome";
-            cbxEpi.ValueMember = "id";
+            carregarEstoque();
         }
 
         public void carregarEstoque()
@@ -46,12 +41,24 @@ namespace EpiControl.epicontrol.views
                 cbxEpi.DisplayMember = "nome";
                 cbxEpi.ValueMember = "id";
                 cbxEpi.SelectedValue = epiIdAtual;
+
+                if (cbxEpi.SelectedValue == null)
+                {
+                    foreach (DataRowView item in cbxEpi.Items)
+                    {
+                        if (Convert.ToInt32(item["id"]) == epiIdAtual)
+                        {
+                            cbxEpi.SelectedItem = item;
+                            break;
+                        }
+                    }
+                }
+
                 cbxEpi.Enabled = false;
 
                 txtQuantidade.Text = row["quantidade"].ToString();
                 rtbLocalizacao.Text = row["localizacao"].ToString();
                 txtEstoqueMinimo.Text = row["estoque_minimo"].ToString();
-
             }
             catch (Exception ex)
             {
@@ -68,7 +75,6 @@ namespace EpiControl.epicontrol.views
         {
             try
             {
-
                 EstoqueEpiDAO dao = new EstoqueEpiDAO();
                 dao.excluirEstoqueEpiId(_idEstoqueEpi);
 
