@@ -2,6 +2,8 @@ using EpiControl.epicontrol.dao;
 using EpiControl.epicontrol.views;
 using EpiControl.views;
 using EpiControl.Views;
+using System.Data;
+using System.Text;
 
 namespace EpiControl
 {
@@ -12,6 +14,15 @@ namespace EpiControl
         public frmHome()
         {
             InitializeComponent();
+        }
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            verificarEstoqueMinimo();
+
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 5 * 60 * 1000;
+            timer.Tick += (s, ev) => verificarEstoqueMinimo();
+            timer.Start();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -256,7 +267,7 @@ namespace EpiControl
             {
                 flpNormaRegulamentadora.Height += STEP_EXPAND;
 
-                if (flpNormaRegulamentadora.Height >=153)
+                if (flpNormaRegulamentadora.Height >= 153)
                 {
                     transicaoMenuNorma.Stop();
                     menuExpand = true;
@@ -373,5 +384,34 @@ namespace EpiControl
         {
             transicaoMenuTreinamentos.Start();
         }
+
+
+
+
+
+        public void verificarEstoqueMinimo()
+        {
+            try
+            {
+                EstoqueEpiDAO dao = new EstoqueEpiDAO();
+                DataTable epis = dao.listarEpisAbaixoDoMinimo();
+
+                if (epis.Rows.Count == 0) return;
+
+                StringBuilder mensagem = new StringBuilder();
+                mensagem.AppendLine("Os seguintes EPIs estão no limite ou abaixo do estoque mínimo:\n");
+
+                foreach (DataRow row in epis.Rows)
+                {
+                    mensagem.AppendLine($"• {row["nome"]} - Qtd. Estoque: {row["quantidade"]} | Mínimo: {row["estoque_minimo"]}");
+                }
+
+                MessageBox.Show(mensagem.ToString(), "Alerta de Estoque", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao verificar estoque: " + ex.Message);
+            }
+        }       
     }
 }

@@ -350,5 +350,32 @@ namespace EpiControl.epicontrol.dao
                     conexao.Close();
             }
         }
+
+        public DataTable listarEpisAbaixoDoMinimo()
+        {
+            try
+            {
+                DataTable tabela = new DataTable();
+
+                string sql = @" SELECT e.nome, ee.quantidade, ee.estoque_minimo, ee.localizacao FROM tb_estoque_epi ee INNER JOIN tb_epi e ON e.id_epi = ee.fk_epi WHERE ee.quantidade <= ee.estoque_minimo ORDER BY ee.quantidade ASC";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(tabela);
+
+                return tabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar estoque mínimo: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
     }
 }
