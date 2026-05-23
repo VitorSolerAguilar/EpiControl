@@ -293,7 +293,11 @@ namespace EpiControl.epicontrol.dao
         {
             List<Epi> lista = new List<Epi>();
 
-            string sql = @"SELECT ee.id_estoque AS id, e.nome FROM tb_epi e INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi ORDER BY e.nome";
+            string sql = @"SELECT ee.id_estoque AS id, e.nome 
+                   FROM tb_epi e 
+                   INNER JOIN tb_estoque_epi ee ON ee.fk_epi = e.id_epi 
+                   WHERE e.status = 'Ativo'
+                   ORDER BY e.nome";
 
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
@@ -330,7 +334,29 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabela = new DataTable();
 
-                string sql = @" SELECT e.id_epi, e.nome, e.valor_unitario, ( IFNULL(( SELECT SUM(emp.quantidade) FROM tb_emprestimo emp WHERE emp.fk_epi = e.id_epi ), 0) + IFNULL(( SELECT SUM(m.quantidade) FROM tb_movimentacao_estoque m INNER JOIN tb_estoque_epi ee ON ee.id_estoque = m.fk_estoque WHERE ee.fk_epi = e.id_epi AND m.tipo_movimentacao IN ('Saida Emprestimo', 'Saida Descarte') ), 0) ) AS total_saidas FROM tb_epi e WHERE e.valor_unitario > 0 HAVING total_saidas > 0 ORDER BY total_saidas DESC LIMIT 10";
+                string sql = @"
+            SELECT e.id_epi, e.nome, e.valor_unitario,
+            (
+                IFNULL((
+                    SELECT SUM(emp.quantidade)
+                    FROM tb_emprestimo emp
+                    WHERE emp.fk_epi = e.id_epi
+                ), 0)
+                +
+                IFNULL((
+                    SELECT SUM(m.quantidade)
+                    FROM tb_movimentacao_estoque m
+                    INNER JOIN tb_estoque_epi ee ON ee.id_estoque = m.fk_estoque
+                    WHERE ee.fk_epi = e.id_epi
+                      AND m.tipo_movimentacao IN ('Saida Emprestimo', 'Saida Descarte')
+                ), 0)
+            ) AS total_saidas
+            FROM tb_epi e
+            WHERE e.valor_unitario > 0
+              AND e.status = 'Ativo'
+            HAVING total_saidas > 0
+            ORDER BY total_saidas DESC
+            LIMIT 10";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
 

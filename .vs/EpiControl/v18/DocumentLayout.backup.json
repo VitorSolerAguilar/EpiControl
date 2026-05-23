@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.dao\\estoqueepidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\estoqueepidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarmovimentacaoestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,49 +22,49 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstoqueEpiDAO.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs*",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAywEgBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T01:37:59.256Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Home.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Home.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs [Projeto]*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Home.cs [Projeto]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T02:44:03.285Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Home.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Home.cs*",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Home.cs*",
-              "ViewState": "AgIAAHoBAAAAAAAAAAAgwJUBAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T02:43:28.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EstoqueEpiDAO.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.dao\\EstoqueEpiDAO.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAiwGEBAAAfAAAAAAAAAA==",
+              "Title": "CadastrarMovimentacaoEstoque.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wBwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T02:41:26.367Z",
+              "WhenOpened": "2026-05-23T01:36:19.776Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CadastrarMovimentacaoEstoque.cs [Projeto]",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarMovimentacaoEstoque.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T01:36:07.643Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         },

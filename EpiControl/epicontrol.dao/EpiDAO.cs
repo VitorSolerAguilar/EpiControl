@@ -60,32 +60,35 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable listarEpi()
-		{
-			try
-			{
-				DataTable tabelaEpi = new DataTable();
+        public DataTable listarEpi()
+        {
+            try
+            {
+                DataTable tabelaEpi = new DataTable();
 
-				string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor;";
+                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor 
+                       FROM tb_epi e 
+                       INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor
+                       WHERE e.status = 'Ativo'";
 
-				MySqlCommand cmd = new MySqlCommand(sql, conexao);
-				conexao.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
 
-				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-				da.Fill(tabelaEpi);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(tabelaEpi);
 
-				return tabelaEpi;
-			}
-			catch (Exception ex)
-			{
-				throw new Exception("Erro ao listar epi's: " + ex.Message);
-			}
-			finally
-			{
-				if (conexao.State == ConnectionState.Open)
-					conexao.Close();
-			}
-		}
+                return tabelaEpi;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar epi's: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
 
         public void editarEpi(Epi epi)
         {
@@ -159,10 +162,31 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabelaEpi = new DataTable();
 
-                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor FROM tb_epi e LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.nome LIKE @termo OR e.codigo_interno LIKE @termo OR e.ca LIKE @termo OR e.marca LIKE @termo OR e.categoria LIKE @termo OR e.tamanho LIKE @termo OR f.nome LIKE @termo OR e.status LIKE @termo";
+                bool buscandoInativo = termoBusca.Trim().ToLower() == "inativo";
+
+                string filtroStatus = buscandoInativo
+                    ? "e.status = 'Inativo'"
+                    : "e.status = 'Ativo'";
+
+                string filtroBusca = buscandoInativo
+                    ? ""
+                    : "AND (e.nome LIKE @termo " +
+                      "  OR e.codigo_interno LIKE @termo " +
+                      "  OR e.ca LIKE @termo " +
+                      "  OR e.marca LIKE @termo " +
+                      "  OR e.categoria LIKE @termo " +
+                      "  OR e.tamanho LIKE @termo " +
+                      "  OR f.nome LIKE @termo)";
+
+                string sql = $@"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.categoria, e.tamanho, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor 
+                        FROM tb_epi e 
+                        LEFT JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor
+                        WHERE {filtroStatus} {filtroBusca}";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
+
+                if (!buscandoInativo)
+                    executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
                 conexao.Open();
 
@@ -183,30 +207,41 @@ namespace EpiControl.epicontrol.dao
         }
 
         public List<Epi> listarNomesEpi()
-		{
-			List<Epi> lista = new List<Epi>();
+        {
+            List<Epi> lista = new List<Epi>();
 
-			string sql = "SELECT id_epi, nome FROM tb_epi ORDER BY nome";
+            string sql = "SELECT id_epi, nome FROM tb_epi WHERE status = 'Ativo' ORDER BY nome";
 
-			MySqlCommand cmd = new MySqlCommand(sql, conexao);
-			conexao.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
 
-			MySqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                conexao.Open();
+                MySqlDataReader reader = cmd.ExecuteReader();
 
-			while (reader.Read())
-			{
-				lista.Add(new Epi
-				{
-					id = reader.GetInt32("id_epi"),
-					nome = reader.GetString("nome")
-				});
-			}
+                while (reader.Read())
+                {
+                    lista.Add(new Epi
+                    {
+                        id = reader.GetInt32("id_epi"),
+                        nome = reader.GetString("nome")
+                    });
+                }
 
-			conexao.Close();
-			return lista;
-		}
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar nomes dos EPIs: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
 
-		public void excluirEpiId(int idEpi)
+        public void excluirEpiId(int idEpi)
 		{
 			conexao.Open();
 			MySqlTransaction transaction = conexao.BeginTransaction();

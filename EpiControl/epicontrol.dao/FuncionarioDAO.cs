@@ -130,64 +130,59 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable listarFuncionarios()
-		{
-			try
-			{
-				DataTable tabelaFuncionario = new DataTable();
+        public DataTable listarFuncionarios()
+        {
+            try
+            {
+                DataTable tabelaFuncionario = new DataTable();
 
-				string sql = "SELECT " +
-					"f.id_funcionario, " +
-					"f.nome, " +
-					"f.data_nascimento," +
-					"f.pis," +
-					"f.nome_mae," +
-					"f.nome_pai," +
-					"f.nacionalidade," +
-					"f.matricula," +
-					"f.status," +
-					"f.estado_civil," +
-					"f.rg," +
-					"f.cpf, " +
-					"f.cargo, " +
-					"f.genero," +
-					"" +
-					"c.id_contato," +
-					"c.telefone, " +
-					"c.celular, " +
-					"c.email, " +
-					"c.email_corporativo, " +
-					"" +
-					"e.id_endereco," +
-					"e.cep, " +
-					"e.rua, " +
-					"e.numero, " +
-					"e.logradouro," +
-					"e.complemento, " +
-					"e.cidade, " +
-					"e.tipo," +
-					"e.uf " +
-					"" +
-					"FROM tb_funcionario f " +
-					"LEFT JOIN tb_contato c " +
-					"ON c.fk_funcionario = f.id_funcionario " +
-					"LEFT JOIN tb_endereco e " +
-					"ON e.fk_funcionario = f.id_funcionario " +
-					"ORDER BY f.nome;";
+                string sql = "SELECT " +
+                    "f.id_funcionario, " +
+                    "f.nome, " +
+                    "f.data_nascimento," +
+                    "f.pis," +
+                    "f.nome_mae," +
+                    "f.nome_pai," +
+                    "f.nacionalidade," +
+                    "f.matricula," +
+                    "f.status," +
+                    "f.estado_civil," +
+                    "f.rg," +
+                    "f.cpf, " +
+                    "f.cargo, " +
+                    "f.genero," +
+                    "c.id_contato," +
+                    "c.telefone, " +
+                    "c.celular, " +
+                    "c.email, " +
+                    "c.email_corporativo, " +
+                    "e.id_endereco," +
+                    "e.cep, " +
+                    "e.rua, " +
+                    "e.numero, " +
+                    "e.logradouro," +
+                    "e.complemento, " +
+                    "e.cidade, " +
+                    "e.tipo," +
+                    "e.uf " +
+                    "FROM tb_funcionario f " +
+                    "LEFT JOIN tb_contato c ON c.fk_funcionario = f.id_funcionario " +
+                    "LEFT JOIN tb_endereco e ON e.fk_funcionario = f.id_funcionario " +
+                    "WHERE f.status = 'Ativo' " +
+                    "ORDER BY f.nome;";
 
-				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				conexao.Open();
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                conexao.Open();
 
-				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-				da.Fill(tabelaFuncionario);
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaFuncionario);
 
-				return tabelaFuncionario;
-
-			}
-			catch (Exception e)
-			{
-				return null;
-			}
+                return tabelaFuncionario;
+            }
+            catch
+            {
+                return null;
+            }
             finally
             {
                 if (conexao.State == ConnectionState.Open)
@@ -195,7 +190,7 @@ namespace EpiControl.epicontrol.dao
             }
         }
 
-		public DataTable buscarFuncionarioId(int idFuncionario)
+        public DataTable buscarFuncionarioId(int idFuncionario)
 		{
 			try
 			{
@@ -258,74 +253,83 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public DataTable buscarFuncionario(string termoBusca)
-		{
-			try
-			{
-				DataTable tabelaFuncionario = new DataTable();
+        public DataTable buscarFuncionario(string termoBusca)
+        {
+            try
+            {
+                DataTable tabelaFuncionario = new DataTable();
 
-				string sql = "SELECT " +
-					"f.id_funcionario, " +
-					"f.nome, " +
-					"f.cpf, " +
-					"f.cargo, " +
-					"f.status, " +
+                bool buscandoInativo = termoBusca.Trim().ToLower() == "inativo";
 
-					"c.id_contato AS id_contato, " +
-					"c.telefone, " +
-					"c.celular, " +
-					"c.email, " +
-					"c.email_corporativo, " +
+                string filtroStatus = buscandoInativo
+                    ? "f.status = 'Inativo'"
+                    : "f.status = 'Ativo'";
 
-					"e.id_endereco AS id_endereco, " +
-					"e.cep, " +
-					"e.rua, " +
-					"e.numero, " +
-					"e.complemento, " +
-					"e.logradouro, " +
-					"e.cidade, " +
-					"e.uf " +
-					"FROM tb_funcionario f " +
-					"LEFT JOIN tb_contato c ON c.fk_funcionario = f.id_funcionario " +
-					"LEFT JOIN tb_endereco e ON e.fk_funcionario = f.id_funcionario " +
-					"WHERE f.nome LIKE @termo " +
-					"   OR f.cpf LIKE @termo " +
-					"   OR f.cargo LIKE @termo " +
-					"   OR f.status LIKE @termo " +
-					"   OR c.telefone LIKE @termo " +
-					"   OR c.celular LIKE @termo " +
-					"   OR c.email LIKE @termo " +
-					"   OR c.email_corporativo LIKE @termo " +
-					"   OR e.cep LIKE @termo " +
-					"   OR e.rua LIKE @termo " +
-					"   OR e.numero LIKE @termo " +
-					"   OR e.complemento LIKE @termo " +
-					"   OR e.logradouro LIKE @termo " +
-					"   OR e.cidade LIKE @termo " +
-					"   OR e.uf LIKE @termo;";
+                string filtroBusca = buscandoInativo
+                    ? ""
+                    : "AND (f.nome LIKE @termo " +
+                      "   OR f.cpf LIKE @termo " +
+                      "   OR f.cargo LIKE @termo " +
+                      "   OR c.telefone LIKE @termo " +
+                      "   OR c.celular LIKE @termo " +
+                      "   OR c.email LIKE @termo " +
+                      "   OR c.email_corporativo LIKE @termo " +
+                      "   OR e.cep LIKE @termo " +
+                      "   OR e.rua LIKE @termo " +
+                      "   OR e.numero LIKE @termo " +
+                      "   OR e.complemento LIKE @termo " +
+                      "   OR e.logradouro LIKE @termo " +
+                      "   OR e.cidade LIKE @termo " +
+                      "   OR e.uf LIKE @termo)";
 
-				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
+                string sql = "SELECT " +
+                    "f.id_funcionario, " +
+                    "f.nome, " +
+                    "f.cpf, " +
+                    "f.cargo, " +
+                    "f.status, " +
+                    "c.id_contato AS id_contato, " +
+                    "c.telefone, " +
+                    "c.celular, " +
+                    "c.email, " +
+                    "c.email_corporativo, " +
+                    "e.id_endereco AS id_endereco, " +
+                    "e.cep, " +
+                    "e.rua, " +
+                    "e.numero, " +
+                    "e.complemento, " +
+                    "e.logradouro, " +
+                    "e.cidade, " +
+                    "e.uf " +
+                    "FROM tb_funcionario f " +
+                    "LEFT JOIN tb_contato c ON c.fk_funcionario = f.id_funcionario " +
+                    "LEFT JOIN tb_endereco e ON e.fk_funcionario = f.id_funcionario " +
+                    $"WHERE {filtroStatus} {filtroBusca};";
 
-				conexao.Open();
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
-				MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
-				da.Fill(tabelaFuncionario);
+                if (!buscandoInativo)
+                    executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
 
-				return tabelaFuncionario;
-			}
-			catch
-			{
-				return null;
-			}
-			finally
-			{
-				if (conexao.State == ConnectionState.Open)
-					conexao.Close();
-			}
-		}
+                conexao.Open();
 
-		public void editarFuncionario(Funcionario funcionario, Endereco endereco, Contato contato)
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaFuncionario);
+
+                return tabelaFuncionario;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+
+        public void editarFuncionario(Funcionario funcionario, Endereco endereco, Contato contato)
 		{
 			conexao.Open();
 			MySqlTransaction transaction = conexao.BeginTransaction();
@@ -395,28 +399,28 @@ namespace EpiControl.epicontrol.dao
 			}
 		}
 
-		public List<Funcionario> listarNomesFuncionarios()
-		{
-			List<Funcionario> lista = new List<Funcionario>();
+        public List<Funcionario> listarNomesFuncionarios()
+        {
+            List<Funcionario> lista = new List<Funcionario>();
 
-			string sql = "SELECT id_funcionario, nome FROM tb_funcionario ORDER BY nome";
+            string sql = "SELECT id_funcionario, nome FROM tb_funcionario WHERE status = 'Ativo' ORDER BY nome";
 
-			MySqlCommand cmd = new MySqlCommand(sql, conexao);
-			conexao.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            conexao.Open();
 
-			MySqlDataReader reader = cmd.ExecuteReader();
+            MySqlDataReader reader = cmd.ExecuteReader();
 
-			while (reader.Read())
-			{
-				lista.Add(new Funcionario
-				{
-					id = reader.GetInt32("id_funcionario"),
-					nome = reader.GetString("nome")
-				});
-			}
+            while (reader.Read())
+            {
+                lista.Add(new Funcionario
+                {
+                    id = reader.GetInt32("id_funcionario"),
+                    nome = reader.GetString("nome")
+                });
+            }
 
-			conexao.Close();
-			return lista;
-		}
-	}
+            conexao.Close();
+            return lista;
+        }
+    }
 }
