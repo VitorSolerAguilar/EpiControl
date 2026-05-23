@@ -44,6 +44,7 @@
             btnEditar = new Button();
             btnExcluir = new Button();
             btnVoltar = new Button();
+            btnGerarCertificado = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -191,7 +192,7 @@
             // btnVoltar
             // 
             btnVoltar.BackColor = Color.Transparent;
-            btnVoltar.Location = new Point(205, 284);
+            btnVoltar.Location = new Point(72, 284);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(72, 40);
             btnVoltar.TabIndex = 101;
@@ -199,11 +200,26 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // btnGerarCertificado
+            // 
+            btnGerarCertificado.BackColor = Color.Transparent;
+            btnGerarCertificado.Image = (Image)resources.GetObject("btnGerarCertificado.Image");
+            btnGerarCertificado.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGerarCertificado.Location = new Point(150, 284);
+            btnGerarCertificado.Name = "btnGerarCertificado";
+            btnGerarCertificado.Size = new Size(127, 40);
+            btnGerarCertificado.TabIndex = 104;
+            btnGerarCertificado.Text = "Gerar Certificado";
+            btnGerarCertificado.TextAlign = ContentAlignment.MiddleRight;
+            btnGerarCertificado.UseVisualStyleBackColor = false;
+            btnGerarCertificado.Click += btnGerarCertificado_Click;
+            // 
             // frmEditarFuncionarioCurso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(458, 336);
+            Controls.Add(btnGerarCertificado);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
             Controls.Add(btnVoltar);
@@ -247,5 +263,6 @@
 		private Button btnEditar;
 		private Button btnExcluir;
 		private Button btnVoltar;
-	}
+        private Button btnGerarCertificado;
+    }
 }

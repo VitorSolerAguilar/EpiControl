@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ILUYAYiS7Rk=",
+  "dgSpecHash": "i4SSNY44JvE=",
   "success": true,
   "projectFilePath": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
+    "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\docx\\1.7.0\\docx.1.7.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\google.protobuf\\3.32.0\\google.protobuf.3.32.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\itext\\9.6.0\\itext.9.6.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\itext.bouncy-castle-adapter\\9.6.0\\itext.bouncy-castle-adapter.9.6.0.nupkg.sha512",
@@ -103,5 +104,18 @@
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512",
     "C:\\Users\\Vitor Soler Aguilar\\.nuget\\packages\\zstdsharp.port\\0.8.6\\zstdsharp.port.0.8.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "O pacote 'DocX 1.7.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "projectPath": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\EpiControl\\EpiControl\\EpiControl.csproj",
+      "libraryId": "DocX",
+      "targetGraphs": [
+        "net8.0-windows"
+      ]
+    }
+  ]
 }

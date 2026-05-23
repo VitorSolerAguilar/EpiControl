@@ -15,6 +15,17 @@
           }
         }
       },
+      "DocX/1.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Xceed.Document.NET.dll": {},
+          "lib/net40/Xceed.Words.NET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Xceed.Document.NET.dll": {},
+          "lib/net40/Xceed.Words.NET.dll": {}
+        }
+      },
       "Google.Protobuf/3.32.0": {
         "type": "package",
         "compile": {
@@ -1748,6 +1759,22 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "DocX/1.7.0": {
+      "sha512": "nNapS06LBhlvYYNAj2/ouDhTvwqfcYp3JbbexkE5fYFx4cT7SA5g3QHWkkWf6YsiMfv79Jhwe6WrVhTuROJclg==",
+      "type": "package",
+      "path": "docx/1.7.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "docx.1.7.0.nupkg.sha512",
+        "docx.nuspec",
+        "lib/net40/Xceed.Document.NET.dll",
+        "lib/net40/Xceed.Words.NET.dll",
+        "tools/install.ps1"
       ]
     },
     "Google.Protobuf/3.32.0": {
@@ -5456,6 +5483,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "DocX >= 1.7.0",
       "Microsoft.Extensions.Configuration >= 10.0.1",
       "Microsoft.Extensions.Configuration.FileExtensions >= 10.0.1",
       "Microsoft.Extensions.Configuration.Json >= 10.0.1",
@@ -5518,6 +5546,10 @@
         "framework": "net8.0-windows7.0",
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "DocX": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[10.0.1, )"
@@ -5573,5 +5605,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'DocX 1.7.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "DocX",
+      "targetGraphs": [
+        "net8.0-windows"
+      ]
+    }
+  ]
 }

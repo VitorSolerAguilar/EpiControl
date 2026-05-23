@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Vitor Soler Aguilar\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgDocX Condition=" '$(PkgDocX)' == '' ">C:\Users\Vitor Soler Aguilar\.nuget\packages\docx\1.7.0</PkgDocX>
+  </PropertyGroup>
 </Project>

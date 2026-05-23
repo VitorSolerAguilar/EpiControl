@@ -153,5 +153,63 @@ namespace EpiControl.epicontrol.dao
                 conexao.Close();
             }
         }
+
+        public (string nomeFuncionario, string nomeCurso, string descricaoCurso, string cargaHoraria, int validadeMeses, DateTime dataConclusao)
+    buscarDadosCertificado(int idFuncionarioCurso)
+        {
+            try
+            {
+                string sql = @"
+            SELECT 
+                f.nome AS nome_funcionario,
+                c.nome AS nome_curso,
+                c.descricao AS descricao_curso,
+                c.carga_horaria,
+                c.validade_meses,
+                fc.data_conclusao
+            FROM tb_funcionario_curso fc
+            INNER JOIN tb_funcionario f ON f.id_funcionario = fc.fk_funcionario
+            INNER JOIN tb_curso c ON c.id_curso = fc.fk_curso
+            WHERE fc.id_funcionario_curso = @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@id", idFuncionarioCurso);
+
+                conexao.Open();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        if (reader["data_conclusao"] == DBNull.Value)
+                            throw new Exception("Este funcionário ainda não possui data de conclusão registrada.");
+
+                        int validadeMeses = 0;
+                        if (reader["validade_meses"] != DBNull.Value)
+                            int.TryParse(reader["validade_meses"].ToString(), out validadeMeses);
+
+                        return (
+                            reader["nome_funcionario"].ToString(),
+                            reader["nome_curso"].ToString(),
+                            reader["descricao_curso"] != DBNull.Value ? reader["descricao_curso"].ToString() : "",
+                            reader["carga_horaria"] != DBNull.Value ? reader["carga_horaria"].ToString() : "Não informada",
+                            validadeMeses,
+                            Convert.ToDateTime(reader["data_conclusao"])
+                        );
+                    }
+
+                    throw new Exception("Registro não encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar dados do certificado: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
     }
 }
