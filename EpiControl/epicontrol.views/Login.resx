@@ -390,6 +390,15 @@
         RK5CYII=
 </value>
   </data>
+  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAMxJREFUOE/V0z0OAVEUhuFBoZDQiRAqpc4mLEJjDzqFRqXRWoFKpdXZgYREKFUS
+        pb8o8B4xyQ0nOHcK8SZPMcnMV8zcCX5VGVVk7lcRqmCG68MBTaTg1RThmGsIc3loY+KEGEyVoI2JI8zF
+        Ie9MG1zAXBJbaIMTmJMjcoY2OIdXLWiDNXiVwx7u2BLmL+zWgzvYQKS6cAfr8K6IFdzBMdIwJf9wHzu4
+        Y6ENOijgbXJUBrhAG3omv6AMJ6A2gvbgJ228lIV28zfW+IuC4AYqeXZmULjInAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA7wAAAAEAIAAo3AMAFgAAACgAAADvAAAAAAIAAAEAIAAAAAAAALwDAMMOAADDDgAAAAAAAAAA

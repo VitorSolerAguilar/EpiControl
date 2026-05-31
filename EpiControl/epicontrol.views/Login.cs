@@ -17,6 +17,17 @@ namespace EpiControl.epicontrol.views
             InitializeComponent();
         }
 
+        private bool senhaVisivel = false;
+
+        private string pastaIcons = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "epicontrol.resources", "Icons");
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            pictureBox3.Image = Image.FromFile(Path.Combine(pastaIcons, "olho-fechado-20px.png"));
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string usuarioCorreto = "admin";
@@ -33,6 +44,22 @@ namespace EpiControl.epicontrol.views
                 MessageBox.Show("Usuário ou senha incorretos.", "Acesso negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSenha.Clear();
                 txtSenha.Focus();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            senhaVisivel = !senhaVisivel;
+
+            if (senhaVisivel)
+            {
+                txtSenha.PasswordChar = '\0';
+                pictureBox3.Image = Image.FromFile(Path.Combine(pastaIcons, "olho-aberto-20px.png"));
+            }
+            else
+            {
+                txtSenha.PasswordChar = '*';
+                pictureBox3.Image = Image.FromFile(Path.Combine(pastaIcons, "olho-fechado-20px.png"));
             }
         }
     }

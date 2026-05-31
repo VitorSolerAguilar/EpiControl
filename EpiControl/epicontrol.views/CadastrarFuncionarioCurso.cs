@@ -59,8 +59,10 @@ namespace EpiControl.epicontrol.views
 
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
+                funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
 
-				if (mtbInicio.Text.Length < 7 || mtbInicio.Text.Contains("_"))
+
+                if (mtbInicio.Text.Length < 7 || mtbInicio.Text.Contains("_"))
 				{
                     MessageBox.Show("Campo INÍCIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

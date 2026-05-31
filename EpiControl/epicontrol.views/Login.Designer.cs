@@ -33,16 +33,20 @@
             label1 = new Label();
             label2 = new Label();
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             panel2 = new Panel();
             txtUsuario = new TextBox();
             panel3 = new Panel();
+            pictureBox3 = new PictureBox();
             panel4 = new Panel();
             txtSenha = new TextBox();
             label3 = new Label();
             btnEntrar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -76,12 +80,22 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtUsuario);
             panel1.Location = new Point(75, 269);
             panel1.Name = "panel1";
             panel1.Size = new Size(286, 34);
             panel1.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(263, 7);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(20, 20);
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -102,12 +116,22 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(txtSenha);
             panel3.Location = new Point(75, 367);
             panel3.Name = "panel3";
             panel3.Size = new Size(286, 34);
             panel3.TabIndex = 6;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(263, 7);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(20, 20);
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // panel4
             // 
@@ -171,11 +195,14 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EPICONTROL";
+            Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,5 +220,7 @@
         private Panel panel4;
         private TextBox txtSenha;
         private Button btnEntrar;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

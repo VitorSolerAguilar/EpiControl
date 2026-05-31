@@ -253,13 +253,6 @@ namespace EpiControl.Views
                 contato.emailCorporativo = txtEmailCorporativo.Text.Trim();
 
                 FuncionarioDAO dao = new FuncionarioDAO();
-
-                if (dao.verificarRgCpfMatriculaExistente(funcionario.rg, funcionario.cpf, funcionario.matricula))
-                {
-                    MessageBox.Show("Já existe um funcionário cadastrado com este RG, matricula ou CPF.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 dao.editarFuncionario(funcionario, endereco, contato);
 
                 MessageBox.Show("Funcionário atualizado!");
