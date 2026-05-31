@@ -127,7 +127,7 @@ namespace EpiControl.epicontrol.views
                     return;
                 }
                 else
-                {                   
+                {
                     funcionario.dataNascimento = Convert.ToDateTime(mtbDataNascimento.Text);
                 }
 
@@ -175,6 +175,13 @@ namespace EpiControl.epicontrol.views
                 contato.emailCorporativo = txtEmailCorporativo.Text;
 
                 FuncionarioDAO dao = new FuncionarioDAO();
+
+                if (dao.verificarRgCpfMatriculaExistente(funcionario.rg, funcionario.cpf, funcionario.matricula))
+                {
+                    MessageBox.Show("Já existe um funcionário cadastrado com este RG, matricula ou CPF.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 dao.cadastrarFuncionario(funcionario, endereco, contato);
 
                 MessageBox.Show("Funcionário cadastrado com sucesso!");
@@ -266,6 +273,28 @@ namespace EpiControl.epicontrol.views
             int digito2 = resto < 2 ? 0 : 11 - resto;
 
             return cpf[9] - '0' == digito1 && cpf[10] - '0' == digito2;
+        }
+
+        private void mtbDataNascimento_Validating(object sender, CancelEventArgs e)
+        {
+            string texto = mtbDataNascimento.Text;
+            DateTime dataLimite = new DateTime(2026, 1, 1);
+
+            if (DateTime.TryParseExact(texto, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime dataSelecionada))
+            {
+                if (dataSelecionada > dataLimite)
+                {
+                    e.Cancel = true; 
+                    MessageBox.Show($"A data não pode ser maior que {dataLimite:dd/MM/yyyy}.", "Data inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    mtbDataNascimento.Clear();
+                }
+            }
+            else
+            {
+                e.Cancel = true;
+                MessageBox.Show("Digite uma data válida no formato dd/MM/yyyy.", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mtbDataNascimento.Clear();
+            }
         }
     }
 }

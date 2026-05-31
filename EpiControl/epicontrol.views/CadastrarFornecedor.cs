@@ -95,6 +95,13 @@ namespace EpiControl.Views
                 contato.emailCorporativo = txtEmailPessoal.Text;
 
                 FornecedorDAO dao = new FornecedorDAO();
+
+                if (dao.verificarCnpjNomeExistente(fornecedor.cnpj))
+                {
+                    MessageBox.Show("Já existe um fornecedor cadastrado com este CNPJ ou NOME.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 dao.cadastrarFornecedor(fornecedor, endereco, contato);
 
                 MessageBox.Show("Fornecedor cadastrado com sucesso!");

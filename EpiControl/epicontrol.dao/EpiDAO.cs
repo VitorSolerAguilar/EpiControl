@@ -400,5 +400,34 @@ namespace EpiControl.epicontrol.dao
 
             return lista;
         }
+
+        public bool verificarNomeCaExistente(string nome, string ca, int idEpi = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_epi 
+                       WHERE nome = @nome 
+                       AND ca = @ca
+                       AND id_epi != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@ca", ca);
+                cmd.Parameters.AddWithValue("@id", idEpi);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar EPI: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
     }
 }

@@ -154,8 +154,7 @@ namespace EpiControl.epicontrol.dao
             }
         }
 
-        public (string nomeFuncionario, string nomeCurso, string descricaoCurso, string cargaHoraria, int validadeMeses, DateTime dataConclusao)
-    buscarDadosCertificado(int idFuncionarioCurso)
+        public (string nomeFuncionario, string nomeCurso, string descricaoCurso, string cargaHoraria, int validadeMeses, DateTime dataConclusao) buscarDadosCertificado(int idFuncionarioCurso)
         {
             try
             {
@@ -204,6 +203,35 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 throw new Exception("Erro ao buscar dados do certificado: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+
+        public bool verificarFuncionarioCursoExistente(int idFuncionario, int idCurso, int idFuncionarioCurso = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_funcionario_curso 
+                       WHERE fk_funcionario = @fk_funcionario 
+                       AND fk_curso = @fk_curso
+                       AND id_funcionario_curso != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@fk_funcionario", idFuncionario);
+                cmd.Parameters.AddWithValue("@fk_curso", idCurso);
+                cmd.Parameters.AddWithValue("@id", idFuncionarioCurso);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar associação: " + ex.Message);
             }
             finally
             {

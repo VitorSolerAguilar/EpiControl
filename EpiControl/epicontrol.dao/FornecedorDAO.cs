@@ -286,6 +286,33 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
-	}
+
+        public bool verificarCnpjNomeExistente(string cnpj, int idFornecedor = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_fornecedor 
+                       WHERE cnpj = @cnpj
+                       AND id_fornecedor != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@cnpj", cnpj);
+                cmd.Parameters.AddWithValue("@id", idFornecedor);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar CNPJ e nome: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+    }
 }
 

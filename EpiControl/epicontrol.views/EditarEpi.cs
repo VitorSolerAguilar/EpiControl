@@ -149,7 +149,14 @@ namespace EpiControl.Views
 				epi.fornecedorId = (int)cbxFornecedor.SelectedValue;
 
 				EpiDAO dao = new EpiDAO();
-				dao.editarEpi(epi);
+
+                if (dao.verificarNomeCaExistente(epi.nome, epi.ca))
+                {
+                    MessageBox.Show("Já existe um EPI cadastrado com este nome e CA.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dao.editarEpi(epi);
 
 				MessageBox.Show("EPI atualizado com sucesso!");
 				Close();

@@ -60,7 +60,7 @@ namespace EpiControl.epicontrol.views
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
 
-				if (mtbInicio.Text.Length < 10 || mtbInicio.Text.Contains("_"))
+				if (mtbInicio.Text.Length < 7 || mtbInicio.Text.Contains("_"))
 				{
                     MessageBox.Show("Campo INÍCIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -69,18 +69,15 @@ namespace EpiControl.epicontrol.views
                     funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
                 }
 
-				if (mtbConclusao.Text.Length < 10 || mtbConclusao.Text.Contains("_"))
-				{
-                    MessageBox.Show("Campo INÍCIO obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    funcionarioCurso.conclusao = null;
-                }
-				else
-				{
-                    funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
+                FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
+
+                if (funcionarioCursoDAO.verificarFuncionarioCursoExistente(funcionarioCurso.funcionarioId, funcionarioCurso.cursoId))
+                {
+                    MessageBox.Show("Este funcionário já está associado a este curso.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
-                FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
-				funcionarioCursoDAO.cadastrarFuncionarioCurso(funcionarioCurso);
+                funcionarioCursoDAO.cadastrarFuncionarioCurso(funcionarioCurso);
 
 				limparCampos();
 

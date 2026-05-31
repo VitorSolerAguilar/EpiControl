@@ -68,7 +68,14 @@ namespace EpiControl.views
                 }
 
                 NormaRegulamentadoraDAO dao = new NormaRegulamentadoraDAO();
-				dao.cadastrarNormaRegulamentadora(normaRegulamentadora);
+
+                if (dao.verificarCodigoNrExistente(normaRegulamentadora.codigoNr))
+                {
+                    MessageBox.Show("Já existe uma norma regulamentadora cadastrada com este número.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dao.cadastrarNormaRegulamentadora(normaRegulamentadora);
 
                 MessageBox.Show("Norma regulamentadora cadastrada com sucesso!");
 

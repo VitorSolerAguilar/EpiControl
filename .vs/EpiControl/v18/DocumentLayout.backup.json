@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\EpiControl\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\editarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrarfornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.dao\\fornecedordao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\fornecedordao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarFornecedor.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarFornecedor.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarFornecedor.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarFornecedor.cs*",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAewH0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:44:27.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CadastrarFornecedor.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFornecedor.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarFornecedor.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarFornecedor.cs*",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarFornecedor.cs*",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAewGIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:44:21.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FornecedorDAO.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\FornecedorDAO.cs",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAcwCEBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:43:48.621Z",
+              "EditorCaption": ""
             }
           ]
         },

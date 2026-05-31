@@ -103,6 +103,12 @@ namespace EpiControl.epicontrol.views
                     curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
                 }
 
+                if (dao.verificarNomeCursoExistente(curso.nome, curso.id))
+                {
+                    MessageBox.Show("Já existe outro treinamento cadastrado com este nome.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 dao.editarCurso(curso);
 
                 MessageBox.Show("Curso atualizado com sucesso!");

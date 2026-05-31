@@ -105,7 +105,14 @@ namespace EpiControl.Views
 				epi.descricao = rtbDescricao.Text;
 
 				EpiDAO dao = new EpiDAO();
-				dao.cadastrarEpi(epi);
+
+                if (dao.verificarNomeCaExistente(epi.nome, epi.ca))
+                {
+                    MessageBox.Show("Já existe um EPI cadastrado com este nome e CA.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dao.cadastrarEpi(epi);
 
 				MessageBox.Show("Epi cadastrado com sucesso!");
 				limparCampos();

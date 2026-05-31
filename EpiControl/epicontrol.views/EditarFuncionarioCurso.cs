@@ -125,8 +125,15 @@ namespace EpiControl.epicontrol.views
                     funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
                 }
 
-                FuncionarioCursoDAO dao = new FuncionarioCursoDAO();
-                dao.editarFuncionarioCurso(funcionarioCurso);
+                FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
+
+                if (funcionarioCursoDAO.verificarFuncionarioCursoExistente(funcionarioCurso.funcionarioId, funcionarioCurso.cursoId))
+                {
+                    MessageBox.Show("Este funcionário já está associado a este curso.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                funcionarioCursoDAO.editarFuncionarioCurso(funcionarioCurso);
 
                 MessageBox.Show("Funcionario curso atualizado com sucesso!");
 

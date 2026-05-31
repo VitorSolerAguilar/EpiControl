@@ -637,6 +637,7 @@
             mtbDataNascimento.Size = new Size(147, 23);
             mtbDataNascimento.TabIndex = 228;
             mtbDataNascimento.ValidatingType = typeof(DateTime);
+            mtbDataNascimento.Validating += mtbDataNascimento_Validating;
             // 
             // mtbCelular
             // 

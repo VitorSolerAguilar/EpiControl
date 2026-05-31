@@ -173,7 +173,7 @@ namespace EpiControl.epicontrol.dao
 			{
 				DataTable tabelaNorma = new DataTable();
 
-				string sql = @"SELECT id_norma_regulamentadora, codigo_nr, titulo, descricao, link_mte, data_vigencia FROM tb_norma_regulamentadora WHERE codigo_nr LIKE @termo OR titulo    LIKE @termo OR descricao LIKE @termo OR link_mte  LIKE @termo";
+				string sql = @"SELECT id_norma_regulamentadora, codigo_nr, titulo, descricao, link_mte, data_vigencia FROM tb_norma_regulamentadora WHERE codigo_nr LIKE @termo OR titulo LIKE @termo OR descricao LIKE @termo OR link_mte  LIKE @termo";
 
 				MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 				executacmd.Parameters.AddWithValue("@termo", "%" + termoBusca + "%");
@@ -195,5 +195,32 @@ namespace EpiControl.epicontrol.dao
 					conexao.Close();
 			}
 		}
-	}
+
+        public bool verificarCodigoNrExistente(string codigoNr, int idNorma = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_norma_regulamentadora 
+                       WHERE codigo_nr = @codigo_nr 
+                       AND id_norma_regulamentadora != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@codigo_nr", codigoNr);
+                cmd.Parameters.AddWithValue("@id", idNorma);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar código NR: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+    }
 }

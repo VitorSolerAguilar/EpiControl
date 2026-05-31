@@ -54,7 +54,14 @@ namespace EpiControl.epicontrol.views
                 }
 
                 CursoDAO cursoDAO = new CursoDAO();
-				cursoDAO.cadastrarCurso(curso);
+
+                if (cursoDAO.verificarNomeCursoExistente(curso.nome, curso.id))
+                {
+                    MessageBox.Show("Já existe outro treinamento cadastrado com este nome.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                cursoDAO.cadastrarCurso(curso);
 				MessageBox.Show("Treinamento cadastrado!");
 
 				limparCampos();

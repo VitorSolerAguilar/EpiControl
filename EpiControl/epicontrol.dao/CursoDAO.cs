@@ -192,6 +192,33 @@ namespace EpiControl.epicontrol.dao
 				conexao.Close();
 			}
 		}
-	}
+
+        public bool verificarNomeCursoExistente(string nome, int idCurso = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_curso 
+                       WHERE nome = @nome 
+                       AND id_curso != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@id", idCurso);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar nome do treinamento: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
+        }
+    }
 }
 

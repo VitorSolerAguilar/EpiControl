@@ -269,6 +269,7 @@ namespace EpiControl.epicontrol.dao
                     ? ""
                     : "AND (f.nome LIKE @termo " +
                       "   OR f.cpf LIKE @termo " +
+                      "   OR f.matricula LIKE @termo " +
                       "   OR f.cargo LIKE @termo " +
                       "   OR c.telefone LIKE @termo " +
                       "   OR c.celular LIKE @termo " +
@@ -421,6 +422,35 @@ namespace EpiControl.epicontrol.dao
 
             conexao.Close();
             return lista;
+        }
+
+        public bool verificarRgCpfMatriculaExistente(string rg, string cpf, string matricula, int idFuncionario = 0)
+        {
+            try
+            {
+                string sql = @"SELECT COUNT(*) FROM tb_funcionario 
+                       WHERE (rg = @rg OR cpf = @cpf or matricula = @matricula) 
+                       AND id_funcionario != @id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.Parameters.AddWithValue("@rg", rg);
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                cmd.Parameters.AddWithValue("@matricula", matricula);
+                cmd.Parameters.AddWithValue("@id", idFuncionario);
+
+                conexao.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao verificar RG/CPF: " + ex.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                    conexao.Close();
+            }
         }
     }
 }
