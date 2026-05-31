@@ -185,3 +185,4 @@ C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.dao.frmO
 C:\EpiControl\EpiControl\bin\Debug\net8.0-windows\Xceed.Document.NET.dll
 C:\EpiControl\EpiControl\bin\Debug\net8.0-windows\Xceed.Words.NET.dll
 C:\EpiControl\EpiControl\bin\Debug\net8.0-windows\epicontrol.resources\Teamplate\teamplateCertificado.docx
+C:\EpiControl\EpiControl\obj\Debug\net8.0-windows\EpiControl.epicontrol.views.frmLogin.resources

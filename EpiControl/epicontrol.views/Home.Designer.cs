@@ -751,6 +751,7 @@
             Name = "frmHome";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EPICONTROL";
+            FormClosed += frmHome_FormClosed;
             Load += frmHome_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -412,6 +412,11 @@ namespace EpiControl
             {
                 MessageBox.Show("Erro ao verificar estoque: " + ex.Message);
             }
-        }       
+        }
+
+        private void frmHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
