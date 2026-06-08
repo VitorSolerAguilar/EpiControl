@@ -32,15 +32,10 @@ namespace EpiControl.epicontrol.service
 
 				tblFuncionario.AddCell(CelulaLabel("Nome:"));
 				tblFuncionario.AddCell(CelulaTexto(func.nome));
-
-				tblFuncionario.AddCell(CelulaLabel("Área:"));
-
-				tblFuncionario.AddCell(CelulaTexto("Operacional"));
-
 				tblFuncionario.AddCell(CelulaLabel("Função:"));
 				tblFuncionario.AddCell(CelulaTexto(func.cargo));
 
-				tblFuncionario.AddCell(CelulaLabel("Registro:"));
+				tblFuncionario.AddCell(CelulaLabel("Matrícula:"));
 				tblFuncionario.AddCell(CelulaTexto(func.matricula));
 
 				doc.Add(tblFuncionario);
@@ -54,9 +49,9 @@ namespace EpiControl.epicontrol.service
 				tblEpi.AddHeaderCell(CelulaHeader("CA"));
 				tblEpi.AddHeaderCell(CelulaHeader("Data"));
 				tblEpi.AddHeaderCell(CelulaHeader("Quant."));
-				tblEpi.AddHeaderCell(CelulaHeader("Código"));
+				tblEpi.AddHeaderCell(CelulaHeader("Código Interno"));
 				tblEpi.AddHeaderCell(CelulaHeader("Subst."));
-				tblEpi.AddHeaderCell(CelulaHeader("assinatura"));
+				tblEpi.AddHeaderCell(CelulaHeader("Assinatura"));
 
 				foreach (var item in epis)
 				{

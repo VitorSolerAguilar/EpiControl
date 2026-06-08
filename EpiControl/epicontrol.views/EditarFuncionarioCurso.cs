@@ -127,7 +127,7 @@ namespace EpiControl.epicontrol.views
 
                 FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();
 
-                if (funcionarioCursoDAO.verificarFuncionarioCursoExistente(funcionarioCurso.funcionarioId, funcionarioCurso.cursoId))
+                if (funcionarioCursoDAO.verificarFuncionarioCursoExistente(funcionarioCurso.funcionarioId, funcionarioCurso.cursoId, funcionarioCurso.id))
                 {
                     MessageBox.Show("Este funcionário já está associado a este curso.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

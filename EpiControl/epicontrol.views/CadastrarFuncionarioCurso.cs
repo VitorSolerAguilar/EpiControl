@@ -59,8 +59,6 @@ namespace EpiControl.epicontrol.views
 
 				funcionarioCurso.funcionarioId = Convert.ToInt32(cbxFuncionario.SelectedValue);
 				funcionarioCurso.cursoId = Convert.ToInt32(cbxCurso.SelectedValue);
-                funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
-
 
                 if (mtbInicio.Text.Length < 7 || mtbInicio.Text.Contains("_"))
 				{
@@ -69,6 +67,15 @@ namespace EpiControl.epicontrol.views
                 else
 				{
                     funcionarioCurso.inicio = Convert.ToDateTime(mtbInicio.Text);
+                }
+
+                if (mtbConclusao.Text.Length < 10 || mtbConclusao.Text.Contains("_"))
+                {
+                    funcionarioCurso.conclusao = null;
+                }
+                else
+                {
+                    funcionarioCurso.conclusao = Convert.ToDateTime(mtbConclusao.Text);
                 }
 
                 FuncionarioCursoDAO funcionarioCursoDAO = new FuncionarioCursoDAO();

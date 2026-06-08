@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Login.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Login.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Login.cs",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Login.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwEIAAAAAAAAAAAAAAA==",
+              "Title": "Curso.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.model\\Curso.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.model\\Curso.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.model\\Curso.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.model\\Curso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T04:10:11.523Z",
+              "WhenOpened": "2026-06-08T00:51:35.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cs [Projeto]",
-              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Login.cs",
-              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\Login.cs",
-              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\Login.cs [Projeto]",
-              "RelativeToolTip": "EpiControl\\epicontrol.views\\Login.cs [Projeto]",
+              "Title": "CadastrarTreinamento.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T04:06:38.679Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2026-06-08T00:51:03.442Z",
+              "EditorCaption": ""
             }
           ]
         },
