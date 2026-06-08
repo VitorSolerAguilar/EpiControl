@@ -42,15 +42,26 @@ namespace EpiControl.epicontrol.views
 				curso.cargaHoraria = txtCargaHoraria.Text;
 				curso.descricao = rtbDescricao.Text;
 
-				if (mtbValidade.Text.Length < 10 || mtbValidade.Text.Contains("_"))
-				{
+                if (mtbValidade.Text.Length < 10 || mtbValidade.Text.Contains("_"))
+                {
                     MessageBox.Show("Campo VALIDADE obrigatório!", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     mtbValidade.Focus();
                     return;
                 }
-				else
+                else
                 {
-                    curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
+                    DateTime dataValidade = Convert.ToDateTime(mtbValidade.Text);
+                    DateTime hoje = DateTime.Today;
+
+                    if (dataValidade <= hoje)
+                    {
+                        MessageBox.Show("A data de validade deve ser maior que a data atual.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mtbValidade.Focus();
+                        return;
+                    }
+
+                    curso.dataValidade = dataValidade;
+                    curso.validadeMeses = ((dataValidade.Year - hoje.Year) * 12) + (dataValidade.Month - hoje.Month);
                 }
 
                 CursoDAO cursoDAO = new CursoDAO();

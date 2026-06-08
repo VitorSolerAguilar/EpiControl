@@ -36,12 +36,14 @@ namespace EpiControl.epicontrol.views
                 txtNome.Text = row["nome"].ToString();
                 txtCargaHoraria.Text = row["carga_horaria"].ToString();
                 rtbDescricao.Text = row["descricao"].ToString();
-                mtbValidade.Text = row["validade_meses"].ToString();
+
+                int validadeMeses = Convert.ToInt32(row["validade_meses"]);
+                DateTime dataValidade = DateTime.Today.AddMonths(validadeMeses);
+                mtbValidade.Text = dataValidade.ToString("dd/MM/yyyy");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar treinamento: " + ex);
-
             }
         }
 
@@ -100,7 +102,18 @@ namespace EpiControl.epicontrol.views
                 }
                 else
                 {
-                    curso.validadeMeses = Convert.ToDateTime(mtbValidade.Text);
+                    DateTime dataValidade = Convert.ToDateTime(mtbValidade.Text);
+                    DateTime hoje = DateTime.Today;
+
+                    if (dataValidade <= hoje)
+                    {
+                        MessageBox.Show("A data de validade deve ser maior que a data atual.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mtbValidade.Focus();
+                        return;
+                    }
+
+                    curso.dataValidade = dataValidade;
+                    curso.validadeMeses = ((dataValidade.Year - hoje.Year) * 12) + (dataValidade.Month - hoje.Month);
                 }
 
                 if (dao.verificarNomeCursoExistente(curso.nome, curso.id))

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\EpiControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\editartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\editartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\editartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.views\\cadastrartreinamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.model\\curso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|c:\\epicontrol\\epicontrol\\epicontrol.dao\\cursodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2CC904D-73AC-4ABF-992D-ECEA10069DDE}|EpiControl\\EpiControl.csproj|solutionrelative:epicontrol\\epicontrol.dao\\cursodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 279,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +38,64 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditarTreinamento.cs [Projeto]",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarTreinamento.cs [Projeto]",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarTreinamento.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T01:03:42.341Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CursoDAO.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.dao\\CursoDAO.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwOAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T00:56:58.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EditarTreinamento.cs",
+              "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "RelativeToolTip": "EpiControl\\epicontrol.views\\EditarTreinamento.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T00:56:28.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Curso.cs",
               "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.model\\Curso.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.model\\Curso.cs",
               "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.model\\Curso.cs",
               "RelativeToolTip": "EpiControl\\epicontrol.model\\Curso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T00:51:35.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CadastrarTreinamento.cs",
               "DocumentMoniker": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
               "RelativeDocumentMoniker": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
               "ToolTip": "C:\\EpiControl\\EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
               "RelativeToolTip": "EpiControl\\epicontrol.views\\CadastrarTreinamento.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAqwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T00:51:03.442Z",
               "EditorCaption": ""
