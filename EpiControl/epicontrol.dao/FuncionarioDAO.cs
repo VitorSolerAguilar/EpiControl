@@ -122,7 +122,7 @@ namespace EpiControl.epicontrol.dao
 			catch (Exception ex)
 			{
 				transaction.Rollback();
-				MessageBox.Show("Erro ao excluir funcionario: " + ex.Message);
+                throw new Exception("Erro ao excluir funcionario: " + ex.Message);
 			}
 			finally
 			{
