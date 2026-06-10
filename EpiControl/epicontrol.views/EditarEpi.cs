@@ -47,7 +47,7 @@ namespace EpiControl.Views
 				txtTamanho.Text = row["tamanho"].ToString();
 				mtbValidadeCa.Text = row["validade_ca"].ToString();
 				txtMarca.Text = row["marca"].ToString();
-				txtCor.Text = row["nome"].ToString();
+				txtCor.Text = row["cor"].ToString();
 				txtValorUnitario.Text = row["valor_unitario"].ToString();
 
 				string status = row["status"].ToString();
@@ -150,7 +150,8 @@ namespace EpiControl.Views
 
 				EpiDAO dao = new EpiDAO();
 
-                if (dao.verificarNomeCaExistente(epi.nome, epi.ca))
+                if (dao.verificarNomeCaExistente(epi.nome, epi.ca, epi.id))
+
                 {
                     MessageBox.Show("Já existe um EPI cadastrado com este nome e CA.", "Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

@@ -66,7 +66,7 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabelaEpi = new DataTable();
 
-                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.valor_unitario, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor 
+                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.tamanho, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.valor_unitario, e.cor, e.fk_fornecedor AS id_fornecedor, f.nome AS fornecedor 
                        FROM tb_epi e 
                        INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor
                        WHERE e.status = 'Ativo'";
@@ -135,7 +135,13 @@ namespace EpiControl.epicontrol.dao
             {
                 DataTable tabelaEpi = new DataTable();
 
-                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, e.status, e.marca, e.descricao, e.categoria, e.tamanho, e.fk_fornecedor, e.valor_unitario, f.nome AS nome_fornecedor FROM tb_epi e INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor WHERE e.id_epi = @id_epi";
+                string sql = @"SELECT e.id_epi, e.nome, e.codigo_interno, e.ca, e.validade_ca, 
+                              e.status, e.marca, e.descricao, e.categoria, e.tamanho, 
+                              e.cor, e.fk_fornecedor, e.valor_unitario, 
+                              f.nome AS nome_fornecedor 
+                       FROM tb_epi e 
+                       INNER JOIN tb_fornecedor f ON e.fk_fornecedor = f.id_fornecedor 
+                       WHERE e.id_epi = @id_epi";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 executacmd.Parameters.AddWithValue("@id_epi", idEpi);

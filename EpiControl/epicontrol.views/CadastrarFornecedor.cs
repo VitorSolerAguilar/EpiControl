@@ -72,7 +72,11 @@ namespace EpiControl.Views
                 Fornecedor fornecedor = new Fornecedor();
 
                 fornecedor.nome = txtNome.Text;
+
+                mtbCnpj.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 fornecedor.cnpj = mtbCnpj.Text;
+                mtbCnpj.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+
                 fornecedor.observacoes = rtbObservacao.Text;
 
                 Endereco endereco = new Endereco();

@@ -137,8 +137,15 @@ namespace EpiControl.epicontrol.views
                 funcionario.nomeMae = txtNomeMae.Text;
                 funcionario.nomePai = txtNomePai.Text;
                 funcionario.pisPasep = txtPisPasep.Text;
+
+                mtbRg.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 funcionario.rg = mtbRg.Text;
+                mtbRg.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+
+                mtbCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                 funcionario.cpf = mtbCpf.Text;
+                mtbCpf.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+
                 funcionario.matricula = txtMatricula.Text;
                 funcionario.cargo = txtCargo.Text;
 

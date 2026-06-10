@@ -428,14 +428,36 @@ namespace EpiControl.epicontrol.dao
         {
             try
             {
-                string sql = @"SELECT COUNT(*) FROM tb_funcionario 
-                       WHERE (rg = @rg OR cpf = @cpf or matricula = @matricula) 
-                       AND id_funcionario != @id";
+                // Se nenhum campo estiver preenchido, não há o que verificar
+                if (string.IsNullOrWhiteSpace(rg) && string.IsNullOrWhiteSpace(cpf) && string.IsNullOrWhiteSpace(matricula))
+                    return false;
+
+                List<string> condicoes = new List<string>();
+
+                if (!string.IsNullOrWhiteSpace(rg))
+                    condicoes.Add("rg = @rg");
+
+                if (!string.IsNullOrWhiteSpace(cpf))
+                    condicoes.Add("cpf = @cpf");
+
+                if (!string.IsNullOrWhiteSpace(matricula))
+                    condicoes.Add("matricula = @matricula");
+
+                string sql = $@"SELECT COUNT(*) FROM tb_funcionario 
+                        WHERE ({string.Join(" OR ", condicoes)}) 
+                        AND id_funcionario != @id";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
-                cmd.Parameters.AddWithValue("@rg", rg);
-                cmd.Parameters.AddWithValue("@cpf", cpf);
-                cmd.Parameters.AddWithValue("@matricula", matricula);
+
+                if (!string.IsNullOrWhiteSpace(rg))
+                    cmd.Parameters.AddWithValue("@rg", rg);
+
+                if (!string.IsNullOrWhiteSpace(cpf))
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                if (!string.IsNullOrWhiteSpace(matricula))
+                    cmd.Parameters.AddWithValue("@matricula", matricula);
+
                 cmd.Parameters.AddWithValue("@id", idFuncionario);
 
                 conexao.Open();

@@ -86,7 +86,7 @@ namespace EpiControl.epicontrol.views
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar emprestimo: " + ex);
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

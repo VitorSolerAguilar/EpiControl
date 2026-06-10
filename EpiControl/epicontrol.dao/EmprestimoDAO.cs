@@ -37,7 +37,7 @@ namespace EpiControl.epicontrol.dao
                 {
                     transaction.Rollback();
                     conexao.Close();
-                    MessageBox.Show("Nenhum estoque cadastrado para este EPI.");
+                    throw new Exception("Nenhum estoque cadastrado para este EPI.");
                     return;
                 }
 
@@ -47,7 +47,7 @@ namespace EpiControl.epicontrol.dao
                 {
                     transaction.Rollback();
                     conexao.Close();
-                    MessageBox.Show($"Estoque insuficiente. Disponível: {quantidadeAtual}, Solicitado: {emprestimo.quantidade}.");
+                    throw new Exception($"Estoque insuficiente. Disponível: {quantidadeAtual}, Solicitado: {emprestimo.quantidade}.");
                     return;
                 }
 
@@ -75,6 +75,7 @@ namespace EpiControl.epicontrol.dao
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao cadastrar empréstimo de EPI: " + ex.Message);
+                throw;
             }
             finally
             {
